@@ -21,6 +21,8 @@ export const SectionContent = styled.div`
     justify-content: space-between;
     align-items: center;
 
+    box-sizing: content-box;
+
     min-width: 85%;
     max-width: 85%;
 
@@ -29,5 +31,8 @@ export const SectionContent = styled.div`
     padding: 2rem;
 
     background-color: orange;
+
+  overflow-wrap: break-word;
+  line-height: 1.6;
 
 `

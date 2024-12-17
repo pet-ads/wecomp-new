@@ -6,13 +6,13 @@ const ButtonContainer = styled.button`
   justify-content: center;
   align-items: center;
 
-  min-width: 10rem;
-  max-width: 10rem;
+  min-width: 8rem;
+  max-width: 8rem;
 
   min-height: 2.5rem;
   max-height: 2.5rem;
 
-  padding: 1rem 1.5rem;
+  padding: .5rem 1rem;
 
   background-color: var(--primary-color);
   color: var(--primary-text-color);

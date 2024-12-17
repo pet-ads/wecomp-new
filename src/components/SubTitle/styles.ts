@@ -6,7 +6,7 @@ export const LabelContainer = styled.div`
     justify-content: center;
     align-items: center;
 
-    width: 20rem;
+    width: 22vw;
     
     height: 2rem;
 
@@ -19,5 +19,5 @@ export const LabelContainer = styled.div`
 export const LabelText = styled.span`
   font-size: 1rem;
   font-weight: bold;
-  color: var(--background-color)
+  color: var(--background-color);
 `;

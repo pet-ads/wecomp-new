@@ -3,19 +3,19 @@ import styled from "styled-components";
 
 export const TextContainer = styled.div`
     display: flex;
-    box-sizing: border-box;
 
-    min-width: 80vw;
-    max-width: 80vw;
+    min-width: 80%;
 
-    min-width: 80vw;
-    max-width: 80vw;
+    height: auto;
 
-    padding: 2rem 0;
+    padding: 2rem 1rem;
+
+    overflow-wrap: break-word;
 
     text-align: justify;
 
-    font-size: larger;
+    font-size: medium;
     font-weight: lighter;
+
     color: var(--secundary-text-color);
 `

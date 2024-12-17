@@ -2,7 +2,7 @@
 import { SubTitle } from "../SubTitle";
 
 // Styles
-import { PrologueContainer, PrologueContent } from "./styles";
+import { PrologueContainer, PrologueContent, ProloqueButton } from "./styles";
 import Text from "../Text";
 import LinkButton from "../LinkButton/styles";
 
@@ -20,7 +20,9 @@ export const Prologue = () => {
           reduzir a distância entre a teoria e a prática, ensinar tecnologias
           novas e promover o ingresso dos participantes no mercado de trabalho.
         </Text>
-        <LinkButton>Veja mais</LinkButton>
+        <ProloqueButton>
+          <LinkButton>Veja mais</LinkButton>
+        </ProloqueButton>
       </PrologueContent>
     </PrologueContainer>
   );
