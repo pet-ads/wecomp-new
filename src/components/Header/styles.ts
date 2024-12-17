@@ -8,7 +8,7 @@ export const Nav = styled.nav`
     align-items: center;
 
     position: fixed;
-    z-index: 10;
+    z-index: 1;
 
     width: 100%;
 

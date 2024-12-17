@@ -1,11 +1,12 @@
-import { Header } from '../components/Header'
-import { HeroBanner } from '../components/HeroBanner'
+// Components
+import { Header } from "../components/Header";
+import { HeroBanner } from "../components/HeroBanner";
 
-export default function Home(){
+export default function Home() {
   return (
-      <>
-        <Header />
-        <HeroBanner/>
-      </>
-  )
+    <>
+      <Header />
+      <HeroBanner />
+    </>
+  );
 }
