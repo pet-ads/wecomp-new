@@ -6,14 +6,14 @@ import { PrologueContainer, PrologueContent, ProloqueButton } from "./styles";
 import Text from "../Text";
 import LinkButton from "../LinkButton/styles";
 
-export const Prologue = () => {
+export default function Prologue(){
   return (
     <PrologueContainer>
       <PrologueContent>
-        <SubTitle>Sobre</SubTitle>
+        <SubTitle>Sobre a WECOMP</SubTitle>
         <Text>
           A Wecomp é a semana da computação do IFSP São Carlos, que neste ano
-          realizará sua quinta edição. O objetivo do evento é proporcionar uma
+          realizará sua sexta edição. O objetivo do evento é proporcionar uma
           maior interação entre os estudantes, o mercado de tecnologia e a
           cidade de São Carlos. Ao longo de cinco dias de evento, serão
           realizados diversos minicursos, talks e processos seletivos, que visam

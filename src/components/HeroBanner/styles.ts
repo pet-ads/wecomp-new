@@ -14,6 +14,13 @@ export const LogoContainer = styled.div`
   max-height: 60vh;
 
   background-color: var(--primary-color);
+
+  @media screen and (max-width: 768px) {
+    min-width: 100vw;
+    max-width: 100vw;
+
+    min-height: 100vh;
+  }
 `;
 
 export const EventLogo = styled.img`
@@ -40,8 +47,12 @@ export const EventDate = styled.div`
     font-size: 12.5pt;
 
     text-align: center;
+
+    white-space: nowrap;
 `
 
 export const HighlightedText = styled.strong`
   font-size: larger;
+
+  white-space: nowrap;
 `

@@ -5,7 +5,7 @@ import {
   EventLogo,
 } from "./styles";
 
-export const HeroBanner = () => {
+export default function HeroBanner(){
   return (
     <LogoContainer>
       <EventLogo

@@ -5,7 +5,7 @@ import { NavList } from "./subcomponents/NavList";
 import { Nav } from "./styles";
 import { LinkAnchor } from "../../types/Navigation";
 
-export function Header() {
+export default function Header(){
   const links: LinkAnchor[] = [
     { text: "Início", url: "" },
     { text: "Sobre", url: "" },

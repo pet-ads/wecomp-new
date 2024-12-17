@@ -14,6 +14,7 @@ export const PrologueContent = styled(SectionContent)`
 
   @media (max-width: 768px) {
     height: 60vh;
+    padding-bottom: 5rem;
   }
 
   @media (max-width: 480px) {
