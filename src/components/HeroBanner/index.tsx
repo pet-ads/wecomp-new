@@ -9,7 +9,7 @@ export const HeroBanner = () => {
   return (
     <LogoContainer>
       <EventLogo
-        src="src/assets/images/wecompLogo.png"
+        src="images/wecompLogo.svg"
         alt="Logo de apresentação"
       />
       <EventDate>
