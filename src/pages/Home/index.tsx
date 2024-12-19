@@ -1,4 +1,5 @@
 // Components
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import HeroBanner from "../../components/sections/HeroBanner";
 import Programming from "../../components/sections/Programming";
@@ -18,6 +19,7 @@ export default function Home() {
         <Supporters />
         <Programming />
       </Main>
+      <Footer/>
     </>
   );
 }
