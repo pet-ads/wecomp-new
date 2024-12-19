@@ -23,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--background-color);
     color: var(--secundary-text-color);
 
-    font-family: sans-serif; 
+    font-family: "MontSerrat"; 
   }
 `;
 
