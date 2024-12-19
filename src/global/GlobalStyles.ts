@@ -6,7 +6,8 @@ const GlobalStyles = createGlobalStyle`
     --background-color: #F4F3EF;
     --primary-text-color: #FFFFFF;
     --secundary-text-color: #000000;
-    --primary-color: #1A800A;
+    --primary-color: #0E6700;
+    --secundary-color: #1A800A;
   }
 
  * {

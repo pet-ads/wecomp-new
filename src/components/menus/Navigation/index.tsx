@@ -1,10 +1,10 @@
-// Styles
-import { NavigationLink, NavigationList, NavigationItem } from "./styles";
-
 // Types
-import { NavListProps } from "../../../../types/Navigation";
+import { NavListProps } from '../../../types/Navigation'
 
-export function NavList({ links }: NavListProps) {
+// Styles
+import { NavigationItem, NavigationLink, NavigationList } from "./styles";
+
+export default function MenuNavigation({links}: NavListProps){
   return (
     <NavigationList>
       {links.map((link, index) => (

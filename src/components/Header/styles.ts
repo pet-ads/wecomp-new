@@ -2,21 +2,22 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-    position: fixed;
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 
-    width: 100%;
+  min-width: 100%;
 
-    min-height: 5vh;
-    max-height: 5vh;
+  min-height: 5vh;
 
-    gap: 2rem 5rem;
+  padding: 0.5rem 0;
 
-    background-color: var(--primary-color);
+  gap: 2rem;
 
-`
+  background-color: var(--primary-color);
+
+`;
