@@ -2,9 +2,9 @@
 import { LabelContainer, LabelText } from "./styles";
 
 // Types
-import { SubtitleLabel } from "../../types/SectionLabel";
+import { SubtitleLabel } from "../../../types/SectionLabel";
 
-export const SubTitle = ({ children }: SubtitleLabel) => {
+export default function SubTitle({ children }: SubtitleLabel){
   return (
     <LabelContainer>
       <LabelText>{children}</LabelText>

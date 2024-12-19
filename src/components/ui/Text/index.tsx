@@ -1,5 +1,5 @@
 // Types
-import { TextContainerProps } from "../../types/TextContainerProps.ts"
+import { TextContainerProps } from "../../../types/TextContainerProps.ts"
 
 // Styles
 import { TextContainer } from "./styles.ts"

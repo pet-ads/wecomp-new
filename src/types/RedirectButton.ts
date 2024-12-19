@@ -1,4 +1,4 @@
-export interface LinkButtonProps {
+export interface RedirectButtonProps {
     link: string;
     children: string;
 }

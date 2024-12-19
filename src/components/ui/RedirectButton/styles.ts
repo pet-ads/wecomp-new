@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ButtonContainer from "../../styles/ButtonContainer.ts";
+import ButtonContainer from "../../../styles/ButtonContainer.ts";
 
 const LinkButton = styled(ButtonContainer)`
     text-decoration: none;

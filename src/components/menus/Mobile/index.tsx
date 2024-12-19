@@ -1,7 +1,7 @@
 
 // External library
 import { useState } from 'react'
-import { IoMenuOutline, IoClose } from "react-icons/io5";
+import { IoMenuOutline } from "react-icons/io5";
 
 // Components
 import DropDownMenu from "../subcomponent/DropDown";

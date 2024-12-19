@@ -1,10 +1,10 @@
 // Components
-import { SubTitle } from "../../SubTitle";
+import SubTitle from "../../ui/SubTitle";
+import Text from "../../ui/Text";
+import RedirectButton from "../../ui/RedirectButton";
 
 // Styles
 import { PrologueContainer, PrologueContent } from "./styles";
-import Text from "../../Text";
-import LinkButton from "../../LinkButton/styles";
 
 export default function Prologue() {
   return (
@@ -20,7 +20,10 @@ export default function Prologue() {
           reduzir a distância entre a teoria e a prática, ensinar tecnologias
           novas e promover o ingresso dos participantes no mercado de trabalho.
         </Text>
-        <LinkButton>Veja mais</LinkButton>
+        <RedirectButton
+          link="http://petads.paginas.scl.ifsp.edu.br/#/"
+          children="Veja mais"
+        />
       </PrologueContent>
     </PrologueContainer>
   );

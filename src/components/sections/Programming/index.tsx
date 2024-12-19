@@ -1,5 +1,5 @@
 // Components
-import { SubTitle } from "../../SubTitle";
+import SubTitle from "../../ui/SubTitle";
 
 // Styles
 import { ProgrammingContainer, ProgrammingContent } from "./styles";
