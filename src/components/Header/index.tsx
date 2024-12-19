@@ -15,7 +15,7 @@ export default function Header() {
     { text: "Locais", url: "" },
     { text: "Destaques", url: "" },
     { text: "Contato", url: "" },
-    { text: "Eventos", url: "" },
+    { text: "Edições", url: "" },
     { text: "FAQ", url: "" },
   ];
 
