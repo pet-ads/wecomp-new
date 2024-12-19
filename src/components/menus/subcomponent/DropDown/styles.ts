@@ -1,7 +1,6 @@
 // External Library
 import styled from "styled-components";
 
-
 export const DropDownList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -18,13 +17,11 @@ export const DropDownList = styled.ul`
 
   gap: 1rem;
 
-  border-radius: 1rem 0 0 1rem ;
+  border-radius: 1rem 0 0 1rem;
 
   list-style-type: none;
 
   background-color: var(--secundary-color);
-
-  transition: .5s ease-in-out;
 `;
 
 export const DropDownRow = styled.li`
@@ -37,4 +34,5 @@ export const DropDownLink = styled.a`
   text-decoration: none;
 
   color: var(--secundary-text-color);
+  cursor: pointer;
 `;
