@@ -2,6 +2,7 @@
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import HeroBanner from "../../components/sections/HeroBanner";
+import Locations from "../../components/sections/Locations";
 import Programming from "../../components/sections/Programming";
 import Prologue from "../../components/sections/Prologue";
 import Supporters from "../../components/sections/Supporters";
@@ -18,6 +19,7 @@ export default function Home() {
         <Prologue />
         <Supporters />
         <Programming />
+        <Locations/>
       </Main>
       <Footer/>
     </>
