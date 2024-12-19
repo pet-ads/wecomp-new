@@ -20,7 +20,6 @@ export const TextContainer = styled.div`
   color: var(--secundary-text-color);
 
   @media (max-width: 380px) {
-    font-size: 12.5pt;
+    font-size: 10pt;
   }
-
 `;

@@ -17,7 +17,6 @@ export const SupportesContent = styled(SectionContent)`
 export const SupportesLogoContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
 
   width: 100%;
   height: 80%;
@@ -26,6 +25,8 @@ export const SupportesLogoContainer = styled.div`
   margin: 1rem 0;
 
   gap: 3rem;
+
+  overflow-x: hidden;
 
   background-color: purple;
 `;
@@ -42,6 +43,6 @@ export const SupporterLogo = styled.img`
   }
 
   @media (max-width: 480px) {
-    width: 90%;
+    width: 30%;
   }
 `;
