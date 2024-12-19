@@ -3,36 +3,35 @@ import styled from "styled-components";
 export const SectionContainer = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
+
 
   min-width: 100%;
   max-width: 100%;
 
-  height: 25rem;
+  height: fit-content;
+  min-height: 100vh;
 
-  padding: 5rem 0;
+  padding: 2rem 0;
 
+  background-color: blue;
 `;
 
 export const SectionContent = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    box-sizing: content-box;
+  min-width: 80%;
+  max-width: 80%;
 
-    min-width: 85%;
-    max-width: 85%;
+  height: fit-content;
 
-    height: 35vh;
+  padding: 2rem 0;
 
-    padding: 2rem;
-
-    background-color: orange;
+  background-color: orange;
 
   overflow-wrap: break-word;
   line-height: 1.6;
-
-`
+`;

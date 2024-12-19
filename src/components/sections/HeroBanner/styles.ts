@@ -7,52 +7,50 @@ export const LogoContainer = styled.div`
   align-items: center;
 
   min-width: 100%;
-  max-width: 100%;
 
-
-  min-height: 60vh;
-  max-height: 60vh;
+  min-height: 100vh;
+  max-height: 100vh;
 
   background-color: var(--primary-color);
-
-  @media screen and (max-width: 768px) {
-    min-width: 100vw;
-    max-width: 100vw;
-
-    min-height: 100vh;
-  }
 `;
 
 export const EventLogo = styled.img`
   min-width: 80%;
   max-width: 80%;
 
-  min-height: 20vh;
-  max-height: 20vh;
+  min-height: 25vh;
+  max-height: 25vh;
 
   object-fit: contain;
 `;
 
 export const EventDate = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    min-width: 60%;
-    max-width: 60%;
+  min-width: 60%;
+  max-width: 60%;
 
-    padding: .5rem 0;
+  padding: 0.5rem 0;
 
-    font-size: 12.5pt;
+  font-size: 12.5pt;
 
-    text-align: center;
+  text-align: center;
 
-    white-space: nowrap;
-`
+  white-space: nowrap;
+
+  @media (max-width: 400px) {
+    min-width: 80%;
+    max-width: 80%;
+
+    padding: 0 1rem;
+  }
+`;
 
 export const HighlightedText = styled.strong`
   font-size: larger;
 
   white-space: nowrap;
-`
+`;

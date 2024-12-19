@@ -1,16 +1,16 @@
 // Components
-import { SubTitle } from "../SubTitle";
+import { SubTitle } from "../../SubTitle";
 
 // Styles
-import { PrologueContainer, PrologueContent, ProloqueButton } from "./styles";
-import Text from "../Text";
-import LinkButton from "../LinkButton/styles";
+import { PrologueContainer, PrologueContent } from "./styles";
+import Text from "../../Text";
+import LinkButton from "../../LinkButton/styles";
 
-export default function Prologue(){
+export default function Prologue() {
   return (
     <PrologueContainer>
       <PrologueContent>
-        <SubTitle>Sobre a WECOMP</SubTitle>
+        <SubTitle>Sobre a Wecomp</SubTitle>
         <Text>
           A Wecomp é a semana da computação do IFSP São Carlos, que neste ano
           realizará sua sexta edição. O objetivo do evento é proporcionar uma
@@ -20,10 +20,8 @@ export default function Prologue(){
           reduzir a distância entre a teoria e a prática, ensinar tecnologias
           novas e promover o ingresso dos participantes no mercado de trabalho.
         </Text>
-        <ProloqueButton>
-          <LinkButton>Veja mais</LinkButton>
-        </ProloqueButton>
+        <LinkButton>Veja mais</LinkButton>
       </PrologueContent>
     </PrologueContainer>
   );
-};
+}

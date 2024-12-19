@@ -12,7 +12,7 @@ const ButtonContainer = styled.button`
   min-height: 2.5rem;
   max-height: 2.5rem;
 
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 
   background-color: var(--primary-color);
   color: var(--primary-text-color);
@@ -25,7 +25,6 @@ const ButtonContainer = styled.button`
   line-height: 1.5;
   transition: opacity 0.3s ease-in-out;
 
-
   cursor: pointer;
 
   &:hover {
@@ -37,6 +36,18 @@ const ButtonContainer = styled.button`
     outline-offset: 2px;
   }
 
+  @media (max-width: 380px) {
+    min-width: 6rem;
+    max-width: 6rem;
+
+    min-height: 2rem;
+    max-height: 2rem;
+
+
+    font-size: .75rem;
+
+    white-space: nowrap;
+  }
 `;
 
 export default ButtonContainer;

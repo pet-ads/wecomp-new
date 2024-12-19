@@ -13,6 +13,12 @@ export const LabelContainer = styled.div`
     padding: .5rem;
 
     background-color: var(--secundary-text-color);
+
+    @media (max-width: 400px){
+      min-width: 20vw;
+
+      height: 1.5rem;
+    }
 `
 
 export const LabelText = styled.span`
@@ -23,4 +29,8 @@ export const LabelText = styled.span`
   white-space: nowrap;
 
   color: var(--background-color);
+
+  @media (max-width: 400px) {
+    font-size: 1rem;
+  }
 `;
