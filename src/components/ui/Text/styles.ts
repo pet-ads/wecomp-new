@@ -15,7 +15,6 @@ export const TextContainer = styled.div`
   text-align: justify;
 
   font-size: 15pt;
-  font-weight: lighter;
 
   color: var(--secundary-text-color);
 
