@@ -5,12 +5,15 @@ import RedirectButton from "../../ui/RedirectButton";
 
 // Styles
 import { PrologueContainer, PrologueContent } from "./styles";
+import useSectionRefs from "../../../hooks/useSectionRefs";
 
 export default function Prologue() {
+  const { sections } = useSectionRefs();
+
   return (
     <PrologueContainer>
-      <PrologueContent>
-        <SubTitle>Sobre a Wecomp</SubTitle>
+      <PrologueContent ref={sections.prologue}>
+        <SubTitle children="Sobre a Wecomp" />
         <Text>
           A Wecomp é a semana da computação do IFSP São Carlos, que neste ano
           realizará sua sexta edição. O objetivo do evento é proporcionar uma
