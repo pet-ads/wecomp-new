@@ -4,12 +4,16 @@ import styled from "styled-components";
 export const ArrowContainerBox = styled.div`
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 
-  width: 100%;
+  position: relative;
+  top: 8rem;
+
+  z-index: 10;
+
+  width: 3rem;
   height: 3rem;
 
-  background-color: red;
   cursor: pointer;
 `;
 
