@@ -23,7 +23,6 @@ export const LabelContainer = styled.div`
 
 export const LabelText = styled.span`
   font-size: 1.5rem;
-  letter-spacing: 3px;
   font-weight: bold;
 
   white-space: nowrap;

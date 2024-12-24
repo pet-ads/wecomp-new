@@ -1,6 +1,7 @@
 // Components
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import Contact from "../../components/sections/Contact";
 import HeroBanner from "../../components/sections/HeroBanner";
 import Highlights from "../../components/sections/Highlights";
 import Locations from "../../components/sections/Locations";
@@ -21,9 +22,10 @@ export default function Home() {
         <Supporters />
         <Programming />
         <Locations />
-        <Highlights/>
+        <Highlights />
+        <Contact/>
       </Main>
-      <Footer/>
+      <Footer />
     </>
   );
 }
