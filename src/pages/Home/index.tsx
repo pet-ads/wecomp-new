@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import Contact from "../../components/sections/Contact";
 import Editions from "../../components/sections/Editions";
 import HeroBanner from "../../components/sections/HeroBanner";
+import FAQs from "../../components/sections/FAQs";
 import Highlights from "../../components/sections/Highlights";
 import Locations from "../../components/sections/Locations";
 import Programming from "../../components/sections/Programming";
@@ -25,7 +26,8 @@ export default function Home() {
         <Locations />
         <Highlights />
         <Contact />
-        <Editions/>
+        <Editions />
+        <FAQs/>
       </Main>
       <Footer />
     </>
