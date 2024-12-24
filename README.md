@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 # WECOMP VI
 
 Página destinada à Semana da Computação WECOMP.
@@ -39,6 +38,10 @@ Componentes reutilizáveis organizados em subdiretórios:
   - Seções específicas da aplicação.
 - **`ui/`**:
   - Componentes de interface do usuário, como botões, componentes de texto e outros elementos que podem ser reutilizados por outros componentes na aplicação.
+
+##### `context/`
+
+Contém módulos utilizados para centralizar e prover estados para a aplicação.
 
 ##### `global/`
 
