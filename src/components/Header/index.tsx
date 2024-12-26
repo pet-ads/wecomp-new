@@ -5,9 +5,11 @@ import MenuMobile from "../menus/Mobile";
 // Hooks
 import useSectionRefs from "../../hooks/useSectionRefs";
 
+// Types
+import { LinkAnchor } from "../../types/Navigation";
+
 // Styles
 import { Nav } from "./styles";
-import { LinkAnchor } from "../../types/Navigation";
 
 export default function Header() {
   const { sections } =  useSectionRefs();
