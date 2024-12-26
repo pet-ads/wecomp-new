@@ -13,6 +13,7 @@ import Footer from "../../components/Footer";
 
 // Styles
 import { Main } from "./styles";
+import Marathon from "../../components/sections/Marathon";
 
 export default function Home() {
   return (
@@ -23,11 +24,12 @@ export default function Home() {
         <Prologue />
         <Supporters />
         <Programming />
+        <Marathon />
         <Locations />
         <Highlights />
         <Contact />
         <Editions />
-        <FAQs/>
+        <FAQs />
       </Main>
       <Footer />
     </>
