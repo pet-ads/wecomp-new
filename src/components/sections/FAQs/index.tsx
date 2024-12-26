@@ -1,14 +1,19 @@
 // Components
 import SubTitle from "../../ui/SubTitle";
+import FAQ from "./subcomponent";
+
+// Hooks
+import useSectionRefs from "../../../hooks/useSectionRefs";
 
 // Styles
 import { FAQContainer, FAQContent, FAQList} from "./styles";
-import FAQ from "./subcomponent";
 
 export default function FAQs() {
+  const { sections } = useSectionRefs();
+
   return (
     <FAQContainer>
-      <FAQContent>
+      <FAQContent ref={sections.FAQs}>
         <SubTitle children="Perguntas frequentes" />
         <FAQList>
           <FAQ question="pgt 1" response="res 1" />

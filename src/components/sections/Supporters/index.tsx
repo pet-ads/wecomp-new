@@ -1,6 +1,9 @@
 // Components
 import SubTitle from "../../ui/SubTitle";
 
+// Hooks
+import useSectionRefs from "../../../hooks/useSectionRefs";
+
 // Styles
 import {
   SupporterLogo,
@@ -10,10 +13,12 @@ import {
 } from "./styles";
 
 export default function Supporters() {
+  const { sections } = useSectionRefs();
+
   return (
     <SupportesContainer>
-      <SupportesContent>
-        <SubTitle>Patrocinadores</SubTitle>
+      <SupportesContent ref={sections.supporters}>
+        <SubTitle children="Patrocinadores"/>
         <SupportesLogoContainer>
           <SupporterLogo
             src="images/CompassUol.svg"
