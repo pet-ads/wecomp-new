@@ -8,11 +8,11 @@ export const Nav = styled.nav`
 
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 10;
 
   min-width: 100%;
 
-  min-height: 5vh;
+  min-height: 4vh;
 
   padding: 0.5rem 0;
 

@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export const NavigationList = styled.ul`
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: space-around;
 
   position: fixed;
@@ -33,4 +32,6 @@ export const NavigationLink = styled.a`
   text-decoration: none;
 
   color: var(--secundary-text-color);
+
+  cursor: pointer;
 `;
