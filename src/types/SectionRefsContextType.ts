@@ -3,9 +3,16 @@ import React from "react"
 
 export interface SectionRefsContextType {
   sections: {
+    HeroBanner: React.RefObject<HTMLDivElement>;
     prologue: React.RefObject<HTMLDivElement>;
     supporters: React.RefObject<HTMLDivElement>;
     programming: React.RefObject<HTMLDivElement>;
+    Locations: React.RefObject<HTMLDivElement>;
+    Highlights: React.RefObject<HTMLDivElement>;
+    Marathon: React.RefObject<HTMLDivElement>;
+    Contact: React.RefObject<HTMLDivElement>;
+    Editions: React.RefObject<HTMLDivElement>;
+    FAQs: React.RefObject<HTMLDivElement>;
   };
 }
 
