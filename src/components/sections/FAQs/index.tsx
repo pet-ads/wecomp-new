@@ -6,7 +6,7 @@ import FAQ from "./subcomponent";
 import useSectionRefs from "../../../hooks/useSectionRefs";
 
 // Styles
-import { FAQContainer, FAQContent, FAQList} from "./styles";
+import { FAQContainer, FAQContent, FAQList } from "./styles";
 
 export default function FAQs() {
   const { sections } = useSectionRefs();

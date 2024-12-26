@@ -25,8 +25,8 @@ export default function Home() {
         <Supporters />
         <Programming />
         <Marathon />
-        <Locations />
         <Highlights />
+        <Locations />
         <Contact />
         <Editions />
         <FAQs />

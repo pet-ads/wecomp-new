@@ -1,5 +1,6 @@
 // Components
 import SubTitle from "../../ui/SubTitle";
+import ArrowButton from "../../ui/ArrowButton";
 
 // Hooks
 import useSectionRefs from "../../../hooks/useSectionRefs";
@@ -18,7 +19,7 @@ export default function Supporters() {
   return (
     <SupportesContainer>
       <SupportesContent ref={sections.supporters}>
-        <SubTitle children="Patrocinadores"/>
+        <SubTitle children="Patrocinadores" />
         <SupportesLogoContainer>
           <SupporterLogo
             src="images/CompassUol.svg"
@@ -47,6 +48,7 @@ export default function Supporters() {
           />
         </SupportesLogoContainer>
       </SupportesContent>
+      <ArrowButton sectionRef={sections.programming} />
     </SupportesContainer>
   );
 }

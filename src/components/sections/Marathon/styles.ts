@@ -18,7 +18,7 @@ export const MarathonCardContainer = styled.div`
 
   width: 100%;
 
-  min-height: 55vh;
+  min-height: 40vh;
 
   padding: 2rem 0;
 

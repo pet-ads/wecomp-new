@@ -1,11 +1,16 @@
 // Components
 import SubTitle from "../../ui/SubTitle";
+import ArrowButton from "../../ui/ArrowButton";
 
 // Hooks
 import useSectionRefs from "../../../hooks/useSectionRefs";
 
 // Styles
-import { EditionsCardContainer, EditionsContainer, EditionsContent } from "./styles";
+import {
+  EditionsCardContainer,
+  EditionsContainer,
+  EditionsContent,
+} from "./styles";
 
 export default function Editions() {
   const { sections } = useSectionRefs();
@@ -13,11 +18,12 @@ export default function Editions() {
   return (
     <EditionsContainer>
       <EditionsContent ref={sections.Editions}>
-        <SubTitle children="Edições anteriores"/>
+        <SubTitle children="Edições anteriores" />
         <EditionsCardContainer>
           Carrossel of Editions cards
         </EditionsCardContainer>
       </EditionsContent>
+      <ArrowButton sectionRef={sections.FAQs} />
     </EditionsContainer>
   );
 }

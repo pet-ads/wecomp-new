@@ -7,9 +7,7 @@ export const ArrowContainerBox = styled.div`
   align-items: center;
 
   position: relative;
-  top: 8rem;
-
-  z-index: 10;
+  top: 12rem;
 
   width: 3rem;
   height: 3rem;

@@ -7,11 +7,9 @@ import {
   SectionContent,
 } from "../../../styles/SectionContainer";
 
-export const ProgrammingContainer = styled(SectionContainer)`
-`;
+export const ProgrammingContainer = styled(SectionContainer)``;
 
-export const ProgrammingContent = styled(SectionContent)`
-`;
+export const ProgrammingContent = styled(SectionContent)``;
 
 export const ProgrammingCardContainer = styled.div`
   display: flex;
@@ -20,12 +18,11 @@ export const ProgrammingCardContainer = styled.div`
 
   width: 100%;
 
-  min-height: 55vh;
+  min-height: 40vh;
 
   padding: 2rem 0;
 
   margin: 2rem 0;
 
   background-color: red;
-  
-`
+`;

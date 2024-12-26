@@ -7,7 +7,8 @@ import {
   SectionContent,
 } from "../../../styles/SectionContainer";
 
-export const HighlightsContainer = styled(SectionContainer)``;
+export const HighlightsContainer = styled(SectionContainer)`
+`;
 
 export const HighlightsContent = styled(SectionContent)``;
 
@@ -18,7 +19,7 @@ export const HighlightsCardContainer = styled.div`
 
   width: 100%;
 
-  min-height: 55vh;
+  min-height: 40vh;
 
   padding: 2rem 0;
 

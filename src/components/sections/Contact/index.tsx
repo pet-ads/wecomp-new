@@ -1,6 +1,7 @@
 // Components
 import SubTitle from "../../ui/SubTitle";
 import Text from "../../ui/Text";
+import ArrowButton from "../../ui/ArrowButton";
 
 // Hooks
 import useSectionRefs from "../../../hooks/useSectionRefs";
@@ -22,6 +23,7 @@ export default function Contact() {
             <Card>Icon 3</Card>
           </ContactCards>
         </ContactContent>
+        <ArrowButton sectionRef={sections.Editions}/>
       </ContactContainer>
     );
 }

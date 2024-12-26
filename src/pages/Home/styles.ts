@@ -11,5 +11,4 @@ export const Main = styled.div`
 
   background-color: aqua;
 
-  padding: 5rem 0;
 `;
