@@ -13,6 +13,8 @@ export interface SectionRefsContextType {
     Contact: React.RefObject<HTMLDivElement>;
     Editions: React.RefObject<HTMLDivElement>;
     FAQs: React.RefObject<HTMLDivElement>;
+    DropDownMenu: React.RefObject<HTMLDivElement>;
+
   };
 }
 

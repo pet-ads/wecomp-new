@@ -20,6 +20,7 @@ export default function SectionReferences({ children }: ChildrenContext) {
   const EditionsSection = useRef<HTMLDivElement>(null);
   const ContactSection = useRef<HTMLDivElement>(null);
   const FAQsSection = useRef<HTMLDivElement>(null);
+  const DropDownMenuComponent = useRef<HTMLDivElement>(null);
 
   return (
     <SectionRefsContext.Provider
@@ -35,6 +36,7 @@ export default function SectionReferences({ children }: ChildrenContext) {
           Editions: EditionsSection,
           Contact: ContactSection,
           FAQs: FAQsSection,
+          DropDownMenu: DropDownMenuComponent,
         },
       }}
     >

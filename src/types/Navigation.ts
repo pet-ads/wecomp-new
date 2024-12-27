@@ -1,8 +1,9 @@
 export interface LinkAnchor {
   text: string;
-  url: string;
+  ref: React.RefObject<HTMLDivElement>;
 }
 
 export interface NavListProps {
   links: LinkAnchor[];
+  isOpen?: boolean
 }
