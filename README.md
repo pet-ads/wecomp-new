@@ -61,6 +61,10 @@ Estilos compartilhados entre componentes:
 
 - Estilos genéricos para outros componentes.
 
+##### `animations/`
+
+Contém animações reutilizáveis
+
 ##### `types/`
 
 Definições de tipos TypeScript:
@@ -70,6 +74,10 @@ Definições de tipos TypeScript:
 ##### `hooks/`
 
 Contém hooks personalizados utilizados pelos componentes.
+
+##### `utils/`
+
+Funções utilitárias:
 
 ## Como rodar o projeto
 
@@ -84,6 +92,3 @@ Contém hooks personalizados utilizados pelos componentes.
 3. Faça suas alterações e adicione commits: `git commit -m "Minha contribuição"`.
 4. Envie suas alterações: `git push origin minha-branch`.
 5. Abra um Pull Request.
-=======
-
->>>>>>> Stashed changes
