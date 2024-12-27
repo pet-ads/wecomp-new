@@ -1,6 +1,5 @@
 // External library
-import { useState, useEffect, useRef } from "react";
-import { IoMenuOutline } from "react-icons/io5";
+import { useState, useEffect } from "react";
 
 // Components
 import DropDownMenu from "../subcomponent/DropDown";
@@ -8,19 +7,25 @@ import DropDownMenu from "../subcomponent/DropDown";
 // Types
 import { NavListProps } from "../../../types/Navigation";
 
+// Context
+import useSectionRefs from "../../../hooks/useSectionRefs";
+
 // Styles
-import { SandWichIcon } from "./styles";
+import { SandWichIcon, WrapperIcon } from "./styles";
 
 export default function MenuMobile({ links }: NavListProps) {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const menuRef = useRef<HTMLDivElement>(null);
+  const { sections } = useSectionRefs();
 
   const handleOpenMenu = () => {
     setOpenMenu((prev) => !prev);
   };
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+    if (
+      sections.DropDownMenu.current &&
+      !sections.DropDownMenu.current.contains(event.target as Node)
+    ) {
       setOpenMenu(false);
     }
   };
@@ -31,12 +36,12 @@ export default function MenuMobile({ links }: NavListProps) {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  });
 
   return (
-    <SandWichIcon ref={menuRef}>
-      <IoMenuOutline size="3rem" color="white" onClick={handleOpenMenu} />
-      {openMenu && <DropDownMenu links={links} />}
+    <SandWichIcon ref={sections.DropDownMenu}>
+      <WrapperIcon onClick={handleOpenMenu} />
+      <DropDownMenu links={links} isOpen={openMenu} />
     </SandWichIcon>
   );
 }

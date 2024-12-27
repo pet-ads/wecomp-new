@@ -1,5 +1,9 @@
 // External Library
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
+export const Wrapper = styled(motion.div)`
+`;
 
 export const DropDownList = styled.ul`
   display: flex;
@@ -7,9 +11,9 @@ export const DropDownList = styled.ul`
   justify-content: center;
   align-items: center;
 
-  position: absolute;
-  top: 2.75rem;
-  right: 0;
+  position: relative;
+  top: 0;
+  left: .5rem;
 
   min-height: 12.5vh;
 

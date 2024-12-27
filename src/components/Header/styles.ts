@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
   display: flex;
-  justify-content: space-around;
+  justify-content: end;
   align-items: center;
 
   position: fixed;
@@ -12,7 +12,7 @@ export const Nav = styled.nav`
 
   min-width: 100%;
 
-  min-height: 4vh;
+  min-height: 2.5rem;
 
   padding: 0.5rem 0;
 

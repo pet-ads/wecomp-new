@@ -3,22 +3,23 @@ import styled from "styled-components";
 
 export const NavigationList = styled.ul`
   display: flex;
-  justify-content: space-around;
-
-  position: fixed;
-  top: 0;
+  justify-content: center;
+  align-items: center;
 
   width: 100%;
 
   padding: 1rem 0;
 
-  gap: 1.5rem;
+  gap: 2.5rem;
 
   list-style-type: none;
-  letter-spacing: 3px;
 
-  @media (max-width: 1035px) {
+  @media (max-width: 1080px) {
     display: none;
+  }
+
+  @media (min-width: 1500px) {
+    gap: 3rem;
   }
 `;
 
@@ -34,4 +35,9 @@ export const NavigationLink = styled.a`
   color: var(--secundary-text-color);
 
   cursor: pointer;
+
+  @media (min-width: 1350px) {
+    font-size: 1.25rem;
+  }
+
 `;
