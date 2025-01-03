@@ -1,7 +1,9 @@
 // External library
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { IoIosArrowDown } from "react-icons/io";
 
-export const ArrowContainerBox = styled.div`
+export const ArrowContainerBox = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,5 +15,16 @@ export const ArrowContainerBox = styled.div`
   height: 3rem;
 
   cursor: pointer;
+
+  @media (max-width: 1080px) {
+    top: 6.5rem;
+  }
 `;
 
+export const WrapperIcon = styled(IoIosArrowDown)`
+  font-size: 2rem;
+
+  color: black;
+
+  cursor: pointer;
+`;

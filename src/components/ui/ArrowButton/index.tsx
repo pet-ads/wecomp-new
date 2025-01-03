@@ -1,7 +1,3 @@
-// External library
-import { IoIosArrowDown } from "react-icons/io";
-import { motion } from "framer-motion";
-
 // Types
 import { ArrowScrool } from "../../../types/ArrowButtonScroll";
 
@@ -9,23 +5,18 @@ import { ArrowScrool } from "../../../types/ArrowButtonScroll";
 import { handlePageScrollingOnClick } from "../../../utils/pageScrollingOnClick";
 
 // Styles
-import { ArrowContainerBox } from "./styles";
+import { ArrowContainerBox, WrapperIcon } from "./styles";
 
+// Animations
+import { LEVITATION } from "../../../animations/levitation";
 
 export default function ArrowButton({ sectionRef }: ArrowScrool) {
-
   return (
-    <ArrowContainerBox onClick={() => handlePageScrollingOnClick({sectionRef})}
-      as={motion.div}
-      animate={{ y: [0, -15, 0] }}
-      transition={{
-        duration: 1.5,
-        repeat: Infinity,
-        repeatType: "loop",
-        ease: "easeInOut",
-      }}
+    <ArrowContainerBox
+      onClick={() => handlePageScrollingOnClick({ sectionRef })}
+      {...LEVITATION}
     >
-      <IoIosArrowDown size={24} color="black" />
+      <WrapperIcon />
     </ArrowContainerBox>
   );
 }

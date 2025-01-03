@@ -14,11 +14,11 @@ export const TextContainer = styled.div`
 
   text-align: justify;
 
-  font-size: 15pt;
+  font-size: 1rem;
 
   color: var(--secundary-text-color);
 
   @media (max-width: 380px) {
-    font-size: 10pt;
+    font-size: 0.8rem;
   }
 `;

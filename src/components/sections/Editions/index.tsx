@@ -22,8 +22,8 @@ export default function Editions() {
         <EditionsCardContainer>
           Carrossel of Editions cards
         </EditionsCardContainer>
-      </EditionsContent>
       <ArrowButton sectionRef={sections.FAQs} />
+      </EditionsContent>
     </EditionsContainer>
   );
 }
