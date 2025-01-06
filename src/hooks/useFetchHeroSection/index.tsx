@@ -14,11 +14,14 @@ export default function useFetchHeroSection() {
         const response = await API.get("heroBanner.json");
         setHeroInformation(response.data.eventHero);
       } catch (error) {
-        console.error("Ocorreu um erro ao obter da seção de hero:", error);
+        console.error(
+          "Ocorreu um erro ao obter os dados da seção de hero:",
+          error
+        );
       }
     };
     fetchHero();
   }, []);
 
-  return {heroInformation};
+  return { heroInformation };
 }
