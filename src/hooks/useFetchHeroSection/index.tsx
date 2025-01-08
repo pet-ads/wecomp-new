@@ -1,27 +1,10 @@
-// External library
-import { useEffect, useState } from "react";
-import { API } from "../../api/config";
-
 // Types
 import { HeroSectionProps } from "../../types/HeroSection";
 
+// JSON
+import heroBanner from "../../../public/data/heroBanner.json";
+
 export default function useFetchHeroSection() {
-  const [heroInformation, setHeroInformation] = useState<HeroSectionProps>();
-
-  useEffect(() => {
-    const fetchHero = async () => {
-      try {
-        const response = await API.get("heroBanner.json");
-        setHeroInformation(response.data.eventHero);
-      } catch (error) {
-        console.error(
-          "Ocorreu um erro ao obter os dados da seção de hero:",
-          error
-        );
-      }
-    };
-    fetchHero();
-  }, []);
-
+  const heroInformation: HeroSectionProps = heroBanner.eventHero;
   return { heroInformation };
 }

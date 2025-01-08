@@ -1,25 +1,10 @@
-// External library
-import { useEffect, useState } from "react";
-import { API } from "../../api/config";
-
 // Types
 import { PrologueSectionProps } from "../../types/PrologueSection";
 
+// JSON
+import prologue from "../../../public/data/prologue.json";
+
 export default function useFetchPrologueSection() {
-  const [prologueInformation, setPrologueInformation] =
-    useState<PrologueSectionProps>();
-
-  useEffect(() => {
-    const fetchHero = async () => {
-      try {
-        const response = await API.get("prologue.json");
-        setPrologueInformation(response.data.eventDetails);
-      } catch (error) {
-        console.error("Ocorreu um erro ao obter os dados da seção de prológo:", error);
-      }
-    };
-    fetchHero();
-  }, []);
-
+  const prologueInformation: PrologueSectionProps = prologue.eventDetails;
   return { prologueInformation };
 }
