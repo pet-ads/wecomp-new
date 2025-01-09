@@ -3,7 +3,7 @@
         {
             "id": 1,
             "name": "Abertura",
-            "image": "public/images/image 31.svg",
+            "image": "/images/image 31.svg",
             "imageDescription": "Abertura da Wecomp",
             "bio": "Especialista em Análise de Dados",
             "author": "Marcos da Silva",
@@ -18,7 +18,7 @@
         {
             "id": 2,
             "name": "Minicurso de Front-end",
-            "image": "public/images/image 31.svg",
+            "image": "/images/image 31.svg",
             "imageDescription": "Minicurso de Back-end",
             "bio": "Especialista em Front-end",
             "author": "Bruna doss Santos",
@@ -33,7 +33,7 @@
         {
             "id": 3,
             "name": "Talk sobre a Importância do Back-end",
-            "image": "public/images/image 31.svg",
+            "image": "/images/image 31.svg",
             "imageDescription": "Minicurso de Back-end",
             "bio": "Especialista em Back-end",
             "author": "Clara de Oliveira",
@@ -48,7 +48,7 @@
         {
             "id": 4,
             "name": "Visita Técnica",
-            "image": "public/images/image 31.svg",
+            "image": "/images/image 31.svg",
             "imageDescription": "Ambiente da Visita Técnica",
             "bio": "Fullstack com especialização em Mobile",
             "author": "Diogo Pereira",
