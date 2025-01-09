@@ -1,0 +1,41 @@
+{
+    "eventSupporters": [
+        {
+            "id": 1,
+            "nameSupporter": "Softable",
+            "logoAlternativeText": "Logo da empresa Softable",
+            "logoPath": "public/images/Softable.svg"
+        },
+        {
+            "id": 2,
+            "nameSupporter": "Onovolab",
+            "logoAlternativeText": "Logo da empresa ONOVOLAB",
+            "logoPath": "public/images/Onovolab.svg"
+        },
+        {
+            "id": 3,
+            "nameSupportes": "F1RST",
+            "logoAlternativeText": "Logo da empresa F1RST",
+            "logoPath": "public/images/F1RST.svg"
+        },
+        {
+            "id": 4,
+            "nameSupporter": "Xmobots",
+            "logoAlternativeText": "Logo da empresa Xmobots",
+            "logoPath": "public/images/Xmobots.svg"
+        },
+        {
+            "id": 5,
+            "nameSupporter": "Marlabs",
+            "logoAlternativeText": "Logo da empresa Marlabs",
+            "logoPath": "public/images/Marlabs.svg"
+        },
+        {
+            "id": 6,
+            "nameSupporter": "Compass Uol",
+            "logoAlternativeText": "Logo da empresa Compass Uol",
+            "logoPath": "public/images/CompassUol.svg"
+        }
+    ]
+}
+
