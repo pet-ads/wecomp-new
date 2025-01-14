@@ -75,6 +75,10 @@ Definições de tipos TypeScript:
 
 Contém hooks personalizados utilizados pelos componentes.
 
+##### `dto/`
+
+Centraliza a exportação dos componentes chave.
+
 ##### `utils/`
 
 Funções utilitárias:
