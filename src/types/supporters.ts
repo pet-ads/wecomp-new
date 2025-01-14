@@ -6,5 +6,5 @@ export interface SupportersProps {
 }
 
 export interface SupportersScetionProps {
-    supporters: SupportersProps[];
+    eventSupporters: SupportersProps[];
 }
