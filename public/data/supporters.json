@@ -14,7 +14,7 @@
         },
         {
             "id": 3,
-            "nameSupportes": "F1RST",
+            "nameSupporter": "F1RST",
             "logoAlternativeText": "Logo da empresa F1RST",
             "logoPath": "public/images/F1RST.svg"
         },

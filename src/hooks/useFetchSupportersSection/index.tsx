@@ -1,9 +1,9 @@
-// JSON 
-import supporters from "../../../public/data/supporters.json";
+// Types
 import { SupportersScetionProps } from "../../types/supporters";
 
-export default function useFetchSupportersSection() {
-    const supportersInformation: SupportersScetionProps = supporters.eventSupporters
+// JSON 
+import supporters from "../../../public/data/supporters.json";
 
-    return{supportersInformation};
+export default function useFetchSupportersSection(): SupportersScetionProps {
+    return supporters;
 }
