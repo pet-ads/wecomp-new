@@ -13,20 +13,17 @@ import { PrologueContainer, PrologueContent } from "./styles";
 
 export default function Prologue() {
   const { sections } = useSectionRefs();
-  const { prologueInformation } = useFetchPrologueSection();
+  const { buttonLabel, buttonlink, description, sectionLabel } =
+    useFetchPrologueSection();
 
   return (
     <PrologueContainer>
       <PrologueContent ref={sections.prologue}>
-        <SubTitle children={prologueInformation?.sectionLabel || ""} />
-        <Text children={prologueInformation?.description || ""} />
-        {prologueInformation?.buttonlink &&
-          prologueInformation?.buttonLabel && (
-            <RedirectButton
-              link={prologueInformation?.buttonlink}
-              children={prologueInformation?.buttonLabel}
-            />
-          )}
+        <SubTitle children={sectionLabel || ""} />
+        <Text children={description || ""} />
+        {buttonlink && buttonLabel && (
+          <RedirectButton link={buttonlink} children={buttonLabel} />
+        )}
       </PrologueContent>
       <ArrowButton sectionRef={sections.supporters} />
     </PrologueContainer>

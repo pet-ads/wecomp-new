@@ -10,19 +10,15 @@ import { LogoContainer, EventDate, HighlightedText, EventLogo } from "./styles";
 
 export default function HeroBanner() {
   const { sections } = useSectionRefs();
-  const { heroInformation } = useFetchHeroSection();
+  const { eventDate, eventEdition, logoAlternativeText, logoPath } =
+    useFetchHeroSection();
 
   return (
     <LogoContainer ref={sections.HeroBanner}>
-      <EventLogo
-        src={heroInformation?.logoPath}
-        alt={heroInformation?.logoAlternativeText}
-      />
+      <EventLogo src={logoPath} alt={logoAlternativeText} />
       <EventDate>
-        <HighlightedText>
-          {heroInformation?.eventEdition}
-        </HighlightedText>
-        {heroInformation?.eventDate}
+        <HighlightedText>{eventEdition}</HighlightedText>
+        {eventDate}
       </EventDate>
       <ArrowButton sectionRef={sections.prologue} />
     </LogoContainer>
