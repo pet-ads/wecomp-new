@@ -15,7 +15,6 @@ import {
 
 export default function Supporters() {
   const { sections } = useSectionRefs();
-
   return (
     <SupportesContainer>
       <SupportesContent ref={sections.supporters}>
@@ -25,26 +24,6 @@ export default function Supporters() {
             src="images/CompassUol.svg"
             alt="Compass Uol"
             aria-label="Compass Uol Logo"
-          />
-          <SupporterLogo
-            src="images/F1RST.svg"
-            alt="F1RST"
-            aria-label="F1RST Logo"
-          />
-          <SupporterLogo
-            src="images/Marlabs.svg"
-            alt="Marlabs"
-            aria-label="Marlabs Logo"
-          />
-          <SupporterLogo
-            src="images/Softable.svg"
-            alt="Softable"
-            aria-label="Softable Logo"
-          />
-          <SupporterLogo
-            src="images/Xmobots.svg"
-            alt="Xmobots"
-            aria-label="Xmobots Logo"
           />
         </SupportesLogoContainer>
       </SupportesContent>

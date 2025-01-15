@@ -6,30 +6,24 @@ import ArrowButton from "../../ui/ArrowButton";
 
 // Hooks
 import useSectionRefs from "../../../hooks/useSectionRefs";
+import useFetchPrologueSection from "../../../hooks/useFetchPrologueSection";
 
 // Styles
 import { PrologueContainer, PrologueContent } from "./styles";
 
 export default function Prologue() {
   const { sections } = useSectionRefs();
+  const { buttonLabel, buttonlink, description, sectionLabel } =
+    useFetchPrologueSection();
 
   return (
     <PrologueContainer>
       <PrologueContent ref={sections.prologue}>
-        <SubTitle children="Sobre a Wecomp" />
-        <Text>
-          A Wecomp é a semana da computação do IFSP São Carlos, que neste ano
-          realizará sua sexta edição. O objetivo do evento é proporcionar uma
-          maior interação entre os estudantes, o mercado de tecnologia e a
-          cidade de São Carlos. Ao longo de cinco dias de evento, serão
-          realizados diversos minicursos, talks e processos seletivos, que visam
-          reduzir a distância entre a teoria e a prática, ensinar tecnologias
-          novas e promover o ingresso dos participantes no mercado de trabalho.
-        </Text>
-        <RedirectButton
-          link="http://petads.paginas.scl.ifsp.edu.br/#/"
-          children="Veja mais"
-        />
+        <SubTitle children={sectionLabel || ""} />
+        <Text children={description || ""} />
+        {buttonlink && buttonLabel && (
+          <RedirectButton link={buttonlink} children={buttonLabel} />
+        )}
       </PrologueContent>
       <ArrowButton sectionRef={sections.supporters} />
     </PrologueContainer>

@@ -3,19 +3,22 @@ import ArrowButton from "../../ui/ArrowButton";
 
 // Hooks
 import useSectionRefs from "../../../hooks/useSectionRefs";
+import useFetchHeroSection from "../../../hooks/useFetchHeroSection";
 
 // Styles
 import { LogoContainer, EventDate, HighlightedText, EventLogo } from "./styles";
 
 export default function HeroBanner() {
   const { sections } = useSectionRefs();
+  const { eventDate, eventEdition, logoAlternativeText, logoPath } =
+    useFetchHeroSection();
 
   return (
     <LogoContainer ref={sections.HeroBanner}>
-      <EventLogo src="images/wecompLogo.svg" alt="Logo de apresentação" />
+      <EventLogo src={logoPath} alt={logoAlternativeText} />
       <EventDate>
-        <HighlightedText>VI Semana da Computação</HighlightedText>
-        Dia da semana da computação
+        <HighlightedText>{eventEdition}</HighlightedText>
+        {eventDate}
       </EventDate>
       <ArrowButton sectionRef={sections.prologue} />
     </LogoContainer>
