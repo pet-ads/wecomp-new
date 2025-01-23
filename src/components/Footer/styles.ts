@@ -13,7 +13,7 @@ export const FooterContainer = styled.div`
   min-width: 100%;
   max-width: 100%;
 
-  height: 5vh;
+  height: 5.5vh;
 
   padding: 0.2rem 0;
 
@@ -25,7 +25,7 @@ export const FooterContent = styled.span`
   justify-content: space-evenly;
   align-items: center;
 
-  width: 80%;
+  gap: 0.5rem;
 
   text-align: center;
 
