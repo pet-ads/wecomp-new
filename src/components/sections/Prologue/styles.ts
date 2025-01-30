@@ -7,6 +7,10 @@ import {
   SectionContent,
 } from "../../../styles/SectionContainer";
 
-export const PrologueContainer = styled(SectionContainer)``;
+export const PrologueContainer = styled(SectionContainer)`
+  background: var(--background-color);
+`;
 
-export const PrologueContent = styled(SectionContent)``;
+export const PrologueContent = styled(SectionContent)`
+  background: var(--background-color);
+`;
