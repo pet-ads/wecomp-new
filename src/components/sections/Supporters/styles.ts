@@ -33,14 +33,16 @@ export const SupportesLogoContainer = styled.div`
   overflow-x: hidden;
 `;
 
-export const SupporterLogo = styled.img`
+export const SupporterLogo = styled.img<{width?: string}>`
   height: 100%;
   max-width: 15rem;
-  width: 30%;
+  width: ${({width}) => width || "30%"};
   object-fit: contain;
   overflow: hidden;
   margin-left: 4rem;
   margin-bottom: 1rem;
+
+  cursor: pointer;
 
   @media (max-width: 768px) {
     width: 45%;
@@ -53,6 +55,7 @@ export const SupporterLogo = styled.img`
 
 export const MarqueeContainer = styled(motion.div)`
   display: flex;
+  flex-direction: column;
 
   width: 100%;
 
@@ -66,10 +69,10 @@ export const MarqueeContainer = styled(motion.div)`
 export const MarqueeItem = styled.div`
   position: relative;
 
+  gap: 5rem;
+
   font-size: 5rem;
   font-weight: bold;
-
-  margin-left: 3rem; // Espaço entre os itens do marquee
 
   animation: marquee 10s linear infinite;
 
@@ -79,10 +82,10 @@ export const MarqueeItem = styled.div`
 
   @keyframes marquee {
     0% {
-      transform: translateX(-1.5%); // Começa fora da tela à direita
+      transform: translateX(-1.5%);
     }
     100% {
-      transform: translateX(-100%); // Move até fora da tela à esquerda
+      transform: translateX(-100%);
     }
   }
 `;
