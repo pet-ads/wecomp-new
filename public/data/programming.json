@@ -13,6 +13,8 @@
             "active": false,
             "vacancies": "30",
             "location": "Onovolab",
+            "status": "Disponível",
+            "classification": "Básico",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         },
         {
@@ -28,6 +30,8 @@
             "active": false,
             "vacancies": "30",
             "location": "IFSP",
+            "status": "Disponível",
+            "classification": "Básico",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         },
         {
@@ -43,6 +47,8 @@
             "active": false,
             "vacancies": "30",
             "location": "IFSP",
+            "status": "Disponível",
+            "classification": "Básico",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         },
         {
@@ -58,6 +64,8 @@
             "active": false,
             "vacancies": "30",
             "location": "Onovolab",
+            "status": "Disponível",
+            "classification": "Básico",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         }
     ]
