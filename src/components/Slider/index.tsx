@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 
-import { SliderContainer, SlideItem } from "./styles";
+import { SliderContainer } from "./styles";
 
 
 interface SliderProps<T> {
