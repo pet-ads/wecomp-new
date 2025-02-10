@@ -34,11 +34,7 @@ export default function Card({ children, name, image, imageDescription, bio, aut
 
       <Description>{showBiography ? bio : description}</Description>
 
-      {!isTechnicalVisit && (
-        <ButtonContainer onClick={() => setshowBiography(!showBiography)}>
-          {showBiography ? "Ver informações do evento" : "Ver biografia"}
-        </ButtonContainer>
-      )}
+      
 
       <InfoContainer>
         {author && <p><strong>Autor:</strong> {author}</p>}
@@ -58,6 +54,11 @@ export default function Card({ children, name, image, imageDescription, bio, aut
         <LinkButtonContainer href={link} target="_blank" rel="noopener noreferrer">
           Inscrever-se
         </LinkButtonContainer>
+      )}
+      {!isTechnicalVisit && (
+        <ButtonContainer onClick={() => setshowBiography(!showBiography)}>
+          {showBiography ? "Ver informações do evento" : "Ver biografia"}
+        </ButtonContainer>
       )}
 
       {children}
