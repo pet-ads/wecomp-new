@@ -8,18 +8,21 @@ export const Container = styled.div`
   align-items: center;
 
   width: fit-content;
-  min-width: 50vw;
-  max-width: 50vw;
+  min-width: 90%;
+  max-width: 90%;
 
   height: fit-content;
-  min-height: 50vh;
-  max-height: 50vh;
+  min-height: 90%;
+  max-height: 90%;
+
+  margin: 5%;
 
   padding: 1rem 2rem;
 
   gap: 1rem;
 
   border-radius: 1rem;
+  border: 2px solid black;
 
   background-color: var(--primary-text-color);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
