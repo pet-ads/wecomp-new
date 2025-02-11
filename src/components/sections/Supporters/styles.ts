@@ -66,7 +66,7 @@ export const MarqueeContainer = styled(motion.div)`
   font-weight: bold;
 `;
 
-export const MarqueeItem = styled(motion.div)`
+export const MarqueeItem = styled.div`
   position: relative;
 
   gap: 5rem;
@@ -74,8 +74,18 @@ export const MarqueeItem = styled(motion.div)`
   font-size: 5rem;
   font-weight: bold;
 
+  animation: marquee 10s linear infinite;
+
   &:hover {
     animation-play-state: paused;
   }
 
+  @keyframes marquee {
+    0% {
+      transform: translateX(-0.53%);
+    }
+    100% {
+      transform: translateX(-92%);
+    }
+  }
 `;
