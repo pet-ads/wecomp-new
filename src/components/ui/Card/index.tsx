@@ -89,7 +89,7 @@ export default function Card({
           </LinkButtonContainer>
           {!isTechnicalVisit && (
             <ButtonContainer onClick={() => setshowBiography(!showBiography)}>
-              {showBiography ? "Ver informações do evento" : "Ver biografia"}
+              {showBiography ? "Ver Evento" : "Ver Biografia"}
             </ButtonContainer>
           )}
         </ButtonsContainer>
