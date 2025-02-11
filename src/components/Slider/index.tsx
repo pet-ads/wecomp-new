@@ -1,18 +1,15 @@
+// External library
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useState, useEffect, ReactNode } from "react";
+import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import "swiper/css/bundle";
 
+// Type
+import { SliderProps } from "../../types/Slider";
 
+// Styles
 import { SliderContainer } from "./styles";
-
-
-interface SliderProps<T> {
-  items: T[];
-  renderItem: (item: T) => ReactNode;
-}
 
 export default function Slider<T>({ items, renderItem }: SliderProps<T>) {
   const [slidePerView, setSlidePerView] = useState(2);
@@ -29,19 +26,12 @@ export default function Slider<T>({ items, renderItem }: SliderProps<T>) {
 
   return (
     <SliderContainer>
-
       <Swiper slidesPerView={slidePerView} spaceBetween={20}>
-      
         {items.map((item, index) => (
-            
-          <SwiperSlide key={index} style={{ height: "auto"}}>
-            
-                {renderItem(item)}
-            
+          <SwiperSlide key={index} style={{ height: "auto" }}>
+            {renderItem(item)}
           </SwiperSlide>
-          
         ))}
-        
       </Swiper>
     </SliderContainer>
   );
