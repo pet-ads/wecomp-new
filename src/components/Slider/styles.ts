@@ -10,6 +10,7 @@ export const SliderContainer = styled.div`
     height: 100%;
     object-fit: cover;
     
+    
     .swiper-pagination-bullet {
         background:rgb(255, 255, 255);
         opacity: 0.6;
