@@ -26,6 +26,8 @@ export const Container = styled.div`
 
   background-color: var(--primary-text-color);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  overflow: hidden;
 `;
 
 export const Title = styled.h2`
@@ -44,7 +46,7 @@ export const Image = styled.img`
   width: auto;
 `;
 
-export const LinkButtonContainer = styled.a`
+export const LinkButtonContainer = styled.button`
   display: flex;
 
   justify-content: center;
