@@ -11,6 +11,8 @@ export interface ProgrammingProps {
     active: boolean;
     vacancies: string | number;
     location: string;
+    status: string;
+    classification: string; 
     description: string;
 }
 

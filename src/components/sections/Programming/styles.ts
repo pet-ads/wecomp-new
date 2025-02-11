@@ -7,15 +7,17 @@ import {
   SectionContent,
 } from "../../../styles/SectionContainer";
 
-export const ProgrammingContainer = styled(SectionContainer)``;
+export const ProgrammingContainer = styled(SectionContainer)`
+background: var(--background-color);`;
 
-export const ProgrammingContent = styled(SectionContent)``;
+export const ProgrammingContent = styled(SectionContent)`
+background: var(--background-color);`;
 
 export const ProgrammingCardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  background-color: black;
   width: 100%;
 
   min-height: 40vh;
@@ -24,5 +26,5 @@ export const ProgrammingCardContainer = styled.div`
 
   margin: 2rem 0;
 
-  background-color: red;
+  background: var(--background-color);
 `;

@@ -10,9 +10,11 @@
             "date": "25 de setembro",
             "time": "19h - 20h",
             "link":"https://forms.gle/example123",
-            "active": false,
+            "active": true,
             "vacancies": "30",
             "location": "Onovolab",
+            "status": "Disponível",
+            "classification": "Básico",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         },
         {
@@ -25,9 +27,11 @@
             "date": "26 de setembro",
             "time": "19h - 20h",
             "link": "https://forms.gle/example123",
-            "active": false,
+            "active": true,
             "vacancies": "30",
             "location": "IFSP",
+            "status": "Disponível",
+            "classification": "Básico",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         },
         {
@@ -40,9 +44,11 @@
             "date": "27 de setembro",
             "time": "19h - 20h",
             "link": "https://forms.gle/example123",
-            "active": false,
+            "active": true,
             "vacancies": "30",
             "location": "IFSP",
+            "status": "Disponível",
+            "classification": "Básico",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         },
         {
@@ -55,9 +61,11 @@
             "date": "28 de setembro",
             "time": "19h - 20h",
             "link": "https://forms.gle/example123",
-            "active": false,
+            "active": true,
             "vacancies": "30",
             "location": "Onovolab",
+            "status": "Disponível",
+            "classification": "Básico",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         }
     ]
