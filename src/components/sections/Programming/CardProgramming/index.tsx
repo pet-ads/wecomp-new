@@ -12,14 +12,16 @@ import {
   Title,
   Description,
   Image,
-  LinkButtonContainer,
   InfoContainer,
-  TopContainer,
+  HeaderContainer,
   ImageContainer,
-  MiddleContainer,
-  BottomContainer,
+  DescriptionContainer,
+  FooterContainer,
   VacanciesContainer,
   ButtonsContainer,
+  StatusContainer,
+  ClassificationContainer,
+  StatusInfoContainer,
 } from "./styles";
 
 import ButtonContainer from "../../../../styles/ButtonContainer";
@@ -27,7 +29,7 @@ import ButtonContainer from "../../../../styles/ButtonContainer";
 // Components
 import StrongParagraph from "../../../ui/StrongParagraph";
 
-export default function CardProgramming({
+export default function Card({
   children,
   name,
   image,
@@ -54,46 +56,43 @@ export default function CardProgramming({
 
   return (
     <Container>
-      <TopContainer>
+      <HeaderContainer>
         <InfoContainer>
           <Title>{name}</Title>
-          <StrongParagraph>Local:</StrongParagraph> {location}
-          <StrongParagraph>Data:</StrongParagraph> {date}
-          <StrongParagraph>Horário:</StrongParagraph> {time}
-          <StrongParagraph>Autor:</StrongParagraph> {author}
-          <StrongParagraph>Status:</StrongParagraph> {status}
-          <StrongParagraph>Classificação:</StrongParagraph> {classification}
+          {location} | {date} | {time}
+          <StrongParagraph>{author}</StrongParagraph>
+          <StatusInfoContainer>
+            <StatusContainer>{status}</StatusContainer>
+            <ClassificationContainer>{classification}</ClassificationContainer>
+          </StatusInfoContainer>
         </InfoContainer>
 
         <ImageContainer>
           <Image src={image} alt={imageDescription} />
         </ImageContainer>
-      </TopContainer>
+      </HeaderContainer>
 
-      <MiddleContainer>
+      <DescriptionContainer>
         <Description>{showBiography ? bio : description}</Description>
-      </MiddleContainer>
+      </DescriptionContainer>
 
-      <BottomContainer>
+      <FooterContainer>
         <VacanciesContainer>
           <StrongParagraph>Vagas:</StrongParagraph> {vacancies}
         </VacanciesContainer>
 
         <ButtonsContainer>
-          <LinkButtonContainer
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ButtonContainer onClick={() => window.open(link, "_blank")}>
             Inscrever-se
-          </LinkButtonContainer>
+          </ButtonContainer>
+
           {!isTechnicalVisit && (
             <ButtonContainer onClick={() => setshowBiography(!showBiography)}>
               {showBiography ? "Ver Evento" : "Ver Biografia"}
             </ButtonContainer>
           )}
         </ButtonsContainer>
-      </BottomContainer>
+      </FooterContainer>
 
       {children}
     </Container>
