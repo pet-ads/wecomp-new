@@ -2,13 +2,15 @@ export interface InterIfMarathonProps {
     interIfMarathon: Event[];
 }
 
-interface Event {
+export interface Event {
     title: string;
     definition: string;
     schedule: Schedule[];
+    link: string;
 } 
 
 interface Schedule {
     time: string;
     activity: string;
 }
+
