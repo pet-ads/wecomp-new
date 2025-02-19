@@ -1,103 +1,37 @@
-import { useState } from "react";
+// Components
+import SubTitle from "../../ui/SubTitle";
+import ArrowButton from "../../ui/ArrowButton";
+import Card from "./CardProgramming";
+import Slider from "../../Slider";
 
-// Types
-import { CardProps } from "../../../types/Card";
-import { ProgrammingProps } from "../../../types/Programming";
-
-type CardComponentProps = ProgrammingProps & CardProps;
+// Hooks
+import useSectionRefs from "../../../hooks/useSectionRefs";
+import useFetchProgrammingSection from "../../../hooks/useFetchProgrammingSection";
 
 // Styles
 import {
-  Container,
-  Title,
-  Description,
-  Image,
-  InfoContainer,
-  HeaderContainer,
-  ImageContainer,
-  DescriptionContainer,
-  FooterContainer,
-  VacanciesContainer,
-  ButtonsContainer,
-  StatusContainer,
-  ClassificationContainer,
-  StatusInfoContainer,
+  ProgrammingCardContainer,
+  ProgrammingContainer,
+  ProgrammingContent,
 } from "./styles";
 
-import ButtonContainer from "../../../styles/ButtonContainer";
+export default function Programming() {
+  const { sections } = useSectionRefs();
 
-// Components
-import StrongParagraph from "../../ui/StrongParagraph";
-
-export default function Card({
-  children,
-  name,
-  image,
-  imageDescription,
-  bio,
-  author,
-  date,
-  time,
-  link,
-  active,
-  vacancies,
-  location,
-  status,
-  classification,
-  description,
-}: CardComponentProps) {
-  const [showBiography, setshowBiography] = useState(false);
-
-  const isTechnicalVisit = name.toLowerCase().includes("visita técnica");
-
-  if (!active) {
-    return null;
-  }
+  const { eventProgramming } = useFetchProgrammingSection();
 
   return (
-    <Container>
-      <HeaderContainer>
-        <InfoContainer>
-          <Title>{name}</Title>
-          {location} | {date} | {time}
-
-          <StrongParagraph>{author}</StrongParagraph>
-
-        <StatusInfoContainer>
-          <StatusContainer>{status}</StatusContainer>
-          <ClassificationContainer>{classification}</ClassificationContainer>
-        </StatusInfoContainer>
-
-        </InfoContainer>
-
-        <ImageContainer>
-          <Image src={image} alt={imageDescription} />
-        </ImageContainer>
-      </HeaderContainer>
-
-      <DescriptionContainer>
-        <Description>{showBiography ? bio : description}</Description>
-      </DescriptionContainer>
-
-      <FooterContainer>
-        <VacanciesContainer>
-          <StrongParagraph>Vagas:</StrongParagraph> {vacancies}
-        </VacanciesContainer>
-
-        <ButtonsContainer>
-          <ButtonContainer onClick={() => window.open(link, "_blank")}>
-            Inscrever-se
-          </ButtonContainer>
-
-          {!isTechnicalVisit && (
-            <ButtonContainer onClick={() => setshowBiography(!showBiography)}>
-              {showBiography ? "Ver Evento" : "Ver Biografia"}
-            </ButtonContainer>
-          )}
-        </ButtonsContainer>
-      </FooterContainer>
-
-      {children}
-    </Container>
+    <ProgrammingContainer>
+      <ProgrammingContent ref={sections.programming}>
+        <SubTitle children="Programação" />
+        <ProgrammingCardContainer>
+          <Slider
+            items={eventProgramming}
+            renderItem={(event) => <Card key={event.id} {...event} />}
+          />
+        </ProgrammingCardContainer>
+        <ArrowButton sectionRef={sections.Marathon} />
+      </ProgrammingContent>
+    </ProgrammingContainer>
   );
 }
