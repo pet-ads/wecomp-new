@@ -12,8 +12,10 @@ export interface ProgrammingProps {
     vacancies: string | number;
     location: string;
     status: string;
-    classification: string; 
+    classification: string;
+    eventType: string; 
     description: string;
+    programmingIcon: string;
 }
 
 export interface ProgrammingSectionProps {
