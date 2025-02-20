@@ -15,7 +15,9 @@
             "location": "Onovolab",
             "status": "Disponível",
             "classification": "Básico",
-            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            "eventType": "Abertura",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+            "programmingIcon": "src/assets/icons/programming/openingIcon.svg"
         },
         {
             "id": 2,
@@ -23,7 +25,7 @@
             "image": "/images/image 31.svg",
             "imageDescription": "Minicurso de Back-end",
             "bio": "Especialista em Front-end",
-            "author": "Bruna doss Santos",
+            "author": "Bruna dos Santos",
             "date": "26 de setembro",
             "time": "19h - 20h",
             "link": "https://forms.gle/example123",
@@ -32,7 +34,9 @@
             "location": "IFSP",
             "status": "Disponível",
             "classification": "Básico",
-            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            "eventType": "Minicurso",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+            "programmingIcon": "src/assets/icons/programming/programmingIcon.svg"
         },
         {
             "id": 3,
@@ -49,7 +53,9 @@
             "location": "IFSP",
             "status": "Disponível",
             "classification": "Básico",
-            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            "eventType": "Talk",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+            "programmingIcon": "src/assets/icons/programming/talkIcon.svg"
         },
         {
             "id": 4,
@@ -66,7 +72,9 @@
             "location": "Onovolab",
             "status": "Disponível",
             "classification": "Básico",
-            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+            "eventType": "Visita Técnica",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+            "programmingIcon": "src/assets/icons/programming/technicalVisitIcon.svg"
         }
     ]
 }
