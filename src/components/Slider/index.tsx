@@ -1,9 +1,9 @@
 // External library
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/bundle";
+
+import "swiper/swiper-bundle.css";
+
 
 // Type
 import { SliderProps } from "../../types/Slider";

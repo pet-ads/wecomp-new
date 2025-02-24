@@ -1,10 +1,10 @@
 import { useState } from "react";
 
+
+
 // Types
-import { CardProps } from "../../../../types/Card";
 import { ProgrammingProps } from "../../../../types/Programming";
 
-type CardComponentProps = ProgrammingProps & CardProps;
 
 // Styles
 import {
@@ -29,8 +29,9 @@ import ButtonContainer from "../../../../styles/ButtonContainer";
 // Components
 import StrongParagraph from "../../../ui/StrongParagraph";
 
+// Componente Card
 export default function Card({
-  children,
+  id,
   name,
   image,
   imageDescription,
@@ -44,13 +45,17 @@ export default function Card({
   status,
   classification,
   description,
-}: CardComponentProps) {
-  const [showBiography, setshowBiography] = useState(false);
+}: ProgrammingProps) {
+  const [showBiography, setShowBiography] = useState(false);
+
+  if (!active) {
+    return null; 
+  }
 
   const isTechnicalVisit = name.toLowerCase().includes("visita técnica");
 
   return (
-    <Container>
+    <Container key={id}>
       <HeaderContainer>
         <InfoContainer>
           <Title>{name}</Title>
@@ -82,14 +87,12 @@ export default function Card({
           </ButtonContainer>
 
           {!isTechnicalVisit && (
-            <ButtonContainer onClick={() => setshowBiography(!showBiography)}>
+            <ButtonContainer onClick={() => setShowBiography(!showBiography)}>
               {showBiography ? "Ver Evento" : "Ver Biografia"}
             </ButtonContainer>
           )}
         </ButtonsContainer>
       </FooterContainer>
-
-      {children}
     </Container>
   );
 }
