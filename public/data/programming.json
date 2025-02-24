@@ -10,14 +10,12 @@
             "date": "25 de setembro",
             "time": "19h - 20h",
             "link":"https://forms.gle/example123",
-            "active": true,
             "vacancies": "30",
             "location": "Onovolab",
             "status": "Disponível",
             "classification": "Básico",
-            "eventType": "Abertura",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-            "programmingIcon": "src/assets/icons/programming/openingIcon.svg"
+            "programmingIcon": "assets/icons/programming/openingIcon.svg"
         },
         {
             "id": 2,
@@ -29,14 +27,12 @@
             "date": "26 de setembro",
             "time": "19h - 20h",
             "link": "https://forms.gle/example123",
-            "active": true,
             "vacancies": "30",
             "location": "IFSP",
             "status": "Disponível",
             "classification": "Básico",
-            "eventType": "Minicurso",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-            "programmingIcon": "src/assets/icons/programming/programmingIcon.svg"
+            "programmingIcon": "/assets/icons/programming/programmingIcon.svg"
         },
         {
             "id": 3,
@@ -48,14 +44,12 @@
             "date": "27 de setembro",
             "time": "19h - 20h",
             "link": "https://forms.gle/example123",
-            "active": true,
             "vacancies": "30",
             "location": "IFSP",
             "status": "Disponível",
             "classification": "Básico",
-            "eventType": "Talk",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-            "programmingIcon": "src/assets/icons/programming/talkIcon.svg"
+            "programmingIcon": "/assets/icons/programming/talkIcon.svg"
         },
         {
             "id": 4,
@@ -67,14 +61,12 @@
             "date": "28 de setembro",
             "time": "19h - 20h",
             "link": "https://forms.gle/example123",
-            "active": true,
             "vacancies": "30",
             "location": "Onovolab",
             "status": "Disponível",
             "classification": "Básico",
-            "eventType": "Visita Técnica",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-            "programmingIcon": "src/assets/icons/programming/technicalVisitIcon.svg"
+            "programmingIcon": "/assets/icons/programming/technicalVisitIcon.svg"
         }
     ]
 }
