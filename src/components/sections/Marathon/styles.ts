@@ -34,15 +34,15 @@ export const MarathonCardContainer = styled.div`
 `;
 
 export const MarathonCard = styled.div`
-  background: var(--background-color);
-  padding: 1.5rem;
+  background: rgb(255, 255, 255); // var(--background-color)
+  padding: 2.5rem;
 
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; // 8
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
   text-align: center;
 
-  max-width: 400px;
+  max-width: 550px; // 400
   width: 100%; 
 
   min-height: 300px; 
@@ -50,6 +50,27 @@ export const MarathonCard = styled.div`
   flex-direction: column;
   justify-content: space-between; 
 `;
+
+export const MarathonIcon = styled.div`
+  display: flex;
+  img {
+    width: 40px;
+  }
+`;
+
+export const MarathonCardTitle = styled.h2`
+    display: flex;
+    font-size: 28px;
+    font-weight: bold;
+    content: "O que é InterIF ?";
+`;
+
+export const MarathonCardDef = styled.p`
+    text-align: justify;
+    font-size: 22px;
+    content: "O que é InterIF ?";
+`;
+
 
 export const CardButton = styled.a`
   display: inline-block;
@@ -72,14 +93,32 @@ export const ScheduleTable = styled.table`
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+
 
   td {
-    border: 1px solid #ddd;
     padding: 8px;
-    text-align: left;
+    text-align: center;
   }
 
-  tr:nth-child(even) {
-    background-color: var(--background-color);
+  tr + tr {
+    border-top: 1px solid #ddd;
+  }
+
+  td:nth-child(even) {
+    border-left: 1px solid #ddd;
+
+  }
+
+  tr:first-child {  //:nth-child(even)
+    font-weight: bold;
+    background-color: rgb(255, 255, 255); // var(--background-color)
   }
 `;
+
+
+
+// import Text from "../../ui/Text";
+// <Text children={marathon.definition} />  
+//

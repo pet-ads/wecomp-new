@@ -13,9 +13,11 @@ import {
   MarathonContainer,
   MarathonContent,
   MarathonCard,
+  MarathonIcon,
+  MarathonCardTitle,
+  MarathonCardDef,
   ScheduleTable,
 } from "./styles";
-import Text from "../../ui/Text";
 import RedirectButton from "../../ui/RedirectButton";
 
 export default function Marathon() {
@@ -29,12 +31,26 @@ export default function Marathon() {
         <SubTitle>{marathon.title}</SubTitle>
         <MarathonCardContainer>
           <MarathonCard>
-            <Text children={marathon.definition} />  
+            <MarathonIcon>
+              <img src="src/assets/icons/programming/iconMarathon1.svg" alt="" />
+            </MarathonIcon>
+            <MarathonCardTitle>
+              <h2>O que é InterIF ?</h2>
+            </MarathonCardTitle>
+            <MarathonCardDef>
+              <p>{marathon.definition}</p>
+            </MarathonCardDef>
             <RedirectButton  link={marathon.link} children="Ver mais" />  
           </MarathonCard>
           
           <MarathonCard>
-            <Text children="Cronograma" />
+            <MarathonIcon>
+              <img src="src/assets/icons/programming/iconMarathon2.svg" alt="" />
+            </MarathonIcon>
+            
+            <MarathonCardTitle>
+              <h2>Cronograma</h2>
+            </MarathonCardTitle>
             <ScheduleTable>
               <tbody>
                 {marathon.schedule.map((event: { time: string; activity: string }, index: number) => (
@@ -45,6 +61,7 @@ export default function Marathon() {
                 ))}
               </tbody>
             </ScheduleTable>
+            <RedirectButton  link={marathon.link} children="Ver mais" /> 
           </MarathonCard>
         </MarathonCardContainer>
         <ArrowButton sectionRef={sections.Highlights} />
