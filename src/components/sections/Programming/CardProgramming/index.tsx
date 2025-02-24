@@ -39,7 +39,6 @@ export default function Card({
   date,
   time,
   link,
-  active,
   vacancies,
   location,
   status,
@@ -49,10 +48,6 @@ export default function Card({
   const [showBiography, setshowBiography] = useState(false);
 
   const isTechnicalVisit = name.toLowerCase().includes("visita técnica");
-
-  if (!active) {
-    return null;
-  }
 
   return (
     <Container>
