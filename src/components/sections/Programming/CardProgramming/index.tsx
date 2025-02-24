@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-
-
 // Types
 import { ProgrammingProps } from "../../../../types/Programming";
 
@@ -47,10 +45,6 @@ export default function Card({
   description,
 }: ProgrammingProps) {
   const [showBiography, setShowBiography] = useState(false);
-
-  if (!active) {
-    return null; 
-  }
 
   const isTechnicalVisit = name.toLowerCase().includes("visita técnica");
 
