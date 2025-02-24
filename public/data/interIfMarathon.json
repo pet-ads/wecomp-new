@@ -6,6 +6,10 @@
             "link": "https://ifsp.edu.br/interif",
             "schedule": [
                 {
+                    "time": "Horário",
+                    "activity": "Atividade"
+                },
+                {
                     "time": "09h00",
                     "activity": "Chegada / Credenciamento / Conversa com os Apoiadores"
                 },
