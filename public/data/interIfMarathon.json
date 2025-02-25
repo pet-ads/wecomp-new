@@ -2,8 +2,13 @@
     "interIfMarathon": [
         {
             "title": "Maratona InterIF",
-            "definition": "O InterIF é uma ação que visa contribuir com a aprendizagem por meio de uma competição de programação de computadores destinada aos estudantes regularmente matriculados nos cursos do Instituto Federal de São Paulo, realizada anualmente em duas etapas, sendo que a final de 2025 será em São Carlos...",
+            "definition": "O InterIF é uma ação que visa contribuir com a aprendizagem por meio de uma competição de programação de computadores destinada aos estudantes regularmente matriculados nos cursos do Instituto Federal de São Paulo, realizada anualmente em duas etapas, sendo que a final de 2025 será em São Carlos.",
+            "link": "https://ifsp.edu.br/interif",
             "schedule": [
+                {
+                    "time": "Horário",
+                    "activity": "Atividade"
+                },
                 {
                     "time": "09h00",
                     "activity": "Chegada / Credenciamento / Conversa com os Apoiadores"
