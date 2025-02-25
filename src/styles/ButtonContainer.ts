@@ -24,6 +24,7 @@ const ButtonContainer = styled.button`
   font-weight: bold;
   line-height: 1.5;
   transition: opacity 0.3s ease-in-out;
+  white-space: nowrap;
 
   cursor: pointer;
 

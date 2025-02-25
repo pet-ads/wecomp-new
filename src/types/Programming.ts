@@ -8,12 +8,12 @@ export interface ProgrammingProps {
     date: string;
     time: string;
     link: string;
-    active: boolean;
     vacancies: string | number;
     location: string;
     status: string;
-    classification: string; 
+    classification: string;
     description: string;
+    programmingIcon: string;
 }
 
 export interface ProgrammingSectionProps {

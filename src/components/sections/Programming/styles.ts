@@ -11,20 +11,23 @@ export const ProgrammingContainer = styled(SectionContainer)`
 background: var(--background-color);`;
 
 export const ProgrammingContent = styled(SectionContent)`
-background: var(--background-color);`;
+background: var(--background-color);
+`;
 
 export const ProgrammingCardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   background-color: black;
+
   width: 100%;
 
-  min-height: 40vh;
+  min-height: 40vh; 
 
   padding: 2rem 0;
 
   margin: 2rem 0;
-
-  background: var(--background-color);
+  
+  background-color: var(--background-color);
 `;
