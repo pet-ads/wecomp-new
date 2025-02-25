@@ -12,18 +12,18 @@ export const Container = styled.div`
   max-width: 90%;
 
   height: fit-content;
-  min-height: 90%;
-  max-height: 90%;
+  min-height: 100%;
+  max-height: 100%;
 
   margin: 5%;
-  padding: 1rem 2rem;
+  padding: 2rem;
   gap: 1rem;
   border-radius: 1rem;
   border: 2px solid black;
   background-color: var(--primary-text-color);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  /* aspect-ratio: 16 / 9; */
 
   @media (max-width: 768px) {
     width: 100%;
@@ -46,7 +46,12 @@ export const Title = styled.h2`
 `;
 
 export const Description = styled.p`
-  text-align: center;
+  width: 100%;
+  height: 10rem;
+
+  overflow-y: auto;
+
+  text-align: justify;
   font-size: 16px;
 
   @media (max-width: 768px) {
@@ -55,7 +60,7 @@ export const Description = styled.p`
 `;
 
 export const InfoContainer = styled.div`
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -68,7 +73,7 @@ export const Image = styled.img`
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
 
   @media (max-width: 768px) {
