@@ -46,7 +46,7 @@ export const Image = styled.img`
   width: auto;
 `;
 
-export const LinkButtonContainer = styled.button`
+export const LinkButtonContainer = styled.a`
   display: flex;
 
   justify-content: center;
