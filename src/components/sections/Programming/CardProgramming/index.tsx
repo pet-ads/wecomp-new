@@ -1,31 +1,18 @@
-import { useState } from "react";
+
 
 // Types
 import { ProgrammingProps } from "../../../../types/Programming";
 
 
+import InfoCard from "./InfoCard";
+import DescriptionCard from "./DescriptionCard";
+
 // Styles
 import {
   Container,
-  Title,
-  Description,
-  Image,
-  InfoContainer,
-  HeaderContainer,
-  ImageContainer,
-  DescriptionContainer,
-  FooterContainer,
-  VacanciesContainer,
-  ButtonsContainer,
-  StatusContainer,
-  ClassificationContainer,
-  StatusInfoContainer,
 } from "./styles";
 
-import ButtonContainer from "../../../../styles/ButtonContainer";
 
-// Components
-import StrongParagraph from "../../../ui/StrongParagraph";
 
 // Componente Card
 export default function Card({
@@ -43,50 +30,48 @@ export default function Card({
   status,
   classification,
   description,
+  programmingIcon
 }: ProgrammingProps) {
-  const [showBiography, setShowBiography] = useState(false);
-
-  const isTechnicalVisit = name.toLowerCase().includes("visita técnica");
+ 
 
   return (
     <Container key={id}>
-      <HeaderContainer>
-        <InfoContainer>
-          <Title>{name}</Title>
-          {location} | {date} | {time}
-          <StrongParagraph>{author}</StrongParagraph>
-          <StatusInfoContainer>
-            <StatusContainer>{status}</StatusContainer>
-            <ClassificationContainer>{classification}</ClassificationContainer>
-          </StatusInfoContainer>
-        </InfoContainer>
-
-        <ImageContainer>
-          <Image src={image} alt={imageDescription} />
-        </ImageContainer>
-      </HeaderContainer>
-
-      <DescriptionContainer>
-        <Description>{showBiography ? bio : description}</Description>
-      </DescriptionContainer>
-
-      <FooterContainer>
-        <VacanciesContainer>
-          <StrongParagraph>Vagas:</StrongParagraph> {vacancies}
-        </VacanciesContainer>
-
-        <ButtonsContainer>
-          <ButtonContainer onClick={() => window.open(link, "_blank")}>
-            Inscrever-se
-          </ButtonContainer>
-
-          {!isTechnicalVisit && (
-            <ButtonContainer onClick={() => setShowBiography(!showBiography)}>
-              {showBiography ? "Ver Evento" : "Ver Biografia"}
-            </ButtonContainer>
-          )}
-        </ButtonsContainer>
-      </FooterContainer>
+      <InfoCard 
+        id={id}
+        programmingIcon={programmingIcon}
+        name={name}
+        image={image}
+        imageDescription={imageDescription}
+        bio={bio}
+        author={author}
+        date={date}
+        time={time}
+        link={link}
+        vacancies={vacancies}
+        location={location}
+        status={status}
+        classification={classification}
+        description={description}
+      />
+      <DescriptionCard 
+        id={id}
+        programmingIcon={programmingIcon}
+        name={name}
+        image={image}
+        imageDescription={imageDescription}
+        bio={bio}
+        author={author}
+        date={date}
+        time={time}
+        link={link}
+        vacancies={vacancies}
+        location={location}
+        status={status}
+        classification={classification}
+        description={description}
+        
+      />
+      
     </Container>
   );
 }
