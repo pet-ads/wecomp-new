@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 // Types
 import { ProgrammingProps } from "../../../../../types/Programming";
 
