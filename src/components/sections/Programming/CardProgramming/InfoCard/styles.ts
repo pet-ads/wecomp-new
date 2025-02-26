@@ -1,6 +1,13 @@
 // External library
 import styled from "styled-components";
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative; 
+`;
+
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -46,6 +53,15 @@ export const StatusInfoContainer = styled.div`
   display: flex;
   gap: 1rem;
 `;
+
+export const ProgrammingIconContainer = styled.div`
+  display: inline-block;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+`;
+
+export const ProgrammingIcon = styled.img``;
 
 export const StatusContainer = styled.div``;
 

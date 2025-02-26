@@ -3,6 +3,7 @@ import { ProgrammingProps } from "../../../../../types/Programming";
 
 // Styles
 import {
+    Container,
   HeaderContainer,
   InfoContainer,
   Title,
@@ -11,6 +12,8 @@ import {
   ClassificationContainer,
   Image,
   ImageContainer,
+  ProgrammingIconContainer,
+  ProgrammingIcon,
 } from "./styles";
 
 import StrongParagraph from "../../../../ui/StrongParagraph";
@@ -26,9 +29,14 @@ export default function InfoCard(props: ProgrammingProps) {
     classification,
     image,
     imageDescription,
+    programmingIcon,
   } = props;
 
   return (
+    <Container>
+    <ProgrammingIconContainer>
+            <ProgrammingIcon src={programmingIcon} alt="Icon"/>
+    </ProgrammingIconContainer>
     <HeaderContainer>
       <InfoContainer>
         <Title>{name}</Title>
@@ -44,5 +52,6 @@ export default function InfoCard(props: ProgrammingProps) {
         <Image src={image} alt={imageDescription} />
       </ImageContainer>
     </HeaderContainer>
+    </Container>
   );
 }
