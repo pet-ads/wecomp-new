@@ -1,18 +1,11 @@
-
-
 // Types
 import { ProgrammingProps } from "../../../../types/Programming";
-
 
 import InfoCard from "./InfoCard";
 import DescriptionCard from "./DescriptionCard";
 
 // Styles
-import {
-  Container,
-} from "./styles";
-
-
+import { Container } from "./styles";
 
 // Componente Card
 export default function Card({
@@ -30,13 +23,11 @@ export default function Card({
   status,
   classification,
   description,
-  programmingIcon
+  programmingIcon,
 }: ProgrammingProps) {
- 
-
   return (
     <Container key={id}>
-      <InfoCard 
+      <InfoCard
         id={id}
         programmingIcon={programmingIcon}
         name={name}
@@ -53,7 +44,7 @@ export default function Card({
         classification={classification}
         description={description}
       />
-      <DescriptionCard 
+      <DescriptionCard
         id={id}
         programmingIcon={programmingIcon}
         name={name}
@@ -69,9 +60,7 @@ export default function Card({
         status={status}
         classification={classification}
         description={description}
-        
       />
-      
     </Container>
   );
 }
