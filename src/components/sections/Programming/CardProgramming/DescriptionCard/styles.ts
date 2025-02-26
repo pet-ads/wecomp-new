@@ -31,4 +31,4 @@ export const ButtonsContainer = styled.div`
   justify-content: flex-end;
 `;
 
-export const Conteiner = styled.div``;
+export const Container = styled.div``;

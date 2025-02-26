@@ -10,7 +10,7 @@ import ButtonContainer from "../../../../../styles/ButtonContainer";
 import {
   DescriptionContainer,
   Description,
-  Conteiner,
+  Container,
   ButtonsContainer,
 } from "./styles";
 
@@ -35,7 +35,7 @@ export default function DescriptionCard(props: ProgrammingProps) {
   const [showBiography, setShowBiography] = useState(false);
   const isTechnicalVisit = name.toLowerCase().includes("visita técnica");
   return (
-    <Conteiner>
+    <Container>
       <DescriptionContainer>
         <Description>{showBiography ? bio : description}</Description>
       </DescriptionContainer>
@@ -67,6 +67,6 @@ export default function DescriptionCard(props: ProgrammingProps) {
           </ButtonContainer>
         )}
       </ButtonsContainer>
-    </Conteiner>
+    </Container>
   );
 }
