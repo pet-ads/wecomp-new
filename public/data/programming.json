@@ -15,7 +15,7 @@
             "status": "Disponível",
             "classification": "Básico",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
-            "programmingIcon": "assets/icons/programming/openingIcon.svg"
+            "programmingIcon": "../../src/assets/icons/programming/openingIcon.svg"
         },
         {
             "id": 2,
@@ -32,7 +32,7 @@
             "status": "Disponível",
             "classification": "Básico",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
-            "programmingIcon": "/assets/icons/programming/programmingIcon.svg"
+            "programmingIcon": "../../src/assets/icons/programming/programmingIcon.svg"
         },
         {
             "id": 3,
@@ -49,7 +49,7 @@
             "status": "Disponível",
             "classification": "Básico",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
-            "programmingIcon": "/assets/icons/programming/talkIcon.svg"
+            "programmingIcon": "../../src/assets/icons/programming/talkIcon.svg"
         },
         {
             "id": 4,
@@ -66,7 +66,7 @@
             "status": "Disponível",
             "classification": "Básico",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
-            "programmingIcon": "/assets/icons/programming/technicalVisitIcon.svg"
+            "programmingIcon": "../../src/assets/icons/programming/technicalVisitIcon.svg"
         }
     ]
 }
