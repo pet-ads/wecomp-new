@@ -5,24 +5,24 @@
             "name": "Abertura",
             "image": "/images/ministrante.svg",
             "imageDescription": "Abertura da Wecomp",
-            "bio": "Especialista em Análise de Dados",
+            "bio": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
             "author": "Marcos da Silva",
             "date": "25 de setembro",
             "time": "19h - 20h",
-            "link":"https://forms.gle/example123",
+            "link": "https://forms.gle/example123",
             "vacancies": "30",
             "location": "Onovolab",
             "status": "Disponível",
             "classification": "Básico",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
-            "programmingIcon": "../../src/assets/icons/programming/openingIcon.svg"
+            "typeEvent": "Opening"
         },
         {
             "id": 2,
             "name": "Minicurso de Front-end",
             "image": "/images/ministrante.svg",
             "imageDescription": "Minicurso de Back-end",
-            "bio": "Especialista em Front-end",
+            "bio": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
             "author": "Bruna dos Santos",
             "date": "26 de setembro",
             "time": "19h - 20h",
@@ -32,14 +32,14 @@
             "status": "Disponível",
             "classification": "Básico",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
-            "programmingIcon": "../../src/assets/icons/programming/programmingIcon.svg"
+            "typeEvent": "Course"
         },
         {
             "id": 3,
             "name": "Talk sobre a Importância do Back-end",
             "image": "/images/ministrante.svg",
             "imageDescription": "Minicurso de Back-end",
-            "bio": "Especialista em Back-end",
+            "bio": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
             "author": "Clara de Oliveira",
             "date": "27 de setembro",
             "time": "19h - 20h",
@@ -49,14 +49,14 @@
             "status": "Disponível",
             "classification": "Básico",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
-            "programmingIcon": "../../src/assets/icons/programming/talkIcon.svg"
+            "typeEvent": "Talk"
         },
         {
             "id": 4,
             "name": "Visita Técnica",
             "image": "/images/ministrante.svg",
             "imageDescription": "Ambiente da Visita Técnica",
-            "bio": "Fullstack com especialização em Mobile",
+            "bio": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
             "author": "Diogo Pereira",
             "date": "28 de setembro",
             "time": "19h - 20h",
@@ -66,7 +66,7 @@
             "status": "Disponível",
             "classification": "Básico",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
-            "programmingIcon": "../../src/assets/icons/programming/technicalVisitIcon.svg"
+            "typeEvent": "TechnicalVisit"
         }
     ]
 }
