@@ -40,6 +40,7 @@ export interface CardFooterProps {
   link: string;
   labelButton: string;
   handleChangeCardText: () => void;
+  typeEvent: TypeEventName;
 }
 
 export interface ProgrammingSectionProps {

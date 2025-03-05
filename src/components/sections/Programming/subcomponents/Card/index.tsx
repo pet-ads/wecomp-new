@@ -61,6 +61,7 @@ export default function Card({
         link={link}
         labelButton={labelButton}
         handleChangeCardText={handleChangeCardText}
+        typeEvent={typeEvent}
       />
     </Container>
   );

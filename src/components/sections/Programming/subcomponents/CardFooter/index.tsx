@@ -12,15 +12,18 @@ export default function CardFooter({
   vacancies,
   link,
   labelButton,
+  typeEvent,
   handleChangeCardText,
 }: CardFooterProps) {
   return (
     <Container>
       <LabeledValue label="Vagas" value={vacancies} />
       <ContainerButtons>
-        <EventDescriptionButton onClick={handleChangeCardText}>
-          {labelButton}
-        </EventDescriptionButton>
+        {typeEvent == "TechnicalVisit" ? null : (
+          <EventDescriptionButton onClick={handleChangeCardText}>
+            {labelButton}
+          </EventDescriptionButton>
+        )}
         <RedirectButton children="Inscrever-se" link={link} />
       </ContainerButtons>
     </Container>
