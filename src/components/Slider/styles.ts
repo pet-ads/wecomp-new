@@ -2,11 +2,12 @@
 import styled from "styled-components";
 
 export const SliderContainer = styled.div`
-  min-width: 70%;
+  min-width: 80%;
   max-width: 100%;
   height: 100%;
-  object-fit: cover;
 
+
+  object-fit: cover;
   .swiper-pagination-bullet {
     background: rgb(255, 255, 255);
     opacity: 0.6;

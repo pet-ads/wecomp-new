@@ -25,11 +25,17 @@ export default function Slider<T>({ items, renderItem }: SliderProps<T>) {
 
   return (
     <SliderContainer>
-      <Swiper slidesPerView={slidePerView} spaceBetween={20}>
+      <Swiper
+        slidesPerView={slidePerView}
+        spaceBetween={80}
+        style={{
+          width: "100%",
+          maxHeight: "100%",
+          padding: ".5rem",
+        }}
+      >
         {items.map((item, index) => (
-          <SwiperSlide key={index} style={{ height: "100%" }}>
-            {renderItem(item)}
-          </SwiperSlide>
+          <SwiperSlide key={index}>{renderItem(item)}</SwiperSlide>
         ))}
       </Swiper>
     </SliderContainer>
