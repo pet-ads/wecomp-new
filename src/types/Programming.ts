@@ -1,3 +1,6 @@
+// Types
+import { AvailabilityStatus, DifficultyEvent } from "./Tag";
+
 export type TypeEventName = "Talk" | "Course" | "Opening" | "TechnicalVisit";
 
 export interface ProgrammingProps {
@@ -12,8 +15,8 @@ export interface ProgrammingProps {
   link: string;
   vacancies: string | number;
   location: string;
-  status: string;
-  classification: string;
+  status: AvailabilityStatus;
+  classification: DifficultyEvent;
   description: string;
   typeEvent: TypeEventName;
 }
