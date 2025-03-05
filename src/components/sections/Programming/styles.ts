@@ -19,15 +19,14 @@ export const ProgrammingCardContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: black;
-
   width: 100%;
 
-  min-height: 40vh; 
+  min-height: 100%;
+  max-height: 100%;
 
-  padding: 2rem 0;
+  padding: 2rem;
 
   margin: 2rem 0;
-  
+
   background-color: var(--background-color);
 `;

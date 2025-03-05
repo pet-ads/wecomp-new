@@ -4,25 +4,22 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 
-  width: 90%;
-  min-width: 90%;
-  max-width: 90%;
+  min-width: 100%;
+  max-width: 100%;
 
-  height: fit-content;
   min-height: 100%;
   max-height: 100%;
 
-  margin: 5%;
-  padding: 2rem;
-  gap: 1rem;
+  padding: 1.5rem;
+  gap: 2rem;
   border-radius: 1rem;
-  border: 2px solid black;
+
   background-color: var(--primary-text-color);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+
+  /* overflow: hidden; */
   /* aspect-ratio: 16 / 9; */
 
   @media (max-width: 768px) {
@@ -35,3 +32,9 @@ export const Container = styled.div`
   }
 `;
 
+export const IconContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
+`;
+
+export const Icon = styled.img``;

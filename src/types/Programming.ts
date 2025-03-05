@@ -18,6 +18,27 @@ export interface ProgrammingProps {
   typeEvent: TypeEventName;
 }
 
+export interface CardHeaderProps {
+  title: string;
+  eventLocationAndDate: string;
+  author: string;
+  status: string;
+  classification: string;
+  image: string;
+  imageDescription: string;
+}
+
+export interface CardMainProps {
+  content: string;
+}
+
+export interface CardFooterProps {
+  vacancies: string | number;
+  link: string;
+  labelButton: string;
+  handleChangeCardText: () => void;
+}
+
 export interface ProgrammingSectionProps {
   eventProgramming: ProgrammingProps[];
 }

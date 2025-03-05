@@ -1,7 +1,7 @@
 // Components
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
-import Card from "./CardProgramming";
+import Card from "./subcomponents/Card";
 import Slider from "../../Slider";
 
 // Hooks
