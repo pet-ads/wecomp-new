@@ -12,10 +12,10 @@
             "link": "https://forms.gle/example123",
             "vacancies": "30",
             "location": "Onovolab",
-            "status": "Disponível",
-            "classification": "Básico",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
-            "typeEvent": "Opening"
+            "typeEvent": "Opening",
+            "classification": "Basic",
+            "status": "Available"
         },
         {
             "id": 2,
@@ -29,10 +29,10 @@
             "link": "https://forms.gle/example123",
             "vacancies": "30",
             "location": "IFSP",
-            "status": "Disponível",
-            "classification": "Básico",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
-            "typeEvent": "Course"
+            "typeEvent": "Course",
+            "classification": "Free",
+            "status": "Last vacancies"
         },
         {
             "id": 3,
@@ -46,10 +46,10 @@
             "link": "https://forms.gle/example123",
             "vacancies": "30",
             "location": "IFSP",
-            "status": "Disponível",
-            "classification": "Básico",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
-            "typeEvent": "Talk"
+            "typeEvent": "Talk",
+            "classification": "Intermediary",
+            "status": "Closed"
         },
         {
             "id": 4,
@@ -63,10 +63,10 @@
             "link": "https://forms.gle/example123",
             "vacancies": "30",
             "location": "Onovolab",
-            "status": "Disponível",
-            "classification": "Básico",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
-            "typeEvent": "TechnicalVisit"
+            "typeEvent": "TechnicalVisit",
+            "classification": "Free",
+            "status": "Available"
         }
     ]
 }
