@@ -38,7 +38,6 @@ export default function Card({
     "Ver biografia"
   );
   const eventIconProps = generatedIconEvent(typeEvent);
-
   return (
     <Container key={id}>
       <IconContainer>

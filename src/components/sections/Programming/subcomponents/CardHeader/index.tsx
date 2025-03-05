@@ -1,3 +1,7 @@
+// Components
+import AvailabilityTag from "../../../../ui/tags/AvailabilityTag";
+import DifficultyTag from "../../../../ui/tags/DifficultyTag";
+
 // Styles
 import {
   Container,
@@ -28,8 +32,8 @@ export default function CardHeader({
         <EventDetails>{eventLocationAndDate}</EventDetails>
         <EventSpeakers>{author}</EventSpeakers>
         <TagContainer>
-          <div>{status}</div>
-          <div>{classification}</div>
+          <AvailabilityTag label={status} />
+          <DifficultyTag label={classification} />
         </TagContainer>
       </InformationContainer>
       <EventImage src={image} alt={imageDescription} />
