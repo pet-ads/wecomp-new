@@ -25,8 +25,8 @@ export interface CardHeaderProps {
   title: string;
   eventLocationAndDate: string;
   author: string;
-  status: string;
-  classification: string;
+  status: AvailabilityStatus;
+  classification: DifficultyEvent;
   image: string;
   imageDescription: string;
 }

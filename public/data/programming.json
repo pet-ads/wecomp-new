@@ -32,7 +32,7 @@
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",
             "typeEvent": "Course",
             "classification": "Free",
-            "status": "Last vacancies"
+            "status": "LastVacancies"
         },
         {
             "id": 3,
