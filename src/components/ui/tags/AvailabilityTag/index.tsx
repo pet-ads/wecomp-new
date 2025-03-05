@@ -10,14 +10,17 @@ export default function AvailabilityTag({label}: AvailabilityProps) {
       Available: {
         backgroundColor: "#DCF7E4",
         textColor: "#1A800A",
+        translateText: "Disponível"
       },
       LastVacancies: {
         backgroundColor: "#FCF2D6",
         textColor: "#EAB00D",
+        translateText: "Últimas vagas"
       },
       Closed: {
         backgroundColor: "#F2E6E6",
         textColor: "#FF6158",
+        translateText: "Encerrado"
       },
     };
     return options[label];
@@ -30,7 +33,7 @@ export default function AvailabilityTag({label}: AvailabilityProps) {
       backgroundColor={tagProps.backgroundColor}
       textColor={tagProps.textColor}
     >
-      {label}
+      {tagProps.translateText}
     </Container>
   );
 }
