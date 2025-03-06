@@ -1,7 +1,5 @@
-// Component
 import Home from "./pages/Home";
 
-// Context
 import SectionReferences from "./context/SectionReferences/index.tsx";
 
 function App() {

@@ -1,7 +1,5 @@
-// External Library
 import styled from "styled-components";
 
-// Styles
 import {
   SectionContainer,
   SectionContent,
@@ -20,4 +18,4 @@ export const FAQList = styled.div`
   padding: 2rem 0;
 
   gap: 1rem;
-`
+`;

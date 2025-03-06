@@ -1,9 +1,7 @@
-// External Library
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const Wrapper = styled(motion.div)`
-`;
+export const Wrapper = styled(motion.div)``;
 
 export const DropDownList = styled.ul`
   display: flex;
@@ -13,7 +11,7 @@ export const DropDownList = styled.ul`
 
   position: relative;
   top: 0;
-  left: .5rem;
+  left: 0.5rem;
 
   min-height: 12.5vh;
 

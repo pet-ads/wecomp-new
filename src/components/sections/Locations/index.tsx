@@ -1,11 +1,8 @@
-// Components
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 
-// Hooks
 import useSectionRefs from "../../../hooks/useSectionRefs";
 
-// Styles
 import { LocalContainer, LocalContent, MapsContainer, Map } from "./styles";
 
 export default function Locations() {

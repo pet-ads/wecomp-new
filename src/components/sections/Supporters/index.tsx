@@ -1,12 +1,9 @@
-// Components
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 
-// Hooks
 import useSectionRefs from "../../../hooks/useSectionRefs";
 import useFetchSupporters from "../../../hooks/useFetchSupportersSection";
 
-// Styles
 import {
   SupporterLogo,
   SupportesContainer,
@@ -21,15 +18,22 @@ export default function Supporters() {
   const { eventSupporters } = useFetchSupporters();
 
   const reversedArrayOfSupporters = [...eventSupporters].reverse();
-  const supporterList = [...eventSupporters, ...eventSupporters];
+  const supporterList = [
+    ...eventSupporters,
+    ...eventSupporters,
+    ...eventSupporters,
+    ...eventSupporters,
+  ];
   const reversedSupporterList = [
+    ...reversedArrayOfSupporters,
+    ...reversedArrayOfSupporters,
     ...reversedArrayOfSupporters,
     ...reversedArrayOfSupporters,
   ];
 
   const handleRedirectOnClick = (url: string) => {
     window.open(url, "_blank");
-  }
+  };
 
   return (
     <SupportesContainer>

@@ -1,11 +1,8 @@
-// Component
 import LabeledValue from "../../../../ui/LabeledValue";
 import RedirectButton from "../../../../ui/RedirectButton";
 
-// Styles
 import { Container, ContainerButtons, EventDescriptionButton } from "./styles";
 
-// Types
 import { CardFooterProps } from "../../../../../types/Programming";
 
 export default function CardFooter({

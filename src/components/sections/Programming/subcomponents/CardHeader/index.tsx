@@ -1,8 +1,6 @@
-// Components
 import AvailabilityTag from "../../../../ui/tags/AvailabilityTag";
 import DifficultyTag from "../../../../ui/tags/DifficultyTag";
 
-// Styles
 import {
   Container,
   EventImage,
@@ -13,7 +11,6 @@ import {
   EventTitle,
 } from "./styles";
 
-// Types
 import { CardHeaderProps } from "../../../../../types/Programming";
 
 export default function CardHeader({

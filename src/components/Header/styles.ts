@@ -1,4 +1,3 @@
-// External Library
 import styled from "styled-components";
 
 export const Nav = styled.nav`
@@ -19,5 +18,4 @@ export const Nav = styled.nav`
   gap: 2rem;
 
   background-color: var(--primary-color);
-
 `;

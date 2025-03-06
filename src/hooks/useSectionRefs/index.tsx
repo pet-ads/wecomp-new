@@ -1,7 +1,5 @@
-// External library
 import { useContext } from "react";
 
-// Context
 import { SectionRefsContext } from "../../context/SectionReferences/context";
 
 export default function useSectionRefs() {

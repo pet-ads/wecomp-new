@@ -1,4 +1,3 @@
-// External library
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -14,5 +13,4 @@ export const Container = styled.div`
   overflow-y: auto;
 
   text-align: justify;
-
 `;

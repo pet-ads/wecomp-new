@@ -1,16 +1,11 @@
-// External library
 import { useState, useEffect } from "react";
 
-// Components
 import DropDownMenu from "../subcomponent/DropDown";
 
-// Types
 import { NavListProps } from "../../../types/Navigation";
 
-// Context
 import useSectionRefs from "../../../hooks/useSectionRefs";
 
-// Styles
 import { SandWichIcon, WrapperIcon } from "./styles";
 
 export default function MenuMobile({ links }: NavListProps) {

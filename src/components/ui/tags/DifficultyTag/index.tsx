@@ -1,7 +1,5 @@
-// Styles
 import { Container } from "./styles.ts";
 
-// Types
 import { DifficultyEventProps } from "../../../../types/Tag";
 
 export default function DifficultyTag({ label }: DifficultyEventProps) {

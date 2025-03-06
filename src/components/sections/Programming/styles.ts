@@ -1,17 +1,16 @@
-// External Library
 import styled from "styled-components";
 
-// Styles
 import {
   SectionContainer,
   SectionContent,
 } from "../../../styles/SectionContainer";
 
 export const ProgrammingContainer = styled(SectionContainer)`
-background: var(--background-color);`;
+  background: var(--background-color);
+`;
 
 export const ProgrammingContent = styled(SectionContent)`
-background: var(--background-color);
+  background: var(--background-color);
 `;
 
 export const ProgrammingCardContainer = styled.div`

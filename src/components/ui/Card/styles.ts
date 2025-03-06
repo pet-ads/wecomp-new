@@ -1,4 +1,3 @@
-// External library
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -30,13 +29,9 @@ export const Container = styled.div`
   overflow: hidden;
 `;
 
-export const Title = styled.h2`
-  
-`;
+export const Title = styled.h2``;
 
-export const Description = styled.p`
-  
-`;
+export const Description = styled.p``;
 
 export const InfoContainer = styled.div`
   margin-bottom: 16px;
@@ -89,8 +84,7 @@ export const LinkButtonContainer = styled.a`
     min-height: 2rem;
     max-height: 2rem;
 
-
-    font-size: .75rem;
+    font-size: 0.75rem;
 
     white-space: nowrap;
   }
@@ -182,8 +176,7 @@ export const ButtonContainer = styled.button`
     min-height: 2rem;
     max-height: 2rem;
 
-
-    font-size: .75rem;
+    font-size: 0.75rem;
 
     white-space: nowrap;
   }

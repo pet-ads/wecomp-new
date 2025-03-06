@@ -1,4 +1,3 @@
-// External library
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";

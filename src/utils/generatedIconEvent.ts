@@ -1,4 +1,3 @@
-// Types
 import { TypeEventName } from "../types/Programming";
 
 export function generatedIconEvent(typeEvent: TypeEventName) {

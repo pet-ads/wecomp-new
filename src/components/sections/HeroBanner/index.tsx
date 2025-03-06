@@ -1,11 +1,8 @@
-// Components
 import ArrowButton from "../../ui/ArrowButton";
 
-// Hooks
 import useSectionRefs from "../../../hooks/useSectionRefs";
 import useFetchHeroSection from "../../../hooks/useFetchHeroSection";
 
-// Styles
 import { LogoContainer, EventDate, HighlightedText, EventLogo } from "./styles";
 
 export default function HeroBanner() {

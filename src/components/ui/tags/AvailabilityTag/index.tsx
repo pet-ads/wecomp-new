@@ -1,26 +1,24 @@
-// Styles
 import { Container } from "./styles.ts";
 
-// Types
 import { AvailabilityProps } from "../../../../types/Tag";
 
-export default function AvailabilityTag({label}: AvailabilityProps) {
+export default function AvailabilityTag({ label }: AvailabilityProps) {
   const getAvailabilityProperties = () => {
     const options = {
       Available: {
         backgroundColor: "#DCF7E4",
         textColor: "#1A800A",
-        translateText: "Disponível"
+        translateText: "Disponível",
       },
       LastVacancies: {
         backgroundColor: "#FCF2D6",
         textColor: "#EAB00D",
-        translateText: "Últimas vagas"
+        translateText: "Últimas vagas",
       },
       Closed: {
         backgroundColor: "#F2E6E6",
         textColor: "#FF6158",
-        translateText: "Encerrado"
+        translateText: "Encerrado",
       },
     };
     return options[label];

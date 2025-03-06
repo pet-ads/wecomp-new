@@ -1,14 +1,11 @@
-// External Library
 import styled from "styled-components";
 
-// Styles
 import {
   SectionContainer,
   SectionContent,
 } from "../../../styles/SectionContainer";
 
-export const HighlightsContainer = styled(SectionContainer)`
-`;
+export const HighlightsContainer = styled(SectionContainer)``;
 
 export const HighlightsContent = styled(SectionContent)``;
 

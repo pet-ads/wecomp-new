@@ -1,13 +1,9 @@
-// Components
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 
-// Hooks
 import useSectionRefs from "../../../hooks/useSectionRefs";
 import useMarathonData from "../../../hooks/useMarathonData";
 
-
-// Styles
 import {
   MarathonCardContainer,
   MarathonContainer,
@@ -32,7 +28,10 @@ export default function Marathon() {
         <MarathonCardContainer>
           <MarathonCard>
             <MarathonIcon>
-              <img src="src/assets/icons/programming/iconMarathon1.svg" alt="" />
+              <img
+                src="src/assets/icons/programming/iconMarathon1.svg"
+                alt=""
+              />
             </MarathonIcon>
             <MarathonCardTitle>
               <h2>O que é InterIF ?</h2>
@@ -40,28 +39,36 @@ export default function Marathon() {
             <MarathonCardDef>
               <p>{marathon.definition}</p>
             </MarathonCardDef>
-            <RedirectButton  link={marathon.link} children="Ver mais" />  
+            <RedirectButton link={marathon.link} children="Ver mais" />
           </MarathonCard>
-          
+
           <MarathonCard>
             <MarathonIcon>
-              <img src="src/assets/icons/programming/iconMarathon2.svg" alt="" />
+              <img
+                src="src/assets/icons/programming/iconMarathon2.svg"
+                alt=""
+              />
             </MarathonIcon>
-            
+
             <MarathonCardTitle>
               <h2>Cronograma</h2>
             </MarathonCardTitle>
             <ScheduleTable>
               <tbody>
-                {marathon.schedule.map((event: { time: string; activity: string }, index: number) => (
-                  <tr key={index}>
-                    <td>{event.time}</td>
-                    <td>{event.activity}</td>
-                  </tr>
-                ))}
+                {marathon.schedule.map(
+                  (
+                    event: { time: string; activity: string },
+                    index: number
+                  ) => (
+                    <tr key={index}>
+                      <td>{event.time}</td>
+                      <td>{event.activity}</td>
+                    </tr>
+                  )
+                )}
               </tbody>
             </ScheduleTable>
-            <RedirectButton  link={marathon.link} children="Ver mais" /> 
+            <RedirectButton link={marathon.link} children="Ver mais" />
           </MarathonCard>
         </MarathonCardContainer>
         <ArrowButton sectionRef={sections.Highlights} />
@@ -69,4 +76,3 @@ export default function Marathon() {
     </MarathonContainer>
   );
 }
-

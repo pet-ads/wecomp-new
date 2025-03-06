@@ -1,4 +1,3 @@
-// External Library
 import styled from "styled-components";
 
 export const Container = styled.details`
@@ -9,11 +8,11 @@ export const Container = styled.details`
   min-height: 2rem;
 
   border: 1px solid var(--secundary-text-color);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 
   background-color: var(--primary-text-color);
 `;
 
 export const Content = styled.summary`
-    padding: 1rem;
+  padding: 1rem;
 `;

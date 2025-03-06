@@ -1,4 +1,3 @@
-// Types
 import { AvailabilityStatus, DifficultyEvent } from "./Tag";
 
 export type TypeEventName = "Talk" | "Course" | "Opening" | "TechnicalVisit";

@@ -1,12 +1,7 @@
-// External library
 import { useRef } from "react";
 
-// Types
-import {
-  ChildrenContext,
-} from "../../types/SectionRefsContextType";
+import { ChildrenContext } from "../../types/SectionRefsContextType";
 
-// context
 import { SectionRefsContext } from "./context";
 
 export default function SectionReferences({ children }: ChildrenContext) {

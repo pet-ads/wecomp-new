@@ -1,4 +1,3 @@
-// External library
 import styled from "styled-components";
 import { IoMenuOutline } from "react-icons/io5";
 

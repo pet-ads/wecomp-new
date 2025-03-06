@@ -1,11 +1,8 @@
-// Components
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 
-// Hooks
 import useSectionRefs from "../../../hooks/useSectionRefs";
 
-// Styles
 import {
   EditionsCardContainer,
   EditionsContainer,
@@ -22,7 +19,7 @@ export default function Editions() {
         <EditionsCardContainer>
           Carrossel of Editions cards
         </EditionsCardContainer>
-      <ArrowButton sectionRef={sections.FAQs} />
+        <ArrowButton sectionRef={sections.FAQs} />
       </EditionsContent>
     </EditionsContainer>
   );

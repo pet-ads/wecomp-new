@@ -1,18 +1,13 @@
-// Components
 import CardHeader from "../CardHeader";
 import CardMain from "../CardMain";
 import CardFooter from "../CardFooter";
 
-// Hooks
 import useToggleCardContent from "../../../../../hooks/useToggleCardContent";
 
-// Styles
 import { Container, Icon, IconContainer } from "./styles";
 
-// Utils
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
 
-// Types
 import { ProgrammingProps } from "../../../../../types/Programming";
 
 export default function Card({

@@ -1,7 +1,5 @@
-// Types
 import { RedirectButtonProps } from "../../../types/RedirectButton.ts";
 
-// Styles
 import LinkButton from "./styles.ts";
 
 export default function RedirectButton({

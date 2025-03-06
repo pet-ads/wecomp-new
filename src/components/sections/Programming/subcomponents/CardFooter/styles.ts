@@ -1,7 +1,5 @@
-// External library
 import styled from "styled-components";
 
-// Styles
 import ButtonContainer from "../../../../../styles/ButtonContainer";
 
 export const Container = styled.div`

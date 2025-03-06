@@ -1,4 +1,3 @@
-// External libraries
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -16,7 +15,6 @@ export const Container = styled.div`
     flex-direction: column;
   }
 `;
-
 
 export const InformationContainer = styled.div`
   display: flex;
@@ -47,7 +45,6 @@ export const EventImage = styled.img`
     width: 40%;
 
     height: 40%;
-
   }
 `;
 
@@ -67,7 +64,6 @@ export const EventTitle = styled.div`
 export const EventDetails = styled.div`
   font-size: 1rem;
   font-weight: 600;
-
 `;
 
 export const EventSpeakers = styled.div`

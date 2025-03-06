@@ -1,13 +1,10 @@
-// External library
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/swiper-bundle.css";
 
-// Type
 import { SliderProps } from "../../types/Slider";
 
-// Styles
 import { SliderContainer } from "./styles";
 
 export default function Slider<T>({ items, renderItem }: SliderProps<T>) {

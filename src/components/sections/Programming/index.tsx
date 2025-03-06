@@ -1,14 +1,11 @@
-// Components
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 import Card from "./subcomponents/Card";
 import Slider from "../../Slider";
 
-// Hooks
 import useSectionRefs from "../../../hooks/useSectionRefs";
 import useFetchProgrammingSection from "../../../hooks/useFetchProgrammingSection";
 
-// Styles
 import {
   ProgrammingCardContainer,
   ProgrammingContainer,

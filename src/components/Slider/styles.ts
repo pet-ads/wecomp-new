@@ -1,11 +1,9 @@
-// External Library
 import styled from "styled-components";
 
 export const SliderContainer = styled.div`
   min-width: 80%;
   max-width: 100%;
   height: 100%;
-
 
   object-fit: cover;
   .swiper-pagination-bullet {

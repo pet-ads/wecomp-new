@@ -1,4 +1,3 @@
-// Components
 import {
   Header,
   HeroBanner,
@@ -14,7 +13,6 @@ import {
   Footer,
 } from "../../dto";
 
-// Styles
 import { Main } from "./styles";
 
 export default function Home() {
