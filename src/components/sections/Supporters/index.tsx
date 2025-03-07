@@ -66,7 +66,7 @@ export default function Supporters() {
           </MarqueeContainer>
         </SupportesLogoContainer>
       </SupportesContent>
-      <ArrowButton sectionRef={sections.programming} />
+      <ArrowButton sectionRef={sections.directors} />
     </SupportesContainer>
   );
 }
