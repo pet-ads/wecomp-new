@@ -3,6 +3,7 @@ import {
   HeroBanner,
   Prologue,
   Supporters,
+  Directors,
   Programming,
   Marathon,
   Highlights,
@@ -23,6 +24,7 @@ export default function Home() {
       <Main>
         <Prologue />
         <Supporters />
+        <Directors/>
         <Programming />
         <Marathon />
         <Highlights />
