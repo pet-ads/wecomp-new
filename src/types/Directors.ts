@@ -6,7 +6,3 @@ export interface DirectorsProps {
   link: string;
   width: string;
 }
-
-export interface DirectorsScetionProps {
-  eventDirectors: DirectorsProps[];
-}
