@@ -5,6 +5,7 @@ export interface SectionRefsContextType {
     HeroBanner: React.RefObject<HTMLDivElement>;
     prologue: React.RefObject<HTMLDivElement>;
     supporters: React.RefObject<HTMLDivElement>;
+    directors: React.RefObject<HTMLDivElement>;
     programming: React.RefObject<HTMLDivElement>;
     Locations: React.RefObject<HTMLDivElement>;
     Highlights: React.RefObject<HTMLDivElement>;
