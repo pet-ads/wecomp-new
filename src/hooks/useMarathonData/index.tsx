@@ -1,4 +1,4 @@
-import { Event } from "../../types/interifMarathon";
+import { Event } from "../../types/InterifMarathon";
 
 import marathonData from "../../../public/data/interIfMarathon.json";
 
