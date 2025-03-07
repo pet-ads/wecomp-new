@@ -14,6 +14,7 @@ export default function Header() {
     { text: "Início", ref: sections.HeroBanner },
     { text: "Sobre", ref: sections.prologue },
     { text: "Apoiadores", ref: sections.supporters },
+    { text: "Realizadores", ref: sections.directors },
     { text: "Programação", ref: sections.programming },
     { text: "Maratona", ref: sections.Marathon },
     { text: "Destaques", ref: sections.Highlights },
