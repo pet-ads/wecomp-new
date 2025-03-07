@@ -23,9 +23,9 @@ export const ProgrammingCardContainer = styled.div`
   min-height: 100%;
   max-height: 100%;
 
-  padding: 2rem;
+  padding: 2rem 0;
 
-  margin: 2rem 0;
+  margin: 1rem;
 
   background-color: var(--background-color);
 `;

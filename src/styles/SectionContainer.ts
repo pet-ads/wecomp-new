@@ -10,7 +10,7 @@ export const SectionContainer = styled.section`
   min-width: 100%;
   max-width: 100%;
 
-  height: fit-content;
+  /* height: fit-content; */
   min-height: 100vh;
 
   padding: 2rem 0;
@@ -26,9 +26,7 @@ export const SectionContent = styled.div`
   min-width: 80%;
   max-width: 80%;
 
-  height: fit-content;
-
-  padding: 2rem 0;
+  height: 100%;
 
   background-color: orange;
 

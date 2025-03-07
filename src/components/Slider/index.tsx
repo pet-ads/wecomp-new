@@ -12,7 +12,7 @@ export default function Slider<T>({ items, renderItem }: SliderProps<T>) {
 
   useEffect(() => {
     function handleResize() {
-      setSlidePerView(window.innerWidth < 1080 ? 1.2 : 2.5);
+      setSlidePerView(window.innerWidth < 1080 ? 2.5 : 1.8);
     }
 
     handleResize();
@@ -25,11 +25,9 @@ export default function Slider<T>({ items, renderItem }: SliderProps<T>) {
       <Swiper
         slidesPerView={slidePerView}
         spaceBetween={80}
-        style={{
-          width: "100%",
-          maxHeight: "100%",
-          padding: ".5rem",
-        }}
+        centeredSlides={false}
+        centeredSlidesBounds={true}
+        centerInsufficientSlides={true}
       >
         {items.map((item, index) => (
           <SwiperSlide key={index}>{renderItem(item)}</SwiperSlide>
