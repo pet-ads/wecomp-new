@@ -11,6 +11,23 @@ export interface HighlightsProps {
   link: string;
 }
 
+export interface CardHeaderProps {
+  title: string;
+  classification: OfferModality;
+  image: string;
+  imageDescription: string;
+}
+
+export interface CardMainProps {
+  content: string;
+}
+
+export interface CardFooterProps {
+  vacancies: number;
+  link: string;
+}
+
+
 export interface HighlightsSectionProps {
     eventHighlights : HighlightsProps[]
 }
