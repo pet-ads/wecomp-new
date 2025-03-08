@@ -5,9 +5,13 @@ import {
   SectionContent,
 } from "../../../styles/SectionContainer";
 
-export const HighlightsContainer = styled(SectionContainer)``;
+export const HighlightsContainer = styled(SectionContainer)`
+  background-color: var(--background-color);
+`;
 
-export const HighlightsContent = styled(SectionContent)``;
+export const HighlightsContent = styled(SectionContent)`
+  background-color: var(--background-color);
+`;
 
 export const HighlightsCardContainer = styled.div`
   display: flex;
@@ -22,5 +26,4 @@ export const HighlightsCardContainer = styled.div`
 
   margin: 2rem 0;
 
-  background-color: red;
 `;
