@@ -9,6 +9,7 @@ export interface HighlightsProps {
   description: string;
   type: OfferModality;
   link: string;
+  linkCompany: string;
 }
 
 export interface CardHeaderProps {
@@ -16,6 +17,7 @@ export interface CardHeaderProps {
   classification: OfferModality;
   image: string;
   imageDescription: string;
+  linkCompany: string;
 }
 
 export interface CardMainProps {
@@ -27,7 +29,6 @@ export interface CardFooterProps {
   link: string;
 }
 
-
 export interface HighlightsSectionProps {
-    eventHighlights : HighlightsProps[]
+  eventHighlights: HighlightsProps[];
 }
