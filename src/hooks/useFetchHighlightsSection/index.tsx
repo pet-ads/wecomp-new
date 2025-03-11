@@ -1,4 +1,4 @@
-import { HighlightsSectionProps } from "../../types/HighlightsSection";
+import { HighlightsSectionProps } from "../../types/Highlights";
 
 import highlights from "../../../public/data/highlights.json";
 import { OfferModality } from "../../types/Tag";

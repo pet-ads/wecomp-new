@@ -17,18 +17,11 @@ export const Container = styled.div`
 
   background-color: var(--primary-text-color);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  /* background-color: red; */
 
   /* overflow: hidden; */
   /* aspect-ratio: 16 / 9; */
 
-  @media (max-width: 768px) {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 1rem;
-    aspect-ratio: auto;
-  }
 `;
 
 export const IconContainer = styled.div`

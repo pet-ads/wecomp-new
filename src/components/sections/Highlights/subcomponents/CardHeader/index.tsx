@@ -8,19 +8,18 @@ import {
   EventTitle,
 } from "./styles";
 
-import { CardHeaderProps } from "../../../../../types/HighlightsSection";
+import { CardHeaderProps } from "../../../../../types/Highlights";
 
 export default function CardHeader({
   title,
   classification,
   image,
   imageDescription,
-  linkCompany
+  linkCompany,
 }: CardHeaderProps) {
-
-    const handleRedirectOnClick = (url: string) => {
-      window.open(url, "_blank");
-    };
+  const handleRedirectOnClick = (url: string) => {
+    window.open(url, "_blank");
+  };
 
   return (
     <Container>

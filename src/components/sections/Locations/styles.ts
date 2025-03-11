@@ -31,7 +31,7 @@ export const MapsContainer = styled.div`
   }
 `;
 
-export const Map = styled.div`
+export const Map = styled.iframe`
   display: flex;
   flex-direction: column;
   justify-content: center;

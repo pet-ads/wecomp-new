@@ -1,6 +1,6 @@
 import { Container, Icon, IconContainer } from "./styles";
 
-import { HighlightsProps } from "../../../../../types/HighlightsSection";
+import { HighlightsProps } from "../../../../../types/Highlights";
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
 import CardHeader from "../CardHeader";
 import CardMain from "../CardMain";
@@ -35,10 +35,7 @@ export default function Card({
         linkCompany={linkCompany}
       />
       <CardMain content={description} />
-      <CardFooter
-        vacancies={vacancies}
-        link={link}
-      />
+      <CardFooter vacancies={vacancies} link={link} />
     </Container>
   );
 }

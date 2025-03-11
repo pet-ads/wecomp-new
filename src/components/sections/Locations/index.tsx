@@ -13,7 +13,7 @@ export default function Locations() {
       <LocalContent ref={sections.Locations}>
         <SubTitle children="Locais do evento" />
         <MapsContainer>
-          <Map>map1</Map>
+          <Map src="">map1</Map>
           <Map>map2</Map>
         </MapsContainer>
       </LocalContent>
