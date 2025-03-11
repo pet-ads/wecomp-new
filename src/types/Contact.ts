@@ -1,11 +1,11 @@
 export interface ContactProps {
   id: string | number;
-  socialMediaName: string;
-  url: string;
-  icon: string;
-  alt: string;
+  username: string;
+  contactUrl: string;
+  iconPath: string;
+  iconAlt: string;
 }
 
 export interface ContactSectionsProps {
-  socialMedias: ContactProps[];
+  socialMediaLinks: ContactProps[];
 }
