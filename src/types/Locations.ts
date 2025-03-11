@@ -6,5 +6,5 @@ export interface LocationProps {
 }
 
 export interface LocationSectionProps {
-  eventLocations: LocationProps;
+  eventLocations: LocationProps[];
 }
