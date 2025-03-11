@@ -1,7 +1,5 @@
-// External library
 import styled from "styled-components";
 
-// Styles
 import {
   SectionContainer,
   SectionContent,
@@ -28,7 +26,7 @@ export const ContactCards = styled.div`
 
   background-color: brown;
 
-  @media (max-width: 650px){
+  @media (max-width: 650px) {
     flex-direction: column;
   }
 `;

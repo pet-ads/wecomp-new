@@ -1,11 +1,8 @@
-// Components
 import SubTitle from "../../ui/SubTitle";
 import FAQ from "./subcomponent";
 
-// Hooks
 import useSectionRefs from "../../../hooks/useSectionRefs";
 
-// Styles
 import { FAQContainer, FAQContent, FAQList } from "./styles";
 
 export default function FAQs() {

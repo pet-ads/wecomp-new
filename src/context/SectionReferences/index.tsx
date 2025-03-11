@@ -1,18 +1,14 @@
-// External library
 import { useRef } from "react";
 
-// Types
-import {
-  ChildrenContext,
-} from "../../types/SectionRefsContextType";
+import { ChildrenContext } from "../../types/SectionRefsContextType";
 
-// context
 import { SectionRefsContext } from "./context";
 
 export default function SectionReferences({ children }: ChildrenContext) {
   const HeroBannerSection = useRef<HTMLDivElement>(null);
   const prologueSection = useRef<HTMLDivElement>(null);
   const supportersSection = useRef<HTMLDivElement>(null);
+  const directorsSection = useRef<HTMLDivElement>(null);
   const programmingSection = useRef<HTMLDivElement>(null);
   const HighlightsSection = useRef<HTMLDivElement>(null);
   const MarathonSection = useRef<HTMLDivElement>(null);
@@ -29,6 +25,7 @@ export default function SectionReferences({ children }: ChildrenContext) {
           HeroBanner: HeroBannerSection,
           prologue: prologueSection,
           supporters: supportersSection,
+          directors: directorsSection,
           programming: programmingSection,
           Highlights: HighlightsSection,
           Marathon: MarathonSection,

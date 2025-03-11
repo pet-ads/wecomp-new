@@ -1,11 +1,11 @@
-// External library
-import React from "react"
+import React from "react";
 
 export interface SectionRefsContextType {
   sections: {
     HeroBanner: React.RefObject<HTMLDivElement>;
     prologue: React.RefObject<HTMLDivElement>;
     supporters: React.RefObject<HTMLDivElement>;
+    directors: React.RefObject<HTMLDivElement>;
     programming: React.RefObject<HTMLDivElement>;
     Locations: React.RefObject<HTMLDivElement>;
     Highlights: React.RefObject<HTMLDivElement>;
@@ -14,7 +14,6 @@ export interface SectionRefsContextType {
     Editions: React.RefObject<HTMLDivElement>;
     FAQs: React.RefObject<HTMLDivElement>;
     DropDownMenu: React.RefObject<HTMLDivElement>;
-
   };
 }
 

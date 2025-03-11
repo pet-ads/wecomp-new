@@ -1,9 +1,7 @@
-// Types
-import { SupportersScetionProps } from "../../types/supporters";
+import { SupportersScetionProps } from "../../types/Supporters";
 
-// JSON 
 import supporters from "../../../public/data/supporters.json";
 
 export default function useFetchSupportersSection(): SupportersScetionProps {
-    return supporters;
+  return supporters;
 }

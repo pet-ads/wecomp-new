@@ -1,9 +1,9 @@
-// Components
 import {
   Header,
   HeroBanner,
   Prologue,
   Supporters,
+  Directors,
   Programming,
   Marathon,
   Highlights,
@@ -14,7 +14,6 @@ import {
   Footer,
 } from "../../dto";
 
-// Styles
 import { Main } from "./styles";
 
 export default function Home() {
@@ -25,6 +24,7 @@ export default function Home() {
       <Main>
         <Prologue />
         <Supporters />
+        <Directors/>
         <Programming />
         <Marathon />
         <Highlights />

@@ -1,7 +1,5 @@
-// Types
-import { PrologueSectionProps } from "../../types/PrologueSection";
+import { PrologueSectionProps } from "../../types/Prologue";
 
-// JSON
 import prologue from "../../../public/data/prologue.json";
 
 export default function useFetchPrologueSection(): PrologueSectionProps {

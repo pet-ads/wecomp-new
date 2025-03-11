@@ -1,4 +1,3 @@
-// External library
 import styled from "styled-components";
 
 export const NavigationList = styled.ul`
@@ -10,12 +9,16 @@ export const NavigationList = styled.ul`
 
   padding: 1rem 0;
 
-  gap: 2.5rem;
+  gap: 1.5rem;
 
   list-style-type: none;
 
   @media (max-width: 1080px) {
     display: none;
+  }
+
+  @media (min-width: 1380px) {
+    gap: 2rem;
   }
 
   @media (min-width: 1500px) {
@@ -39,5 +42,4 @@ export const NavigationLink = styled.a`
   @media (min-width: 1350px) {
     font-size: 1.25rem;
   }
-
 `;

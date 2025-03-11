@@ -1,7 +1,5 @@
-// Types
-import { HeroSectionProps } from "../../types/HeroSection";
+import { HeroSectionProps } from "../../types/Hero";
 
-// JSON
 import heroBanner from "../../../public/data/heroBanner.json";
 
 export default function useFetchHeroSection(): HeroSectionProps {

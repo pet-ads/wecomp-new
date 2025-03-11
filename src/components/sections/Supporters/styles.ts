@@ -1,8 +1,6 @@
-// External Library
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-// Styles
 import {
   SectionContainer,
   SectionContent,
@@ -33,10 +31,10 @@ export const SupportesLogoContainer = styled.div`
   overflow-x: hidden;
 `;
 
-export const SupporterLogo = styled.img<{width?: string}>`
+export const SupporterLogo = styled.img<{ width?: string }>`
   height: 100%;
   max-width: 15rem;
-  width: ${({width}) => width || "30%"};
+  width: ${({ width }) => width || "30%"};
   object-fit: contain;
   overflow: hidden;
   margin-left: 4rem;
@@ -74,7 +72,7 @@ export const MarqueeItem = styled.div`
   font-size: 5rem;
   font-weight: bold;
 
-  animation: marquee 10s linear infinite;
+  animation: marquee 30s linear infinite;
 
   &:hover {
     animation-play-state: paused;

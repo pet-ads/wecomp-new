@@ -1,10 +1,10 @@
-// External Library
 import styled from "styled-components";
 
 export const SliderContainer = styled.div`
-  min-width: 70%;
+  min-width: 100%;
   max-width: 100%;
   height: 100%;
+
   object-fit: cover;
 
   .swiper-pagination-bullet {
@@ -15,5 +15,13 @@ export const SliderContainer = styled.div`
   .swiper-pagination-bullet-active {
     background: var(--primary-color);
     opacity: 1;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    list-style: none;
+    overflow: visible;
   }
 `;

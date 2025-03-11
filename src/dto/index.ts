@@ -1,8 +1,8 @@
-
 export { default as Header } from "../components/Header";
 export { default as HeroBanner } from "../components/sections/HeroBanner";
 export { default as Prologue } from "../components/sections/Prologue";
 export { default as Supporters } from "../components/sections/Supporters";
+export { default as Directors } from "../components/sections/Directors";
 export { default as Programming } from "../components/sections/Programming";
 export { default as Locations } from "../components/sections/Locations";
 export { default as Marathon } from "../components/sections/Marathon";

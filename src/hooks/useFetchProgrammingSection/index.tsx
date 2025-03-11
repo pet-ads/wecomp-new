@@ -1,9 +1,15 @@
-// Types
-import {ProgrammingSectionProps} from "../../types/Programming";
+import { ProgrammingSectionProps, TypeEventName } from "../../types/Programming";
 
-// JSON
 import programming from "../../../public/data/programming.json";
+import { AvailabilityStatus, DifficultyEvent } from "../../types/Tag";
 
 export default function useFetchProgrammingSection(): ProgrammingSectionProps {
-    return programming;
+  return {
+    eventProgramming: programming.eventProgramming.map((prog) => ({
+      ...prog,
+      classification: prog.classification as DifficultyEvent,
+      status: prog.status as AvailabilityStatus,
+      typeEvent: prog.typeEvent as TypeEventName,
+    })),
+  };
 }

@@ -1,4 +1,3 @@
-// External Library
 import styled from "styled-components";
 
 export const Main = styled.div`
@@ -7,8 +6,5 @@ export const Main = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  gap: 5rem;
-
-  background-color: aqua;
-
+  overflow: hidden;
 `;

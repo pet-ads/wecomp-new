@@ -1,4 +1,3 @@
-// External Library
 import styled from "styled-components";
 
 export const Nav = styled.nav`
@@ -14,10 +13,9 @@ export const Nav = styled.nav`
 
   min-height: 2.5rem;
 
-  padding: 0.5rem 0;
+  padding: 0.15rem 0;
 
   gap: 2rem;
 
   background-color: var(--primary-color);
-
 `;

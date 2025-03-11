@@ -1,4 +1,3 @@
-// External library
 import React from "react";
 
 export interface ArrowScrool {

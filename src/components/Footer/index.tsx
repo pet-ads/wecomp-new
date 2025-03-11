@@ -1,10 +1,7 @@
-// External library
 import { FaHeart } from "react-icons/fa";
 
-// Components
 import RedirectSpan from "../ui/RedirectSpan";
 
-// Styles
 import { FooterContainer, FooterContent } from "./styles";
 
 export default function Footer() {

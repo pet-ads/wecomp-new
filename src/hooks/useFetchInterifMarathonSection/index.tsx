@@ -1,9 +1,7 @@
-// Types
-import { InterIfMarathonProps } from "../../types/interifMarathon";
+import { InterIfMarathonProps } from "../../types/InterifMarathon";
 
-// JSON
 import interIfMarathon from "../../../public/data/interIfMarathon.json";
 
 export default function useFetchInterifMarathonSection(): InterIfMarathonProps {
-    return interIfMarathon;
+  return interIfMarathon;
 }

@@ -1,25 +1,24 @@
-// External Library
 import styled from "styled-components";
 
 export const LabelContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    min-width: 22vw;
-    
-    height: 2rem;
+  min-width: 22vw;
 
-    padding: .5rem;
+  height: 2rem;
 
-    background-color: var(--secundary-text-color);
+  padding: 0.5rem;
 
-    @media (max-width: 400px){
-      min-width: 20vw;
+  background-color: var(--secundary-text-color);
 
-      height: 1.5rem;
-    }
-`
+  @media (max-width: 400px) {
+    min-width: 20vw;
+
+    height: 1.5rem;
+  }
+`;
 
 export const LabelText = styled.span`
   font-size: 1.5rem;

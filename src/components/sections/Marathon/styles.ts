@@ -1,7 +1,5 @@
-// External Library
 import styled from "styled-components";
 
-// Styles
 import {
   SectionContainer,
   SectionContent,
@@ -19,7 +17,7 @@ export const MarathonContent = styled(SectionContent)`
 export const MarathonCardContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: stretch; 
+  align-items: stretch;
   flex-wrap: wrap;
 
   gap: 2rem;
@@ -28,9 +26,9 @@ export const MarathonCardContainer = styled.div`
 
   min-height: 40%;
 
-  padding: 1rem 0; 
+  padding: 1rem 0;
 
-  margin: 1rem 0; 
+  margin: 1rem 0;
 `;
 
 export const MarathonCard = styled.div`
@@ -43,12 +41,12 @@ export const MarathonCard = styled.div`
   text-align: center;
 
   max-width: 550px; // 400
-  width: 100%; 
+  width: 100%;
 
-  min-height: 300px; 
+  min-height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
 `;
 
 export const MarathonIcon = styled.div`
@@ -59,18 +57,17 @@ export const MarathonIcon = styled.div`
 `;
 
 export const MarathonCardTitle = styled.h2`
-    display: flex;
-    font-size: 28px;
-    font-weight: bold;
-    content: "O que é InterIF ?";
+  display: flex;
+  font-size: 28px;
+  font-weight: bold;
+  content: "O que é InterIF ?";
 `;
 
 export const MarathonCardDef = styled.p`
-    text-align: justify;
-    font-size: 22px;
-    content: "O que é InterIF ?";
+  text-align: justify;
+  font-size: 22px;
+  content: "O que é InterIF ?";
 `;
-
 
 export const CardButton = styled.a`
   display: inline-block;
@@ -96,7 +93,6 @@ export const ScheduleTable = styled.table`
   margin-bottom: 1rem;
   border: none;
 
-
   td {
     padding: 8px;
     text-align: center;
@@ -108,17 +104,15 @@ export const ScheduleTable = styled.table`
 
   td:nth-child(even) {
     border-left: 1px solid #ddd;
-
   }
 
-  tr:first-child {  //:nth-child(even)
+  tr:first-child {
+    //:nth-child(even)
     font-weight: bold;
     background-color: rgb(255, 255, 255); // var(--background-color)
   }
 `;
 
-
-
 // import Text from "../../ui/Text";
-// <Text children={marathon.definition} />  
+// <Text children={marathon.definition} />
 //

@@ -1,17 +1,16 @@
-// External Library
 import styled from "styled-components";
 
-// Styles
 import {
   SectionContainer,
   SectionContent,
 } from "../../../styles/SectionContainer";
 
 export const ProgrammingContainer = styled(SectionContainer)`
-background: var(--background-color);`;
+  background: var(--background-color);
+`;
 
 export const ProgrammingContent = styled(SectionContent)`
-background: var(--background-color);
+  background: var(--background-color);
 `;
 
 export const ProgrammingCardContainer = styled.div`
@@ -19,15 +18,14 @@ export const ProgrammingCardContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: black;
-
   width: 100%;
 
-  min-height: 40vh; 
+  min-height: 100%;
+  max-height: 100%;
 
   padding: 2rem 0;
 
-  margin: 2rem 0;
-  
+  margin: 1rem;
+
   background-color: var(--background-color);
 `;

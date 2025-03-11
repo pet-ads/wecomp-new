@@ -1,29 +1,37 @@
-// Components
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 
-// Hooks
 import useSectionRefs from "../../../hooks/useSectionRefs";
+import useFetchHighlightsSection from "../../../hooks/useFetchHighlightsSection";
 
-// Styles
 import {
   HighlightsCardContainer,
   HighlightsContainer,
   HighlightsContent,
 } from "./styles";
+import Slider from "../../Slider";
+import Card from "./subcomponents/Card";
 
 export default function Highlights() {
   const { sections } = useSectionRefs();
+
+  const {eventHighlights} = useFetchHighlightsSection();
 
   return (
     <HighlightsContainer>
       <HighlightsContent ref={sections.Highlights}>
         <SubTitle children="Destaques" />
         <HighlightsCardContainer>
-          Carrossel of highlights cards
+          <Slider
+            items={eventHighlights}
+            renderItem={(highlight) => (
+              <Card key={highlight.id} {...highlight} />
+            )}
+          />
         </HighlightsCardContainer>
-      <ArrowButton sectionRef={sections.Locations} />
+        <ArrowButton sectionRef={sections.Locations} />
       </HighlightsContent>
     </HighlightsContainer>
   );
 }
+// HighlightsSectionProps;
