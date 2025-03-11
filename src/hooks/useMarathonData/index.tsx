@@ -1,6 +1,6 @@
-import { Event } from "../../types/InterifMarathon";
+import { Event } from "../../types/interifMarathon";
 
-import marathonData from "../../../public/data/interIfMarathon.json";
+import marathonData from "../../data/interIfMarathon.json";
 
 export default function useMarathonData(): Event[] {
   return marathonData.interIfMarathon;

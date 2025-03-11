@@ -1,6 +1,6 @@
 import { ProgrammingSectionProps, TypeEventName } from "../../types/Programming";
 
-import programming from "../../../public/data/programming.json";
+import programming from "../../data/programming.json";
 import { AvailabilityStatus, DifficultyEvent } from "../../types/Tag";
 
 export default function useFetchProgrammingSection(): ProgrammingSectionProps {
