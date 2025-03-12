@@ -1,4 +1,4 @@
-import { InterIfMarathonProps } from "../../types/InterifMarathon";
+import { InterIfMarathonProps } from "../../types/interifMarathon";
 
 import interIfMarathon from "../../data/interIfMarathon.json";
 
