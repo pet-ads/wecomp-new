@@ -6,11 +6,11 @@ import {
 } from "../../../styles/SectionContainer";
 
 export const LocalContainer = styled(SectionContainer)`
-    background-color: var(--primary-text-color);
+    background-color: var(--background-color);
 `;
 
 export const LocalContent = styled(SectionContent)`
-    background-color: var(--primary-text-color);
+    background-color: var(--background-color);
 `;
 
 export const MapsContainer = styled.div`
