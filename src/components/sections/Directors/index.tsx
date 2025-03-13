@@ -8,6 +8,9 @@ import {
   DirectorContent,
   DirectorLogo,
   DirectorsLogoContainer,
+  OrganizerContent,
+  OrganizerLogo,
+  OrganizerLogoContainer,
 } from "./styles";
 import useFetchDirectorsSection from "../../../hooks/useFetchDirectorsSection";
 
@@ -35,6 +38,17 @@ export default function Directors() {
           ))}
         </DirectorsLogoContainer>
       </DirectorContent>
+
+      <OrganizerContent>
+        <SubTitle children="Organizadores" />
+        <OrganizerLogoContainer>
+          <OrganizerLogo
+            src="../../../../public/images/empresaGenerica.svg"
+            alt="Logo do PET ADS"
+            onClick={() => handleRedirectOnClick("https://petads-ifsp-scl.vercel.app/")}
+          />
+        </OrganizerLogoContainer>
+      </OrganizerContent>
       <ArrowButton sectionRef={sections.programming} />
     </DirectorContainer>
   );
