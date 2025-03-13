@@ -16,7 +16,7 @@ export default function Contact() {
     <ContactContainer>
       <ContactContent ref={sections.Contact}>
         <SubTitle children="Informações de contato" />
-        <Text children="Nos acompanhe pelas nossas redes sociais, onde divulgaremos as atualizações do evento." />
+        <Text textAlign="center" children="Nos acompanhe pelas nossas redes sociais, onde divulgaremos as atualizações do evento." />
         <ContactCards>
           {socialMediaLinks.map((media) => (
             <Card
