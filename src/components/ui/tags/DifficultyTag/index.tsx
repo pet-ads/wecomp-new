@@ -1,6 +1,6 @@
 import { Container } from "./styles.ts";
 
-import { DifficultyEventProps } from "../../../../types/Tag";
+import { DifficultyEventProps } from "../types.ts";
 
 export default function DifficultyTag({ label }: DifficultyEventProps) {
   const getAvailabilityProperties = () => {

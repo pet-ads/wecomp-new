@@ -1,4 +1,4 @@
-import { TypeEventName } from "../types/Programming";
+import { TypeEventName } from "../components/sections/Programming/types";
 
 export function generatedIconEvent(typeEvent: TypeEventName) {
   const icons = {

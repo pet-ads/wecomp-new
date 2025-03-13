@@ -8,7 +8,7 @@ import { Container, Icon, IconContainer } from "./styles";
 
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
 
-import { ProgrammingProps } from "../../../../../types/Programming";
+import { ProgrammingProps } from "../../types";
 
 export default function Card({
   id,

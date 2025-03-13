@@ -1,4 +1,4 @@
-import { TextContainerProps } from "../../../types/TextContainerProps.ts";
+import { TextContainerProps } from "./types.ts";
 
 import { TextContainer } from "./styles.ts";
 

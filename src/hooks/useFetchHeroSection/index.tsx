@@ -1,4 +1,4 @@
-import { HeroSectionProps } from "../../types/Hero";
+import { HeroSectionProps } from "../../components/sections/HeroBanner/types";
 
 import heroBanner from "../../data/heroBanner.json";
 

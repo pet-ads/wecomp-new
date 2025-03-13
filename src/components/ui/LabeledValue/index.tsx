@@ -1,4 +1,4 @@
-import { LabeledValueProps } from "../../../types/LabeledValueProps";
+import { LabeledValueProps } from "./types";
 
 import { LabeledValueContainer } from "./style";
 

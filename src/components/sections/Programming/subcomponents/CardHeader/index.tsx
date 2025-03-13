@@ -11,7 +11,7 @@ import {
   EventTitle,
 } from "./styles";
 
-import { CardHeaderProps } from "../../../../../types/Programming";
+import { CardHeaderProps } from "../../types";
 
 export default function CardHeader({
   title,

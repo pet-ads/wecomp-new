@@ -1,4 +1,4 @@
-import { Event } from "../../types/interifMarathon";
+import { Event } from "../useFetchInterifMarathonSection/types";
 
 import marathonData from "../../data/interIfMarathon.json";
 

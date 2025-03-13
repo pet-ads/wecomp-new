@@ -1,6 +1,6 @@
 import { Container, Icon, IconContainer } from "./styles";
 
-import { HighlightsProps } from "../../../../../types/Highlights";
+import { HighlightsProps } from "../../types";
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
 import CardHeader from "../CardHeader";
 import CardMain from "../CardMain";

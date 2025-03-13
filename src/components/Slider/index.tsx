@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/swiper-bundle.css";
 
-import { SliderProps } from "../../types/Slider";
+import { SliderProps } from "./types";
 
 import { SliderContainer } from "./styles";
 

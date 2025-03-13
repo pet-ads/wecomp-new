@@ -1,4 +1,4 @@
-import { LocationSectionProps } from "../../types/Locations";
+import { LocationSectionProps } from "../../components/sections/Locations/types";
 
 import location from "../../data/location.json";
 
