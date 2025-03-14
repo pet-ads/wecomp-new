@@ -1,7 +1,7 @@
 import MenuNavigation from "../menus/Navigation";
 import MenuMobile from "../menus/Mobile";
 
-import useSectionRefs from "../../hooks/useSectionRefs";
+import useSectionRefs from "../../hooks/references/useSectionRefs";
 
 import { LinkAnchor } from "../menus/types";
 

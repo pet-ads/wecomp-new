@@ -1,8 +1,8 @@
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
-import useFetchSupporters from "../../../hooks/useFetchSupportersSection";
+import useSectionRefs from "../../../hooks/references/useSectionRefs";
+import useFetchSupporters from "../../../hooks/fetch/useSupportersSectionData";
 
 import {
   SupporterLogo,

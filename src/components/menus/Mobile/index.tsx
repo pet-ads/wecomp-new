@@ -4,7 +4,7 @@ import DropDownMenu from "../subcomponent/DropDown";
 
 import { NavListProps } from "../types";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
+import useSectionRefs from "../../../hooks/references/useSectionRefs";
 
 import { SandWichIcon, WrapperIcon } from "./styles";
 

@@ -2,7 +2,7 @@ import CardHeader from "../CardHeader";
 import CardMain from "../CardMain";
 import CardFooter from "../CardFooter";
 
-import useToggleCardContent from "../../../../../hooks/useToggleCardContent";
+import useToggleCardContent from "../../../../../hooks/toggle/useToggleCardContent";
 
 import { Container, Icon, IconContainer } from "./styles";
 

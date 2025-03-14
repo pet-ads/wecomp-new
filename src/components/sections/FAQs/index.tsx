@@ -1,21 +1,23 @@
 import SubTitle from "../../ui/SubTitle";
-import FAQ from "./subcomponent";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
+import useSectionRefs from "../../../hooks/references/useSectionRefs";
 
 import { FAQContainer, FAQContent, FAQList } from "./styles";
+import Details from "./subcomponent/Details";
+import useFAQSectionData from "../../../hooks/fetch/useFAQSectionData";
 
 export default function FAQs() {
   const { sections } = useSectionRefs();
+  const { frequentlyAsks } = useFAQSectionData();
 
   return (
     <FAQContainer>
       <FAQContent ref={sections.FAQs}>
         <SubTitle children="Perguntas frequentes" />
         <FAQList>
-          <FAQ question="pgt 1" response="res 1" />
-          <FAQ question="pgt 2" response="res 2" />
-          <FAQ question="pgt 3" response="res 3" />
+          {frequentlyAsks.map((item) => (
+            <Details question={item.question} answer={item.answer} />
+          ))}
         </FAQList>
       </FAQContent>
     </FAQContainer>
