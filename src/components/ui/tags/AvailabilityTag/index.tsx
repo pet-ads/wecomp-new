@@ -1,6 +1,6 @@
 import { Container } from "./styles.ts";
 
-import { AvailabilityProps } from "../../../../types/Tag";
+import { AvailabilityProps } from "../types.ts";
 
 export default function AvailabilityTag({ label }: AvailabilityProps) {
   const getAvailabilityProperties = () => {

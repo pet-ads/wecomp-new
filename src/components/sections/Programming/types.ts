@@ -1,4 +1,4 @@
-import { AvailabilityStatus, DifficultyEvent } from "./Tag";
+import { AvailabilityStatus, DifficultyEvent } from "../../ui/tags/types";
 
 export type TypeEventName = "Talk" | "Course" | "Opening" | "TechnicalVisit";
 

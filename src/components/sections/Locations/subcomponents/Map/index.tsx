@@ -1,4 +1,4 @@
-import { LocationProps } from "../../../../../types/Locations";
+import { LocationProps } from "../../types";
 import { Container, MapFrame, DetailsOfLocal, InformationSpan } from "./styles";
 
 export default function Map({ address, alt, localName, url }: LocationProps) {

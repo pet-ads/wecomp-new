@@ -1,5 +1,5 @@
 
-import { DirectorsProps } from "../../types/Directors";
+import { DirectorsProps } from "./types";
 
 import directors from "./../../data/directors.json";
 

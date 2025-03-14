@@ -3,7 +3,7 @@ import MenuMobile from "../menus/Mobile";
 
 import useSectionRefs from "../../hooks/useSectionRefs";
 
-import { LinkAnchor } from "../../types/Navigation";
+import { LinkAnchor } from "../menus/types";
 
 import { Nav } from "./styles";
 

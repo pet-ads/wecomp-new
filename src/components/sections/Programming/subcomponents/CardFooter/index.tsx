@@ -3,7 +3,7 @@ import RedirectButton from "../../../../ui/RedirectButton";
 
 import { Container, ContainerButtons, EventDescriptionButton } from "./styles";
 
-import { CardFooterProps } from "../../../../../types/Programming";
+import { CardFooterProps } from "../../types";
 
 export default function CardFooter({
   vacancies,

@@ -1,7 +1,7 @@
-import { HighlightsSectionProps } from "../../types/Highlights";
+import { HighlightsSectionProps } from "../../components/sections/Highlights/types";
 
 import highlights from "../../data/highlights.json";
-import { OfferModality } from "../../types/Tag";
+import { OfferModality } from "../../components/ui/tags/types";
 
 export default function useFetchHighlightsSection(): HighlightsSectionProps {
   return {

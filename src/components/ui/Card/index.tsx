@@ -1,4 +1,4 @@
-import { CardProps } from "../../../types/Card";
+import { CardProps } from "./types";
 
 type CardComponentProps = CardProps;
 

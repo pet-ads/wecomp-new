@@ -1,4 +1,4 @@
-import { PrologueSectionProps } from "../../types/Prologue";
+import { PrologueSectionProps } from "../../components/sections/Prologue/types";
 
 import prologue from "../../data/prologue.json";
 

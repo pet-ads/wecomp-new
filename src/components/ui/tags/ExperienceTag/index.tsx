@@ -1,6 +1,6 @@
 import { Container } from "./styles.ts";
 
-import { OfferModalityProps } from "../../../../types/Tag";
+import { OfferModalityProps } from "../types.ts";
 
 export default function ExpirienceTag({ label }: OfferModalityProps) {
   const getExperienceProperties = () => {

@@ -1,4 +1,4 @@
-import { RedirectButtonProps } from "../../../types/RedirectButton.ts";
+import { RedirectButtonProps } from "./types.ts";
 
 import LinkButton from "./styles.ts";
 

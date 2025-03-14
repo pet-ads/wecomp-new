@@ -1,6 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 
-import { NavListProps } from "../../../../types/Navigation";
+import { NavListProps } from "../../types";
 
 import { handlePageScrollingOnClick } from "../../../../utils/pageScrollingOnClick";
 

@@ -1,4 +1,4 @@
-import { ArrowScrool } from "../types/ArrowButtonScroll";
+import { ArrowScrool } from "../components/ui/ArrowButton/types";
 
 export const handlePageScrollingOnClick = ({ sectionRef }: ArrowScrool) => {
   if (sectionRef && sectionRef.current) {

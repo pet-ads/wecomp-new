@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import { ChildrenContext } from "../../types/SectionRefsContextType";
+import { ChildrenContext } from "./types";
 
 import { SectionRefsContext } from "./context";
 

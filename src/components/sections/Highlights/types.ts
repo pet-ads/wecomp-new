@@ -1,4 +1,4 @@
-import { OfferModality } from "./Tag";
+import { OfferModality } from "../../ui/tags/types";
 
 export interface HighlightsProps {
   id: string | number;

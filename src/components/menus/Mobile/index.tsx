@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import DropDownMenu from "../subcomponent/DropDown";
 
-import { NavListProps } from "../../../types/Navigation";
+import { NavListProps } from "../types";
 
 import useSectionRefs from "../../../hooks/useSectionRefs";
 

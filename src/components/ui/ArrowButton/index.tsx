@@ -1,4 +1,4 @@
-import { ArrowScrool } from "../../../types/ArrowButtonScroll";
+import { ArrowScrool } from "./types";
 
 import { handlePageScrollingOnClick } from "../../../utils/pageScrollingOnClick";
 

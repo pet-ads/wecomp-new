@@ -1,28 +1,25 @@
 {
-    "socialMedias" : [
+    "socialMediaLinks": [
         {
-            "id": 1,
-            "socialMediaName": "wecompifsp",
-            "url": "https://www.instagram.com/wecompifsp/",
-            "icon": "/src/assets/icons/instagram.svg",
-            "alt": "Logo da Rede social instagram"
-
+            "id": "1",
+            "username": "wecompifsp",
+            "contactUrl": "https://www.instagram.com/wecompifsp/",
+            "iconPath": "/src/assets/icons/contact/instagram.svg",
+            "iconAlt": "Instagram social network icon"
         },
         {
-            "id": 2,
-            "socialMediaName": "wecompifsp",
-            "url": "https://web.facebook.com/wecompifsp",
-            "icon": "/src/assets/icons/facebook.svg",
-            "alt": "Logo da Rede social facebook"
-
+            "id": "2",
+            "username": "wecompifsp",
+            "contactUrl": "https://web.facebook.com/wecompifsp",
+            "iconPath": "/src/assets/icons/contact/facebook.svg",
+            "iconAlt": "Facebook  social network icon"
         },
         {
-            "id": 3,
-            "socialMediaName": "wecomp.scl@ifsp.edu.br",
-            "url": "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Contato+via+Site+da+Wecomp&to=wecomp.scl@ifsp.edu.br",
-            "icon": "/src/assets/icons/email.svg",
-            "alt": "Logo da plataforma de mensagens"
-
+            "id": "3",
+            "username": "wecomp.scl@ifsp.edu.br",
+            "contactUrl": "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Contato+via+Site+da+Wecomp&to=wecomp.scl@ifsp.edu.br",
+            "iconPath": "/src/assets/icons/contact/email.svg",
+            "iconAlt": "Wecomp contact e-mail"
         }
     ]
 }

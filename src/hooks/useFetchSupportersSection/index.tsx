@@ -1,4 +1,4 @@
-import { SupportersScetionProps } from "../../types/Supporters";
+import { SupportersScetionProps } from "../../components/sections/Supporters/types";
 
 import Supporters from "../../data/supporters.json";
 
