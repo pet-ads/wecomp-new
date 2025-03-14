@@ -1,23 +1,33 @@
 import SubTitle from "../../ui/SubTitle";
 import Text from "../../ui/Text";
 import ArrowButton from "../../ui/ArrowButton";
+import Card from "./subcomponents/Card";
 
 import useSectionRefs from "../../../hooks/useSectionRefs";
+import useFetchContactSection from "../../../hooks/useFetchContactSection";
 
-import { Card, ContactCards, ContactContainer, ContactContent } from "./styles";
+import { ContactCards, ContactContainer, ContactContent } from "./styles";
 
 export default function Contact() {
   const { sections } = useSectionRefs();
+  const { socialMediaLinks } = useFetchContactSection();
 
   return (
     <ContactContainer>
       <ContactContent ref={sections.Contact}>
         <SubTitle children="Informações de contato" />
-        <Text children="Nos acompanhe pelas nossas redes sociais, onde divulgaremos as atualizações do evento." />
+        <Text textAlign="center" children="Nos acompanhe pelas nossas redes sociais, onde divulgaremos as atualizações do evento." />
         <ContactCards>
-          <Card>Icon 1</Card>
-          <Card>Icon 2</Card>
-          <Card>Icon 3</Card>
+          {socialMediaLinks.map((media) => (
+            <Card
+              key={media.id}
+              id={""}
+              username={media.username}
+              contactUrl={media.contactUrl}
+              iconPath={media.iconPath}
+              iconAlt={media.iconAlt}
+            />
+          ))}
         </ContactCards>
       </ContactContent>
       <ArrowButton sectionRef={sections.Editions} />

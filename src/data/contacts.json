@@ -11,14 +11,14 @@
             "id": "2",
             "username": "wecompifsp",
             "contactUrl": "https://web.facebook.com/wecompifsp",
-            "iconPath": "assets/icons/contact/facebook.svg",
+            "iconPath": "/src/assets/icons/contact/facebook.svg",
             "iconAlt": "Facebook  social network icon"
         },
         {
             "id": "3",
             "username": "wecomp.scl@ifsp.edu.br",
             "contactUrl": "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Contato+via+Site+da+Wecomp&to=wecomp.scl@ifsp.edu.br",
-            "iconPath": "assets/icons/contact/email.svg",
+            "iconPath": "/src/assets/icons/contact/email.svg",
             "iconAlt": "Wecomp contact e-mail"
         }
     ]
