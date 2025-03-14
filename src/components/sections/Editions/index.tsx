@@ -1,20 +1,20 @@
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
+import useSectionRefs from "../../../hooks/references/useSectionRefs";
 
 import {
   EditionsCardContainer,
   EditionsContainer,
   EditionsContent,
 } from "./styles";
-import useFetchEditionsSection from "../../../hooks/useFetchEditionsSection";
+import useEditionsSectionData from "../../../hooks/fetch/useEditionsSectionData";
 import Slider from "../../Slider";
 import Card from "./subcomponents/Card";
 
 export default function Editions() {
   const { sections } = useSectionRefs();
-  const { previousEditions } = useFetchEditionsSection();
+  const { previousEditions } = useEditionsSectionData();
 
   return (
     <EditionsContainer>
