@@ -65,18 +65,9 @@ export const NameContainer = styled(motion.div)`
   padding: 0.5rem 1rem;
 
   color: var(--secundary-text-color);
-
-  text-align: center;
-`;
-
-
-export const SocialMediaNameSpan = styled.span`
   font-size: 1rem;
   font-weight: bold;
-  color: var(--secundary-text-color);
 
   text-align: center;
-  word-wrap: break-word;
 `;
-
 
