@@ -6,6 +6,7 @@ export const SectionContainer = styled.section`
   justify-content: center;
   align-items: center;
 
+  position: relative;
 
   min-width: 100%;
   max-width: 100%;

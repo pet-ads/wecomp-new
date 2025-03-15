@@ -6,6 +6,8 @@ export const LogoContainer = styled.div`
   justify-content: center;
   align-items: center;
 
+  position: relative;
+
   min-width: 100%;
 
   min-height: 100vh;
