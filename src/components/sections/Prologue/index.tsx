@@ -1,6 +1,5 @@
 import SubTitle from "../../ui/SubTitle";
 import Text from "../../ui/Text";
-import RedirectButton from "../../ui/RedirectButton";
 import ArrowButton from "../../ui/ArrowButton";
 
 import useSectionRefs from "../../../hooks/references/useSectionRefs";
@@ -10,17 +9,14 @@ import { PrologueContainer, PrologueContent } from "./styles";
 
 export default function Prologue() {
   const { sections } = useSectionRefs();
-  const { buttonLabel, buttonlink, description, sectionLabel } =
+  const { description, sectionLabel } =
     usePrologueSectionData();
 
   return (
     <PrologueContainer>
       <PrologueContent ref={sections.prologue}>
-        <SubTitle children={sectionLabel || ""} />
-        <Text children={description || ""} />
-        {buttonlink && buttonLabel && (
-          <RedirectButton link={buttonlink} children={buttonLabel} />
-        )}
+        <SubTitle children={sectionLabel} />
+        <Text children={description} fontSize="12.5pt" width="80%"/>
       </PrologueContent>
       <ArrowButton sectionRef={sections.supporters} />
     </PrologueContainer>
