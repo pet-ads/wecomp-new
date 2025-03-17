@@ -28,5 +28,4 @@ export const FAQList = styled.div`
   padding: 2rem 1rem;
 
   gap: 1rem;
-
 `;
