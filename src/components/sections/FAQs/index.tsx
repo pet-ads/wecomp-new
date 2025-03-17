@@ -15,8 +15,8 @@ export default function FAQs() {
       <FAQContent ref={sections.FAQs}>
         <SubTitle children="Perguntas frequentes" />
         <FAQList>
-          {frequentlyAsks.map((item) => (
-            <Details question={item.question} answer={item.answer} />
+          {frequentlyAsks.map((item, index) => (
+            <Details question={item.question} answer={item.answer} key={index}/>
           ))}
         </FAQList>
       </FAQContent>
