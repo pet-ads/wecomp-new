@@ -4,7 +4,7 @@ import CardFooter from "../CardFooter";
 
 import useToggleCardContent from "../../../../../hooks/toggle/useToggleCardContent";
 
-import { Container, Icon, IconContainer } from "./styles";
+import { Container, EventTitle, Icon, IconContainer } from "./styles";
 
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
 
@@ -41,9 +41,11 @@ export default function Card({
           alt={`Icone evento ${eventIconProps.label}`}
         />
       </IconContainer>
+      <EventTitle>
+        {name}
+      </EventTitle>
       <CardHeader
         author={author}
-        title={name}
         eventLocationAndDate={`${location} | ${date} | ${time}`}
         status={status}
         classification={classification}

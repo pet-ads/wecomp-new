@@ -6,7 +6,8 @@ export const Container = styled.div`
 
   width: 100%;
 
-  height: 100%;
+  min-height: 5rem;
+  max-height: 10rem;
 
   gap: 1rem;
 
@@ -37,28 +38,16 @@ export const InformationContainer = styled.div`
 export const EventImage = styled.img`
   width: 25%;
 
-  height: 25%;
+  height: 100%;
 
   object-fit: cover;
 
   @media (max-width: 600px) {
     width: 40%;
 
-    height: 40%;
+    /* height: 40%; */
+    height: 100%;
   }
-`;
-
-export const EventTitle = styled.div`
-  font-size: 1.25rem;
-  font-weight: bold;
-
-  max-width: 100%;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  cursor: pointer;
 `;
 
 export const EventDetails = styled.div`

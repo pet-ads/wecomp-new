@@ -21,7 +21,6 @@ export interface ProgrammingProps {
 }
 
 export interface CardHeaderProps {
-  title: string;
   eventLocationAndDate: string;
   author: string;
   status: AvailabilityStatus;

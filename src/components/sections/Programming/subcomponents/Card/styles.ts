@@ -5,22 +5,17 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  min-width: 100%;
-  max-width: 100%;
+  min-width: 35rem;
+  max-width: 35rem;
 
-  min-height: 100%;
-  max-height: 100%;
+  min-height: 30rem;
+  max-height: 30rem;
 
   padding: 1.5rem;
-  gap: 2rem;
   border-radius: 1rem;
 
   background-color: var(--primary-text-color);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-  /* background-color: red; */
-
-  /* overflow: hidden; */
-  /* aspect-ratio: 16 / 9; */
 
 `;
 
@@ -30,3 +25,11 @@ export const IconContainer = styled.div`
 `;
 
 export const Icon = styled.img``;
+
+
+export const EventTitle = styled.div`
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  max-width: 100%;
+`;
