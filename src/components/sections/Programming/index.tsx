@@ -3,8 +3,8 @@ import ArrowButton from "../../ui/ArrowButton";
 import Card from "./subcomponents/Card";
 import Slider from "../../Slider";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
-import useFetchProgrammingSection from "../../../hooks/useFetchProgrammingSection";
+import useSectionRefs from "../../../hooks/references/useSectionRefs";
+import useProgrammingSectionData from "../../../hooks/fetch/useProgrammingSectionData";
 
 import {
   ProgrammingCardContainer,
@@ -15,7 +15,7 @@ import {
 export default function Programming() {
   const { sections } = useSectionRefs();
 
-  const { eventProgramming } = useFetchProgrammingSection();
+  const { eventProgramming } = useProgrammingSectionData();
 
   return (
     <ProgrammingContainer>

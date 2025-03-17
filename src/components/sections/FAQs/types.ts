@@ -1,4 +1,8 @@
 export interface FAQProps {
   question: string;
-  response: string;
+  answer: string;
+}
+
+export interface FAQSectionProps {
+  frequentlyAsks: FAQProps[];
 }
