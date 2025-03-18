@@ -25,7 +25,5 @@ export const ProgrammingCardContainer = styled.div`
 
   padding: 2rem 0;
 
-  margin: 1rem;
-
   background-color: var(--background-color);
 `;

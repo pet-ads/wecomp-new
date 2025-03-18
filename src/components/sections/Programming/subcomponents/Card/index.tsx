@@ -41,9 +41,7 @@ export default function Card({
           alt={`Icone evento ${eventIconProps.label}`}
         />
       </IconContainer>
-      <EventTitle>
-        {name}
-      </EventTitle>
+      <EventTitle>{name}</EventTitle>
       <CardHeader
         author={author}
         eventLocationAndDate={`${location} | ${date} | ${time}`}
