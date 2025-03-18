@@ -1,4 +1,4 @@
-import { Container, Icon, IconContainer } from "./styles";
+import { Container, EventTitle, Icon, IconContainer } from "./styles";
 
 import { HighlightsProps } from "../../types";
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
@@ -27,8 +27,8 @@ export default function Card({
           alt={`Icone evento ${eventIconProps.label}`}
         />
       </IconContainer>
+      <EventTitle>{title}</EventTitle>
       <CardHeader
-        title={title}
         classification={type}
         image={image}
         imageDescription={imageDescription}

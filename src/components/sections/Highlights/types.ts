@@ -13,7 +13,6 @@ export interface HighlightsProps {
 }
 
 export interface CardHeaderProps {
-  title: string;
   classification: OfferModality;
   image: string;
   imageDescription: string;

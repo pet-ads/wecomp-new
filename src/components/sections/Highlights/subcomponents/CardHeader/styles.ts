@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
 
   width: 100%;
@@ -10,9 +11,10 @@ export const Container = styled.div`
 
   gap: 1rem;
 
-  @media (max-width: 1000px) {
-    flex-direction: column;
-    align-items: center;
+  @media (max-width: 675px) {
+    flex-direction: column-reverse;
+
+    gap: 1rem;
   }
 `;
 
@@ -36,44 +38,27 @@ export const InformationContainer = styled.div`
 `;
 
 export const EventImage = styled.img`
-  width: 30%;
+  width: 25%;
 
-  height: 30%;
+  height: 25%;
 
   object-fit: cover;
 
-  cursor: pointer;
+  @media (max-width: 768px) {
+    width: 30%;
 
-  @media (max-width: 1000px) {
-    width: 100%;
-
-    height: 100%;
-
-    padding: 1rem;
+    height: 30%;
   }
-`;
-
-export const EventTitle = styled.div`
-  font-size: 1.25rem;
-  font-weight: bold;
-
-  max-width: 100%;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  cursor: pointer;
 `;
 
 export const TagContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 
-  width: 10rem;
+  width: 100%;
 
-
-  @media (max-width: 1000px){
-    width: 100%;
+  @media (max-width: 675px) {
+    justify-content: center;
   }
 `;
