@@ -1,38 +1,33 @@
-import { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect, useRef, useState } from "react";
 
-import "swiper/swiper-bundle.css";
+import { CarouselItem, CarouselTrack, SliderWrapper } from "./styles";
 
 import { SliderProps } from "./types";
 
-import { SliderContainer } from "./styles";
-
 export default function Slider<T>({ items, renderItem }: SliderProps<T>) {
-  const [slidePerView, setSlidePerView] = useState(2);
+  const [carouselWidth, setCarouselWidth] = useState<number>(0);
+  const carouselContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleResize() {
-      setSlidePerView(window.innerWidth < 1080 ? 2.5 : 1.8);
+    if (carouselContainerRef.current) {
+      setCarouselWidth(
+        carouselContainerRef.current.scrollWidth -
+          carouselContainerRef.current.offsetWidth
+      );
     }
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <SliderContainer>
-      <Swiper
-        slidesPerView={slidePerView}
-        spaceBetween={80}
-        centeredSlides={false}
-        centeredSlidesBounds={true}
-        centerInsufficientSlides={true}
+    <SliderWrapper>
+      <CarouselTrack
+        ref={carouselContainerRef}
+        drag="x"
+        dragConstraints={{ right: 0, left: -carouselWidth }}
       >
         {items.map((item, index) => (
-          <SwiperSlide key={index}>{renderItem(item)}</SwiperSlide>
+          <CarouselItem key={index}>{renderItem(item)}</CarouselItem>
         ))}
-      </Swiper>
-    </SliderContainer>
+      </CarouselTrack>
+    </SliderWrapper>
   );
 }
