@@ -20,6 +20,8 @@ export const CarouselTrack = styled(motion.div)`
 
   gap: 5rem;
 
+  padding: 1rem 0;
+
   cursor: grab;
 `;
 
@@ -27,6 +29,4 @@ export const CarouselItem = styled.div`
   width: 100%;
 
   height: 100%;
-
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 `;
