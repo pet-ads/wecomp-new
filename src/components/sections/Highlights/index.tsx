@@ -1,7 +1,7 @@
 import SubTitle from "../../ui/SubTitle";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
-import useFetchHighlightsSection from "../../../hooks/useFetchHighlightsSection";
+import useSectionRefs from "../../../hooks/references/useSectionRefs";
+import useHighlightsSectionData from "../../../hooks/fetch/useHighlightsSectionData";
 
 import {
   HighlightsCardContainer,
@@ -14,7 +14,7 @@ import Card from "./subcomponents/Card";
 export default function Highlights() {
   const { sections } = useSectionRefs();
 
-  const {eventHighlights} = useFetchHighlightsSection();
+  const { eventHighlights } = useHighlightsSectionData();
 
   return (
     <HighlightsContainer>

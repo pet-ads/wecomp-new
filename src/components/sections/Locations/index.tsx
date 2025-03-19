@@ -1,8 +1,8 @@
 import SubTitle from "../../ui/SubTitle";
 import Map from "./subcomponents/Map";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
-import useFetchLocationSection from "../../../hooks/useFetchLocationSection";
+import useSectionRefs from "../../../hooks/references/useSectionRefs";
+import useFetchLocationSection from "../../../hooks/fetch/useFetchLocationSection";
 
 import { LocalContainer, LocalContent, MapsContainer } from "./styles";
 

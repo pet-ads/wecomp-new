@@ -1,6 +1,6 @@
 import SubTitle from "../../ui/SubTitle";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
+import useSectionRefs from "../../../hooks/references/useSectionRefs";
 
 import {
   DirectorContainer,
@@ -8,11 +8,11 @@ import {
   DirectorLogo,
   DirectorsLogoContainer,
 } from "./styles";
-import useFetchDirectorsSection from "../../../hooks/useFetchDirectorsSection";
+import useDirectorsSectionData from "../../../hooks/fetch/useDirectorsSectionData";
 
 export default function Directors() {
   const { sections } = useSectionRefs();
-  const data = useFetchDirectorsSection();
+  const data = useDirectorsSectionData();
 
   const handleRedirectOnClick = (url: string) => {
     window.open(url, "_blank");

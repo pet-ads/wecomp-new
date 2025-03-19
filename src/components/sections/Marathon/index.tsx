@@ -1,7 +1,7 @@
 import SubTitle from "../../ui/SubTitle";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
-import useMarathonData from "../../../hooks/useMarathonData";
+import useSectionRefs from "../../../hooks/references/useSectionRefs";
+import useMarathonSectionData from "../../../hooks/fetch/useMarathonSectionData";
 
 import {
   MarathonCardContainer,
@@ -17,7 +17,7 @@ import RedirectButton from "../../ui/RedirectButton";
 
 export default function Marathon() {
   const { sections } = useSectionRefs();
-  const marathonData = useMarathonData();
+  const marathonData = useMarathonSectionData();
   const marathon = marathonData[0];
 
   return (

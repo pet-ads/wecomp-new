@@ -2,15 +2,15 @@ import SubTitle from "../../ui/SubTitle";
 import Text from "../../ui/Text";
 import RedirectButton from "../../ui/RedirectButton";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
-import useFetchPrologueSection from "../../../hooks/useFetchPrologueSection";
+import useSectionRefs from "../../../hooks/references/useSectionRefs";
+import usePrologueSectionData from "../../../hooks/fetch/usePrologueSectionData";
 
 import { PrologueContainer, PrologueContent } from "./styles";
 
 export default function Prologue() {
   const { sections } = useSectionRefs();
   const { buttonLabel, buttonlink, description, sectionLabel } =
-    useFetchPrologueSection();
+    usePrologueSectionData();
 
   return (
     <PrologueContainer>

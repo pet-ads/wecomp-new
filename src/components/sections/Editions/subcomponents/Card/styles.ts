@@ -9,8 +9,8 @@ export const Container = styled.div`
 
   position: relative;
 
-  width: 12.5rem;
-  height: 12.5rem;
+  width: 15rem;
+  height: 15rem;
   padding: 1rem;
 
   overflow: hidden;
@@ -20,8 +20,8 @@ export const Container = styled.div`
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {
-    width: 5rem;
-    height: 5rem;
+    width: 10rem;
+    height: 10rem;
   }
 `;
 
@@ -34,26 +34,26 @@ export const IconContainer = styled(motion.div)`
 
   z-index: 2;
 
-
   width: 100%;
-  height: 65%;
+  height: 70%;
 
   padding: 1rem 0;
 
   background-color: var(--primary-text-color);
+
 `;
 
-export const SocialIcon = styled.img`
-  width: 5rem;
-  height: 5rem;
+export const EditionIcon = styled.img`
+  width: 8rem;
+  height: 8rem;
 
   z-index: 5;
 
   object-fit: cover;
 
   @media (max-width: 768px) {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 5rem;
+    height: 5rem;
   }
 `;
 
@@ -70,4 +70,3 @@ export const NameContainer = styled(motion.div)`
 
   text-align: center;
 `;
-
