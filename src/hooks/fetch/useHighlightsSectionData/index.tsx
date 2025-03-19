@@ -1,4 +1,4 @@
-import { HighlightsSectionProps } from "../../../components/sections/Highlights/types";
+import { HighlightsSectionProps } from "../../../sections/Highlights/types";
 
 import highlights from "../../../data/highlights.json";
 import { OfferModality } from "../../../components/ui/tags/types";

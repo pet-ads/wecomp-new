@@ -1,7 +1,7 @@
 import {
   ProgrammingSectionProps,
   TypeEventName,
-} from "../../../components/sections/Programming/types";
+} from "../../../sections/Programming/types";
 
 import programming from "../../../data/programming.json";
 import {
