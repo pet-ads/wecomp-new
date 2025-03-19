@@ -10,4 +10,4 @@ export { default as Highlights } from "../components/sections/Highlights";
 export { default as Contact } from "../components/sections/Contact";
 export { default as Editions } from "../components/sections/Editions";
 export { default as FAQs } from "../components/sections/FAQs";
-export { default as Footer } from "../components/Footer";
+export { default as Footer } from "../components/footer";
