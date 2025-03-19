@@ -1,4 +1,3 @@
-import ArrowButton from "../../ui/ArrowButton";
 import SubTitle from "../../ui/SubTitle";
 
 import useSectionRefs from "../../../hooks/useSectionRefs";
@@ -35,7 +34,6 @@ export default function Directors() {
           ))}
         </DirectorsLogoContainer>
       </DirectorContent>
-      <ArrowButton sectionRef={sections.programming} />
     </DirectorContainer>
   );
 }

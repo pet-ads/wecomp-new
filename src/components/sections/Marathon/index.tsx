@@ -1,5 +1,4 @@
 import SubTitle from "../../ui/SubTitle";
-import ArrowButton from "../../ui/ArrowButton";
 
 import useSectionRefs from "../../../hooks/useSectionRefs";
 import useMarathonData from "../../../hooks/useMarathonData";
@@ -71,7 +70,6 @@ export default function Marathon() {
             <RedirectButton link={marathon.link} children="Ver mais" />
           </MarathonCard>
         </MarathonCardContainer>
-        <ArrowButton sectionRef={sections.Highlights} />
       </MarathonContent>
     </MarathonContainer>
   );

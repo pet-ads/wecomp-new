@@ -1,23 +1,22 @@
-import ArrowButton from "../../ui/ArrowButton";
-
-import useSectionRefs from "../../../hooks/useSectionRefs";
 import useFetchHeroSection from "../../../hooks/useFetchHeroSection";
-
-import { LogoContainer, EventDate, HighlightedText, EventLogo } from "./styles";
+import { LogoContainer, EventDate, HighlightedText, EventLogo, ArrowDown } from "./styles";
+import { useScrollToNext } from "../../../hooks/useScrollToNext";
 
 export default function HeroBanner() {
-  const { sections } = useSectionRefs();
   const { eventDate, eventEdition, logoAlternativeText, logoPath } =
     useFetchHeroSection();
+  const { sectionRef, scrollToNextSection } = useScrollToNext();
 
   return (
-    <LogoContainer ref={sections.HeroBanner}>
-      <EventLogo src={logoPath} alt={logoAlternativeText} />
-      <EventDate>
-        <HighlightedText>{eventEdition}</HighlightedText>
-        {eventDate}
-      </EventDate>
-      <ArrowButton sectionRef={sections.prologue} />
-    </LogoContainer>
+    <section ref={sectionRef as React.RefObject<HTMLElement>} className="section">
+      <LogoContainer>
+        <EventLogo src={logoPath} alt={logoAlternativeText} />
+        <EventDate>
+          <HighlightedText>{eventEdition}</HighlightedText>
+          {eventDate}
+        </EventDate>
+        <ArrowDown onClick={scrollToNextSection}>▼</ArrowDown>
+      </LogoContainer>
+    </section>
   );
 }

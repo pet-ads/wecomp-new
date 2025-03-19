@@ -1,5 +1,4 @@
 import SubTitle from "../../ui/SubTitle";
-import ArrowButton from "../../ui/ArrowButton";
 
 import useSectionRefs from "../../../hooks/useSectionRefs";
 
@@ -19,7 +18,6 @@ export default function Editions() {
         <EditionsCardContainer>
           Carrossel of Editions cards
         </EditionsCardContainer>
-        <ArrowButton sectionRef={sections.FAQs} />
       </EditionsContent>
     </EditionsContainer>
   );

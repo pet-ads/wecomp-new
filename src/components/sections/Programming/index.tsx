@@ -1,5 +1,4 @@
 import SubTitle from "../../ui/SubTitle";
-import ArrowButton from "../../ui/ArrowButton";
 import Card from "./subcomponents/Card";
 import Slider from "../../Slider";
 
@@ -27,7 +26,6 @@ export default function Programming() {
             renderItem={(event) => <Card key={event.id} {...event} />}
           />
         </ProgrammingCardContainer>
-        <ArrowButton sectionRef={sections.Marathon} />
       </ProgrammingContent>
     </ProgrammingContainer>
   );

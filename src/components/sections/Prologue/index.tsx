@@ -1,7 +1,6 @@
 import SubTitle from "../../ui/SubTitle";
 import Text from "../../ui/Text";
 import RedirectButton from "../../ui/RedirectButton";
-import ArrowButton from "../../ui/ArrowButton";
 
 import useSectionRefs from "../../../hooks/useSectionRefs";
 import useFetchPrologueSection from "../../../hooks/useFetchPrologueSection";
@@ -22,7 +21,6 @@ export default function Prologue() {
           <RedirectButton link={buttonlink} children={buttonLabel} />
         )}
       </PrologueContent>
-      <ArrowButton sectionRef={sections.supporters} />
     </PrologueContainer>
   );
 }

@@ -1,5 +1,4 @@
 import SubTitle from "../../ui/SubTitle";
-import ArrowButton from "../../ui/ArrowButton";
 import Map from "./subcomponents/Map";
 
 import useSectionRefs from "../../../hooks/useSectionRefs";
@@ -27,7 +26,6 @@ export default function Locations() {
           ))}
         </MapsContainer>
       </LocalContent>
-      <ArrowButton sectionRef={sections.Contact} />
     </LocalContainer>
   );
 }

@@ -1,5 +1,4 @@
 import SubTitle from "../../ui/SubTitle";
-import ArrowButton from "../../ui/ArrowButton";
 
 import useSectionRefs from "../../../hooks/useSectionRefs";
 import useFetchHighlightsSection from "../../../hooks/useFetchHighlightsSection";
@@ -29,7 +28,6 @@ export default function Highlights() {
             )}
           />
         </HighlightsCardContainer>
-        <ArrowButton sectionRef={sections.Locations} />
       </HighlightsContent>
     </HighlightsContainer>
   );

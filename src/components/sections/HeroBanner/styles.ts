@@ -54,3 +54,17 @@ export const HighlightedText = styled.strong`
 
   white-space: nowrap;
 `;
+
+export const ArrowDown = styled.div`
+  position: absolute;
+  bottom: 20px;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+`;
