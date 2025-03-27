@@ -6,18 +6,16 @@ import {
   SectionContent,
 } from "../../../styles/SectionContainer";
 
-export const SupportesContainer = styled(SectionContainer)`
-  background: var(--background-color);
-`;
+export const SupporterSection = styled(SectionContainer)``;
 
-export const SupportesContent = styled(SectionContent)`
+export const SupporterWrapper = styled(SectionContent)`
   min-width: 100%;
   max-width: 100%;
-  background: var(--background-color);
 `;
 
-export const SupportesLogoContainer = styled.div`
+export const SupporterLogoContainer = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-around;
 
   width: 100%;
@@ -32,47 +30,53 @@ export const SupportesLogoContainer = styled.div`
 `;
 
 export const SupporterLogo = styled.img<{ width?: string }>`
-  height: 100%;
-  max-width: 15rem;
-  width: ${({ width }) => width || "30%"};
+  width: ${({ width }) => width || "15rem"};
+
   object-fit: contain;
   overflow: hidden;
-  margin-left: 4rem;
-  margin-bottom: 1rem;
+
+  margin-left: 3rem;
 
   cursor: pointer;
 
   @media (max-width: 768px) {
-    width: 45%;
-  }
-
-  @media (max-width: 480px) {
-    width: 30%;
+    width: 10rem;
   }
 `;
 
 export const MarqueeContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
 
   width: 100%;
+  height: 20rem;
 
   white-space: nowrap;
   overflow: hidden;
-
-  font-size: 5rem;
-  font-weight: bold;
+  /* 
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 2%,
+    black 30%,
+    black 70%,
+    rgba(0, 0, 0, 0) 100%
+  ); */
 `;
 
-export const MarqueeItem = styled.div`
-  position: relative;
+export const MarqueeItem = styled.div<{ isPaused: boolean }>`
+  min-width: 100%;
+  max-width: 100%;
 
-  gap: 5rem;
+  gap: 2rem;
 
-  font-size: 5rem;
-  font-weight: bold;
-
-  animation: marquee 30s linear infinite;
+  /* position: relative; */
+  height: 5rem;
+  animation: ${(props) =>
+    props.isPaused ? "none" : "marquee 20s linear infinite"};
 
   &:hover {
     animation-play-state: paused;
@@ -80,10 +84,10 @@ export const MarqueeItem = styled.div`
 
   @keyframes marquee {
     0% {
-      transform: translateX(-0.53%);
+      transform: translateX(0);
     }
     100% {
-      transform: translateX(-92%);
+      transform: translateX(-100rem);
     }
   }
 `;

@@ -11,11 +11,14 @@ import {
 } from "./styles";
 import Slider from "../../Slider";
 import Card from "./subcomponents/Card";
+import UpcommingCard from "../../ui/SoonCard";
+import useCheckDate from "../../../hooks/references/useCheckDate";
 
 export default function Highlights() {
   const { sections } = useSectionRefs();
 
   const { eventHighlights } = useHighlightsSectionData();
+  const checkDate = useCheckDate();
 
   return (
     <HighlightsContainer>
@@ -24,9 +27,13 @@ export default function Highlights() {
         <HighlightsCardContainer>
           <Slider
             items={eventHighlights}
-            renderItem={(highlight) => (
-              <Card key={highlight.id} {...highlight} />
-            )}
+            renderItem={(highlight) =>
+              checkDate ? (
+                <Card key={highlight.id} {...highlight} />
+              ) : (
+                <UpcommingCard />
+              )
+            }
           />
         </HighlightsCardContainer>
         <ArrowButton sectionRef={sections.Locations} />

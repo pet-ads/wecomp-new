@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 
@@ -6,14 +8,19 @@ import useFetchSupporters from "../../../hooks/fetch/useSupportersSectionData";
 
 import {
   SupporterLogo,
-  SupportesContainer,
-  SupportesContent,
-  SupportesLogoContainer,
+  SupporterSection,
+  SupporterWrapper,
+  SupporterLogoContainer,
   MarqueeContainer,
   MarqueeItem,
 } from "./styles";
 
 export default function Supporters() {
+  const [isPaused, setIsPaused] = useState({
+    firstRow: false,
+    secundRow: false,
+  });
+
   const { sections } = useSectionRefs();
   const { eventSupporters } = useFetchSupporters();
 
@@ -35,13 +42,25 @@ export default function Supporters() {
     window.open(url, "_blank");
   };
 
+  const handleDoubleClick = (className: "firstRow" | "secundRow") => {
+    setIsPaused((prev) => ({
+      ...prev,
+      [className]: !prev[className],
+    }));
+  };
+
   return (
-    <SupportesContainer>
-      <SupportesContent ref={sections.supporters}>
-        <SubTitle children="Patrocinadores" />
-        <SupportesLogoContainer>
+    <SupporterSection>
+      <SupporterWrapper ref={sections.supporters}>
+        <SubTitle children="Apoiadores" />
+        <SupporterLogoContainer>
           <MarqueeContainer>
-            <MarqueeItem>
+            <MarqueeItem
+              isPaused={isPaused.firstRow}
+              onClick={() => handleDoubleClick("firstRow")}
+              onTouchStart={() => handleDoubleClick("firstRow")}
+              onTouchEnd={() => handleDoubleClick("firstRow")}
+            >
               {supporterList.map((supporter, index) => (
                 <SupporterLogo
                   key={`${supporter.id}-${index}`}
@@ -52,7 +71,12 @@ export default function Supporters() {
                 />
               ))}
             </MarqueeItem>
-            <MarqueeItem>
+            <MarqueeItem
+              isPaused={isPaused.secundRow}
+              onClick={() => handleDoubleClick("secundRow")}
+              onTouchStart={() => handleDoubleClick("secundRow")}
+              onTouchEnd={() => handleDoubleClick("secundRow")}
+            >
               {reversedSupporterList.map((supporter, index) => (
                 <SupporterLogo
                   key={`${supporter.id}+${index}`}
@@ -64,9 +88,9 @@ export default function Supporters() {
               ))}
             </MarqueeItem>
           </MarqueeContainer>
-        </SupportesLogoContainer>
-      </SupportesContent>
+        </SupporterLogoContainer>
+      </SupporterWrapper>
       <ArrowButton sectionRef={sections.directors} />
-    </SupportesContainer>
+    </SupporterSection>
   );
 }

@@ -11,11 +11,14 @@ import {
   ProgrammingContainer,
   ProgrammingContent,
 } from "./styles";
+import useCheckDate from "../../../hooks/references/useCheckDate";
+import UpcommingCard from "../../ui/SoonCard";
 
 export default function Programming() {
   const { sections } = useSectionRefs();
 
   const { eventProgramming } = useProgrammingSectionData();
+  const checkDate = useCheckDate();
 
   return (
     <ProgrammingContainer>
@@ -24,7 +27,9 @@ export default function Programming() {
         <ProgrammingCardContainer>
           <Slider
             items={eventProgramming}
-            renderItem={(event) => <Card key={event.id} {...event} />}
+            renderItem={(event) =>
+              checkDate ? <Card key={event.id} {...event} /> : <UpcommingCard />
+            }
           />
         </ProgrammingCardContainer>
         <ArrowButton sectionRef={sections.Marathon} />
