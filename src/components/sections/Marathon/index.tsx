@@ -8,7 +8,8 @@ import {
   MarathonSection,
   MarathonWrapper,
   MarathonText,
-  MarathonSubtitle
+  MarathonSubtitle,
+  MarathonImageWrapper
 } from "./styles";
 import RedirectButton from "../../ui/RedirectButton";
 
@@ -21,9 +22,14 @@ export default function Marathon() {
     <MarathonSection>
       <SubTitle children="Maratona InterIF" />
       <MarathonWrapper ref={sections.Marathon}>
-        <MarathonSubtitle>O que é InterIF ?</MarathonSubtitle>
-        <MarathonText>{marathon.definition}</MarathonText>
-        <RedirectButton children="veja mais" link={marathon.link} />
+        <MarathonText>
+          <MarathonSubtitle>O que é InterIF ?</MarathonSubtitle>
+          <MarathonText>{marathon.definition}</MarathonText>
+          <RedirectButton children="veja mais" link={marathon.link} />
+        </MarathonText>
+        <MarathonImageWrapper>
+          <img src="images/InterIf.jpeg" alt="Descrição da Imagem" />
+        </MarathonImageWrapper>
       </MarathonWrapper>
       <ArrowButton sectionRef={sections.Highlights} />
     </MarathonSection>
