@@ -25,16 +25,14 @@ export default function Highlights() {
       <HighlightsContent ref={sections.Highlights}>
         <SubTitle children="Destaques" />
         <HighlightsCardContainer>
-          <Slider
-            items={eventHighlights}
-            renderItem={(highlight) =>
-              checkDate ? (
-                <Card key={highlight.id} {...highlight} />
-              ) : (
-                <UpcommingCard />
-              )
-            }
-          />
+          {checkDate ? (        
+            <Slider
+              items={eventHighlights}
+              renderItem={(highlight) => <Card key={highlight.id} {...highlight} />}
+            />
+          ) : (
+            <UpcommingCard />
+          )}
         </HighlightsCardContainer>
         <ArrowButton sectionRef={sections.Locations} />
       </HighlightsContent>
