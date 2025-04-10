@@ -1,4 +1,4 @@
-import wecomp from "../../../../public/images/wecompLogo.svg";
+import wecomp from "../../../public/images/wecompLogo.svg";
 
 interface HeroProps {
   logoPath: string;
