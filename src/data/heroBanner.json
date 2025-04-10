@@ -1,8 +1,0 @@
-{
-    "eventHero": {
-        "logoPath": "images/wecompLogo.svg",
-        "logoAlternativeText": "Logo do evento da Semana da Computação WECOMP",
-        "eventEdition": "VI Semana da Computação",
-        "eventDate": "03 a 09 de Outubro"
-    }
-}
