@@ -11,7 +11,6 @@ import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
 import { ProgrammingProps } from "../../types";
 
 export default function Card({
-  id,
   name,
   image,
   imageDescription,
@@ -34,7 +33,7 @@ export default function Card({
   );
   const eventIconProps = generatedIconEvent(typeEvent);
   return (
-    <Container key={id}>
+    <Container key={name}>
       <IconContainer>
         <Icon
           src={eventIconProps.iconPath}

@@ -1,49 +1,5 @@
 import minister from "../../../public/images/ministrante.svg";
-
-import {
-  AvailabilityStatus,
-  DifficultyEvent,
-} from "../../components/ui/tags/types";
-
-export type TypeEventName = "Talk" | "Course" | "Opening" | "TechnicalVisit";
-
-interface ProgrammingProps {
-  name: string;
-  image: string;
-  imageDescription: string;
-  bio: string;
-  author: string;
-  date: string;
-  time: string;
-  link: string;
-  vacancies: number;
-  location: string;
-  status: AvailabilityStatus;
-  classification: DifficultyEvent;
-  description: string;
-  typeEvent: TypeEventName;
-}
-
-export interface CardHeaderProps {
-  eventLocationAndDate: string;
-  author: string;
-  status: AvailabilityStatus;
-  classification: DifficultyEvent;
-  image: string;
-  imageDescription: string;
-}
-
-export interface CardMainProps {
-  content: string;
-}
-
-export interface CardFooterProps {
-  vacancies: string | number;
-  link: string;
-  labelButton: string;
-  handleChangeCardText: () => void;
-  typeEvent: TypeEventName;
-}
+import { ProgrammingProps } from "../../components/sections/Programming/types";
 
 export const programmingContent: ProgrammingProps[] = [
   {
