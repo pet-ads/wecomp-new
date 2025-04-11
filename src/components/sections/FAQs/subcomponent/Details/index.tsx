@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { IoMdAdd } from "react-icons/io";
 
+import { FaqProps } from "../../types";
+
 import {
   FAQContainer,
   QuestionWrapper,
@@ -10,9 +12,7 @@ import {
   QuestionText,
 } from "./styles";
 
-import { FAQProps } from "../../types";
-
-export default function Details({ question, answer }: FAQProps) {
+export default function Details({ question, answer }: FaqProps) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   return (

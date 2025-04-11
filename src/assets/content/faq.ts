@@ -1,7 +1,4 @@
-interface FaqProps {
-  question: string;
-  answer: string;
-}
+import { FaqProps } from "../../components/sections/FAQs/types";
 
 export const faqContent: FaqProps[] = [
   {
