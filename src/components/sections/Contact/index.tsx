@@ -4,13 +4,13 @@ import ArrowButton from "../../ui/ArrowButton";
 import Card from "./subcomponents/Card";
 
 import useSectionRefs from "../../../hooks/references/useSectionRefs";
-import useContactSectionData from "../../../hooks/fetch/useContactSectionData";
+
+import contactContent from "../../../assets/content/contact";
 
 import { ContactCards, ContactContainer, ContactContent } from "./styles";
 
 export default function Contact() {
   const { sections } = useSectionRefs();
-  const { socialMediaLinks } = useContactSectionData();
 
   return (
     <ContactContainer>
@@ -21,10 +21,9 @@ export default function Contact() {
           children="Nos acompanhe pelas nossas redes sociais, onde divulgaremos as atualizações do evento."
         />
         <ContactCards>
-          {socialMediaLinks.map((media) => (
+          {contactContent.map((media, index) => (
             <Card
-              key={media.id}
-              id={""}
+              key={index}
               username={media.username}
               contactUrl={media.contactUrl}
               iconPath={media.iconPath}

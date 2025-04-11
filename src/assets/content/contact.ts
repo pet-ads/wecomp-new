@@ -2,12 +2,7 @@ import instagram from "@/assets/icons/contact/instagram.svg";
 import facebook from "@/assets/icons/contact/facebook.svg";
 import email from "@/assets/icons/contact/email.svg";
 
-interface ContactProps {
-  username: string;
-  contactUrl: string;
-  iconPath: string;
-  iconAlt: string;
-}
+import { ContactProps } from "../../components/sections/Contact/types";
 
 export const contactContent: ContactProps[] = [
   {
