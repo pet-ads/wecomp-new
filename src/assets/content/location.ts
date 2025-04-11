@@ -1,9 +1,4 @@
-interface LocationProps {
-  name: string;
-  address: string;
-  url: string;
-  alt: string;
-}
+import { LocationProps } from "../../components/sections/Locations/types";
 
 export const locationContent: LocationProps[] = [
   {
