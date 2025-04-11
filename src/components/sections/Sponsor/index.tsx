@@ -63,9 +63,9 @@ export default function Supporters() {
             >
               {supporterList.map((supporter, index) => (
                 <SupporterLogo
-                  key={`${supporter.id}-${index}`}
+                  key={index}
                   src={supporter.logoPath}
-                  alt={supporter.logoAlternativeText}
+                  alt={`Logo da empresa ${supporter.name}`}
                   width={supporter.width}
                   onClick={() => handleRedirectOnClick(supporter.link)}
                 />
