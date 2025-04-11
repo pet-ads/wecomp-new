@@ -1,37 +1,12 @@
 import genericEmpress from "../../../public/images/empresaGenerica.svg";
 
-import { OfferModality } from "../../components/ui/tags/types";
-
-interface HighlightsProps {
-  title: string;
-  image: string;
-  vacancies: number;
-  description: string;
-  type: OfferModality;
-  link: string;
-  linkCompany: string;
-}
-
-export interface CardHeaderProps {
-  classification: OfferModality;
-  image: string;
-  imageDescription: string;
-  linkCompany: string;
-}
-
-export interface CardMainProps {
-  content: string;
-}
-
-export interface CardFooterProps {
-  vacancies: number;
-  link: string;
-}
+import { HighlightsProps } from "../../components/sections/Highlights/types";
 
 export const highlightsContent: HighlightsProps[] = [
   {
     title: "Trainee em Desenvolvimento Web com React e TypeScript",
     image: genericEmpress,
+    companyName: "Empresa genérica",
     linkCompany: "#",
     vacancies: 10,
     description:
@@ -42,6 +17,7 @@ export const highlightsContent: HighlightsProps[] = [
   {
     title: "Estágio em Machine Learning e Inteligência Artificial",
     image: genericEmpress,
+    companyName: "Empresa genérica",
     linkCompany: "#",
     vacancies: 5,
     description:
@@ -52,6 +28,7 @@ export const highlightsContent: HighlightsProps[] = [
   {
     title: "Engenheiro de Software Júnior",
     image: genericEmpress,
+    companyName: "Empresa genérica",
     linkCompany: "#",
     vacancies: 3,
     description:
@@ -62,6 +39,7 @@ export const highlightsContent: HighlightsProps[] = [
   {
     title: "Estágio em Quality Assurance (QA) com JUnit",
     image: genericEmpress,
+    companyName: "Empresa genérica",
     linkCompany: "#",
     vacancies: 5,
     description:

@@ -1,23 +1,22 @@
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
+import Slider from "../../Slider";
+import UpcommingCard from "../../ui/SoonCard";
+import Card from "./subcomponents/Card";
 
 import useSectionRefs from "../../../hooks/references/useSectionRefs";
-import useHighlightsSectionData from "../../../hooks/fetch/useHighlightsSectionData";
+import useCheckDate from "../../../hooks/references/useCheckDate";
+
+import highlightsContent from "../../../assets/content/highlights";
 
 import {
   HighlightsCardContainer,
   HighlightsContainer,
   HighlightsContent,
 } from "./styles";
-import Slider from "../../Slider";
-import Card from "./subcomponents/Card";
-import UpcommingCard from "../../ui/SoonCard";
-import useCheckDate from "../../../hooks/references/useCheckDate";
 
 export default function Highlights() {
   const { sections } = useSectionRefs();
-
-  const { eventHighlights } = useHighlightsSectionData();
   const checkDate = useCheckDate();
 
   return (
@@ -25,10 +24,12 @@ export default function Highlights() {
       <HighlightsContent ref={sections.Highlights}>
         <SubTitle children="Destaques" />
         <HighlightsCardContainer>
-          {checkDate ? (        
+          {checkDate ? (
             <Slider
-              items={eventHighlights}
-              renderItem={(highlight) => <Card key={highlight.id} {...highlight} />}
+              items={highlightsContent}
+              renderItem={(highlight) => (
+                <Card key={highlight.title} {...highlight} />
+              )}
             />
           ) : (
             <UpcommingCard />

@@ -1,37 +1,33 @@
-import { Container, EventTitle, Icon, IconContainer } from "./styles";
+import courseIcon from "@/assets/icons/programming/programmingIcon.svg";
 
-import { HighlightsProps } from "../../types";
-import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
 import CardHeader from "../CardHeader";
 import CardMain from "../CardMain";
 import CardFooter from "../CardFooter";
 
+import { Container, EventTitle, Icon, IconContainer } from "./styles";
+
+import { HighlightsProps } from "../../types";
+
 export default function Card({
-  id,
   description,
   image,
-  imageDescription,
+  companyName,
   link,
   title,
   type,
   vacancies,
   linkCompany,
 }: HighlightsProps) {
-  const eventIconProps = generatedIconEvent("Course");
-
   return (
-    <Container key={id}>
+    <Container key={title}>
       <IconContainer>
-        <Icon
-          src={eventIconProps.iconPath}
-          alt={`Icone evento ${eventIconProps.label}`}
-        />
+        <Icon src={courseIcon} alt="Icone do evento de destaque" />
       </IconContainer>
       <EventTitle>{title}</EventTitle>
       <CardHeader
         classification={type}
         image={image}
-        imageDescription={imageDescription}
+        imageDescription={`Logo da empresa ${companyName}`}
         linkCompany={linkCompany}
       />
       <CardMain content={description} />
