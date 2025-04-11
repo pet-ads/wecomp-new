@@ -2,21 +2,20 @@ import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 
 import useSectionRefs from "../../../hooks/references/useSectionRefs";
-import useMarathonSectionData from "../../../hooks/fetch/useMarathonSectionData";
+
+import marathonContent from "../../../assets/content/marathon";
 
 import {
   MarathonSection,
   MarathonWrapper,
   MarathonText,
   MarathonSubtitle,
-  MarathonImageWrapper
+  MarathonImageWrapper,
 } from "./styles";
 import RedirectButton from "../../ui/RedirectButton";
 
 export default function Marathon() {
   const { sections } = useSectionRefs();
-  const marathonData = useMarathonSectionData();
-  const marathon = marathonData[0];
 
   return (
     <MarathonSection>
@@ -24,11 +23,14 @@ export default function Marathon() {
       <MarathonWrapper ref={sections.Marathon}>
         <MarathonText>
           <MarathonSubtitle>O que é InterIF ?</MarathonSubtitle>
-          <MarathonText>{marathon.definition}</MarathonText>
-          <RedirectButton children="veja mais" link={marathon.link} />
+          <MarathonText>{marathonContent.definition}</MarathonText>
+          <RedirectButton children="veja mais" link={marathonContent.link} />
         </MarathonText>
         <MarathonImageWrapper>
-          <img src="images/InterIf.jpeg" alt="Descrição da Imagem" />
+          <img
+            src={marathonContent.path}
+            alt="Foto da fase final do InterIF 2024"
+          />
         </MarathonImageWrapper>
       </MarathonWrapper>
       <ArrowButton sectionRef={sections.Highlights} />
