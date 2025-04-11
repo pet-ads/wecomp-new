@@ -4,7 +4,8 @@ import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 
 import useSectionRefs from "../../../hooks/references/useSectionRefs";
-import useFetchSupporters from "../../../hooks/fetch/useSupportersSectionData";
+
+import sponsorsContent from "../../../assets/content/sponsors";
 
 import {
   SupporterLogo,
@@ -22,14 +23,13 @@ export default function Supporters() {
   });
 
   const { sections } = useSectionRefs();
-  const { eventSupporters } = useFetchSupporters();
 
-  const reversedArrayOfSupporters = [...eventSupporters].reverse();
+  const reversedArrayOfSupporters = [...sponsorsContent].reverse();
   const supporterList = [
-    ...eventSupporters,
-    ...eventSupporters,
-    ...eventSupporters,
-    ...eventSupporters,
+    ...sponsorsContent,
+    ...sponsorsContent,
+    ...sponsorsContent,
+    ...sponsorsContent,
   ];
   const reversedSupporterList = [
     ...reversedArrayOfSupporters,
@@ -79,9 +79,9 @@ export default function Supporters() {
             >
               {reversedSupporterList.map((supporter, index) => (
                 <SupporterLogo
-                  key={`${supporter.id}+${index}`}
+                  key={index}
                   src={supporter.logoPath}
-                  alt={supporter.logoAlternativeText}
+                  alt={`Logo da empresa ${supporter.name}`}
                   width={supporter.width}
                   onClick={() => handleRedirectOnClick(supporter.link)}
                 />
