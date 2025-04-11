@@ -6,7 +6,7 @@ import CardProjeto from "./subcomponents/Modal";
 
 import useSectionRefs from "../../../hooks/references/useSectionRefs";
 import useCheckDate from "../../../hooks/references/useCheckDate";
-import useIsMobile from "../../Window/Mobile";
+import useIsMobile from "../../../hooks/window/Mobile";
 
 import programmingContent from "../../../assets/content/programming";
 

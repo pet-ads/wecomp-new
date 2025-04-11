@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { SectionRefsContext } from "../../../context/SectionReferences/context";
+import { SectionRefsContext } from "../../context/SectionReferences/context";
 
 export default function useSectionRefs() {
   const context = useContext(SectionRefsContext);
