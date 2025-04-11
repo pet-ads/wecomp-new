@@ -3,17 +3,17 @@ import SubTitle from "../../ui/SubTitle";
 
 import useSectionRefs from "../../../hooks/references/useSectionRefs";
 
+import organizationContent from "../../../assets/content/organization";
+
 import {
   DirectorContainer,
   DirectorContent,
   DirectorLogo,
   DirectorsLogoContainer,
 } from "./styles";
-import useDirectorsSectionData from "../../../hooks/fetch/useDirectorsSectionData";
 
 export default function Directors() {
   const { sections } = useSectionRefs();
-  const data = useDirectorsSectionData();
 
   const handleRedirectOnClick = (url: string) => {
     window.open(url, "_blank");
@@ -24,11 +24,11 @@ export default function Directors() {
       <DirectorContent>
         <SubTitle children="Realizadores" />
         <DirectorsLogoContainer>
-          {data.map((director) => (
+          {organizationContent.map((director, index) => (
             <DirectorLogo
-              key={director.id}
+              key={index}
               src={director.logoPath}
-              alt={director.logoAlternativeText}
+              alt={`Logo da organização ${director.name}`}
               width={director.width}
               onClick={() => handleRedirectOnClick(director.link)}
             />

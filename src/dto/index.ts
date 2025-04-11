@@ -2,7 +2,7 @@ export { default as Header } from "../components/Header";
 export { default as HeroBanner } from "../components/sections/HeroBanner";
 export { default as About } from "../components/sections/About";
 export { default as Sponsors } from "../components/sections/Sponsor";
-export { default as Organization } from "../components/sections/Directors";
+export { default as Organization } from "../components/sections/Organization";
 export { default as Programming } from "../components/sections/Programming";
 export { default as Marathon } from "../components/sections/Marathon";
 export { default as Highlights } from "../components/sections/Highlights";

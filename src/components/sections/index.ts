@@ -1,6 +1,6 @@
 export * from "./About";
 export * from "./Contact";
-export * from "./Directors";
+export * from "./Organization";
 export * from "./Editions";
 export * from "./FAQs";
 export * from "./HeroBanner";
