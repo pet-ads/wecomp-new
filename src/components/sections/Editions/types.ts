@@ -4,7 +4,3 @@ export interface EditionProps {
   edition: string;
   website: string;
 }
-
-export interface EditionSectionProps {
-  previousEditions: EditionProps[];
-}

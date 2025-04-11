@@ -4,12 +4,7 @@ import wecompIII from "../../../public/images/editionsLogo/wecomp2019.svg";
 import wecompIV from "../../../public/images/editionsLogo/wecomp2023.svg";
 import wecompV from "../../../public/images/editionsLogo/wecomp2024.svg";
 
-interface EditionProps {
-  logoPath: string;
-  altText: string;
-  edition: string;
-  website: string;
-}
+import { EditionProps } from "../../components/sections/Editions/types";
 
 export const editionsContent: EditionProps[] = [
   {

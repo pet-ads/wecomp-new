@@ -1,20 +1,20 @@
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
+import Card from "./subcomponents/Card";
+import Slider from "../../Slider";
 
 import useSectionRefs from "../../../hooks/references/useSectionRefs";
+
+import editionsContent from "../../../assets/content/editions";
 
 import {
   EditionsCardContainer,
   EditionsContainer,
   EditionsContent,
 } from "./styles";
-import useEditionsSectionData from "../../../hooks/fetch/useEditionsSectionData";
-import Slider from "../../Slider";
-import Card from "./subcomponents/Card";
 
 export default function Editions() {
   const { sections } = useSectionRefs();
-  const { previousEditions } = useEditionsSectionData();
 
   return (
     <EditionsContainer>
@@ -22,7 +22,7 @@ export default function Editions() {
         <SubTitle children="Edições anteriores" />
         <EditionsCardContainer>
           <Slider
-            items={previousEditions}
+            items={editionsContent}
             renderItem={(item) => (
               <Card
                 altText={item.altText}
