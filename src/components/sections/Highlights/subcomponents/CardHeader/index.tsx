@@ -7,7 +7,7 @@ import {
   TagContainer,
 } from "./styles";
 
-import { CardHeaderProps } from "../../types";
+import { CardHeaderProps } from "./types";
 
 export default function CardHeader({
   classification,
