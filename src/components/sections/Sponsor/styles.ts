@@ -1,12 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import {
-  SectionContainer,
-  SectionContent,
-} from "../../../styles/SectionContainer";
-
-export const SupporterSection = styled(SectionContainer)``;
+import { SectionContent } from "../../../styles/SectionContainer";
 
 export const SupporterWrapper = styled(SectionContent)`
   min-width: 100%;

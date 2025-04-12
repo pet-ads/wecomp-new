@@ -1,18 +1,15 @@
+import { Section } from "../../Section";
 import SubTitle from "../../ui/SubTitle";
-
-import useSectionRefs from "../../../hooks/references/useSectionRefs";
-
-import { FAQContainer, FAQContent, FAQList } from "./styles";
 import Details from "./subcomponent/Details";
 
 import faqContent from "../../../assets/content/faq";
 
-export default function FAQs() {
-  const { sections } = useSectionRefs();
+import { FAQContent, FAQList } from "./styles";
 
+export default function FAQs() {
   return (
-    <FAQContainer>
-      <FAQContent ref={sections.FAQs}>
+    <Section sectionId="FAQ">
+      <FAQContent>
         <SubTitle children="Perguntas frequentes" />
         <FAQList>
           {faqContent.map((item, index) => (
@@ -24,6 +21,6 @@ export default function FAQs() {
           ))}
         </FAQList>
       </FAQContent>
-    </FAQContainer>
+    </Section>
   );
 }

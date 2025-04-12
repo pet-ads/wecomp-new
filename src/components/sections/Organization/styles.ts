@@ -1,13 +1,6 @@
 import styled from "styled-components";
 
-import {
-  SectionContainer,
-  SectionContent,
-} from "../../../styles/SectionContainer";
-
-export const DirectorContainer = styled(SectionContainer)`
-  background: var(--background-color);
-`;
+import { SectionContent } from "../../../styles/SectionContainer";
 
 export const DirectorContent = styled(SectionContent)`
   min-width: 80%;
@@ -70,6 +63,4 @@ export const DirectorLogo = styled.img<{ width?: string }>`
   @media (max-width: 768px) {
     width: 90%;
   }
-
-
 `;

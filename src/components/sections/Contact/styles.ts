@@ -1,13 +1,6 @@
 import styled from "styled-components";
 
-import {
-  SectionContainer,
-  SectionContent,
-} from "../../../styles/SectionContainer";
-
-export const ContactContainer = styled(SectionContainer)`
-  background-color: var(--background-color);
-`;
+import { SectionContent } from "../../../styles/SectionContainer";
 
 export const ContactContent = styled(SectionContent)`
   background-color: var(--background-color);
@@ -26,7 +19,6 @@ export const ContactCards = styled.div`
   padding: 1rem 0;
 
   gap: 3rem;
-
 
   @media (max-width: 650px) {
     flex-direction: column;

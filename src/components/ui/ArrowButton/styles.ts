@@ -8,7 +8,9 @@ export const ArrowContainerBox = styled(motion.div)`
   align-items: center;
 
   position: absolute;
-  bottom: 3.5rem;
+  bottom: 4.5rem;
+
+  z-index: 2;
 
   width: 3rem;
   height: 3rem;

@@ -1,16 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import DropDownMenu from "../subcomponent/DropDown";
 
 import { NavListProps } from "../types";
 
-import useSectionRefs from "../../../hooks/references/useSectionRefs";
-
 import { SandWichIcon, WrapperIcon } from "./styles";
 
 export default function MenuMobile({ links }: NavListProps) {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const { sections } = useSectionRefs();
+  const DropDownMenuComponent = useRef<HTMLDivElement>(null);
 
   const handleOpenMenu = () => {
     setOpenMenu((prev) => !prev);
@@ -18,8 +16,8 @@ export default function MenuMobile({ links }: NavListProps) {
 
   const handleClickOutside = (event: MouseEvent) => {
     if (
-      sections.DropDownMenu.current &&
-      !sections.DropDownMenu.current.contains(event.target as Node)
+      DropDownMenuComponent.current &&
+      !DropDownMenuComponent.current.contains(event.target as Node)
     ) {
       setOpenMenu(false);
     }
@@ -27,14 +25,13 @@ export default function MenuMobile({ links }: NavListProps) {
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   });
 
   return (
-    <SandWichIcon ref={sections.DropDownMenu}>
+    <SandWichIcon ref={DropDownMenuComponent}>
       <WrapperIcon onClick={handleOpenMenu} />
       <DropDownMenu links={links} isOpen={openMenu} />
     </SandWichIcon>

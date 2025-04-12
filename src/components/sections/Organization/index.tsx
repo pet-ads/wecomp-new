@@ -1,26 +1,22 @@
+import { Section } from "../../Section";
 import ArrowButton from "../../ui/ArrowButton";
 import SubTitle from "../../ui/SubTitle";
-
-import useSectionRefs from "../../../hooks/references/useSectionRefs";
 
 import organizationContent from "../../../assets/content/organization";
 
 import {
-  DirectorContainer,
   DirectorContent,
   DirectorLogo,
   DirectorsLogoContainer,
 } from "./styles";
 
 export default function Directors() {
-  const { sections } = useSectionRefs();
-
   const handleRedirectOnClick = (url: string) => {
     window.open(url, "_blank");
   };
 
   return (
-    <DirectorContainer ref={sections.directors}>
+    <Section sectionId="Organization">
       <DirectorContent>
         <SubTitle children="Realizadores" />
         <DirectorsLogoContainer>
@@ -35,7 +31,7 @@ export default function Directors() {
           ))}
         </DirectorsLogoContainer>
       </DirectorContent>
-      <ArrowButton sectionRef={sections.programming} />
-    </DirectorContainer>
+      <ArrowButton sectionId="Programming" />
+    </Section>
   );
 }

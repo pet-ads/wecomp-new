@@ -12,6 +12,7 @@ export const LabelContainer = styled.div`
   padding: 0.5rem;
 
   background-color: var(--secundary-text-color);
+  border-radius: 0.25rem;
 
   @media (max-width: 400px) {
     min-width: 20vw;

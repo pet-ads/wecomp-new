@@ -1,16 +1,13 @@
 import ArrowButton from "../../ui/ArrowButton";
 
-import useSectionRefs from "../../../hooks/references/useSectionRefs";
-
 import heroContent from "../../../assets/content/hero";
 
-import { LogoContainer, EventDate, HighlightedText, EventLogo } from "./styles";
+import { EventDate, HighlightedText, EventLogo } from "./styles";
+import { Section } from "../../Section";
 
 export default function HeroBanner() {
-  const { sections } = useSectionRefs();
-
   return (
-    <LogoContainer ref={sections.HeroBanner}>
+    <Section sectionId="Hero">
       <EventLogo
         src={heroContent.logoPath}
         alt={heroContent.logoAlternativeText}
@@ -19,7 +16,7 @@ export default function HeroBanner() {
         <HighlightedText>{heroContent.eventEdition}</HighlightedText>
         {heroContent.eventDate}
       </EventDate>
-      <ArrowButton sectionRef={sections.prologue} />
-    </LogoContainer>
+      <ArrowButton sectionId="About" />
+    </Section>
   );
 }

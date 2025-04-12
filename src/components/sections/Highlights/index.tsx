@@ -1,27 +1,22 @@
+import { Section } from "../../Section";
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 import Slider from "../../Slider";
 import UpcommingCard from "../../ui/SoonCard";
 import Card from "./subcomponents/Card";
 
-import useSectionRefs from "../../../hooks/references/useSectionRefs";
 import useCheckDate from "../../../hooks/references/useCheckDate";
 
 import highlightsContent from "../../../assets/content/highlights";
 
-import {
-  HighlightsCardContainer,
-  HighlightsContainer,
-  HighlightsContent,
-} from "./styles";
+import { HighlightsCardContainer, HighlightsContent } from "./styles";
 
 export default function Highlights() {
-  const { sections } = useSectionRefs();
   const checkDate = useCheckDate();
 
   return (
-    <HighlightsContainer>
-      <HighlightsContent ref={sections.Highlights}>
+    <Section sectionId="Highlights">
+      <HighlightsContent>
         <SubTitle children="Destaques" />
         <HighlightsCardContainer>
           {checkDate ? (
@@ -35,9 +30,8 @@ export default function Highlights() {
             <UpcommingCard />
           )}
         </HighlightsCardContainer>
-        <ArrowButton sectionRef={sections.Locations} />
+        <ArrowButton sectionId="Locations" />
       </HighlightsContent>
-    </HighlightsContainer>
+    </Section>
   );
 }
-// HighlightsSectionProps;

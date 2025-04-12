@@ -1,26 +1,22 @@
+import { Section } from "../../Section";
+import RedirectButton from "../../ui/RedirectButton";
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
-
-import useSectionRefs from "../../../hooks/references/useSectionRefs";
 
 import marathonContent from "../../../assets/content/marathon";
 
 import {
-  MarathonSection,
   MarathonWrapper,
   MarathonText,
   MarathonSubtitle,
   MarathonImageWrapper,
 } from "./styles";
-import RedirectButton from "../../ui/RedirectButton";
 
 export default function Marathon() {
-  const { sections } = useSectionRefs();
-
   return (
-    <MarathonSection>
+    <Section sectionId="Marathon">
       <SubTitle children="Maratona InterIF" />
-      <MarathonWrapper ref={sections.Marathon}>
+      <MarathonWrapper>
         <MarathonText>
           <MarathonSubtitle>O que é InterIF ?</MarathonSubtitle>
           <MarathonText>{marathonContent.definition}</MarathonText>
@@ -33,7 +29,7 @@ export default function Marathon() {
           />
         </MarathonImageWrapper>
       </MarathonWrapper>
-      <ArrowButton sectionRef={sections.Highlights} />
-    </MarathonSection>
+      <ArrowButton sectionId="Highlights" />
+    </Section>
   );
 }

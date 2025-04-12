@@ -1,20 +1,17 @@
+import { Section } from "../../Section";
 import SubTitle from "../../ui/SubTitle";
 import Text from "../../ui/Text";
 import ArrowButton from "../../ui/ArrowButton";
 import Card from "./subcomponents/Card";
 
-import useSectionRefs from "../../../hooks/references/useSectionRefs";
-
 import contactContent from "../../../assets/content/contact";
 
-import { ContactCards, ContactContainer, ContactContent } from "./styles";
+import { ContactCards, ContactContent } from "./styles";
 
 export default function Contact() {
-  const { sections } = useSectionRefs();
-
   return (
-    <ContactContainer>
-      <ContactContent ref={sections.Contact}>
+    <Section sectionId="Contact">
+      <ContactContent>
         <SubTitle children="Informações de contato" />
         <Text
           textAlign="center"
@@ -31,8 +28,8 @@ export default function Contact() {
             />
           ))}
         </ContactCards>
+        <ArrowButton sectionId="Editions" />
       </ContactContent>
-      <ArrowButton sectionRef={sections.Editions} />
-    </ContactContainer>
+    </Section>
   );
 }

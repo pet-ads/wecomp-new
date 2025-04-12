@@ -1,15 +1,13 @@
 import { useState } from "react";
 
+import { Section } from "../../Section";
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
-
-import useSectionRefs from "../../../hooks/references/useSectionRefs";
 
 import sponsorsContent from "../../../assets/content/sponsors";
 
 import {
   SupporterLogo,
-  SupporterSection,
   SupporterWrapper,
   SupporterLogoContainer,
   MarqueeContainer,
@@ -21,9 +19,6 @@ export default function Supporters() {
     firstRow: false,
     secundRow: false,
   });
-
-  const { sections } = useSectionRefs();
-
   const reversedArrayOfSupporters = [...sponsorsContent].reverse();
   const supporterList = [
     ...sponsorsContent,
@@ -50,8 +45,8 @@ export default function Supporters() {
   };
 
   return (
-    <SupporterSection>
-      <SupporterWrapper ref={sections.supporters}>
+    <Section sectionId="Sponsors">
+      <SupporterWrapper>
         <SubTitle children="Apoiadores" />
         <SupporterLogoContainer>
           <MarqueeContainer>
@@ -90,7 +85,7 @@ export default function Supporters() {
           </MarqueeContainer>
         </SupporterLogoContainer>
       </SupporterWrapper>
-      <ArrowButton sectionRef={sections.directors} />
-    </SupporterSection>
+      <ArrowButton sectionId="Organization" />
+    </Section>
   );
 }

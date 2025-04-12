@@ -1,4 +1,6 @@
+import { Sections } from "../ui/ArrowButton/types";
+
 export type SectionProps = {
-  sectionId: string;
+  sectionId: Sections;
   children: React.ReactNode;
 };

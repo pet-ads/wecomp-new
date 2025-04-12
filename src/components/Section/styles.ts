@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const Container = styled.section<{ background: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,5 +15,6 @@ export const Container = styled.section`
 
   padding: 2rem 0;
 
-  background: var(--background-color);
+  background: ${(props) =>
+    props.background ? "var(--background-color)" : "var(--primary-color)"};
 `;

@@ -1,14 +1,6 @@
 import styled from "styled-components";
 
-import {
-  SectionContainer,
-  SectionContent,
-} from "../../../styles/SectionContainer";
-
-export const FAQContainer = styled(SectionContainer)`
-  background-color: var(--background-color);
-
-`;
+import { SectionContent } from "../../../styles/SectionContainer";
 
 export const FAQContent = styled(SectionContent)`
   background-color: var(--background-color);

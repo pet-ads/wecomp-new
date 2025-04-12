@@ -1,21 +1,5 @@
 import styled from "styled-components";
 
-export const LogoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  position: relative;
-
-  min-width: 100%;
-
-  min-height: 100vh;
-  max-height: 100vh;
-
-  background-color: var(--primary-color);
-`;
-
 export const EventLogo = styled.img`
   min-width: 80%;
   max-width: 80%;
