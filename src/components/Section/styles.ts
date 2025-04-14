@@ -8,8 +8,8 @@ export const Container = styled.section<{ background: boolean }>`
 
   position: relative;
 
-  min-width: 100vw;
-  max-width: 100vw;
+  min-width: 100%;
+  max-width: 100%;
 
   min-height: 100vh;
 
