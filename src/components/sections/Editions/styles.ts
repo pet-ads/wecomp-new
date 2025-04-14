@@ -14,8 +14,4 @@ export const EditionsCardContainer = styled.div`
   width: 100%;
 
   max-height: 40vh;
-
-  padding: 2rem 0;
-
-  margin: 2rem 0;
 `;

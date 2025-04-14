@@ -16,9 +16,6 @@ export const SupporterLogoContainer = styled.div`
   width: 100%;
   height: 100%;
 
-  padding: 2rem 0;
-  margin: 1rem 0;
-
   gap: 3rem;
 
   overflow-x: hidden;

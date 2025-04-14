@@ -14,8 +14,4 @@ export const HighlightsCardContainer = styled.div`
   width: 100%;
 
   min-height: 40vh;
-
-  padding: 2rem 0;
-
-  margin: 2rem 0;
 `;

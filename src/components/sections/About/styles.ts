@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { mq } from "../../../utils/responsive/breakpoints";
 
 export const PrologueText = styled.div`
-  margin: 2rem 0;
   text-align: justify;
 
   ${mq({
