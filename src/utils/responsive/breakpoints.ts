@@ -5,5 +5,5 @@ const breakpoints = [
 ];
 
 export const mq = facepaint(
-  breakpoints.map((bp) => `@media (max-width: ${bp}px)`)
+  breakpoints.map((bp) => `@media (min-width: ${bp}px)`)
 );
