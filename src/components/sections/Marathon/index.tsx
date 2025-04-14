@@ -10,7 +10,10 @@ import {
   MarathonText,
   MarathonSubtitle,
   MarathonImageWrapper,
+  MarathonImage,
+  MarathonTextContent,
 } from "./styles";
+import { ZOOM_ANIMATION } from "../../../animations/scaling";
 
 export default function Marathon() {
   return (
@@ -19,11 +22,14 @@ export default function Marathon() {
       <MarathonWrapper>
         <MarathonText>
           <MarathonSubtitle>O que é InterIF ?</MarathonSubtitle>
-          <MarathonText>{marathonContent.definition}</MarathonText>
+          <MarathonTextContent>
+            {marathonContent.definition}
+          </MarathonTextContent>
           <RedirectButton children="veja mais" link={marathonContent.link} />
         </MarathonText>
         <MarathonImageWrapper>
-          <img
+          <MarathonImage
+            {...ZOOM_ANIMATION}
             src={marathonContent.path}
             alt="Foto da fase final do InterIF 2024"
           />
