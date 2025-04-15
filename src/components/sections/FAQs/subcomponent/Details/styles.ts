@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { mq } from "../../../../../utils/responsive/breakpoints";
 
 export const FAQContainer = styled.div`
   display: flex;
@@ -42,7 +43,7 @@ export const ToggleIcon = styled(motion.div)`
 
   padding: 0.5rem;
 
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
 `;
 
@@ -53,12 +54,11 @@ export const QuestionText = styled.div`
 
   text-align: justify;
 
-  font-size: 12.5pt;
   font-weight: bold;
 
-  @media (max-width: 320px) {
-    font-size: 10pt;
-  }
+  ${mq({
+    fontSize: ["12.5pt", "10pt"],
+  })}
 `;
 
 export const AnswerText = styled.div`
@@ -67,9 +67,11 @@ export const AnswerText = styled.div`
   padding: 1rem;
 
   text-align: justify;
-  font-size: 12.5pt;
 
-  @media (max-width: 320px) {
-    font-size: 10pt;
-  }
+  ${mq({
+    fontSize: ["12.5pt", "10pt"],
+    height: ["5rem", "3rem"],
+    minHeight: ["5rem", "3rem"],
+    maxHeight: ["5rem", "3rem"],
+  })}
 `;
