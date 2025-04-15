@@ -14,7 +14,7 @@ export default function Footer() {
           link="http://petads.paginas.scl.ifsp.edu.br/#/"
           children="PET/ADS"
         />
-        por @
+        por
         <RedirectSpan
           link="https://portais.ifsp.edu.br/scl/"
           children="IFSP/SCL"

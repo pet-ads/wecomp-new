@@ -1,6 +1,6 @@
 import { ELEVATE } from "../../../../../animations";
 import { ContactProps } from "../../types";
-import { Container, IconContainer, NameContainer, SocialIcon } from "./styles";
+import { Container, NameContainer, SocialIcon } from "./styles";
 
 export default function Card({
   contactUrl,
@@ -10,13 +10,12 @@ export default function Card({
 }: ContactProps) {
   return (
     <Container>
-      <IconContainer {...ELEVATE}>
-        <SocialIcon
-          src={iconPath}
-          alt={iconAlt}
-          onClick={() => window.open(contactUrl, "_blank")}
-        />
-      </IconContainer>
+      <SocialIcon
+        {...ELEVATE}
+        src={iconPath}
+        alt={iconAlt}
+        onClick={() => window.open(contactUrl, "_blank")}
+      />
       <NameContainer>{username}</NameContainer>
     </Container>
   );
