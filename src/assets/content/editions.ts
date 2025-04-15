@@ -1,8 +1,8 @@
-import wecompI from "../../../public/images/editionsLogo/wecomp2017.svg";
-import wecompII from "../../../public/images/editionsLogo/wecomp2018.svg";
-import wecompIII from "../../../public/images/editionsLogo/wecomp2019.svg";
-import wecompIV from "../../../public/images/editionsLogo/wecomp2023.svg";
-import wecompV from "../../../public/images/editionsLogo/wecomp2024.svg";
+import wecompI from "../images/editionsLogo/wecomp2017.svg";
+import wecompII from "../images/editionsLogo/wecomp2018.svg";
+import wecompIII from "../images/editionsLogo/wecomp2019.svg";
+import wecompIV from "../images/editionsLogo/wecomp2023.svg";
+import wecompV from "../images/editionsLogo/wecomp2024.svg";
 
 import { EditionProps } from "../../components/sections/Editions/types";
 

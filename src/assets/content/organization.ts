@@ -1,4 +1,4 @@
-import genericEmpress from "../../../public/images/empresaGenerica.svg";
+import genericEmpress from "../images/empresaGenerica.svg";
 
 interface OrganizationProps {
   name: string;
