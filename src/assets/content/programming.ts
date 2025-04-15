@@ -1,4 +1,4 @@
-import minister from "../../../public/images/ministrante.svg";
+import minister from "../images/ministrante.svg";
 import { ProgrammingProps } from "../../components/sections/Programming/types";
 
 export const programmingContent: ProgrammingProps[] = [

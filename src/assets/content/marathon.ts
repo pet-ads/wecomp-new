@@ -1,4 +1,4 @@
-import finalPhase from "../../../public/images/InterIf.jpeg";
+import finalPhase from "../images/InterIf.jpeg";
 
 interface MarathonProps {
   definition: string;
