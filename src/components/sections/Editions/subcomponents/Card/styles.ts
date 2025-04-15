@@ -16,7 +16,7 @@ export const Container = styled.div`
   overflow: hidden;
 
   border-radius: 0.5rem;
-  background-color: var(--primary-text-color);
+  background-color: var(--white-100);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {
@@ -39,8 +39,7 @@ export const IconContainer = styled(motion.div)`
 
   padding: 1rem 0;
 
-  background-color: var(--primary-text-color);
-
+  background-color: var(--white-100);
 `;
 
 export const EditionIcon = styled.img`
@@ -64,7 +63,7 @@ export const NameContainer = styled(motion.div)`
 
   padding: 0.5rem 1rem;
 
-  color: var(--secundary-text-color);
+  color: var(--gray-1000);
   font-size: 1rem;
   font-weight: bold;
 

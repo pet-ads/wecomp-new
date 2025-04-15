@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { SectionContent } from "../../../styles/SectionContainer";
 
 export const FAQContent = styled(SectionContent)`
-  background-color: var(--background-color);
+  background-color: var(--gray-200);
 
   height: 100vh;
 `;

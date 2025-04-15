@@ -11,7 +11,7 @@ export const ProgrammingContent = styled.div`
 
   height: 100%;
 
-  background: var(--background-color);
+  background: var(--gray-200);
 
   overflow-wrap: break-word;
   line-height: 1.6;
@@ -27,5 +27,5 @@ export const ProgrammingCardContainer = styled.div`
   min-height: 100%;
   max-height: 100%;
 
-  background-color: var(--background-color);
+  background-color: var(--gray-200);
 `;

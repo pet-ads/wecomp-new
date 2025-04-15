@@ -15,7 +15,7 @@ export const Container = styled.div`
 
   border-radius: 1rem;
 
-  background-color: var(--primary-text-color);
+  background-color: var(--white-100);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {
@@ -47,7 +47,7 @@ export const Icon = styled.img``;
 
 export const EventTitle = styled.div`
   max-width: 100%;
-  
+
   height: auto;
 
   font-size: 1.25rem;
