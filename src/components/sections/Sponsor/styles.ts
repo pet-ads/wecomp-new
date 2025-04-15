@@ -1,85 +1,63 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled, { css } from "styled-components";
 
-import { SectionContent } from "../../../styles/SectionContainer";
-
-export const SupporterWrapper = styled(SectionContent)`
-  min-width: 100%;
-  max-width: 100%;
-`;
-
-export const SupporterLogoContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
+export const SupporterSectionWrapper = styled.div`
   width: 100%;
-  height: 100%;
-
-  gap: 3rem;
-
-  overflow-x: hidden;
-`;
-
-export const SupporterLogo = styled.img<{ width?: string }>`
-  width: ${({ width }) => width || "15rem"};
-
-  object-fit: contain;
-  overflow: hidden;
-
-  margin-left: 3rem;
-
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    width: 10rem;
-  }
-`;
-
-export const MarqueeContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-
   gap: 2rem;
-
-  width: 100%;
-  height: 20rem;
-
-  white-space: nowrap;
-  overflow: hidden;
-  /* 
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0) 2%,
-    black 30%,
-    black 70%,
-    rgba(0, 0, 0, 0) 100%
-  ); */
+  padding: 4rem 0;
 `;
 
-export const MarqueeItem = styled.div<{ isPaused: boolean }>`
-  min-width: 100%;
-  max-width: 100%;
 
-  gap: 2rem;
+export const CarouselContainer = styled.div`
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+`;
 
-  /* position: relative; */
-  height: 5rem;
-  animation: ${(props) =>
-    props.isPaused ? "none" : "marquee 20s linear infinite"};
+export const LogoList = styled.ul`
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+`;
 
-  &:hover {
-    animation-play-state: paused;
-  }
+export const LogoItem = styled.li`
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100rem);
-    }
-  }
+export const LogoFigure = styled.figure<{ isCenter?: boolean }>`
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.4;
+  transform: scale(0.6);
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(100%);
+
+  ${({ isCenter }) =>
+    isCenter &&
+    css`
+      opacity: 1;
+      transform: scale(1);
+      filter: none;
+      z-index: 2;
+    `}
+`;
+
+export const LogoImage = styled.img`
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 10px;
+  transform: rotate(45deg);
+`;
+
+export const LogoCaption = styled.figcaption`
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
 `;

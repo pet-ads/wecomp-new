@@ -9,25 +9,25 @@ interface SponsorProps {
 
 export const sponsorsContent: SponsorProps[] = [
   {
-    name: "Generica",
+    name: "Cacau Tech",
     logoPath: genericEmpress,
     link: "#",
     width: "",
   },
   {
-    name: "Generica",
+    name: "Softable",
     logoPath: genericEmpress,
     link: "#",
     width: "",
   },
   {
-    name: "Generica",
+    name: "CSD",
     logoPath: genericEmpress,
     link: "#",
     width: "",
   },
   {
-    name: "Generica",
+    name: "SMARTFIT",
     logoPath: genericEmpress,
     link: "#",
     width: "",

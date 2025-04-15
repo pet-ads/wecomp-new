@@ -1,91 +1,67 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import {
+  CarouselContainer,
+  LogoList,
+  LogoItem,
+  LogoFigure,
+  LogoImage,
+  LogoCaption,
+  SupporterSectionWrapper,
+} from "./styles";
+import sponsorsContent from "../../../assets/content/sponsors";
+import ArrowButton from "../../ui/ArrowButton";
 import { Section } from "../../Section";
 import SubTitle from "../../ui/SubTitle";
-import ArrowButton from "../../ui/ArrowButton";
 
-import sponsorsContent from "../../../assets/content/sponsors";
+export default function SupportersCarousel() {
+  const [index, setIndex] = useState(0);
+  const visibleItems = 5;
+  const loopedItems = [...sponsorsContent, ...sponsorsContent, ...sponsorsContent];
 
-import {
-  SupporterLogo,
-  SupporterWrapper,
-  SupporterLogoContainer,
-  MarqueeContainer,
-  MarqueeItem,
-} from "./styles";
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % loopedItems.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, [loopedItems.length]);
 
-export default function Supporters() {
-  const [isPaused, setIsPaused] = useState({
-    firstRow: false,
-    secundRow: false,
-  });
-  const reversedArrayOfSupporters = [...sponsorsContent].reverse();
-  const supporterList = [
-    ...sponsorsContent,
-    ...sponsorsContent,
-    ...sponsorsContent,
-    ...sponsorsContent,
-  ];
-  const reversedSupporterList = [
-    ...reversedArrayOfSupporters,
-    ...reversedArrayOfSupporters,
-    ...reversedArrayOfSupporters,
-    ...reversedArrayOfSupporters,
-  ];
-
-  const handleRedirectOnClick = (url: string) => {
-    window.open(url, "_blank");
-  };
-
-  const handleDoubleClick = (className: "firstRow" | "secundRow") => {
-    setIsPaused((prev) => ({
-      ...prev,
-      [className]: !prev[className],
-    }));
+  const getTranslate = () => {
+    const offset = Math.floor(visibleItems / 2);
+    const shift = (100 / loopedItems.length) * (index - offset);
+    return `translateX(-${shift}%)`;
   };
 
   return (
     <Section sectionId="Sponsors">
-      <SupporterWrapper>
-        <SubTitle children="Apoiadores" />
-        <SupporterLogoContainer>
-          <MarqueeContainer>
-            <MarqueeItem
-              isPaused={isPaused.firstRow}
-              onClick={() => handleDoubleClick("firstRow")}
-              onTouchStart={() => handleDoubleClick("firstRow")}
-              onTouchEnd={() => handleDoubleClick("firstRow")}
-            >
-              {supporterList.map((supporter, index) => (
-                <SupporterLogo
-                  key={index}
-                  src={supporter.logoPath}
-                  alt={`Logo da empresa ${supporter.name}`}
-                  width={supporter.width}
-                  onClick={() => handleRedirectOnClick(supporter.link)}
-                />
-              ))}
-            </MarqueeItem>
-            <MarqueeItem
-              isPaused={isPaused.secundRow}
-              onClick={() => handleDoubleClick("secundRow")}
-              onTouchStart={() => handleDoubleClick("secundRow")}
-              onTouchEnd={() => handleDoubleClick("secundRow")}
-            >
-              {reversedSupporterList.map((supporter, index) => (
-                <SupporterLogo
-                  key={index}
-                  src={supporter.logoPath}
-                  alt={`Logo da empresa ${supporter.name}`}
-                  width={supporter.width}
-                  onClick={() => handleRedirectOnClick(supporter.link)}
-                />
-              ))}
-            </MarqueeItem>
-          </MarqueeContainer>
-        </SupporterLogoContainer>
-      </SupporterWrapper>
-      <ArrowButton sectionId="Organization" />
+      <SupporterSectionWrapper>
+        <SubTitle>Apoiadores</SubTitle>
+
+        <CarouselContainer>
+          <LogoList
+            style={{
+              transform: getTranslate(),
+              width: `${(100 * loopedItems.length) / visibleItems}%`,
+            }}
+          >
+            {loopedItems.map((sponsor, i) => {
+              const isCenter = i === index;
+              return (
+                <LogoItem key={i} style={{ width: `${100 / loopedItems.length}%` }}>
+                  <LogoFigure
+                    isCenter={isCenter}
+                    onClick={() => window.open(sponsor.link, "_blank")}
+                  >
+                    <LogoImage src={sponsor.logoPath} alt={sponsor.name} />
+                    <LogoCaption>{sponsor.name}</LogoCaption>
+                  </LogoFigure>
+                </LogoItem>
+              );
+            })}
+          </LogoList>
+        </CarouselContainer>
+
+        <ArrowButton sectionId="Organization" />
+      </SupporterSectionWrapper>
     </Section>
   );
 }
