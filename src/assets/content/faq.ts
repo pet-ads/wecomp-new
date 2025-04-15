@@ -2,13 +2,35 @@ import { FaqProps } from "../../components/sections/FAQs/types";
 
 export const faqContent: FaqProps[] = [
   {
-    question: "O que é a Wecomp?",
+    question: "Quando começam as inscrições para a WECOMP?",
     answer:
-      "A Wecomp é a semana da computação do IFSP São Carlos, que neste ano sua edição. O objetivo do evento é proporcionar uma maior interação entre os estudantes, o mercado de tecnologia e a cidade de São Carlos. Ao longo de cinco dias de evento, serão realizados diversos minicursos, talks e processos seletivos, que visam reduzir a distância entre a teoria e a prática, ensinar tecnologias novas e promover o ingresso dos participantes no mercado de trabalho.",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nemo facilis inventore illum ",
   },
   {
-    question: "Quando será a Wecomp?",
-    answer: "A Wecomp ocorrerá entre os dias x e x de outubro de 2025.",
+    question:
+      "O que acontece se eu não comparecer sem jusficativa a um evento?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nemo facilis inventore illum ",
+  },
+  {
+    question: "Como posso justificar minha ausência em um evento?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nemo facilis inventore illum ",
+  },
+  {
+    question: "Quando os certificados dos evento serão emitidos?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nemo facilis inventore illum ",
+  },
+  {
+    question: "A WECOMP é aberta para todos os públicos?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nemo facilis inventore illum ",
+  },
+  {
+    question: "Haverá transmissão online do evento?",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nemo facilis inventore illum ",
   },
 ];
 
