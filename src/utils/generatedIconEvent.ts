@@ -1,9 +1,4 @@
-import talkIcon from "@/assets/icons/programming/talkIcon.svg";
-import courseIcon from "@/assets/icons/programming/programmingIcon.svg";
-import openingIcon from "@/assets/icons/programming/openingIcon.svg";
-import technicalVisitIcon from "@/assets/icons/programming/technicalVisitIcon.svg";
-
-import { TypeEventName } from "../components/sections/Programming/types";
+import { TypeEventName } from "../sections/Programming/types";
 
 type IconEventProps = {
   iconPath: string;

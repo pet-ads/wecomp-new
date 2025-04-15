@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TextContainerProps } from "./types.ts";
+import { TextContainerProps } from "./types";
 
 export const TextContainer = styled.div<TextContainerProps>`
   display: ${({ display }) => display || "flex"};
@@ -16,25 +16,13 @@ export const TextContainer = styled.div<TextContainerProps>`
 
   padding: 2rem 1rem;
 
-  overflow-wrap: break-word;
-
   font-size: ${({ fontSize }) => fontSize || "1rem"};
   font-family: ${({ fontFamily }) => fontFamily || "Arial, sans-serif"};
   font-weight: ${({ fontWeight }) => fontWeight || "400"};
-  font-style: ${({ fontStyle }) => fontStyle || "normal"};
-  letter-spacing: ${({ letterSpacing }) => letterSpacing || "normal"};
-  line-height: ${({ lineHeight }) => lineHeight || "1.5"};
-  text-transform: ${({ textTransform }) => textTransform || "none"};
   text-align: ${({ textAlign }) => textAlign || "justify"};
-  word-break: ${({ wordBreak }) => wordBreak || "normal"};
-  white-space: ${({ whiteSpace }) => whiteSpace || "normal"};
 
   color: ${({ color }) => color || "var(--secundary-text-color)"};
-  background-color: ${({ backgroundColor }) =>
-    backgroundColor || "transparent"};
-  text-shadow: ${({ textShadow }) => textShadow || "none"};
-  text-decoration: ${({ textDecoration }) => textDecoration || "none"};
-  opacity: ${({ opacity }) => (opacity !== undefined ? opacity : 1)};
+  background-color: ${({ backgroundColor }) => backgroundColor || "transparent"};
 
   @media (max-width: 380px) {
     font-size: ${({ fontSize }) =>
