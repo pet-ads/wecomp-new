@@ -64,7 +64,7 @@ export const EventSpeakers = styled.div`
   font-size: 1rem;
   font-weight: 600;
 
-  color: var(--secundary-text-color);
+  color: var(--1000-black);
 
   @media (max-width: 768px) {
     width: 100%;

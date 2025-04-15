@@ -15,7 +15,7 @@ export const SectionContainer = styled.section`
 
   padding: 2rem 0;
 
-  background: var(--background-color);
+  background: var(--100-white);
 `;
 
 export const SectionContent = styled.div`
@@ -29,7 +29,7 @@ export const SectionContent = styled.div`
 
   height: 100%;
 
-  background: var(--background-color);
+  background: var(--100-white);
 
   overflow-wrap: break-word;
   line-height: 1.6;

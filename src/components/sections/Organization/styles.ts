@@ -6,7 +6,7 @@ export const DirectorContent = styled(SectionContent)`
   min-width: 80%;
   max-width: 80%;
 
-  background: var(--background-color);
+  background: var(--100-white);
 
   @media (min-width: 768px) {
     min-width: 70%;

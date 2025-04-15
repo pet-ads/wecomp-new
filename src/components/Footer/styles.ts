@@ -16,7 +16,7 @@ export const FooterContainer = styled.div`
 
   padding: 0.2rem 0;
 
-  background-color: var(--primary-color);
+  100-white: var(--600-green);
 `;
 
 export const FooterContent = styled.span`
@@ -31,7 +31,7 @@ export const FooterContent = styled.span`
   font-size: 10pt;
   font-weight: bold;
 
-  color: var(--secundary-text-color);
+  color: var(--1000-black);
 
   @media (max-width: 400px) {
     font-size: 8pt;

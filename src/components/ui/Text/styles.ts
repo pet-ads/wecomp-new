@@ -29,8 +29,8 @@ export const TextContainer = styled.div<TextContainerProps>`
   word-break: ${({ wordBreak }) => wordBreak || "normal"};
   white-space: ${({ whiteSpace }) => whiteSpace || "normal"};
 
-  color: ${({ color }) => color || "var(--secundary-text-color)"};
-  background-color: ${({ backgroundColor }) =>
+  color: ${({ color }) => color || "var(--1000-black)"};
+  100-white: ${({ backgroundColor }) =>
     backgroundColor || "transparent"};
   text-shadow: ${({ textShadow }) => textShadow || "none"};
   text-decoration: ${({ textDecoration }) => textDecoration || "none"};

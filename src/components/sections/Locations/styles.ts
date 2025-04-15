@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { SectionContent } from "../../../styles/SectionContainer";
 
 export const LocalContent = styled(SectionContent)`
-  background-color: var(--background-color);
+  100-white: var(--100-white);
 `;
 
 export const MapsContainer = styled.div`

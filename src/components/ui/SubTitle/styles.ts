@@ -10,7 +10,7 @@ export const LabelContainer = styled.div`
 
   margin-bottom: 2rem;
 
-  background-color: var(--secundary-text-color);
+  100-white: var(--1000-black);
   border-radius: 0.25rem;
 
   ${mq({
@@ -23,7 +23,7 @@ export const LabelText = styled.span`
   font-weight: bold;
   white-space: nowrap;
 
-  color: var(--background-color);
+  color: var(--100-white);
 
   ${mq({
     fontSize: ["1rem", null, "1.5rem"],

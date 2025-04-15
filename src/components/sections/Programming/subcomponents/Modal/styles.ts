@@ -15,7 +15,7 @@ export const Container = styled.div`
   gap: 2rem;
   border-radius: 1rem;
 
-  background-color: var(--primary-text-color);
+  100-white: var(--200-white);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
 `;
@@ -33,7 +33,7 @@ export const AbertoContainer = styled.div`
   padding: 1rem 1rem 0 1rem;
   position: fixed;
   box-sizing: border-box;
-  background-color: var(--primary-text-color);
+  100-white: var(--200-white);
   
   
   @media (max-width: 768px) {
@@ -106,7 +106,7 @@ export const EventSpeakers = styled.div`
   font-size: 1rem;
   font-weight: 600;
 
-  color: var(--secundary-text-color);
+  color: var(--1000-black);
 `;
 
 

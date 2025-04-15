@@ -23,7 +23,7 @@ export const Container = styled.div`
   border-radius: 1rem;
   border: 2px solid black;
 
-  background-color: var(--primary-text-color);
+  100-white: var(--200-white);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   overflow: hidden;
@@ -55,8 +55,8 @@ export const LinkButtonContainer = styled.a`
 
   padding: 0.5rem 1rem;
 
-  background-color: var(--primary-color);
-  color: var(--primary-text-color);
+  100-white: var(--600-green);
+  color: var(--200-white);
 
   border: none;
   border-radius: 5px;
@@ -147,8 +147,8 @@ export const ButtonContainer = styled.button`
 
   padding: 0.5rem 1rem;
 
-  background-color: var(--primary-color);
-  color: var(--primary-text-color);
+  100-white: var(--600-green);
+  color: var(--200-white);
 
   border: none;
   border-radius: 5px;

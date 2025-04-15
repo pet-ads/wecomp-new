@@ -14,8 +14,8 @@ const ButtonContainer = styled.button`
 
   padding: 0.5rem 1rem;
 
-  background-color: var(--primary-color);
-  color: var(--primary-text-color);
+  100-white: var(--600-green);
+  color: var(--200-white);
 
   border: none;
   border-radius: 5px;

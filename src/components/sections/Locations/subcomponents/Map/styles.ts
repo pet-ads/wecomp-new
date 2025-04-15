@@ -44,7 +44,7 @@ export const DetailsOfLocal = styled.div`
 `;
 
 export const InformationSpan = styled.span`
-  color: var(--secundary-text-color);
+  color: var(--1000-black);
   font-size: 1rem;
   font-weight: bold;
 
@@ -52,7 +52,7 @@ export const InformationSpan = styled.span`
 `;
 
 export const ComplementSpan = styled.span`
-  color: var(--secundary-text-color);
+  color: var(--1000-black);
   font-size: 0.9rem;
 
   text-align: center;

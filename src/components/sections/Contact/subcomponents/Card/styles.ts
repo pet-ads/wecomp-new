@@ -13,7 +13,7 @@ export const Container = styled.div`
   overflow: hidden;
 
   border-radius: 0.5rem;
-  background-color: var(--primary-text-color);
+  100-white: var(--200-white);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
   ${mq({
@@ -64,7 +64,7 @@ export const SocialIcon = styled(motion.img)`
 export const NameContainer = styled.div`
   padding: 1rem;
 
-  color: var(--secundary-text-color);
+  color: var(--1000-black);
   font-size: 1rem;
   font-weight: bold;
 

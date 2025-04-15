@@ -15,7 +15,7 @@ export const Container = styled.div`
 
   border-radius: 1rem;
 
-  background-color: var(--primary-text-color);
+  100-white: var(--200-white);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {

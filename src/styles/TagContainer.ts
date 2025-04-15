@@ -16,9 +16,9 @@ export const TagContainer = styled.div<{
   
   white-space: nowrap;
 
-  background-color: ${(props) =>
-    props.backgroundColor || `var(--primary-text-color)`};
-  color: ${(props) => props.textColor || `var(--secundary-text-color)`};
+  100-white: ${(props) =>
+    props.backgroundColor || `var(--200-white)`};
+  color: ${(props) => props.textColor || `var(--1000-black)`};
 
   border-radius: 1rem;
 

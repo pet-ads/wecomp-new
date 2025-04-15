@@ -17,5 +17,5 @@ export const Nav = styled.nav`
 
   gap: 2rem;
 
-  background-color: var(--primary-color);
+  100-white: var(--600-green);
 `;
