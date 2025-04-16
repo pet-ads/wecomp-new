@@ -1,27 +1,23 @@
 import MenuNavigation from "../menus/Navigation";
 import MenuMobile from "../menus/Mobile";
 
-import useSectionRefs from "../../hooks/useSectionRefs";
-
 import { LinkAnchor } from "../menus/types";
 
 import { Nav } from "./styles";
 
 export default function Header() {
-  const { sections } = useSectionRefs();
-
   const links: LinkAnchor[] = [
-    { text: "Início", ref: sections.HeroBanner },
-    { text: "Sobre", ref: sections.prologue },
-    { text: "Apoiadores", ref: sections.supporters },
-    { text: "Realizadores", ref: sections.directors },
-    { text: "Programação", ref: sections.programming },
-    { text: "Maratona", ref: sections.Marathon },
-    { text: "Destaques", ref: sections.Highlights },
-    { text: "Locais", ref: sections.Locations },
-    { text: "Contato", ref: sections.Contact },
-    { text: "Edições", ref: sections.Editions },
-    { text: "FAQ", ref: sections.FAQs },
+    { text: "Início", sectionId: "Hero" },
+    { text: "Sobre", sectionId: "About" },
+    { text: "Apoiadores", sectionId: "Sponsors" },
+    { text: "Realizadores", sectionId: "Organization" },
+    { text: "Programação", sectionId: "Programming" },
+    { text: "Maratona", sectionId: "Marathon" },
+    { text: "Destaques", sectionId: "Highlights" },
+    { text: "Locais", sectionId: "Locations" },
+    { text: "Contato", sectionId: "Contact" },
+    { text: "Edições", sectionId: "Editions" },
+    { text: "FAQ", sectionId: "FAQ" },
   ];
 
   return (

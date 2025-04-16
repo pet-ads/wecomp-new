@@ -1,13 +1,10 @@
 import styled from "styled-components";
 
-import {
-  SectionContainer,
-  SectionContent,
-} from "../../../styles/SectionContainer";
+import { SectionContent } from "../../../styles/SectionContainer";
 
-export const EditionsContainer = styled(SectionContainer)``;
-
-export const EditionsContent = styled(SectionContent)``;
+export const EditionsContent = styled(SectionContent)`
+  background-color: var(--background-color);
+`;
 
 export const EditionsCardContainer = styled.div`
   display: flex;
@@ -16,11 +13,5 @@ export const EditionsCardContainer = styled.div`
 
   width: 100%;
 
-  min-height: 40vh;
-
-  padding: 2rem 0;
-
-  margin: 2rem 0;
-
-  background-color: red;
+  max-height: 40vh;
 `;

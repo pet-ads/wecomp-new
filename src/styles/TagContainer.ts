@@ -8,9 +8,13 @@ export const TagContainer = styled.div<{
   align-items: center;
   justify-content: center;
 
-  width: 100%;
+  width: 7rem;
+  
+  height: 2rem;
 
-  height: 100%;
+  padding: 0 .75rem;
+  
+  white-space: nowrap;
 
   background-color: ${(props) =>
     props.backgroundColor || `var(--primary-text-color)`};

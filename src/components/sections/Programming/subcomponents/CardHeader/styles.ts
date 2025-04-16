@@ -2,35 +2,38 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
 
   width: 100%;
 
-  height: 100%;
+  height: auto;
 
   gap: 1rem;
 
-  @media (max-width: 600px) {
-    align-items: center;
-    flex-direction: column;
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
   }
 `;
 
 export const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
 
   width: 60%;
 
-  gap: 0.5rem;
+  height: 100%;
+
+  gap: 1.25rem;
 
   text-align: justify;
 
   @media (max-width: 768px) {
-    width: 100%;
+    align-items: center;
 
-    gap: 1rem;
+    width: 100%;
   }
 `;
 
@@ -41,29 +44,20 @@ export const EventImage = styled.img`
 
   object-fit: cover;
 
-  @media (max-width: 600px) {
-    width: 40%;
+  @media (max-width: 768px) {
+    width: 30%;
 
-    height: 40%;
+    height: 30%;
   }
-`;
-
-export const EventTitle = styled.div`
-  font-size: 1.25rem;
-  font-weight: bold;
-
-  max-width: 100%;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  cursor: pointer;
 `;
 
 export const EventDetails = styled.div`
   font-size: 1rem;
   font-weight: 600;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const EventSpeakers = styled.div`
@@ -71,6 +65,10 @@ export const EventSpeakers = styled.div`
   font-weight: 600;
 
   color: var(--secundary-text-color);
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const TagContainer = styled.div`
@@ -78,8 +76,4 @@ export const TagContainer = styled.div`
   align-items: center;
 
   gap: 1rem;
-
-  @media (max-width: 600px) {
-    flex-direction: column;
-  }
 `;

@@ -1,34 +1,37 @@
-import SubTitle from "../../ui/SubTitle";
+import { Section } from "../../Section";
 import ArrowButton from "../../ui/ArrowButton";
-import Card from "./subcomponents/Card";
+import SubTitle from "../../ui/SubTitle";
 import Slider from "../../Slider";
+import Card from "./subcomponents/Card";
+import CardProjeto from "./subcomponents/Modal";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
-import useFetchProgrammingSection from "../../../hooks/useFetchProgrammingSection";
+import useIsMobile from "../../../hooks/window/Mobile";
 
-import {
-  ProgrammingCardContainer,
-  ProgrammingContainer,
-  ProgrammingContent,
-} from "./styles";
+import programmingContent from "../../../assets/content/programming";
+
+import { ProgrammingCardContainer, ProgrammingContent } from "./styles";
 
 export default function Programming() {
-  const { sections } = useSectionRefs();
-
-  const { eventProgramming } = useFetchProgrammingSection();
+  const isMobile = useIsMobile();
 
   return (
-    <ProgrammingContainer>
-      <ProgrammingContent ref={sections.programming}>
+    <Section sectionId="Programming">
+      <ProgrammingContent>
         <SubTitle children="Programação" />
         <ProgrammingCardContainer>
           <Slider
-            items={eventProgramming}
-            renderItem={(event) => <Card key={event.id} {...event} />}
+            items={programmingContent}
+            renderItem={(event) =>
+              isMobile ? (
+                <CardProjeto key={event.name} {...event} />
+              ) : (
+                <Card key={event.name} {...event} />
+              )
+            }
           />
         </ProgrammingCardContainer>
-        <ArrowButton sectionRef={sections.Marathon} />
+        <ArrowButton sectionId="Marathon" />
       </ProgrammingContent>
-    </ProgrammingContainer>
+    </Section>
   );
 }

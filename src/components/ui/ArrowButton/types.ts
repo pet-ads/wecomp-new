@@ -1,5 +1,16 @@
-import React from "react";
+export type Sections =
+  | "Hero"
+  | "About"
+  | "Sponsors"
+  | "Organization"
+  | "Programming"
+  | "Marathon"
+  | "Highlights"
+  | "Locations"
+  | "Contact"
+  | "Editions"
+  | "FAQ";
 
 export interface ArrowScrool {
-  sectionRef: React.RefObject<HTMLDivElement>;
+  sectionId: Sections;
 }

@@ -1,27 +1,32 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const SliderContainer = styled.div`
-  min-width: 100%;
-  max-width: 100%;
+export const SliderWrapper = styled.div`
+  display: flex;
+
+  width: 100%;
   height: 100%;
 
-  object-fit: cover;
+  overflow: hidden;
+`;
 
-  .swiper-pagination-bullet {
-    background: rgb(255, 255, 255);
-    opacity: 0.6;
-  }
+export const CarouselTrack = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
-  .swiper-pagination-bullet-active {
-    background: var(--primary-color);
-    opacity: 1;
-  }
+  width: 100%;
+  height: 100%;
 
-  .swiper {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    list-style: none;
-    overflow: visible;
-  }
+  gap: 5rem;
+
+  padding: 1rem 0;
+
+  cursor: grab;
+`;
+
+export const CarouselItem = styled.div`
+  width: 100%;
+
+  height: 100%;
 `;

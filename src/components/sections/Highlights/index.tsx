@@ -1,37 +1,28 @@
+import { Section } from "../../Section";
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
-
-import useSectionRefs from "../../../hooks/useSectionRefs";
-import useFetchHighlightsSection from "../../../hooks/useFetchHighlightsSection";
-
-import {
-  HighlightsCardContainer,
-  HighlightsContainer,
-  HighlightsContent,
-} from "./styles";
 import Slider from "../../Slider";
 import Card from "./subcomponents/Card";
 
+import highlightsContent from "../../../assets/content/highlights";
+
+import { HighlightsCardContainer, HighlightsContent } from "./styles";
+
 export default function Highlights() {
-  const { sections } = useSectionRefs();
-
-  const {eventHighlights} = useFetchHighlightsSection();
-
   return (
-    <HighlightsContainer>
-      <HighlightsContent ref={sections.Highlights}>
+    <Section sectionId="Highlights">
+      <HighlightsContent>
         <SubTitle children="Destaques" />
         <HighlightsCardContainer>
           <Slider
-            items={eventHighlights}
+            items={highlightsContent}
             renderItem={(highlight) => (
-              <Card key={highlight.id} {...highlight} />
+              <Card key={highlight.title} {...highlight} />
             )}
           />
         </HighlightsCardContainer>
-        <ArrowButton sectionRef={sections.Locations} />
+        <ArrowButton sectionId="Locations" />
       </HighlightsContent>
-    </HighlightsContainer>
+    </Section>
   );
 }
-// HighlightsSectionProps;

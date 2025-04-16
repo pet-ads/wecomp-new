@@ -1,78 +1,41 @@
+import { Section } from "../../Section";
+import RedirectButton from "../../ui/RedirectButton";
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
-import useMarathonData from "../../../hooks/useMarathonData";
+import marathonContent from "../../../assets/content/marathon";
 
 import {
-  MarathonCardContainer,
-  MarathonContainer,
-  MarathonContent,
-  MarathonCard,
-  MarathonIcon,
-  MarathonCardTitle,
-  MarathonCardDef,
-  ScheduleTable,
+  MarathonWrapper,
+  MarathonText,
+  MarathonSubtitle,
+  MarathonImageWrapper,
+  MarathonImage,
+  MarathonTextContent,
 } from "./styles";
-import RedirectButton from "../../ui/RedirectButton";
+import { ZOOM_ANIMATION } from "../../../animations/scaling";
 
 export default function Marathon() {
-  const { sections } = useSectionRefs();
-  const marathonData = useMarathonData();
-  const marathon = marathonData[0];
-
   return (
-    <MarathonContainer>
-      <MarathonContent ref={sections.Marathon}>
-        <SubTitle>{marathon.title}</SubTitle>
-        <MarathonCardContainer>
-          <MarathonCard>
-            <MarathonIcon>
-              <img
-                src="src/assets/icons/programming/iconMarathon1.svg"
-                alt=""
-              />
-            </MarathonIcon>
-            <MarathonCardTitle>
-              <h2>O que é InterIF ?</h2>
-            </MarathonCardTitle>
-            <MarathonCardDef>
-              <p>{marathon.definition}</p>
-            </MarathonCardDef>
-            <RedirectButton link={marathon.link} children="Ver mais" />
-          </MarathonCard>
-
-          <MarathonCard>
-            <MarathonIcon>
-              <img
-                src="src/assets/icons/programming/iconMarathon2.svg"
-                alt=""
-              />
-            </MarathonIcon>
-
-            <MarathonCardTitle>
-              <h2>Cronograma</h2>
-            </MarathonCardTitle>
-            <ScheduleTable>
-              <tbody>
-                {marathon.schedule.map(
-                  (
-                    event: { time: string; activity: string },
-                    index: number
-                  ) => (
-                    <tr key={index}>
-                      <td>{event.time}</td>
-                      <td>{event.activity}</td>
-                    </tr>
-                  )
-                )}
-              </tbody>
-            </ScheduleTable>
-            <RedirectButton link={marathon.link} children="Ver mais" />
-          </MarathonCard>
-        </MarathonCardContainer>
-        <ArrowButton sectionRef={sections.Highlights} />
-      </MarathonContent>
-    </MarathonContainer>
+    <Section sectionId="Marathon">
+      <SubTitle children="Maratona InterIF" />
+      <MarathonWrapper>
+        <MarathonText>
+          <MarathonSubtitle>O que é InterIF ?</MarathonSubtitle>
+          <MarathonTextContent>
+            {marathonContent.definition}
+          </MarathonTextContent>
+          <RedirectButton children="veja mais" link={marathonContent.link} />
+        </MarathonText>
+        <MarathonImageWrapper>
+          <MarathonImage
+            {...ZOOM_ANIMATION}
+            src={marathonContent.path}
+            alt="Foto da fase final do InterIF 2024"
+          />
+        </MarathonImageWrapper>
+      </MarathonWrapper>
+      <ArrowButton sectionId="Highlights" />
+    </Section>
   );
 }

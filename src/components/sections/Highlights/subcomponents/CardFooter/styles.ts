@@ -13,21 +13,10 @@ export const Container = styled.div`
 
   gap: 1rem;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 380px){
     flex-direction: column;
   }
 `;
-
-// export const ContainerButtons = styled.div`
-//   display: flex;
-//   flex-direction: row;
-
-//   gap: 1rem;
-
-//   @media (max-width: 600px) {
-//     flex-direction: column;
-//   }
-// `;
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 

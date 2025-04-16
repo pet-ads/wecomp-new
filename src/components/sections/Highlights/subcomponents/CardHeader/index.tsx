@@ -5,18 +5,17 @@ import {
   EventImage,
   InformationContainer,
   TagContainer,
-  EventTitle,
 } from "./styles";
 
-import { CardHeaderProps } from "../../types";
+import { CardHeaderProps } from "./types";
 
 export default function CardHeader({
-  title,
   classification,
   image,
   imageDescription,
   linkCompany,
 }: CardHeaderProps) {
+  
   const handleRedirectOnClick = (url: string) => {
     window.open(url, "_blank");
   };
@@ -24,7 +23,6 @@ export default function CardHeader({
   return (
     <Container>
       <InformationContainer>
-        <EventTitle>{title}</EventTitle>
         <TagContainer>
           <ExpirienceTag label={classification} />
         </TagContainer>

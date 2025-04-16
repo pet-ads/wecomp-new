@@ -2,13 +2,15 @@ import { AnimatePresence } from "framer-motion";
 
 import { NavListProps } from "../../types";
 
-import { handlePageScrollingOnClick } from "../../../../utils/pageScrollingOnClick";
+import useScrollToSection from "../../../../hooks/references/useScrollToSection";
 
 import { DropDownLink, DropDownList, DropDownRow, Wrapper } from "./styles";
 
 import { SIDE_ANIMATION } from "../../../../animations/dropDown";
 
 export default function DropDownMenu({ links, isOpen }: NavListProps) {
+  const smoothScrollToTarget = useScrollToSection();
+
   return (
     <AnimatePresence initial={false}>
       {isOpen ? (
@@ -17,9 +19,7 @@ export default function DropDownMenu({ links, isOpen }: NavListProps) {
             {links.map((link, index) => (
               <DropDownRow key={index}>
                 <DropDownLink
-                  onClick={() =>
-                    handlePageScrollingOnClick({ sectionRef: link.ref })
-                  }
+                  onClick={() => smoothScrollToTarget(link.sectionId)}
                 >
                   {link.text}
                 </DropDownLink>

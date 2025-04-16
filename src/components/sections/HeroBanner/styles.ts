@@ -1,18 +1,5 @@
 import styled from "styled-components";
-
-export const LogoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  min-width: 100%;
-
-  min-height: 100vh;
-  max-height: 100vh;
-
-  background-color: var(--primary-color);
-`;
+import { mq } from "../../../utils/responsive/breakpoints";
 
 export const EventLogo = styled.img`
   min-width: 80%;
@@ -41,12 +28,11 @@ export const EventDate = styled.div`
 
   white-space: nowrap;
 
-  @media (max-width: 400px) {
-    min-width: 80%;
-    max-width: 80%;
-
-    padding: 0 1rem;
-  }
+  ${mq({
+    minWidth: ["60%", "60%", "80%"],
+    maxWidth: ["60%", "60%", "80%"],
+    padding: ["0.5rem 0", "0 1rem"],
+  })}
 `;
 
 export const HighlightedText = styled.strong`

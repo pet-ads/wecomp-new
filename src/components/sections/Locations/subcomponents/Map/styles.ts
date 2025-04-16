@@ -1,14 +1,13 @@
 import styled from "styled-components";
+import { mq } from "../../../../../utils/responsive/breakpoints";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  gap: 2rem;
-
-  @media (max-width: 768px) {
-    gap: .5rem;
-  }
+  ${mq({
+    gap: [".5rem", null, null, null, "2rem", null],
+  })}
 `;
 
 export const MapFrame = styled.iframe`
@@ -18,18 +17,17 @@ export const MapFrame = styled.iframe`
   align-items: center;
 
   width: 25rem;
-  height: 12.5rem;
 
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: none;
 
-  @media (max-width: 768px) {
-    max-width: 100%;
-  }
+  ${mq({
+    maxWidth: ["100%", null, null, null, "25rem", null],
+  })}
 
-  @media (max-width: 320px) {
-    height: 6.5rem;
-  }
+  ${mq({
+    height: ["6.5rem", null, null, null, "12.5rem", null],
+  })}
 `;
 
 export const DetailsOfLocal = styled.div`
@@ -40,17 +38,22 @@ export const DetailsOfLocal = styled.div`
 
   width: 100%;
 
-  gap: 1rem;
-
-  @media (max-width: 768px) {
-    gap: .5rem;
-  }
+  ${mq({
+    gap: ["1rem", null, null, null, null, ".5rem", ".25rem"],
+  })}
 `;
 
 export const InformationSpan = styled.span`
   color: var(--secundary-text-color);
   font-size: 1rem;
   font-weight: bold;
+
+  text-align: center;
+`;
+
+export const ComplementSpan = styled.span`
+  color: var(--secundary-text-color);
+  font-size: 0.9rem;
 
   text-align: center;
 `;
