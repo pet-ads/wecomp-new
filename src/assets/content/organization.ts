@@ -1,4 +1,6 @@
 import genericEmpress from "../images/empresaGenerica.svg";
+import ifsp from "../images/ifspLogo.png";
+import pet from "../images/petadsLogo.svg";
 
 interface OrganizationProps {
   name: string;
@@ -10,13 +12,13 @@ interface OrganizationProps {
 export const organizationContent: OrganizationProps[] = [
   {
     name: "Generica",
-    logoPath: genericEmpress,
+    logoPath: ifsp,
     link: "#",
     width: "",
   },
   {
     name: "Generica",
-    logoPath: genericEmpress,
+    logoPath: pet,
     link: "#",
     width: "",
   },

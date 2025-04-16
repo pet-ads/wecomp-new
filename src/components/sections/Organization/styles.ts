@@ -41,26 +41,29 @@ export const DirectorsLogoContainer = styled.div`
 
   margin: 5rem 0;
 
-  gap: 3rem;
+  gap: 2rem; // Reduzido de 3rem para 2rem no web
 
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
 
     margin: 1rem 0;
+    gap: 1.5rem; // Reduzido ainda mais no mobile
   }
 `;
 
+
 export const DirectorLogo = styled.img<{ width?: string }>`
   height: 100%;
-  max-width: 15rem;
-  width: ${({ width }) => width || "30%"};
+  max-width: 10rem; 
+  width: ${({ width }) => width || "20%"}; 
   object-fit: contain;
   overflow: hidden;
 
   cursor: pointer;
 
   @media (max-width: 768px) {
-    width: 90%;
+    max-width: 8rem; // Diminuído no mobile
+    width: 60%; // Ajustado para ocupar menos espaço no mobile
   }
 `;
