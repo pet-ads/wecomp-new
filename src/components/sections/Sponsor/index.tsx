@@ -1,9 +1,10 @@
-import { SupporterSectionWrapper } from "./styles";
 import sponsorsContent from "../../../assets/content/sponsors";
-import ArrowButton from "../../ui/ArrowButton";
-import { Section } from "../../Section";
-import SubTitle from "../../ui/SubTitle";
-import Carousel from "../../Carousel";
+import SubTitle from "../../commons/toolkit/SubTitle";
+import ArrowButton from "../../commons/toolkit/ArrowButton";
+import { Section } from "../../commons/structure/Section";
+import Carousel from "../../commons/toolkit/Carousel";
+
+import { SupporterSectionWrapper } from "./styles";
 
 export default function SupportersCarousel() {
   return (

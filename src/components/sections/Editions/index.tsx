@@ -1,8 +1,8 @@
-import { Section } from "../../Section";
-import SubTitle from "../../ui/SubTitle";
-import ArrowButton from "../../ui/ArrowButton";
+import { Section } from "../../commons/structure/Section";
+import SubTitle from "../../commons/toolkit/SubTitle";
+import ArrowButton from "../../commons/toolkit/ArrowButton";
 import Card from "./subcomponents/Card";
-import Slider from "../../Slider";
+import Slider from "../../commons/toolkit/Slider";
 
 import editionsContent from "../../../assets/content/editions";
 

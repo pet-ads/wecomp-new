@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import AvailabilityTag from "../../../../commons/toolkit/tags/AvailabilityTag";
+import DifficultyTag from "../../../../commons/toolkit/tags/DifficultyTag";
 import CardMain from "../CardMain";
 
 import {
@@ -20,9 +22,7 @@ import { ProgrammingProps } from "../../types";
 
 import { AiFillCloseCircle } from "react-icons/ai";
 
-import LabeledValue from "../../../../ui/LabeledValue";
-import AvailabilityTag from "../../../../ui/tags/AvailabilityTag";
-import DifficultyTag from "../../../../ui/tags/DifficultyTag";
+import LabeledValue from "../../../../commons/toolkit/LabeledValue";
 
 export default function CardProjeto({
   classification,

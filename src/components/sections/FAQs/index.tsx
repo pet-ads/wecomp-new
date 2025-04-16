@@ -1,6 +1,6 @@
-import { Section } from "../../Section";
-import SubTitle from "../../ui/SubTitle";
-import Details from "./subcomponent/Details";
+import { Section } from "../../commons/structure/Section";
+import SubTitle from "../../commons/toolkit/SubTitle";
+import Details from "./subcomponents/Details";
 
 import faqContent from "../../../assets/content/faq";
 
