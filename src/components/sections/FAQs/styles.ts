@@ -13,11 +13,12 @@ export const FAQList = styled.div`
   flex-direction: column;
 
   width: 100%;
-  max-height: 100%;
+  height: calc(100vh - 45rem);
+  max-height: calc(100vh - 45rem);
 
   overflow-y: auto;
 
-  padding: 2rem 1rem;
+  padding: 1rem;
 
   gap: 1rem;
 `;
