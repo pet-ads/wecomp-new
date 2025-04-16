@@ -1,4 +1,3 @@
-import genericEmpress from "../images/empresaGenerica.svg";
 import ifsp from "../images/ifspLogo.png";
 import pet from "../images/petadsLogo.svg";
 

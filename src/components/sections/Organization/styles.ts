@@ -41,14 +41,14 @@ export const DirectorsLogoContainer = styled.div`
 
   margin: 5rem 0;
 
-  gap: 2rem; // Reduzido de 3rem para 2rem no web
+  gap: 2rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
 
     margin: 1rem 0;
-    gap: 1.5rem; // Reduzido ainda mais no mobile
+    gap: 1.5rem;
   }
 `;
 
@@ -63,7 +63,7 @@ export const DirectorLogo = styled.img<{ width?: string }>`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    max-width: 8rem; // Diminuído no mobile
-    width: 60%; // Ajustado para ocupar menos espaço no mobile
+    max-width: 8rem; 
+    width: 60%;
   }
 `;
