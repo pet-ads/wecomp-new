@@ -16,5 +16,5 @@ export const Container = styled.section<{ background: boolean }>`
   padding: 2rem 0;
 
   background: ${(props) =>
-    props.background ? "var(--background-color)" : "var(--primary-color)"};
+    props.background ? "var(--gray-200)" : "var(--green-700)"};
 `;

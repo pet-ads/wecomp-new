@@ -9,16 +9,15 @@ export const TagContainer = styled.div<{
   justify-content: center;
 
   width: 7rem;
-  
+
   height: 2rem;
 
-  padding: 0 .75rem;
-  
+  padding: 0 0.75rem;
+
   white-space: nowrap;
 
-  background-color: ${(props) =>
-    props.backgroundColor || `var(--primary-text-color)`};
-  color: ${(props) => props.textColor || `var(--secundary-text-color)`};
+  background-color: ${(props) => props.backgroundColor || `var(--white-100)`};
+  color: ${(props) => props.textColor || `var(--gray-1000)`};
 
   border-radius: 1rem;
 

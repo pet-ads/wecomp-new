@@ -8,7 +8,7 @@ export const SoonCardContainer = styled.div`
   width: 100%;
   height: 20rem;
 
-  background-color: var(--primary-text-color);
+  background-color: var(--white-100);
 
   border-radius: 1rem;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);

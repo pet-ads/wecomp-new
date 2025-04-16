@@ -2,11 +2,15 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   :root{
-    --background-color: #F4F3EF;
-    --primary-text-color: #FFFFFF;
-    --secundary-text-color: #000000;
-    --primary-color: #0E6700;
-    --secundary-color: #1A800A;
+    --green-500: #1A800A;
+
+    --white-100: #FFFFFF;
+    
+    --gray-200: #F4F3EF;
+    --gray-1000: #111111;
+
+    --green-500: #1A800A;
+    --green-700: #0E6700;
   }
 
  * {
@@ -19,8 +23,8 @@ const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-direction: column;
 
-    background-color: var(--background-color);
-    color: var(--secundary-text-color);
+    background-color: var(--gray-200);
+    color: var(--gray-1000);
 
     font-family: 'Montserrat'; 
   }

@@ -29,7 +29,7 @@ export const TextContainer = styled.div<TextContainerProps>`
   word-break: ${({ wordBreak }) => wordBreak || "normal"};
   white-space: ${({ whiteSpace }) => whiteSpace || "normal"};
 
-  color: ${({ color }) => color || "var(--secundary-text-color)"};
+  color: ${({ color }) => color || "var(--gray-1000)"};
   background-color: ${({ backgroundColor }) =>
     backgroundColor || "transparent"};
   text-shadow: ${({ textShadow }) => textShadow || "none"};

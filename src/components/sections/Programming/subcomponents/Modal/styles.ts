@@ -15,13 +15,11 @@ export const Container = styled.div`
   gap: 2rem;
   border-radius: 1rem;
 
-  background-color: var(--primary-text-color);
+  background-color: var(--white-100);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-
 `;
 
 export const AbertoContainer = styled.div`
-  
   top: 20vh;
   z-index: 100;
   width: auto;
@@ -33,9 +31,8 @@ export const AbertoContainer = styled.div`
   padding: 1rem 1rem 0 1rem;
   position: fixed;
   box-sizing: border-box;
-  background-color: var(--primary-text-color);
-  
-  
+  background-color: var(--white-100);
+
   @media (max-width: 768px) {
     max-width: 100vw;
     min-width: 100vw;
@@ -47,10 +44,7 @@ export const AbertoContainer = styled.div`
     right: 0;
     position: fixed;
   }
-
 `;
-
-
 
 export const InformationContainer = styled.div`
   display: flex;
@@ -106,9 +100,8 @@ export const EventSpeakers = styled.div`
   font-size: 1rem;
   font-weight: 600;
 
-  color: var(--secundary-text-color);
+  color: var(--gray-1000);
 `;
-
 
 export const IconContainer = styled.div`
   display: flex;

@@ -10,7 +10,7 @@ export const FAQContainer = styled.div`
 
   border-radius: 0.5rem;
 
-  background-color: var(--primary-text-color);
+  background-color: var(--white-100);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
   transition: height 0.3s ease-in-out;
@@ -29,7 +29,7 @@ export const QuestionWrapper = styled.div`
 export const AnswerWrapper = styled(motion.div)`
   width: 100%;
 
-  background-color: var(--primary-text-color);
+  background-color: var(--white-100);
 
   border-radius: 0.5rem;
 

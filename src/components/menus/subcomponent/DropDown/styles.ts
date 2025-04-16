@@ -23,7 +23,7 @@ export const DropDownList = styled.ul`
 
   list-style-type: none;
 
-  background-color: var(--secundary-color);
+  background-color: var(--green-500);
 `;
 
 export const DropDownRow = styled.li`
@@ -35,6 +35,6 @@ export const DropDownLink = styled.a`
   font-weight: bold;
   text-decoration: none;
 
-  color: var(--secundary-text-color);
+  color: var(--gray-1000);
   cursor: pointer;
 `;
