@@ -1,34 +1,20 @@
 import styled from "styled-components";
 
-import {
-  SectionContainer,
-  SectionContent,
-} from "../../../styles/SectionContainer";
-
-export const ContactContainer = styled(SectionContainer)`
-  background-color: var(--background-color);
-`;
+import { SectionContent } from "../../../styles/SectionContainer";
 
 export const ContactContent = styled(SectionContent)`
-  background-color: var(--background-color);
+  background-color: var(--gray-200);
 `;
 
 export const ContactCards = styled.div`
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 
   min-width: 100%;
   max-width: 100%;
 
-  min-height: 25vh;
+  max-height: 100%;
 
-  padding: 1rem 0;
-
-  gap: 3rem;
-
-
-  @media (max-width: 650px) {
-    flex-direction: column;
-  }
+  gap: 1rem;
 `;

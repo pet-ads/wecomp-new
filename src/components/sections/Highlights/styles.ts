@@ -1,16 +1,9 @@
 import styled from "styled-components";
 
-import {
-  SectionContainer,
-  SectionContent,
-} from "../../../styles/SectionContainer";
-
-export const HighlightsContainer = styled(SectionContainer)`
-  background-color: var(--background-color);
-`;
+import { SectionContent } from "../../../styles/SectionContainer";
 
 export const HighlightsContent = styled(SectionContent)`
-  background-color: var(--background-color);
+  background-color: var(--gray-200);
 `;
 
 export const HighlightsCardContainer = styled.div`
@@ -21,9 +14,4 @@ export const HighlightsCardContainer = styled.div`
   width: 100%;
 
   min-height: 40vh;
-
-  padding: 2rem 0;
-
-  margin: 2rem 0;
-
 `;

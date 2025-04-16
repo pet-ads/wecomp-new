@@ -1,23 +1,34 @@
+import talkIcon from "@/assets/icons/programming/talkIcon.svg";
+import courseIcon from "@/assets/icons/programming/programmingIcon.svg";
+import openingIcon from "@/assets/icons/programming/openingIcon.svg";
+import technicalVisitIcon from "@/assets/icons/programming/technicalVisitIcon.svg";
+
 import { TypeEventName } from "../components/sections/Programming/types";
 
+type IconEventProps = {
+  iconPath: string;
+  label: string;
+};
+
+const icons: Record<TypeEventName, IconEventProps> = {
+  Talk: {
+    iconPath: talkIcon,
+    label: "Talk",
+  },
+  Course: {
+    iconPath: courseIcon,
+    label: "Mini curso",
+  },
+  Opening: {
+    iconPath: openingIcon,
+    label: "Abertura",
+  },
+  TechnicalVisit: {
+    iconPath: technicalVisitIcon,
+    label: "Visita técnica",
+  },
+};
+
 export function generatedIconEvent(typeEvent: TypeEventName) {
-  const icons = {
-    Talk: {
-      iconPath: "../../src/assets/icons/programming/talkIcon.svg",
-      label: "Talk",
-    },
-    Course: {
-      iconPath: "../../src/assets/icons/programming/programmingIcon.svg",
-      label: "Mini curso",
-    },
-    Opening: {
-      iconPath: "../../src/assets/icons/programming/openingIcon.svg",
-      label: "Abertura",
-    },
-    TechnicalVisit: {
-      iconPath: "../../src/assets/icons/programming/technicalVisitIcon.svg",
-      label: "Visita técnica",
-    },
-  };
   return icons[typeEvent];
 }

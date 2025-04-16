@@ -1,26 +1,33 @@
+import { Section } from "../../Section";
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
+import Card from "./subcomponents/Card";
+import Slider from "../../Slider";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
+import editionsContent from "../../../assets/content/editions";
 
-import {
-  EditionsCardContainer,
-  EditionsContainer,
-  EditionsContent,
-} from "./styles";
+import { EditionsCardContainer, EditionsContent } from "./styles";
 
 export default function Editions() {
-  const { sections } = useSectionRefs();
-
   return (
-    <EditionsContainer>
-      <EditionsContent ref={sections.Editions}>
+    <Section sectionId="Editions">
+      <EditionsContent>
         <SubTitle children="Edições anteriores" />
         <EditionsCardContainer>
-          Carrossel of Editions cards
+          <Slider
+            items={editionsContent}
+            renderItem={(item) => (
+              <Card
+                altText={item.altText}
+                edition={item.edition}
+                logoPath={item.logoPath}
+                website={item.website}
+              />
+            )}
+          />
         </EditionsCardContainer>
-        <ArrowButton sectionRef={sections.FAQs} />
+        <ArrowButton sectionId="FAQ" />
       </EditionsContent>
-    </EditionsContainer>
+    </Section>
   );
 }

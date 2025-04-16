@@ -1,4 +1,4 @@
-export interface FAQProps {
+export interface FaqProps {
   question: string;
-  response: string;
+  answer: string;
 }

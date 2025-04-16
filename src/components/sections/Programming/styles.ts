@@ -1,16 +1,20 @@
 import styled from "styled-components";
 
-import {
-  SectionContainer,
-  SectionContent,
-} from "../../../styles/SectionContainer";
+export const ProgrammingContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-export const ProgrammingContainer = styled(SectionContainer)`
-  background: var(--background-color);
-`;
+  min-width: 80%;
+  max-width: 80%;
 
-export const ProgrammingContent = styled(SectionContent)`
-  background: var(--background-color);
+  height: 100%;
+
+  background: var(--gray-200);
+
+  overflow-wrap: break-word;
+  line-height: 1.6;
 `;
 
 export const ProgrammingCardContainer = styled.div`
@@ -23,9 +27,5 @@ export const ProgrammingCardContainer = styled.div`
   min-height: 100%;
   max-height: 100%;
 
-  padding: 2rem 0;
-
-  margin: 1rem;
-
-  background-color: var(--background-color);
+  background-color: var(--gray-200);
 `;

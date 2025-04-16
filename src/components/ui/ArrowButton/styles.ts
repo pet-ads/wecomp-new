@@ -7,17 +7,15 @@ export const ArrowContainerBox = styled(motion.div)`
   justify-content: center;
   align-items: center;
 
-  position: relative;
-  top: 12rem;
+  position: absolute;
+  bottom: 4.5rem;
+
+  z-index: 2;
 
   width: 3rem;
   height: 3rem;
 
   cursor: pointer;
-
-  @media (max-width: 1080px) {
-    top: 6.5rem;
-  }
 `;
 
 export const WrapperIcon = styled(IoIosArrowDown)`

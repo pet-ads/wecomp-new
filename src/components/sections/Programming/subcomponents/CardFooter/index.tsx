@@ -1,9 +1,9 @@
 import LabeledValue from "../../../../ui/LabeledValue";
 import RedirectButton from "../../../../ui/RedirectButton";
 
-import { Container, ContainerButtons, EventDescriptionButton } from "./styles";
+import { CardFooterProps } from "./types";
 
-import { CardFooterProps } from "../../types";
+import { Container, ContainerButtons, EventDescriptionButton } from "./styles";
 
 export default function CardFooter({
   vacancies,
@@ -12,11 +12,13 @@ export default function CardFooter({
   typeEvent,
   handleChangeCardText,
 }: CardFooterProps) {
+  const eventsDisablingActionButton = ["TechnicalVisit", "Opening"];
+
   return (
     <Container>
       <LabeledValue label="Vagas" value={vacancies} />
       <ContainerButtons>
-        {typeEvent == "TechnicalVisit" ? null : (
+        {eventsDisablingActionButton.includes(typeEvent) ? null : (
           <EventDescriptionButton onClick={handleChangeCardText}>
             {labelButton}
           </EventDescriptionButton>

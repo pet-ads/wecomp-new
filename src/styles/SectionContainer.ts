@@ -6,29 +6,30 @@ export const SectionContainer = styled.section`
   justify-content: center;
   align-items: center;
 
+  position: relative;
 
   min-width: 100%;
   max-width: 100%;
 
-  /* height: fit-content; */
   min-height: 100vh;
 
   padding: 2rem 0;
 
-  background-color: blue;
+  background: var(--gray-200);
 `;
 
 export const SectionContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   min-width: 80%;
   max-width: 80%;
 
   height: 100%;
 
-  background-color: orange;
+  background: var(--gray-200);
 
   overflow-wrap: break-word;
   line-height: 1.6;

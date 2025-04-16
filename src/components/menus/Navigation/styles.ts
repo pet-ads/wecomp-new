@@ -35,7 +35,7 @@ export const NavigationLink = styled.a`
   font-weight: bold;
   text-decoration: none;
 
-  color: var(--secundary-text-color);
+  color: var(--gray-1000);
 
   cursor: pointer;
 

@@ -1,33 +1,30 @@
+import { Section } from "../../Section";
 import SubTitle from "../../ui/SubTitle";
 import ArrowButton from "../../ui/ArrowButton";
 import Map from "./subcomponents/Map";
 
-import useSectionRefs from "../../../hooks/useSectionRefs";
-import useFetchLocationSection from "../../../hooks/useFetchLocationSection";
+import locationContent from "../../../assets/content/location";
 
-import { LocalContainer, LocalContent, MapsContainer } from "./styles";
+import { LocalContent, MapsContainer } from "./styles";
 
 export default function Locations() {
-  const { sections } = useSectionRefs();
-  const { eventLocations } = useFetchLocationSection();
-
   return (
-    <LocalContainer>
-      <LocalContent ref={sections.Locations}>
+    <Section sectionId="Locations">
+      <LocalContent>
         <SubTitle children="Locais do evento" />
         <MapsContainer>
-          {eventLocations.map((local, index) => (
+          {locationContent.map((local, index) => (
             <Map
               key={index}
               url={local.url}
-              alt={`Location of the ${local.localName}`}
+              alt={`Imagem do local ${local.name}`}
               address={local.address}
-              localName={local.localName}
+              name={local.name}
             />
           ))}
         </MapsContainer>
       </LocalContent>
-      <ArrowButton sectionRef={sections.Contact} />
-    </LocalContainer>
+      <ArrowButton sectionId="Contact" />
+    </Section>
   );
 }

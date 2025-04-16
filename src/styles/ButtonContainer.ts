@@ -14,8 +14,8 @@ const ButtonContainer = styled.button`
 
   padding: 0.5rem 1rem;
 
-  background-color: var(--primary-color);
-  color: var(--primary-text-color);
+  background-color: var(--green-700);
+  color: var(--white-100);
 
   border: none;
   border-radius: 5px;
@@ -44,8 +44,7 @@ const ButtonContainer = styled.button`
     min-height: 2rem;
     max-height: 2rem;
 
-
-    font-size: .75rem;
+    font-size: 0.75rem;
 
     white-space: nowrap;
   }

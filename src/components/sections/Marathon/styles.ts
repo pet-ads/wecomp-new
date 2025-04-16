@@ -1,118 +1,65 @@
 import styled from "styled-components";
+import { mq } from "../../../utils/responsive/breakpoints";
+import { motion } from "framer-motion";
 
-import {
-  SectionContainer,
-  SectionContent,
-} from "../../../styles/SectionContainer";
-
-export const MarathonContainer = styled(SectionContainer)`
-  background: var(--background-color);
-`;
-
-export const MarathonContent = styled(SectionContent)`
-  background: var(--background-color);
-  padding-top: 1rem;
-`;
-
-export const MarathonCardContainer = styled.div`
+export const MarathonWrapper = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: stretch;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 
-  gap: 2rem;
+  min-width: 80%;
+  max-width: 80%;
 
-  width: 100%;
+  height: 100%;
 
-  min-height: 40%;
+  border-radius: 0.5rem;
 
-  padding: 1rem 0;
-
-  margin: 1rem 0;
+  overflow-wrap: break-word;
 `;
 
-export const MarathonCard = styled.div`
-  background: rgb(255, 255, 255); // var(--background-color)
-  padding: 2.5rem;
-
-  border-radius: 10px; // 8
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-
-  text-align: center;
-
-  max-width: 550px; // 400
-  width: 100%;
-
-  min-height: 300px;
+export const MarathonText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`;
 
-export const MarathonIcon = styled.div`
-  display: flex;
-  img {
-    width: 40px;
-  }
-`;
+  height: auto;
 
-export const MarathonCardTitle = styled.h2`
-  display: flex;
-  font-size: 28px;
-  font-weight: bold;
-  content: "O que é InterIF ?";
-`;
+  gap: 0.5rem;
 
-export const MarathonCardDef = styled.p`
   text-align: justify;
-  font-size: 22px;
-  content: "O que é InterIF ?";
+
+  ${mq({
+    width: ["100%", null, null, null, null, null, "60%"],
+    fontSize: ["10pt", null, "12.5pt", null, null, "15pt"],
+    order: ["2", null, null, null, null, null, "1"],
+    alignItems: ["center", null, null, null, null, "start"],
+  })}
 `;
 
-export const CardButton = styled.a`
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
+export const MarathonSubtitle = styled.h2``;
 
-  background-color: var(--secundary-text-color);
-  color: white;
-
-  border-radius: 4px;
-
-  transition: background 0.3s;
-
-  &:hover {
-    background-color: var(--background-color);
-  }
+export const MarathonTextContent = styled.p`
+  width: 95%;
+  height: 100%;
 `;
 
-export const ScheduleTable = styled.table`
+export const MarathonImageWrapper = styled.div`
+  overflow: hidden;
+
+  ${mq({
+    width: ["100%", null, null, null, null, null, "40%"],
+    height: ["8rem", null, "10rem", null, "12rem", null, "15rem"],
+    marginBottom: ["1rem", null, null, null, null, "0"],
+    order: ["1", null, null, null, null, null, "2"],
+  })}
+`;
+
+export const MarathonImage = styled(motion.img)`
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: none;
+  height: 100%;
 
-  td {
-    padding: 8px;
-    text-align: center;
-  }
+  object-fit: cover;
 
-  tr + tr {
-    border-top: 1px solid #ddd;
-  }
-
-  td:nth-child(even) {
-    border-left: 1px solid #ddd;
-  }
-
-  tr:first-child {
-    //:nth-child(even)
-    font-weight: bold;
-    background-color: rgb(255, 255, 255); // var(--background-color)
-  }
+  border-radius: 0.5rem;
 `;
-
-// import Text from "../../ui/Text";
-// <Text children={marathon.definition} />
-//

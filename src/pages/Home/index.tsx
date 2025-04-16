@@ -1,9 +1,9 @@
 import {
   Header,
   HeroBanner,
-  Prologue,
-  Supporters,
-  Directors,
+  About,
+  Sponsors,
+  Organization,
   Programming,
   Marathon,
   Highlights,
@@ -22,9 +22,9 @@ export default function Home() {
       <Header />
       <HeroBanner />
       <Main>
-        <Prologue />
-        <Supporters />
-        <Directors/>
+        <About />
+        <Sponsors />
+        <Organization />
         <Programming />
         <Marathon />
         <Highlights />

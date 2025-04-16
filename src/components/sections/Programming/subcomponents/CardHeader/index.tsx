@@ -1,6 +1,8 @@
 import AvailabilityTag from "../../../../ui/tags/AvailabilityTag";
 import DifficultyTag from "../../../../ui/tags/DifficultyTag";
 
+import { CardHeaderProps } from "./types";
+
 import {
   Container,
   EventImage,
@@ -8,13 +10,9 @@ import {
   EventDetails,
   EventSpeakers,
   TagContainer,
-  EventTitle,
 } from "./styles";
 
-import { CardHeaderProps } from "../../types";
-
 export default function CardHeader({
-  title,
   eventLocationAndDate,
   author,
   status,
@@ -25,7 +23,6 @@ export default function CardHeader({
   return (
     <Container>
       <InformationContainer>
-        <EventTitle>{title}</EventTitle>
         <EventDetails>{eventLocationAndDate}</EventDetails>
         <EventSpeakers>{author}</EventSpeakers>
         <TagContainer>

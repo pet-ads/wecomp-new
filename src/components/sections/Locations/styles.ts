@@ -1,16 +1,9 @@
 import styled from "styled-components";
 
-import {
-  SectionContainer,
-  SectionContent,
-} from "../../../styles/SectionContainer";
-
-export const LocalContainer = styled(SectionContainer)`
-    background-color: var(--background-color);
-`;
+import { SectionContent } from "../../../styles/SectionContainer";
 
 export const LocalContent = styled(SectionContent)`
-    background-color: var(--background-color);
+  background-color: var(--gray-200);
 `;
 
 export const MapsContainer = styled.div`
@@ -36,4 +29,3 @@ export const MapsContainer = styled.div`
     margin: 2rem 0;
   }
 `;
-
