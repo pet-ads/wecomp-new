@@ -1,4 +1,7 @@
-import { AvailabilityStatus, DifficultyEvent } from "../../ui/tags/types";
+import {
+  AvailabilityStatus,
+  DifficultyEvent,
+} from "../../commons/toolkit/tags/types";
 
 export type TypeEventName = "Talk" | "Course" | "Opening" | "TechnicalVisit";
 

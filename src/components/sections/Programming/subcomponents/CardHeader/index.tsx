@@ -1,5 +1,5 @@
-import AvailabilityTag from "../../../../ui/tags/AvailabilityTag";
-import DifficultyTag from "../../../../ui/tags/DifficultyTag";
+import AvailabilityTag from "../../../../commons/toolkit/tags/AvailabilityTag";
+import DifficultyTag from "../../../../commons/toolkit/tags/DifficultyTag";
 
 import { CardHeaderProps } from "./types";
 

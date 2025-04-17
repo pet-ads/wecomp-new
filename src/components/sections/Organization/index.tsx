@@ -1,6 +1,6 @@
-import { Section } from "../../Section";
-import ArrowButton from "../../ui/ArrowButton";
-import SubTitle from "../../ui/SubTitle";
+import { Section } from "../../commons/structure/Section";
+import SubTitle from "../../commons/toolkit/SubTitle";
+import ArrowButton from "../../commons/toolkit/ArrowButton";
 
 import organizationContent from "../../../assets/content/organization";
 

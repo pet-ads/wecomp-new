@@ -1,5 +1,5 @@
-import LabeledValue from "../../../../ui/LabeledValue";
-import RedirectButton from "../../../../ui/RedirectButton";
+import RedirectButton from "../../../../commons/toolkit/RedirectButton";
+import LabeledValue from "../../../../commons/toolkit/LabeledValue";
 
 import { CardFooterProps } from "./types";
 

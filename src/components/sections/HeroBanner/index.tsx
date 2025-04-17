@@ -1,9 +1,9 @@
-import ArrowButton from "../../ui/ArrowButton";
+import ArrowButton from "../../commons/toolkit/ArrowButton";
 
 import heroContent from "../../../assets/content/hero";
 
 import { EventDate, HighlightedText, EventLogo } from "./styles";
-import { Section } from "../../Section";
+import { Section } from "../../commons/structure/Section";
 
 export default function HeroBanner() {
   return (

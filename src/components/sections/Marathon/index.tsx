@@ -1,7 +1,8 @@
-import { Section } from "../../Section";
-import RedirectButton from "../../ui/RedirectButton";
-import SubTitle from "../../ui/SubTitle";
-import ArrowButton from "../../ui/ArrowButton";
+import { Section } from "../../commons/structure/Section";
+
+import SubTitle from "../../commons/toolkit/SubTitle";
+import ArrowButton from "../../commons/toolkit/ArrowButton";
+import RedirectButton from "../../commons/toolkit/RedirectButton";
 
 import marathonContent from "../../../assets/content/marathon";
 

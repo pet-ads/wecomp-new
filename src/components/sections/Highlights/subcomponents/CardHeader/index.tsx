@@ -1,4 +1,4 @@
-import ExpirienceTag from "../../../../ui/tags/ExperienceTag";
+import ExpirienceTag from "../../../../commons/toolkit/tags/ExperienceTag";
 
 import {
   Container,

@@ -1,4 +1,4 @@
-import { OfferModality } from "../../../../ui/tags/types";
+import { OfferModality } from "../../../../commons/toolkit/tags/types";
 
 export interface CardHeaderProps {
   classification: OfferModality;

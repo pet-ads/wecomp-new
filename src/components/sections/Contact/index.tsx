@@ -1,7 +1,7 @@
-import { Section } from "../../Section";
-import SubTitle from "../../ui/SubTitle";
-import Text from "../../ui/Text";
-import ArrowButton from "../../ui/ArrowButton";
+import { Section } from "../../commons/structure/Section";
+import SubTitle from "../../commons/toolkit/SubTitle";
+import ArrowButton from "../../commons/toolkit/ArrowButton";
+import Text from "../../commons/toolkit/Text";
 import Card from "./subcomponents/Card";
 
 import contactContent from "../../../assets/content/contact";
