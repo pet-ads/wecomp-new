@@ -31,11 +31,12 @@ export const MarathonText = styled.div`
 
   ${mq({
     width: ["100%", null, null, null, null, null, "60%"],
-    fontSize: ["10pt", null, "12.5pt", null, null, "15pt"],
+    fontSize: ["8pt", null, "9pt", null, null, "10pt"], // diminuiu aqui
     order: ["2", null, null, null, null, null, "1"],
     alignItems: ["center", null, null, null, null, "start"],
   })}
 `;
+
 
 export const MarathonSubtitle = styled.h2``;
 

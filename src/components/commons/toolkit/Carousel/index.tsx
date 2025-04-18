@@ -14,7 +14,7 @@ interface CarouselProps {
 }
 
 export default function Carousel({ items, visibleItems }: CarouselProps) {
-  const [index, setIndex] = useState(items.length); // Inicia no item central
+  const [index, setIndex] = useState(items.length);
   const loopedItems = [...items, ...items, ...items];
   const startX = useRef<number | null>(null);
   const isDragging = useRef(false);
@@ -36,7 +36,7 @@ export default function Carousel({ items, visibleItems }: CarouselProps) {
 
   useEffect(() => {
     if (index >= items.length * 2) {
-      setTimeout(() => setIndex(items.length), 0); // Reinicia suavemente no centro
+      setTimeout(() => setIndex(items.length), 0);
     }
   }, [index, items.length]);
 
