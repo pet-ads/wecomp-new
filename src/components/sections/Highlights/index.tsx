@@ -1,26 +1,16 @@
 import { Section } from "../../commons/structure/Section";
+import { HighlightsContent } from "./styles";
 import SubTitle from "../../commons/toolkit/SubTitle";
 import ArrowButton from "../../commons/toolkit/ArrowButton";
-import Slider from "../../commons/toolkit/Slider";
-import Card from "./subcomponents/Card";
 
-import highlightsContent from "../../../assets/content/highlights";
-
-import { HighlightsCardContainer, HighlightsContent } from "./styles";
+import comingSoonImg from "../../../assets/images/emBreve.png"; 
 
 export default function Highlights() {
   return (
     <Section sectionId="Highlights">
       <HighlightsContent>
-        <SubTitle children="Destaques" />
-        <HighlightsCardContainer>
-          <Slider
-            items={highlightsContent}
-            renderItem={(highlight) => (
-              <Card key={highlight.title} {...highlight} />
-            )}
-          />
-        </HighlightsCardContainer>
+      <SubTitle children="Destaques" />
+        <img src={comingSoonImg} alt="Em breve" style={{ width: "100%", maxWidth: "500px" }} />
         <ArrowButton sectionId="Locations" />
       </HighlightsContent>
     </Section>
