@@ -1,4 +1,6 @@
 import genericEmpress from "../images/empresaGenerica.svg";
+import cacautec from "../images/cacautec.png";
+import csdbr from "../images/csdbr.png";
 
 interface SponsorProps {
   name: string;
@@ -9,8 +11,8 @@ interface SponsorProps {
 
 export const sponsorsContent: SponsorProps[] = [
   {
-    name: "Cacau Tech",
-    logoPath: genericEmpress,
+    name: "Cacautec",
+    logoPath: cacautec,
     link: "#",
     width: "",
   },
@@ -21,8 +23,8 @@ export const sponsorsContent: SponsorProps[] = [
     width: "",
   },
   {
-    name: "CSD",
-    logoPath: genericEmpress,
+    name: "CSD BR",
+    logoPath: csdbr,
     link: "#",
     width: "",
   },
