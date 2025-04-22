@@ -1,11 +1,23 @@
+import ArrowButton from "../../toolkit/ArrowButton";
 import { SectionProps } from "./types";
+import { Container, Content } from "./styles";
+import SubTitle from "../../toolkit/SubTitle";
 
-import { Container } from "./styles";
-
-export const Section = ({ children, sectionId }: SectionProps) => {
+export const Section = ({
+  title,
+  children,
+  backgroundColor = "var(--gray-200)",
+  currentSectionId,
+  nextSectionId,
+}: SectionProps) => {
   return (
-    <Container id={sectionId} background={sectionId == "Hero" ? false : true}>
-      {children}
+    <Container id={currentSectionId} backgroundColor={backgroundColor}>
+      <Content>
+        {title ? <SubTitle children={title} /> : null}
+        {children}
+      </Content>
+
+      {nextSectionId ? <ArrowButton sectionId={nextSectionId} /> : null}
     </Container>
   );
 };

@@ -1,20 +1,25 @@
 import styled from "styled-components";
 
-import { SectionContent } from "../../../styles/SectionContainer";
+export const Container = styled.div`
+  width: 100%;
+  height: 100%;
 
-export const ContactContent = styled(SectionContent)`
-  background-color: var(--gray-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  gap: 2rem;
 `;
 
 export const ContactCards = styled.div`
+  width: 100%;
+
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-
-  min-width: 100%;
-  max-width: 100%;
-
-  max-height: 100%;
+  align-items: center;
+  justify-content: center;
 
   gap: 1rem;
 `;

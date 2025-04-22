@@ -3,8 +3,6 @@ import styled, { css } from "styled-components";
 export const CarouselContainer = styled.div`
   overflow: hidden;
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
 `;
 
 export const LogoList = styled.ul`
@@ -38,11 +36,16 @@ export const LogoFigure = styled.figure<{ isCenter?: boolean }>`
 `;
 
 export const LogoImage = styled.img`
-  width: 120px;
-  height: 120px;
+  width: 7.5rem;
+  height: 7.5rem;
   object-fit: contain;
   border-radius: 10px;
   transform: none;
+
+  @media (max-width: 768px) {
+    width: 5rem;
+    height: 5rem;
+  }
 `;
 
 export const LogoCaption = styled.figcaption`

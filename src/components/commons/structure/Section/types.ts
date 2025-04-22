@@ -1,6 +1,9 @@
+import { PropsWithChildren } from "react";
 import { Sections } from "../../toolkit/ArrowButton/types";
 
-export type SectionProps = {
-  sectionId: Sections;
-  children: React.ReactNode;
-};
+export interface SectionProps extends PropsWithChildren {
+  title?: string;
+  backgroundColor?: string;
+  currentSectionId: Sections;
+  nextSectionId?: Sections;
+}

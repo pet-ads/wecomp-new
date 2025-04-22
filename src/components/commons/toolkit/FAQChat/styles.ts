@@ -8,9 +8,10 @@ export const ChatWrapper = styled.div`
 `;
 
 export const ToggleButton = styled.button`
-  background-color: #4b6cb7;
+  background-color: var(--green-500);
   border: none;
   color: white;
+  margin: 0.1rem;
   padding: 1rem;
   border-radius: 50%;
   cursor: pointer;
@@ -97,7 +98,6 @@ export const QuestionButtons = styled.div`
     }
   }
 `;
-
 
 export const TypingIndicator = styled.div`
   font-size: 0.75rem;
