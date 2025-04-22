@@ -1,22 +1,22 @@
 import { Section } from "../../commons/structure/Section";
-import SubTitle from "../../commons/toolkit/SubTitle";
-import ArrowButton from "../../commons/toolkit/ArrowButton";
-import Text from "../../commons/toolkit/Text";
 import Card from "./subcomponents/Card";
 
 import contactContent from "../../../assets/content/contact";
 
-import { ContactCards, ContactContent } from "./styles";
+import { ContactCards, Container } from "./styles";
 
 export default function Contact() {
   return (
-    <Section sectionId="Contact">
-      <ContactContent>
-        <SubTitle children="Informações de contato" />
-        <Text
-          textAlign="center"
-          children="Nos acompanhe pelas nossas redes sociais, onde divulgaremos as atualizações do evento."
-        />
+    <Section
+      title="Informações de contato"
+      currentSectionId="Contact"
+      nextSectionId="Editions"
+    >
+      <Container>
+        <p>
+          Nos acompanhe pelas nossas redes sociais, onde divulgaremos as
+          atualizações do evento.
+        </p>
         <ContactCards>
           {contactContent.map((media, index) => (
             <Card
@@ -28,8 +28,7 @@ export default function Contact() {
             />
           ))}
         </ContactCards>
-        <ArrowButton sectionId="Editions" />
-      </ContactContent>
+      </Container>
     </Section>
   );
 }

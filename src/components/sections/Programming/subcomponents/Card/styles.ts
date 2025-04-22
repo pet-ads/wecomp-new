@@ -5,11 +5,10 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-around;
 
+  gap: 0.5rem;
+
   min-width: 35rem;
   max-width: 35rem;
-
-  min-height: 32.5rem;
-  max-height: 32.5rem;
 
   padding: 1.5rem;
 

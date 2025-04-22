@@ -3,8 +3,6 @@ import styled, { css } from "styled-components";
 export const CarouselContainer = styled.div`
   overflow: hidden;
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
 `;
 
 export const LogoList = styled.ul`

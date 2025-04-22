@@ -73,7 +73,7 @@ export default function FAQChat() {
 
             {showFaqButtons && (
               <QuestionButtons>
-                {faqContent.map((item: { question: any; answer?: string; }, index: Key | null | undefined) => (
+                {faqContent.map((item: { question: string; answer?: string; }, index: Key | null | undefined) => (
                   <button key={index} onClick={() => item.answer !== undefined && handleClick(item as { question: string; answer: string })}>
                     {item.question}
                   </button>

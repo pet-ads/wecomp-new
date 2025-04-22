@@ -1,33 +1,34 @@
 import { Section } from "../../commons/structure/Section";
-
-import SubTitle from "../../commons/toolkit/SubTitle";
-import ArrowButton from "../../commons/toolkit/ArrowButton";
 import RedirectButton from "../../commons/toolkit/RedirectButton";
-
 import marathonContent from "../../../assets/content/marathon";
 
 import {
-  MarathonWrapper,
-  MarathonText,
-  MarathonSubtitle,
+  Container,
+  ColumnContent,
   MarathonImageWrapper,
   MarathonImage,
-  MarathonTextContent,
+  ScrollContainer,
 } from "./styles";
 import { ZOOM_ANIMATION } from "../../../animations/scaling";
 
 export default function Marathon() {
   return (
-    <Section sectionId="Marathon">
-      <SubTitle children="Maratona InterIF" />
-      <MarathonWrapper>
-        <MarathonText>
-          <MarathonSubtitle>O que é InterIF ?</MarathonSubtitle>
-          <MarathonTextContent>
-            {marathonContent.definition}
-          </MarathonTextContent>
+    <Section
+      title="InterIF"
+      currentSectionId="Marathon"
+      nextSectionId="Highlights"
+    >
+      <Container>
+        <ColumnContent>
+          <h2>O que é InterIF ?</h2>
+
+          <ScrollContainer>
+            <p>{marathonContent.definition}</p>
+          </ScrollContainer>
+
           <RedirectButton children="veja mais" link={marathonContent.link} />
-        </MarathonText>
+        </ColumnContent>
+
         <MarathonImageWrapper>
           <MarathonImage
             {...ZOOM_ANIMATION}
@@ -35,8 +36,7 @@ export default function Marathon() {
             alt="Foto da fase final do InterIF 2024"
           />
         </MarathonImageWrapper>
-      </MarathonWrapper>
-      <ArrowButton sectionId="Highlights" />
+      </Container>
     </Section>
   );
 }

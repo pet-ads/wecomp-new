@@ -1,6 +1,4 @@
 import { Section } from "../../commons/structure/Section";
-import SubTitle from "../../commons/toolkit/SubTitle";
-import ArrowButton from "../../commons/toolkit/ArrowButton";
 import Card from "./subcomponents/Card";
 import Slider from "../../commons/toolkit/Slider";
 
@@ -10,9 +8,8 @@ import { EditionsCardContainer, EditionsContent } from "./styles";
 
 export default function Editions() {
   return (
-    <Section sectionId="Editions">
+    <Section title="Edições anteriores" currentSectionId="Editions">
       <EditionsContent>
-        <SubTitle children="Edições anteriores" />
         <EditionsCardContainer>
           <Slider
             items={editionsContent}
@@ -26,7 +23,6 @@ export default function Editions() {
             )}
           />
         </EditionsCardContainer>
-        <ArrowButton sectionId="FAQ" />
       </EditionsContent>
     </Section>
   );

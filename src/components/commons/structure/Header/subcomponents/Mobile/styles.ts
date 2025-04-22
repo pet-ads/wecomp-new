@@ -5,7 +5,7 @@ export const SandWichIcon = styled.div`
   display: none;
 
   position: absolute;
-  top: 0.5rem;
+  top: 0;
   right: 0;
 
   @media (max-width: 1080px) {
