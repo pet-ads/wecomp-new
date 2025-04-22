@@ -1,7 +1,8 @@
 import { Section } from "../../commons/structure/Section";
 import { HighlightsContent } from "./styles";
 
-import comingSoonImg from "../../../assets/images/emBreve.png";
+// import comingSoonImg from "../../../assets/images/emBreve.png";
+import SoonCard from "../../commons/toolkit/SoonCard";
 
 export default function Highlights() {
   return (
@@ -11,11 +12,12 @@ export default function Highlights() {
       nextSectionId="Locations"
     >
       <HighlightsContent>
-        <img
+        {/* <img
           src={comingSoonImg}
           alt="Em breve"
-          style={{ width: "100%", maxWidth: "500px" }}
-        />
+          style={{ width: "100%", maxWidth: "20rem" }}
+        /> */}
+        <SoonCard />
       </HighlightsContent>
     </Section>
   );
