@@ -1,6 +1,5 @@
 import { Section } from "../../commons/structure/Section";
 import SubTitle from "../../commons/toolkit/SubTitle";
-import ArrowButton from "../../commons/toolkit/ArrowButton";
 import Card from "./subcomponents/Card";
 import Slider from "../../commons/toolkit/Slider";
 
@@ -26,7 +25,6 @@ export default function Editions() {
             )}
           />
         </EditionsCardContainer>
-        <ArrowButton sectionId="FAQ" />
       </EditionsContent>
     </Section>
   );
