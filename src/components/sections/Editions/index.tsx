@@ -1,4 +1,5 @@
 import { Section } from "../../commons/structure/Section";
+import SubTitle from "../../commons/toolkit/SubTitle";
 import Card from "./subcomponents/Card";
 import Slider from "../../commons/toolkit/Slider";
 
