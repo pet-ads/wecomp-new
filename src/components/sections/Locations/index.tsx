@@ -1,30 +1,27 @@
 import { Section } from "../../commons/structure/Section";
-import SubTitle from "../../commons/toolkit/SubTitle";
-import ArrowButton from "../../commons/toolkit/ArrowButton";
-import Map from "./subcomponents/Map";
-
+import Local from "./subcomponents/Local";
 import locationContent from "../../../assets/content/location";
 
-import { LocalContent, MapsContainer } from "./styles";
+import { Container } from "./styles";
 
 export default function Locations() {
   return (
-    <Section sectionId="Locations">
-      <LocalContent>
-        <SubTitle children="Locais do evento" />
-        <MapsContainer>
-          {locationContent.map((local, index) => (
-            <Map
-              key={index}
-              url={local.url}
-              alt={`Imagem do local ${local.name}`}
-              address={local.address}
-              name={local.name}
-            />
-          ))}
-        </MapsContainer>
-      </LocalContent>
-      <ArrowButton sectionId="Contact" />
+    <Section
+      title="Locais do evento"
+      currentSectionId="Locations"
+      nextSectionId="Contact"
+    >
+      <Container>
+        {locationContent.map((local, index) => (
+          <Local
+            key={index}
+            url={local.url}
+            alt={`Imagem do local ${local.name}`}
+            address={local.address}
+            name={local.name}
+          />
+        ))}
+      </Container>
     </Section>
   );
 }

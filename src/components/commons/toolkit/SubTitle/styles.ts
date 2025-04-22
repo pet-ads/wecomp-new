@@ -6,15 +6,14 @@ export const LabelContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  padding: 0.5rem;
+  width: fit-content;
 
-  margin-bottom: 2rem;
+  padding: 0.5rem;
 
   background-color: var(--gray-1000);
   border-radius: 0.25rem;
 
   ${mq({
-    minWidth: ["20vw", null, "22.5vw"],
     height: ["1.5rem", null, "2rem"],
   })}
 `;

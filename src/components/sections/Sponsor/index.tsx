@@ -1,21 +1,19 @@
 import sponsorsContent from "../../../assets/content/sponsors";
-import SubTitle from "../../commons/toolkit/SubTitle";
-import ArrowButton from "../../commons/toolkit/ArrowButton";
 import { Section } from "../../commons/structure/Section";
 import Carousel from "../../commons/toolkit/Carousel";
 
-import { SupporterSectionWrapper } from "./styles";
+import { Container } from "./styles";
 
 export default function SupportersCarousel() {
   return (
-    <Section sectionId="Sponsors">
-      <SupporterSectionWrapper>
-        <SubTitle>Apoiadores</SubTitle>
-
+    <Section
+      title="Apoiadores"
+      currentSectionId="Sponsors"
+      nextSectionId="Organization"
+    >
+      <Container>
         <Carousel items={sponsorsContent} visibleItems={5} />
-
-        <ArrowButton sectionId="Organization" />
-      </SupporterSectionWrapper>
+      </Container>
     </Section>
   );
 }

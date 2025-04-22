@@ -1,8 +1,6 @@
 import genericEmpress from "../images/empresaGenerica.svg";
 
-import { HighlightsProps } from "../../components/sections/Highlights/types";
-
-export const highlightsContent: HighlightsProps[] = [
+export const highlightsContent = [
   {
     title: "Trainee em Desenvolvimento Web com React e TypeScript",
     image: genericEmpress,

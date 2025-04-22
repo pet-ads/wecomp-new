@@ -12,12 +12,12 @@ export default function Header() {
     { text: "Apoiadores", sectionId: "Sponsors" },
     { text: "Realizadores", sectionId: "Organization" },
     { text: "Programação", sectionId: "Programming" },
-    { text: "Maratona", sectionId: "Marathon" },
+    { text: "InterIF", sectionId: "Marathon" },
     { text: "Destaques", sectionId: "Highlights" },
     { text: "Locais", sectionId: "Locations" },
     { text: "Contato", sectionId: "Contact" },
     { text: "Edições", sectionId: "Editions" },
-    { text: "FAQ", sectionId: "FAQ" },
+    // { text: "FAQ", sectionId: "FAQ" },
   ];
 
   return (

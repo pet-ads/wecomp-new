@@ -9,9 +9,8 @@ import { EditionsCardContainer, EditionsContent } from "./styles";
 
 export default function Editions() {
   return (
-    <Section sectionId="Editions">
+    <Section title="Edições anteriores" currentSectionId="Editions">
       <EditionsContent>
-        <SubTitle children="Edições anteriores" />
         <EditionsCardContainer>
           <Slider
             items={editionsContent}
