@@ -1,4 +1,4 @@
-import { Key, useEffect, useState } from "react";
+import { Key, useEffect, useState, useRef } from "react";
 import faqContent from "../../../../assets/content/faq";
 import {
   ChatWrapper,
@@ -18,6 +18,8 @@ export default function FAQChat() {
   const [chat, setChat] = useState<{ from: "user" | "lucas"; text: string }[]>([]);
   const [typing, setTyping] = useState(false);
   const [showFaqButtons, setShowFaqButtons] = useState(false);
+  const bottomRef = useRef<HTMLDivElement | null>(null);
+
 
   const toggleChat = () => {
     setIsOpen((prev) => !prev);
@@ -33,6 +35,13 @@ export default function FAQChat() {
       setShowFaqButtons(true);
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    if (bottomRef.current) {
+      bottomRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [chat]);
+  
 
   const handleClick = (item: { question: string; answer: string }) => {
     setChat((prev) => [...prev, { from: "user", text: item.question }]);
@@ -58,16 +67,21 @@ export default function FAQChat() {
       {isOpen && (
         <ChatBox>
           <ChatContainer>
-            {chat.map((msg, index) =>
-              msg.from === "lucas" ? (
+          {chat.map((msg, index) => {
+              const isLast = index === chat.length - 1;
+
+              return msg.from === "lucas" ? (
                 <MessageLeft key={index}>
                   <img src={LucasAvatar} alt="Lucas Oliveira" />
-                  <span>{msg.text}</span>
+                  <span ref={isLast ? bottomRef : null}>{msg.text}</span>
                 </MessageLeft>
               ) : (
-                <MessageRight key={index}>{msg.text}</MessageRight>
-              )
-            )}
+                <MessageRight key={index} ref={isLast ? bottomRef : null}>
+                  {msg.text}
+                </MessageRight>
+              );
+            })}
+
 
             {typing && <TypingIndicator>Lucas está digitando...</TypingIndicator>}
 
@@ -80,6 +94,7 @@ export default function FAQChat() {
                 ))}
               </QuestionButtons>
             )}
+            <div ref={bottomRef} />
           </ChatContainer>
         </ChatBox>
       )}

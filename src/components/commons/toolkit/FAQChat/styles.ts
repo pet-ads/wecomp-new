@@ -47,7 +47,7 @@ export const MessageLeft = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-  max-width: 80%;
+  max-width: 90%;
 
   img {
     width: 32px;
@@ -61,7 +61,7 @@ export const MessageLeft = styled.div`
     color: #222;
     padding: 0.6rem 1rem;
     border-radius: 0 1rem 1rem 1rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   }
 `;
@@ -72,8 +72,8 @@ export const MessageRight = styled.div`
   color: #222;
   padding: 0.6rem 1rem;
   border-radius: 1rem 0 1rem 1rem;
-  font-size: 0.9rem;
-  max-width: 80%;
+  font-size: 0.8rem;
+  max-width: 90%;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 `;
 
