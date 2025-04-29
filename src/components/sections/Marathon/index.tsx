@@ -10,8 +10,11 @@ import {
   ScrollContainer,
 } from "./styles";
 import { ZOOM_ANIMATION } from "../../../animations/scaling";
+import useIsMobile from "../../../hooks/window/Mobile";
 
 export default function Marathon() {
+  const isMobile = useIsMobile();
+
   return (
     <Section
       title="InterIF"
@@ -21,14 +24,15 @@ export default function Marathon() {
       <Container>
         <ColumnContent>
           <h2>O que é InterIF ?</h2>
-
           <ScrollContainer>
-            <p>{marathonContent.definition}</p>
+            <p>
+              {isMobile
+                ? marathonContent.definition.simplified
+                : marathonContent.definition.full}
+            </p>
           </ScrollContainer>
-
           <RedirectButton children="veja mais" link={marathonContent.link} />
         </ColumnContent>
-
         <MarathonImageWrapper>
           <MarathonImage
             {...ZOOM_ANIMATION}
