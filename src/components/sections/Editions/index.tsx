@@ -2,6 +2,10 @@ import { Section } from "../../commons/structure/Section";
 import Card from "./subcomponents/Card";
 import Slider from "../../commons/toolkit/Slider";
 
+import {
+  Footer,
+} from "../../../dto";
+
 import editionsContent from "../../../assets/content/editions";
 
 import { EditionsCardContainer, EditionsContent } from "./styles";
@@ -24,6 +28,7 @@ export default function Editions() {
           />
         </EditionsCardContainer>
       </EditionsContent>
+      <Footer />
     </Section>
   );
 }
