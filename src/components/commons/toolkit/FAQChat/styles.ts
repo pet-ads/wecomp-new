@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const ChatWrapper = styled.div`
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 1000;
+  bottom: 3.5rem;
+  right: 1.25rem;
+  z-index: 10;
 `;
 
 export const ToggleButton = styled.button`
