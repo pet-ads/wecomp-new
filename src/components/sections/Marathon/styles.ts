@@ -9,10 +9,9 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
 
-  gap: 1rem;
-
   ${mq({
     flexWrap: ["wrap", "wrap", "wrap", "wrap", "wrap", "wrap", "nowrap"],
+    gap: ["1rem", "1rem", "1rem", "1rem", "1rem", "1rem", "5rem"],
   })}
 `;
 

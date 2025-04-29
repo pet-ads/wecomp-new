@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mq } from "../../../../utils/responsive/breakpoints";
 export interface ContainerProps {
   backgroundColor: string;
 }
@@ -22,7 +23,6 @@ export const Container = styled.section<ContainerProps>`
 `;
 
 export const Content = styled.div`
-  width: 80%;
   height: 60%;
 
   display: flex;
@@ -32,4 +32,21 @@ export const Content = styled.div`
   padding: 2.5rem;
 
   gap: 1rem;
+
+  ${mq({
+    width: [
+      "80%",
+      "80%",
+      "80%",
+      "80%",
+      "80%",
+      "80%",
+      "80%",
+      "80%",
+      "80%",
+      "80%",
+      "80%",
+      "60%",
+    ],
+  })}
 `;
