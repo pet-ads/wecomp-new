@@ -18,7 +18,7 @@ export const CarouselTrack = styled(motion.div)`
   width: 100%;
   height: 100%;
 
-  gap: 5rem;
+  gap: 2rem;
 
   padding: 1rem 0;
 
