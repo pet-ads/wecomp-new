@@ -6,7 +6,8 @@ export const LabelContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: fit-content;
+  width: 20rem;
+  max-width: 20rem;
 
   padding: 0.5rem;
 
