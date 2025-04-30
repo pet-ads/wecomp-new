@@ -6,15 +6,10 @@ export const FooterContainer = styled.div`
   justify-content: start;
   align-items: center;
 
-  position: absolute;
-  bottom: 0;
-
-  z-index: 2;
-
   min-width: 100%;
   max-width: 100%;
 
-  height: 4.5vh;
+  height: 2vh;
 
   padding: 1rem 0;
 

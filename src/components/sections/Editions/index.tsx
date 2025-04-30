@@ -9,9 +9,9 @@ import { EditionsCardContainer, EditionsContent } from "./styles";
 export default function Editions() {
   return (
     <Section
+      isLastSection
       title="Edições anteriores"
       currentSectionId="Editions"
-      isLastSection={true}
     >
       <EditionsContent>
         <EditionsCardContainer>

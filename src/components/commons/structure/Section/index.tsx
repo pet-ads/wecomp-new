@@ -13,7 +13,11 @@ export const Section = ({
   isLastSection,
 }: SectionProps) => {
   return (
-    <Container id={currentSectionId} backgroundColor={backgroundColor}>
+    <Container
+      id={currentSectionId}
+      backgroundColor={backgroundColor}
+      $isLast={isLastSection}
+    >
       <Content>
         {title ? <SubTitle children={title} /> : null}
         {children}

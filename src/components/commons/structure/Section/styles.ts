@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { mq } from "../../../../utils/responsive/breakpoints";
+
 export interface ContainerProps {
   backgroundColor: string;
+  $isLast?: boolean;
 }
 
 export const Container = styled.section<ContainerProps>`
@@ -14,22 +16,23 @@ export const Container = styled.section<ContainerProps>`
   position: relative;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
-  padding: 2rem 0;
+  padding: ${({ $isLast }) => ($isLast ? "0rem" : "2rem 0rem")};
 
   background: ${({ backgroundColor }) => backgroundColor};
 `;
 
 export const Content = styled.div`
   height: 60%;
-
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 
-  padding: 2.5rem;
+  margin: auto;
 
   gap: 1rem;
 
