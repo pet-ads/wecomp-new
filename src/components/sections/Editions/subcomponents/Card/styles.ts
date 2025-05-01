@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { styled } from "styled-components";
+import { mq } from "../../../../../utils/responsive/breakpoints";
 
 export const Container = styled.div`
   display: flex;
@@ -9,8 +10,6 @@ export const Container = styled.div`
 
   position: relative;
 
-  width: 15rem;
-  height: 15rem;
   padding: 1rem;
 
   overflow: hidden;
@@ -19,10 +18,10 @@ export const Container = styled.div`
   background-color: var(--white-100);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
-  @media (max-width: 768px) {
-    width: 10rem;
-    height: 10rem;
-  }
+  ${mq({
+    width: ["8rem", "8rem", "8rem", "8rem", "8rem", "8rem", "10rem"],
+    height: ["8rem", "8rem", "8rem", "8rem", "8rem", "8rem", "10rem"],
+  })}
 `;
 
 export const IconContainer = styled(motion.div)`
@@ -43,17 +42,21 @@ export const IconContainer = styled(motion.div)`
 `;
 
 export const EditionIcon = styled.img`
-  width: 8rem;
-  height: 8rem;
-
   z-index: 5;
-
   object-fit: cover;
 
-  @media (max-width: 768px) {
-    width: 5rem;
-    height: 5rem;
-  }
+  ${mq({
+    width: ["4.5rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem", "6rem"],
+    height: [
+      "4.5rem",
+      "4.5rem",
+      "4.5rem",
+      "4.5rem",
+      "4.5rem",
+      "4.5rem",
+      "6rem",
+    ],
+  })}
 `;
 
 export const NameContainer = styled(motion.div)`

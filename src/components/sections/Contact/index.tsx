@@ -14,8 +14,8 @@ export default function Contact() {
     >
       <Container>
         <p>
-          Nos acompanhe pelas nossas redes sociais, onde divulgaremos as
-          atualizações do evento.
+          Nos acompanhe nas redes sociais, onde divulgaremos as atualizações do
+          evento.
         </p>
         <ContactCards>
           {contactContent.map((media, index) => (

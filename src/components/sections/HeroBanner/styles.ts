@@ -3,20 +3,18 @@ import { mq } from "../../../utils/responsive/breakpoints";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 80%;
 
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
 `;
 
 export const EventLogo = styled.img`
-  min-width: 80%;
-  max-width: 80%;
+  min-width: 100%;
+  max-width: 100%;
 
-  min-height: 25vh;
   max-height: 25vh;
 
   object-fit: contain;
@@ -27,9 +25,6 @@ export const EventDate = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  min-width: 60%;
-  max-width: 60%;
 
   padding: 0.5rem 0;
 

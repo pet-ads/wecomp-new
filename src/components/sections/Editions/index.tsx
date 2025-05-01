@@ -12,7 +12,11 @@ import { EditionsCardContainer, EditionsContent } from "./styles";
 
 export default function Editions() {
   return (
-    <Section title="Edições anteriores" currentSectionId="Editions">
+    <Section
+      isLastSection
+      title="Edições anteriores"
+      currentSectionId="Editions"
+    >
       <EditionsContent>
         <EditionsCardContainer>
           <Slider
