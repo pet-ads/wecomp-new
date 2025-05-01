@@ -9,10 +9,9 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
 
-  gap: 1rem;
-
   ${mq({
     flexWrap: ["wrap", "wrap", "wrap", "wrap", "wrap", "wrap", "nowrap"],
+    gap: ["1rem", "1rem", "1rem", "1rem", "1rem", "1rem", "5rem"],
   })}
 `;
 
@@ -21,43 +20,42 @@ export const ColumnContent = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 
-  width: 50%;
+  width: 55%;
   height: 100%;
 
   gap: 0.5rem;
 
-  p {
-    text-align: justify;
-  }
-
   ${mq({
-    width: ["100%", "100%", "100%", "100%", "100%", "100%", "50%"],
-    height: ["50%", "50%", "50%", "50%", "50%", "50%", "fit-content"],
-    maxHeight: ["50%", "50%", "50%", "50%", "50%", "50%", "100%"],
+    width: ["100%", "100%", "100%", "100%", "100%", "100%", "55%"],
+    height: ["55%", "55%", "55%", "55%", "55%", "55%", "fit-content"],
+    maxHeight: ["55%", "55%", "55%", "55%", "55%", "55%", "100%"],
     order: ["2", "2", "2", "2", "2", "2", "1"],
     alignItems: ["center", "center", "center", "center", "center", "start"],
   })}
 `;
 
 export const ScrollContainer = styled.div`
-  overflow: auto;
+  width: 100%;
 
   ${mq({
-    height: ["45%", "45%", "45%", "45%", "45%", "45%", "100%"],
-    maxHeight: ["45%", "45%", "45%", "45%", "45%", "45%", "100%"],
+    height: ["55%", "55%", "55%", "55%", "55%", "55%", "100%"],
+    maxHeight: ["55%", "55%", "55%", "55%", "55%", "55%", "100%"],
   })}
+
+  p {
+    text-align: justify;
+  }
 `;
 
 export const MarathonImageWrapper = styled.div`
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  height: 40%;
   overflow: hidden;
 
   border-radius: 0.5rem;
 
   ${mq({
-    width: ["100%", "100%", "100%", "100%", "100%", "100%", "50%"],
-
+    width: ["100%", "100%", "100%", "100%", "100%", "100%", "40%"],
     order: ["1", "1", "1", "1", "1", "1", "2"],
   })}
 `;

@@ -6,14 +6,14 @@ export const LabelContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: fit-content;
-
   padding: 0.5rem;
 
   background-color: var(--gray-1000);
   border-radius: 0.25rem;
 
   ${mq({
+    width: ["15rem", "15rem", "20rem"],
+    maxWidth: ["15rem", "15rem", "20rem"],
     height: ["1.5rem", null, "2rem"],
   })}
 `;
@@ -25,6 +25,6 @@ export const LabelText = styled.span`
   color: var(--gray-200);
 
   ${mq({
-    fontSize: ["1rem", null, "1.5rem"],
+    fontSize: ["1rem", "1rem", "1.5rem"],
   })}
 `;
