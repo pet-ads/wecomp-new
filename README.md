@@ -2,97 +2,116 @@
 
 Página destinada à Semana da Computação WECOMP.
 
-### Diretórios e Arquivos
+## Estrutura de Diretórios
 
-#### `public/`
+### `scripts/`
 
-Contém arquivos estáticos que podem ser acessados diretamente pelo navegador:
+Contém scripts auxiliares para execução local do projeto.
 
-- `images/`: Imagens utilizadas no projeto, organizadas por propósito.
-- `data/`: Arquivos de dados utilizados no projeto, organizados por propósito.
+- `run-dev.sh`: Script para iniciar o projeto em ambiente de desenvolvimento.
 
-#### `src/`
+### `src/`
 
-Contém todo o código-fonte do projeto.
-
-##### Arquivos principais
+Pasta principal do código-fonte da aplicação.
 
 - `App.tsx`: Componente principal que encapsula o restante da aplicação.
 - `main.tsx`: Ponto de entrada da aplicação.
 - `vite-env.d.ts` e `vite-config.ts`: Configurações de tipos específicas do Vite.
 - `package.json` e `package-lock.json`: Configuração de dependências do projeto.
 
-##### `assets/`
+### `assets/`
 
-Armazena recursos auxiliares, como ícones ou outras imagens específicas do projeto.
+Contém arquivos estáticos da aplicação.
 
-##### `components/`
+- `images/`: Imagens utilizadas no projeto, organizadas por propósito.
+- `icons/`: Icones utilizados no projeto, organizadas por propósito.
+- `content/`: Arquivos de dados utilizados no projeto, organizados por propósito.
 
-Componentes reutilizáveis organizados em subdiretórios:
+### `components/`
 
-- **`Footer/`** e **`Header/`**: Componentes para o rodapé e cabeçalho, respectivamente.
-- **`menus/`**:
-  - `Mobile/`: Menu para dispositivos móveis.
-  - `Navigation/`: Componente de navegação principal.
-- **`sections/`**:
-  - Seções específicas da aplicação.
-- **`ui/`**:
-  - Componentes de interface do usuário, como botões, componentes de texto e outros elementos que podem ser reutilizados por outros componentes na aplicação.
+Componentes reutilizáveis divididos em duas categorias:
 
-##### `context/`
+#### `commons/`
 
-Contém módulos utilizados para centralizar e prover estados para a aplicação.
+ Componentes comuns projeto organizados em subdiretórios:
 
-##### `global/`
+##### `structure/`
+
+Componentes fixos da aplicação, comumente não são utilizados em outros projetos dado seus aspecto singular com o projeto
+
+##### `toolkit/`
+
+ Componentes reutilizaveis da aplicação, podem ser reutilizados por outros componentes na aplicação.
+
+#### `sections/`
+
+Componentes específicos de cada seção da página
+
+### `global/`
 
 Contém estilos globais aplicados à aplicação:
 
 - `GlobalStyles.ts`: Define o tema base e os estilos globais.
 
-##### `pages/`
+### `pages/`
 
 Contém as páginas da aplicação:
 
 - `Home/`: Página inicial, com seu estilo e lógica.
 
-##### `styles/`
+### `styles/`
 
 Estilos compartilhados entre componentes:
 
 - Estilos genéricos para outros componentes.
 
-##### `animations/`
+### `animations/`
 
-Contém animações reutilizáveis
+Define animações reutilizáveis com Framer Motion.
 
-##### `types/`
-
-Definições de tipos TypeScript:
-
-- Tipos utilizados para garantir a tipagem no projeto.
-
-##### `hooks/`
+### `hooks/`
 
 Contém hooks personalizados utilizados pelos componentes.
 
-##### `dto/`
+### `dto/`
 
 Centraliza a exportação dos componentes chave.
 
-##### `utils/`
+### `utils/`
 
-Funções utilitárias:
+Funções auxiliares da aplicação.
 
-## Como rodar o projeto
+- `responsive/`: Define pontos de quebra para responsividade.
 
-1. Faça uma cópia do projeto utilizando o comando `git clone https://github.com/pet-ads/wecomp-new.git` em um diretório local.
-2. Instale as dependências utilizando o gerenciador de pacotes de sua preferência (npm ou yarn), executando o comando no terminal `npm install` ou `yarn install`.
-3. Com as dependências instaladas, execute o comando `npm run dev` ou `yarn run dev`.
+## Tecnologias Utilizadas
+
+- React + TypeScript
+- Vite
+- Framer Motion
+- Styled Components
+- Facepaint
+
+## Como rodar o projeto:
+
+- Clone o repositório com o comando: `git clone https://github.com/pet-ads/wecomp-new.git`
+- Instale o gerenciador de dependências **Yarn** com o comando: `npm install -g yarn`
+- Navegue até a pasta do projeto no explorador de arquivos e abra-a utilizando o **Git Bash**.
+- No terminal do Git Bash, execute o script: `sh scripts/run-dev.sh` Esse comando irá gerar uma versão de produção da aplicação. Caso ocorra algum erro, ele será exibido no terminal. Ao final, será fornecido um link para acesso à versão de desenvolvimento.
+- Se preferir rodar o projeto diretamente com **npm**, utilize:
+  `npm run dev`
+
+> **Observação:** Antes de enviar qualquer commit para o repositório, execute o comando `npm run build` para gerar uma versão de produção. Caso não haja erros, prossiga normalmente com o envio do commit.
+
+
 
 ## Como contribuir
 
-1. Faça um fork deste repositório.
-2. Crie uma nova branch: `git checkout -b minha-branch`.
-3. Faça suas alterações e adicione commits: `git commit -m "Minha contribuição"`.
-4. Envie suas alterações: `git push origin minha-branch`.
-5. Abra um Pull Request.
+Faça um fork deste repositório.
+
+Crie uma nova branch: `git checkout -b minha-branch`.
+
+Faça suas alterações e adicione commits: `git commit -m "Minha contribuição"`.
+
+Envie suas alterações: `git push origin minha-branch`.
+
+Abra um Pull Request.
