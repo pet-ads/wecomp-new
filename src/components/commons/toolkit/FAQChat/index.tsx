@@ -13,35 +13,32 @@ import {
 import { FaCommentDots } from "react-icons/fa";
 import LucasAvatar from "../../../../assets/icons/chat/lucas.png";
 
+const welcomeMessage = {
+  from: "lucas" as const,
+  text: "Olá! Sou o professor Lucas Oliveira, do IFSP São Carlos. Aqui estão as perguntas frequentes.",
+};
+
 export default function FAQChat() {
   const [isOpen, setIsOpen] = useState(false);
-  const [chat, setChat] = useState<{ from: "user" | "lucas"; text: string }[]>([]);
+  const [chat, setChat] = useState<{ from: "user" | "lucas"; text: string }[]>(
+    []
+  );
   const [typing, setTyping] = useState(false);
   const [showFaqButtons, setShowFaqButtons] = useState(false);
-  const bottomRef = useRef<HTMLDivElement | null>(null);
-
+  const buttonRef = useRef<HTMLDivElement | null>(null);
 
   const toggleChat = () => {
     setIsOpen((prev) => !prev);
   };
 
-  useEffect(() => {
-    if (isOpen && chat.length === 0) {
-      const welcomeMessage = {
-        from: "lucas" as const,
-        text: "Olá! Sou o professor Lucas Oliveira, do IFSP São Carlos. Aqui estão as perguntas frequentes.",
-      };
-      setChat([welcomeMessage]);
-      setShowFaqButtons(true);
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      buttonRef.current &&
+      !buttonRef.current.contains(event.target as Node)
+    ) {
+      setIsOpen(false);
     }
-  }, [isOpen]);
-
-  useEffect(() => {
-    if (bottomRef.current) {
-      bottomRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [chat]);
-  
+  };
 
   const handleClick = (item: { question: string; answer: string }) => {
     setChat((prev) => [...prev, { from: "user", text: item.question }]);
@@ -50,13 +47,30 @@ export default function FAQChat() {
 
     setTimeout(() => {
       setTyping(false);
-      setChat((prev) => [
-        ...prev,
-        { from: "lucas", text: item.answer },
-      ]);
+      setChat((prev) => [...prev, { from: "lucas", text: item.answer }]);
       setShowFaqButtons(true);
     }, 3000);
   };
+
+  useEffect(() => {
+    if (isOpen && chat.length === 0) {
+      setChat([welcomeMessage]);
+      setShowFaqButtons(true);
+    }
+  }, [isOpen, chat.length]);
+
+  useEffect(() => {
+    if (buttonRef.current) {
+      buttonRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [chat]);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  });
 
   return (
     <ChatWrapper>
@@ -67,34 +81,45 @@ export default function FAQChat() {
       {isOpen && (
         <ChatBox>
           <ChatContainer>
-          {chat.map((msg, index) => {
+            {chat.map((msg, index) => {
               const isLast = index === chat.length - 1;
-
               return msg.from === "lucas" ? (
                 <MessageLeft key={index}>
                   <img src={LucasAvatar} alt="Lucas Oliveira" />
-                  <span ref={isLast ? bottomRef : null}>{msg.text}</span>
+                  <span ref={isLast ? buttonRef : null}>{msg.text}</span>
                 </MessageLeft>
               ) : (
-                <MessageRight key={index} ref={isLast ? bottomRef : null}>
+                <MessageRight key={index} ref={isLast ? buttonRef : null}>
                   {msg.text}
                 </MessageRight>
               );
             })}
-
-
-            {typing && <TypingIndicator>Lucas está digitando...</TypingIndicator>}
-
+            {typing && (
+              <TypingIndicator>Lucas está digitando...</TypingIndicator>
+            )}
             {showFaqButtons && (
               <QuestionButtons>
-                {faqContent.map((item: { question: string; answer?: string; }, index: Key | null | undefined) => (
-                  <button key={index} onClick={() => item.answer !== undefined && handleClick(item as { question: string; answer: string })}>
-                    {item.question}
-                  </button>
-                ))}
+                {faqContent.map(
+                  (
+                    item: { question: string; answer?: string },
+                    index: Key | null | undefined
+                  ) => (
+                    <button
+                      key={index}
+                      onClick={() =>
+                        item.answer !== undefined &&
+                        handleClick(
+                          item as { question: string; answer: string }
+                        )
+                      }
+                    >
+                      {item.question}
+                    </button>
+                  )
+                )}
               </QuestionButtons>
             )}
-            <div ref={bottomRef} />
+            <div ref={buttonRef} />
           </ChatContainer>
         </ChatBox>
       )}
