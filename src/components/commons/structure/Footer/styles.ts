@@ -13,7 +13,7 @@ export const FooterContainer = styled.div`
 
   padding: 1rem 0;
 
-  background-color: var(--gray-200);
+  background-color: var(--green-500);
 `;
 
 export const FooterContent = styled.span`
