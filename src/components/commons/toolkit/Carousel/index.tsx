@@ -15,9 +15,19 @@ interface CarouselProps {
 
 export default function Carousel({ items, visibleItems }: CarouselProps) {
   const [index, setIndex] = useState(items.length);
+  const [currentVisibleItems, setCurrentVisibleItems] = useState(visibleItems);
   const loopedItems = [...items, ...items, ...items];
   const startX = useRef<number | null>(null);
   const isDragging = useRef(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setCurrentVisibleItems(window.innerWidth < 768 ? 3 : visibleItems);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [visibleItems]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,7 +39,7 @@ export default function Carousel({ items, visibleItems }: CarouselProps) {
   }, [loopedItems.length]);
 
   const getTranslate = () => {
-    const offset = Math.floor(visibleItems / 2);
+    const offset = Math.floor(currentVisibleItems / 2);
     const shift = (100 / loopedItems.length) * (index - offset);
     return `translateX(-${shift}%)`;
   };
@@ -80,7 +90,7 @@ export default function Carousel({ items, visibleItems }: CarouselProps) {
       <LogoList
         style={{
           transform: getTranslate(),
-          width: `${(100 * loopedItems.length) / visibleItems}%`,
+          width: `${(100 * loopedItems.length) / currentVisibleItems}%`,
         }}
       >
         {loopedItems.map((item, i) => {

@@ -32,6 +32,11 @@ export const ChatBox = styled.div`
   @media (max-width: 400px) {
     width: 90vw;
   }
+
+  @media (orientation: landscape) and (max-width: 932px) {
+    height: 70vh;
+    width: 580px;
+}
 `;
 
 export const ChatContainer = styled.div`

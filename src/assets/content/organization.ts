@@ -6,20 +6,23 @@ interface OrganizationProps {
   logoPath: string;
   link: string;
   width: string;
+  type: "realizador" | "organizador"; 
 }
 
 export const organizationContent: OrganizationProps[] = [
   {
-    name: "Generica",
+    name: "IFSP",
     logoPath: ifsp,
     link: "#",
     width: "",
+    type: "realizador",
   },
   {
-    name: "Generica",
+    name: "PET ADS",
     logoPath: pet,
     link: "#",
     width: "",
+    type: "organizador",
   },
 ];
 
