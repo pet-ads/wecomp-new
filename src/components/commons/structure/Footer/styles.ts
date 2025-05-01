@@ -6,8 +6,10 @@ export const FooterContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
-  position: relative;
-  bottom: 0;
+  position: absolute;
+  bottom: 4.5rem;
+
+  z-index: 2;
 
   min-width: 100%;
   max-width: 100%;
@@ -16,7 +18,7 @@ export const FooterContainer = styled.div`
 
   padding: 0.2rem 0;
 
-  background-color: var(--green-700);
+  background-color: var(--gray-200);
 `;
 
 export const FooterContent = styled.span`

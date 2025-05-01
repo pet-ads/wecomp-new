@@ -11,7 +11,6 @@ import {
   Contact,
   Editions,
   FAQs,
-  Footer,
 } from "../../dto";
 
 import { Main } from "./styles";
@@ -33,7 +32,6 @@ export default function Home() {
         <Editions />
         <FAQs />
       </Main>
-      <Footer />
     </>
   );
 }
