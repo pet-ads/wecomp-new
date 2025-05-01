@@ -5,7 +5,7 @@ export const NavigationList = styled.ul`
   justify-content: center;
   align-items: center;
 
-  width: 100%;
+  width: 100vw;
 
   padding: 1rem 0;
 

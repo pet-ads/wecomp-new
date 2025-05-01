@@ -1,12 +1,8 @@
 import styled from "styled-components";
-import { IoMenuOutline } from "react-icons/io5";
+import { IoCloseOutline, IoMenuOutline } from "react-icons/io5";
 
 export const SandWichIcon = styled.div`
   display: none;
-
-  position: absolute;
-  top: 0;
-  right: 0;
 
   @media (max-width: 1080px) {
     display: flex;
@@ -15,10 +11,22 @@ export const SandWichIcon = styled.div`
     align-items: end;
 
     padding: 0 0.5rem;
+
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 `;
 
-export const WrapperIcon = styled(IoMenuOutline)`
+export const WrapperOpenIcon = styled(IoMenuOutline)`
+  font-size: 2.5rem;
+
+  color: white;
+
+  cursor: pointer;
+`;
+
+export const WrapperCloseIcon = styled(IoCloseOutline)`
   font-size: 2.5rem;
 
   color: white;
