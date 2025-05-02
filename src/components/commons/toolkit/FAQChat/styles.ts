@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ChatWrapper = styled.div`
   position: fixed;
-  bottom: 3.5rem;
+  bottom: 1rem;
   right: 1.25rem;
   z-index: 10;
 `;

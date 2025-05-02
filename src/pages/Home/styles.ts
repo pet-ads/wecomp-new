@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
+  max-width: 100%;
 
   display: flex;
   flex-direction: column;
