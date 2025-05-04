@@ -26,16 +26,14 @@ export default function FAQChat() {
   const [typing, setTyping] = useState(false);
   const [showFaqButtons, setShowFaqButtons] = useState(false);
   const buttonRef = useRef<HTMLDivElement | null>(null);
+  const chatRef = useRef<HTMLDivElement | null>(null);
 
   const toggleChat = () => {
     setIsOpen((prev) => !prev);
   };
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (
-      buttonRef.current &&
-      !buttonRef.current.contains(event.target as Node)
-    ) {
+    if (chatRef.current && !chatRef.current.contains(event.target as Node)) {
       setIsOpen(false);
     }
   };
@@ -79,7 +77,7 @@ export default function FAQChat() {
       </ToggleButton>
 
       {isOpen && (
-        <ChatBox>
+        <ChatBox ref={chatRef}>
           <ChatContainer>
             {chat.map((msg, index) => {
               const isLast = index === chat.length - 1;
