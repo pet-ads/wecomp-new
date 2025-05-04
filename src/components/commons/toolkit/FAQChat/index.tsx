@@ -12,6 +12,7 @@ import {
 } from "./styles";
 import { FaCommentDots } from "react-icons/fa";
 import LucasAvatar from "../../../../assets/icons/chat/lucas.png";
+import { IoCloseOutline } from "react-icons/io5";
 
 const welcomeMessage = {
   from: "lucas" as const,
@@ -73,7 +74,11 @@ export default function FAQChat() {
   return (
     <ChatWrapper>
       <ToggleButton onClick={toggleChat}>
-        <FaCommentDots size={20} />
+        {isOpen ? (
+          <IoCloseOutline size="1.25rem" />
+        ) : (
+          <FaCommentDots size={20} />
+        )}
       </ToggleButton>
 
       {isOpen && (
