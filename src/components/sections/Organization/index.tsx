@@ -1,6 +1,6 @@
 import { Section } from "../../commons/structure/Section";
 import organizationContent from "../../../assets/content/organization";
-import { Container, DirectorLogo, GroupsContainer} from "./styles";
+import { Container, DirectorLogo, GroupsContainer, Content} from "./styles";
 
 export default function Directors() {
   const handleRedirectOnClick = (url: string) => {
@@ -12,22 +12,24 @@ export default function Directors() {
 
   return (
     <Section
-      title="Realizadores"
+      title="Realização"
       currentSectionId="Organization"
       nextSectionId="Programming"
     >
       <GroupsContainer>
         <Container>
           <h2>Realizadores</h2>
-          {realizadores.map((director, index) => (
-            <DirectorLogo
-              key={index}
-              src={director.logoPath}
-              alt={`Logo da organização ${director.name}`}
-              width={director.width}
-              onClick={() => handleRedirectOnClick(director.link)}
-            />
-          ))}
+          <Content>
+            {realizadores.map((director, index) => (
+              <DirectorLogo
+                key={index}
+                src={director.logoPath}
+                alt={`Logo da organização ${director.name}`}
+                width={director.width}
+                onClick={() => handleRedirectOnClick(director.link)}
+              />
+            ))}
+          </Content>
         </Container>
 
         
