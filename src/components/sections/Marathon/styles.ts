@@ -13,6 +13,12 @@ export const Container = styled.div`
     flexWrap: ["wrap", "wrap", "wrap", "wrap", "wrap", "wrap", "nowrap"],
     gap: ["1rem", "1rem", "1rem", "1rem", "1rem", "1rem", "5rem"],
   })}
+
+  @media (orientation: landscape) and (max-width: 930px) {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+  }
 `;
 
 export const ColumnContent = styled.div`
@@ -27,11 +33,21 @@ export const ColumnContent = styled.div`
 
   ${mq({
     width: ["100%", "100%", "100%", "100%", "100%", "100%", "55%"],
-    height: ["55%", "55%", "55%", "55%", "55%", "55%", "fit-content"],
+    height: ["55%", "55%", "55%", "55%", "55%", "55%", "100%"],
     maxHeight: ["55%", "55%", "55%", "55%", "55%", "55%", "100%"],
     order: ["2", "2", "2", "2", "2", "2", "1"],
     alignItems: ["center", "center", "center", "center", "center", "start"],
   })}
+
+  @media (orientation: landscape) and (max-width: 930px) {
+    height: 100%;
+    max-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
 `;
 
 export const ScrollContainer = styled.div`
@@ -58,6 +74,11 @@ export const MarathonImageWrapper = styled.div`
     width: ["100%", "100%", "100%", "100%", "100%", "100%", "40%"],
     order: ["1", "1", "1", "1", "1", "1", "2"],
   })}
+
+  @media (orientation: landscape) and (max-width: 930px) {
+    width: 50%;
+    height: 100%;
+  }
 `;
 
 export const MarathonImage = styled(motion.img)`

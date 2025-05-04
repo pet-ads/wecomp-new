@@ -11,9 +11,11 @@ import {
 } from "./styles";
 import { ZOOM_ANIMATION } from "../../../animations/scaling";
 import useIsMobile from "../../../hooks/window/Mobile";
+import useOrientation from "../../../hooks/window/useOrientation";
 
 export default function Marathon() {
   const isMobile = useIsMobile();
+  const isLandscape = useOrientation();
 
   return (
     <Section
@@ -26,7 +28,7 @@ export default function Marathon() {
           <h2>O que é InterIF ?</h2>
           <ScrollContainer>
             <p>
-              {isMobile
+              {isMobile || isLandscape
                 ? marathonContent.definition.simplified
                 : marathonContent.definition.full}
             </p>
