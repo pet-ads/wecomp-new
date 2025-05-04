@@ -1,6 +1,12 @@
 import { Section } from "../../commons/structure/Section";
 import organizationContent from "../../../assets/content/organization";
-import { Container, DirectorLogo, GroupsContainer, Content } from "./styles";
+import {
+  Container,
+  Content,
+  LabelGroup,
+  DirectorWrapper,
+  DirectorLogo,
+} from "./styles";
 
 const pluralize = (word: string, sufix: string, count: number) =>
   count > 1 ? `${word}${sufix}` : word;
@@ -21,14 +27,16 @@ export default function Directors() {
       currentSectionId="Organization"
       nextSectionId="Programming"
     >
-      <GroupsContainer>
+      <Container>
         {(["realizators", "organizers"] as const).map((group) => {
           const directors = organizationContent[group];
           if (!directors.length) return null;
           return (
-            <Container key={group}>
-              <h2>{pluralize(groupLabels[group], "es", directors.length)}</h2>
-              <Content>
+            <Content key={group}>
+              <LabelGroup>
+                {pluralize(groupLabels[group], "es", directors.length)}
+              </LabelGroup>
+              <DirectorWrapper>
                 {directors.map((director, index) => (
                   <DirectorLogo
                     key={index}
@@ -38,11 +46,11 @@ export default function Directors() {
                     onClick={() => handleRedirectOnClick(director.link)}
                   />
                 ))}
-              </Content>
-            </Container>
+              </DirectorWrapper>
+            </Content>
           );
         })}
-      </GroupsContainer>
+      </Container>
     </Section>
   );
 }
