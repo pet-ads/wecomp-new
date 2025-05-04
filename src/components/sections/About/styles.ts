@@ -5,9 +5,12 @@ export const PrologueText = styled.div`
   text-align: justify;
 
   ${mq({
-    // width: ["90%", null, null, "85%", null, "60%", "50%"],
-    fontSize: ["10pt", null, "12.5pt", null, null, "15pt"],
+    fontSize: ["10pt", "10pt", "12.5pt", "12.5pt", "12.5pt", "15pt"],
   })}
+
+  @media (orientation: landscape) and (max-width: 930px) {
+    font-size: 12pt;
+  }
 `;
 
 export const Container = styled.div`
