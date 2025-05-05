@@ -24,6 +24,11 @@ export const DropDownList = styled.ul`
   list-style-type: none;
 
   background-color: var(--green-500);
+
+  @media (orientation: landscape) and (max-width: 930px) {
+    height: 13rem;
+    gap: 0.05rem;
+  }
 `;
 
 export const DropDownRow = styled.li`
@@ -37,4 +42,8 @@ export const DropDownLink = styled.a`
 
   color: var(--gray-1000);
   cursor: pointer;
+
+  @media (orientation: landscape) and (max-width: 930px) {
+    font-size: 0.85rem;
+  }
 `;
