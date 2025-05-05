@@ -4,7 +4,7 @@ import DropDownMenu from "./subcomponents/DropDown";
 
 import { NavListProps } from "../types";
 
-import { SandWichIcon, WrapperIcon } from "./styles";
+import { SandWichIcon, WrapperOpenIcon, WrapperCloseIcon } from "./styles";
 
 export default function MenuMobile({ links }: NavListProps) {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -32,7 +32,11 @@ export default function MenuMobile({ links }: NavListProps) {
 
   return (
     <SandWichIcon ref={DropDownMenuComponent}>
-      <WrapperIcon onClick={handleOpenMenu} />
+      {openMenu ? (
+        <WrapperCloseIcon onClick={handleOpenMenu} />
+      ) : (
+        <WrapperOpenIcon onClick={handleOpenMenu} />
+      )}
       <DropDownMenu links={links} isOpen={openMenu} />
     </SandWichIcon>
   );

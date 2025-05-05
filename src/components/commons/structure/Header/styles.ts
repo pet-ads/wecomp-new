@@ -9,9 +9,10 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 10;
 
-  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
 
-  min-height: 2.5rem;
+  height: 5vh;
 
   padding: 0.15rem 0;
 

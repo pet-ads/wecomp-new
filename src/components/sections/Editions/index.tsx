@@ -1,5 +1,4 @@
 import { Section } from "../../commons/structure/Section";
-import SubTitle from "../../commons/toolkit/SubTitle";
 import Card from "./subcomponents/Card";
 import Slider from "../../commons/toolkit/Slider";
 
@@ -9,7 +8,11 @@ import { EditionsCardContainer, EditionsContent } from "./styles";
 
 export default function Editions() {
   return (
-    <Section title="Edições anteriores" currentSectionId="Editions">
+    <Section
+      isLastSection
+      title="Edições anteriores"
+      currentSectionId="Editions"
+    >
       <EditionsContent>
         <EditionsCardContainer>
           <Slider

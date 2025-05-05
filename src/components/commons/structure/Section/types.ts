@@ -6,4 +6,5 @@ export interface SectionProps extends PropsWithChildren {
   backgroundColor?: string;
   currentSectionId: Sections;
   nextSectionId?: Sections;
+  isLastSection?: boolean;
 }

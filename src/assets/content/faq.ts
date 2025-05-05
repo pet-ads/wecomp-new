@@ -19,8 +19,8 @@ export const faqContent: FaqProps[] = [
   {
     question: "Haverá transmissão online do evento?",
     answer:
-      "Não. O objetivo da WECOMP é aproximar estudantes de Computação das melhores empresas da região. O contato humano é fundamental. :piscando_olho:",
-  },
+      "Não. O objetivo da WECOMP é aproximar estudantes de Computação das melhores empresas da região. O contato humano é fundamental. 😉",
+  },  
   {
     question: "Como posso apoiar a WECOMP?",
     answer:

@@ -3,20 +3,17 @@ import styled from "styled-components";
 export const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-
-  position: relative;
-  bottom: 0;
 
   min-width: 100%;
   max-width: 100%;
 
-  height: 5.5vh;
+  height: 2vh;
 
-  padding: 0.2rem 0;
+  padding: 1rem 0;
 
-  background-color: var(--green-700);
+  background-color: var(--green-500);
 `;
 
 export const FooterContent = styled.span`
