@@ -10,9 +10,21 @@ export const Container = styled.div`
   align-items: center;
 
   ${mq({
-    flexWrap: ["wrap", "wrap", "wrap", "wrap", "wrap", "wrap", "nowrap"],
-    gap: ["1rem", "1rem", "1rem", "1rem", "1rem", "1rem", "5rem"],
+    flexWrap: [
+      "wrap-reverse",
+      "wrap-reverse",
+      "wrap-reverse",
+      "wrap-reverse",
+      "wrap-reverse",
+      "wrap-reverse",
+      "nowrap",
+    ],
+    gap: ["1rem", "1rem", "1rem", "1rem", "1rem", "1rem", "2rem"],
   })}
+
+  @media (orientation: landscape) and (max-width: 930px) {
+    flex-flow: row nowrap;
+  }
 `;
 
 export const ColumnContent = styled.div`
@@ -22,16 +34,35 @@ export const ColumnContent = styled.div`
 
   width: 55%;
   height: 100%;
-
-  gap: 0.5rem;
+  max-height: 100%;
 
   ${mq({
     width: ["100%", "100%", "100%", "100%", "100%", "100%", "55%"],
     height: ["55%", "55%", "55%", "55%", "55%", "55%", "fit-content"],
     maxHeight: ["55%", "55%", "55%", "55%", "55%", "55%", "100%"],
-    order: ["2", "2", "2", "2", "2", "2", "1"],
-    alignItems: ["center", "center", "center", "center", "center", "start"],
+    alignItems: [
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "start",
+    ],
+    gap: ["2rem", "2rem", "2rem", "2rem", "2rem", "2rem", "2rem", "2rem"],
   })}
+
+  @media (orientation: landscape) and (max-width: 930px) {
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+
+    gap: 1rem;
+
+    h2 {
+      font-size: 12pt;
+    }
+  }
 `;
 
 export const ScrollContainer = styled.div`
@@ -44,6 +75,24 @@ export const ScrollContainer = styled.div`
 
   p {
     text-align: justify;
+    ${mq({
+      fontSize: [
+        "10pt",
+        "10pt",
+        "10pt",
+        "10pt",
+        "12.5pt",
+        "12.5pt",
+        "12.5pt",
+        "12.5pt",
+      ],
+    })}
+  }
+
+  @media (orientation: landscape) and (max-width: 930px) {
+    p {
+      font-size: 10pt;
+    }
   }
 `;
 
@@ -56,8 +105,12 @@ export const MarathonImageWrapper = styled.div`
 
   ${mq({
     width: ["100%", "100%", "100%", "100%", "100%", "100%", "40%"],
-    order: ["1", "1", "1", "1", "1", "1", "2"],
   })}
+
+  @media (orientation: landscape) and (max-width: 930px) {
+    width: 50%;
+    height: 50%;
+  }
 `;
 
 export const MarathonImage = styled(motion.img)`
