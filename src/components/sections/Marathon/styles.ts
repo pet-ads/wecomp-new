@@ -57,7 +57,7 @@ export const ColumnContent = styled.div`
     justify-content: center;
     align-items: start;
 
-    gap: 1rem;
+    gap: 1.5rem;
 
     h2 {
       font-size: 12pt;
