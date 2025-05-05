@@ -16,8 +16,11 @@ export const InformationWrapper = styled.div`
   justify-content: center;
 
   gap: 1rem;
+`;
 
-  /* border-bottom: 5px solid black; */
+export const SoonImage = styled.img<{ isMobile: boolean }>`
+  width: 100%;
+  max-width: ${({ isMobile }) => (isMobile ? "12rem" : "15rem")};
 `;
 
 export const SoonText = styled.span`

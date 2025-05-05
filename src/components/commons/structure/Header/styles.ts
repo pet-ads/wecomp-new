@@ -12,7 +12,7 @@ export const Nav = styled.nav`
   width: 100%;
   max-width: 100%;
 
-  height: 5vh;
+  height: 2.5rem;
 
   padding: 0.15rem 0;
 

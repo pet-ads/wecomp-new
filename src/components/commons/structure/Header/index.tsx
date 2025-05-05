@@ -10,7 +10,7 @@ export default function Header() {
     { text: "Início", sectionId: "Hero" },
     { text: "Sobre", sectionId: "About" },
     { text: "Apoiadores", sectionId: "Sponsors" },
-    { text: "Realizadores", sectionId: "Organization" },
+    { text: "Realização", sectionId: "Organization" },
     { text: "Programação", sectionId: "Programming" },
     { text: "InterIF", sectionId: "Marathon" },
     { text: "Destaques", sectionId: "Highlights" },

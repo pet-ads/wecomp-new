@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
-import { SoonCardContainer, InformationWrapper } from "./styles";
-// import { IoIosNotifications } from "react-icons/io";
+import { SoonCardContainer, InformationWrapper, SoonImage } from "./styles";
 import comingSoonImg from "@/assets/images/emBreve.png";
+import useIsMobile from "../../../../hooks/window/Mobile";
 
 export default function SoonCard() {
+  const isMobile = useIsMobile();
+
   return (
     <SoonCardContainer>
       <InformationWrapper>
@@ -13,14 +15,8 @@ export default function SoonCard() {
             transition: { duration: 0.8 },
           }}
         >
-          {/* <IoIosNotifications size="2rem" /> */}
-          <img
-          src={comingSoonImg}
-          alt="Em breve"
-          style={{ width: "100%", maxWidth: "20rem" }}
-        />
+          <SoonImage src={comingSoonImg} alt="Em breve" isMobile={isMobile} />
         </motion.div>
-        {/* <SoonText>Em breve!</SoonText> */}
       </InformationWrapper>
     </SoonCardContainer>
   );

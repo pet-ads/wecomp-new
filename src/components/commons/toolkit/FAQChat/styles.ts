@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ChatWrapper = styled.div`
   position: fixed;
-  bottom: 1rem;
+  bottom: .75rem;
   right: 1.25rem;
   z-index: 10;
 `;
@@ -12,7 +12,7 @@ export const ToggleButton = styled.button`
   border: none;
   color: white;
   margin: 0.1rem;
-  padding: 1rem;
+  padding: 0.75rem;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -22,12 +22,14 @@ export const ChatBox = styled.div`
   width: 340px;
   max-height: 500px;
   background-color: #ffffff;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   border: 1px solid #e0e0e0;
+
+  margin-top: 0.5rem;
 
   @media (max-width: 400px) {
     width: 90vw;
@@ -36,7 +38,7 @@ export const ChatBox = styled.div`
   @media (orientation: landscape) and (max-width: 932px) {
     height: 70vh;
     width: 580px;
-}
+  }
 `;
 
 export const ChatContainer = styled.div`
