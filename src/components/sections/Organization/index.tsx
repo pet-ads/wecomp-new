@@ -1,49 +1,56 @@
 import { Section } from "../../commons/structure/Section";
 import organizationContent from "../../../assets/content/organization";
-import { Container, DirectorLogo, GroupsContainer} from "./styles";
+import {
+  Container,
+  Content,
+  LabelGroup,
+  DirectorWrapper,
+  DirectorLogo,
+} from "./styles";
+
+const pluralize = (word: string, sufix: string, count: number) =>
+  count > 1 ? `${word}${sufix}` : word;
+
+const groupLabels = {
+  realizators: "Realizador",
+  organizers: "Organizador",
+} as const;
 
 export default function Directors() {
   const handleRedirectOnClick = (url: string) => {
     window.open(url, "_blank");
   };
 
-  const realizadores = organizationContent.filter(org => org.type === "realizador");
-  const organizadores = organizationContent.filter(org => org.type === "organizador");
-
   return (
     <Section
-      title="Realizadores"
+      title="Realização"
       currentSectionId="Organization"
       nextSectionId="Programming"
     >
-      <GroupsContainer>
-        <Container>
-          <h2>Realizadores</h2>
-          {realizadores.map((director, index) => (
-            <DirectorLogo
-              key={index}
-              src={director.logoPath}
-              alt={`Logo da organização ${director.name}`}
-              width={director.width}
-              onClick={() => handleRedirectOnClick(director.link)}
-            />
-          ))}
-        </Container>
-
-        
-        <Container>
-          <h2>Organizadores</h2>
-          {organizadores.map((director, index) => (
-            <DirectorLogo
-              key={index}
-              src={director.logoPath}
-              alt={`Logo da organização ${director.name}`}
-              width={director.width}
-              onClick={() => handleRedirectOnClick(director.link)}
-            />
-          ))}
-        </Container>
-      </GroupsContainer>
+      <Container>
+        {(["realizators", "organizers"] as const).map((group) => {
+          const directors = organizationContent[group];
+          if (!directors.length) return null;
+          return (
+            <Content key={group}>
+              <LabelGroup>
+                {pluralize(groupLabels[group], "es", directors.length)}
+              </LabelGroup>
+              <DirectorWrapper>
+                {directors.map((director, index) => (
+                  <DirectorLogo
+                    key={index}
+                    src={director.logoPath}
+                    alt={`Logo da organização ${director.name}`}
+                    width={director.width}
+                    onClick={() => handleRedirectOnClick(director.link)}
+                  />
+                ))}
+              </DirectorWrapper>
+            </Content>
+          );
+        })}
+      </Container>
     </Section>
   );
 }
