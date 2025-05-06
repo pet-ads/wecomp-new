@@ -11,7 +11,7 @@ export const editionsContent: EditionProps[] = [
     logoPath: wecompV,
     altText: "Logo da V Wecomp",
     edition: "Wecomp 2024",
-    website: "https://wecomp.vercel.app/",
+    website: "https://wecomp-2024.vercel.app",
   },
   {
     logoPath: wecompIV,
