@@ -19,8 +19,8 @@ export const Container = styled.div`
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
   ${mq({
-    width: ["8rem", "8rem", "8rem", "8rem", "8rem", "8rem", "10rem"],
-    height: ["8rem", "8rem", "8rem", "8rem", "8rem", "8rem", "10rem"],
+    width: ["8rem", "8rem", "8rem", "8rem", "8rem", "8rem", "15rem"],
+    height: ["8rem", "8rem", "8rem", "8rem", "8rem", "8rem", "15rem"],
   })}
 `;
 
@@ -34,7 +34,7 @@ export const IconContainer = styled(motion.div)`
   z-index: 2;
 
   width: 100%;
-  height: 70%;
+  height: 80%;
 
   padding: 1rem 0;
 
@@ -59,10 +59,14 @@ export const EditionIcon = styled.img`
   })}
 `;
 
-export const NameContainer = styled(motion.div)`
+export const NameContainer = styled(motion.div)<{ isVisible: boolean }>`
+  display: ${({ isVisible }) => (isVisible ? "block" : "none")};
+  z-index: ${({ isVisible }) => (isVisible ? "0" : "10")};
+
   position: absolute;
   bottom: 1rem;
-  z-index: 1;
+
+  white-space: nowrap;
 
   padding: 0.5rem 1rem;
 
