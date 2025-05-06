@@ -35,9 +35,9 @@ export const LogoFigure = styled.figure<{ isCenter?: boolean }>`
     `}
 `;
 
-export const LogoImage = styled.img`
-  width: 7.5rem;
-  height: 7.5rem;
+export const LogoImage = styled.img<{ width?: string }>`
+  width: ${({ width }) => (width ? width : "7.5rem")};
+  height: ${({ width }) => (width ? width : "7.5rem")};
   object-fit: contain;
   border-radius: 10px;
   transform: none;

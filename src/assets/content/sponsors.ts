@@ -1,4 +1,5 @@
-import genericEmpress from "../images/empresaGenerica.svg";
+import oneSix from "../images/organizationLogo/OneSixLogo.svg";
+import onovolab from "../images/organizationLogo/onovolab.svg";
 
 interface SponsorProps {
   name: string;
@@ -9,40 +10,16 @@ interface SponsorProps {
 
 export const sponsorsContent: SponsorProps[] = [
   {
-    name: "Generica",
-    logoPath: genericEmpress,
-    link: "#",
-    width: "",
+    name: "OneSIX",
+    logoPath: oneSix,
+    link: "https://onesix.global",
+    width: "8rem",
   },
   {
-    name: "Generica",
-    logoPath: genericEmpress,
-    link: "#",
-    width: "",
-  },
-  {
-    name: "Generica",
-    logoPath: genericEmpress,
-    link: "#",
-    width: "",
-  },
-  {
-    name: "Generica",
-    logoPath: genericEmpress,
-    link: "#",
-    width: "",
-  },
-  {
-    name: "Generica",
-    logoPath: genericEmpress,
-    link: "#",
-    width: "",
-  },
-  {
-    name: "Generica",
-    logoPath: genericEmpress,
-    link: "#",
-    width: "",
+    name: "ONOVOLAB",
+    logoPath: onovolab,
+    link: "https://onovolab.com",
+    width: "9rem",
   },
 ];
 
