@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import { 
-  CarouselContainer, 
-  LogoList, 
-  LogoItem, 
-  LogoFigure, 
-  LogoImage, 
-  LogoCaption 
+import {
+  CarouselContainer,
+  LogoList,
+  LogoItem,
+  LogoFigure,
+  LogoImage,
+  LogoCaption,
 } from "./styles";
 
 interface CarouselProps {
-  items: Array<{ logoPath: string; name: string; link: string }>;
+  items: Array<{ logoPath: string; name: string; link: string; width: string }>;
   visibleItems: number;
 }
 
@@ -51,19 +51,23 @@ export default function Carousel({ items, visibleItems }: CarouselProps) {
   }, [index, items.length]);
 
   const handleTouchStart = (e: React.TouchEvent | React.MouseEvent) => {
-    startX.current = "touches" in e ? e.touches[0].clientX : (e as React.MouseEvent).clientX;
+    startX.current =
+      "touches" in e ? e.touches[0].clientX : (e as React.MouseEvent).clientX;
     isDragging.current = true;
   };
 
   const handleTouchMove = (e: React.TouchEvent | React.MouseEvent) => {
     if (!isDragging.current || startX.current === null) return;
 
-    const currentX = "touches" in e ? e.touches[0].clientX : (e as React.MouseEvent).clientX;
+    const currentX =
+      "touches" in e ? e.touches[0].clientX : (e as React.MouseEvent).clientX;
     const diff = currentX - startX.current;
 
     if (Math.abs(diff) > 50) {
       if (diff > 0) {
-        setIndex((prev) => (prev - 1 + loopedItems.length) % loopedItems.length);
+        setIndex(
+          (prev) => (prev - 1 + loopedItems.length) % loopedItems.length
+        );
       } else {
         setIndex((prev) => (prev + 1) % loopedItems.length);
       }
@@ -101,7 +105,11 @@ export default function Carousel({ items, visibleItems }: CarouselProps) {
                 isCenter={isCenter}
                 onClick={() => window.open(item.link, "_blank")}
               >
-                <LogoImage src={item.logoPath} alt={item.name} />
+                <LogoImage
+                  src={item.logoPath}
+                  alt={item.name}
+                  width={item.width}
+                />
                 <LogoCaption>{item.name}</LogoCaption>
               </LogoFigure>
             </LogoItem>
