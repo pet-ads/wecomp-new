@@ -33,9 +33,6 @@ export default function Directors() {
           if (!directors.length) return null;
           return (
             <Content key={group}>
-              <LabelGroup>
-                {pluralize(groupLabels[group], "es", directors.length)}
-              </LabelGroup>
               <DirectorWrapper>
                 {directors.map((director, index) => (
                   <DirectorLogo
@@ -47,6 +44,9 @@ export default function Directors() {
                   />
                 ))}
               </DirectorWrapper>
+              <LabelGroup>
+                {pluralize(groupLabels[group], "es", directors.length)}
+              </LabelGroup>
             </Content>
           );
         })}
