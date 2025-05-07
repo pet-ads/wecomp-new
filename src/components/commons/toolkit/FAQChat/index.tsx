@@ -11,17 +11,17 @@ import {
   TypingIndicator,
 } from "./styles";
 import { FaCommentDots } from "react-icons/fa";
-import JuliaAvatar from "../../../../assets/icons/chat/julia.png";
+import GraceAvatar from "../../../../assets/icons/chat/grace.png";
 import { IoCloseOutline } from "react-icons/io5";
 
 const welcomeMessage = {
-  from: "julia" as const,
-  text: "Oi! Eu sou a Julia, a assistente virtual da Semana da Computação do IFSP São Carlos. Estou aqui para te ajudar com as dúvidas mais frequentes. Pode perguntar!",
+  from: "grace" as const,
+  text: "Oi! Eu sou a Grace, a assistente virtual da Semana da Computação do IFSP São Carlos. Estou aqui para te ajudar com as dúvidas mais frequentes. Pode perguntar!",
 };
 
 export default function FAQChat() {
   const [isOpen, setIsOpen] = useState(false);
-  const [chat, setChat] = useState<{ from: "user" | "julia"; text: string }[]>(
+  const [chat, setChat] = useState<{ from: "user" | "grace"; text: string }[]>(
     []
   );
   const [typing, setTyping] = useState(false);
@@ -46,7 +46,7 @@ export default function FAQChat() {
 
     setTimeout(() => {
       setTyping(false);
-      setChat((prev) => [...prev, { from: "julia", text: item.answer }]);
+      setChat((prev) => [...prev, { from: "grace", text: item.answer }]);
       setShowFaqButtons(true);
     }, 3000);
   };
@@ -86,9 +86,9 @@ export default function FAQChat() {
           <ChatContainer>
             {chat.map((msg, index) => {
               const isLast = index === chat.length - 1;
-              return msg.from === "julia" ? (
+              return msg.from === "grace" ? (
                 <MessageLeft key={index}>
-                  <img src={JuliaAvatar} alt="Julia" />
+                  <img src={GraceAvatar} alt="Grace" />
                   <span ref={isLast ? buttonRef : null}>{msg.text}</span>
                 </MessageLeft>
               ) : (
@@ -98,7 +98,7 @@ export default function FAQChat() {
               );
             })}
             {typing && (
-              <TypingIndicator>Julia está digitando...</TypingIndicator>
+              <TypingIndicator>Grace está digitando...</TypingIndicator>
             )}
             {showFaqButtons && (
               <QuestionButtons>
