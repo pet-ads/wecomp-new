@@ -21,6 +21,8 @@ export default function Directors() {
     window.open(url, "_blank");
   };
 
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <Section
       title="Realização"
@@ -37,7 +39,11 @@ export default function Directors() {
                 {directors.map((director, index) => (
                   <DirectorLogo
                     key={index}
-                    src={director.logoPath}
+                    src={
+                      isMobile && director.mobileLogoPath
+                        ? director.mobileLogoPath
+                        : director.logoPath
+                    }
                     alt={`Logo da organização ${director.name}`}
                     width={director.width}
                     onClick={() => handleRedirectOnClick(director.link)}
