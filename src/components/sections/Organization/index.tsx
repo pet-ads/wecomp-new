@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Section } from "../../commons/structure/Section";
 import organizationContent from "../../../assets/content/organization";
 import {
@@ -17,6 +18,17 @@ const groupLabels = {
 } as const;
 
 export default function Directors() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const handleRedirectOnClick = (url: string) => {
     window.open(url, "_blank");
   };
@@ -37,7 +49,11 @@ export default function Directors() {
                 {directors.map((director, index) => (
                   <DirectorLogo
                     key={index}
-                    src={director.logoPath}
+                    src={
+                      isMobile && director.mobileLogoPath
+                        ? director.mobileLogoPath
+                        : director.logoPath
+                    }
                     alt={`Logo da organização ${director.name}`}
                     width={director.width}
                     onClick={() => handleRedirectOnClick(director.link)}
