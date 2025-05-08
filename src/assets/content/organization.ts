@@ -1,4 +1,4 @@
-import ifsp from "../images/organizationLogo/IFSPLogo.svg";
+import ifsp from "../images/organizationLogo/ifspLogo.png";
 import ifspVertical from "../images/organizationLogo/ifspVertical.png";
 import onesix from "../images/organizationLogo/OneSixLogo.svg";
 import pet from "../images/organizationLogo/petLogo.svg";

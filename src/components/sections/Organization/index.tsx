@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Section } from "../../commons/structure/Section";
 import organizationContent from "../../../assets/content/organization";
 import {
@@ -17,11 +18,20 @@ const groupLabels = {
 } as const;
 
 export default function Directors() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const handleRedirectOnClick = (url: string) => {
     window.open(url, "_blank");
   };
-
-  const isMobile = window.innerWidth <= 768;
 
   return (
     <Section

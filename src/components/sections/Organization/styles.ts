@@ -28,7 +28,9 @@ export const Container = styled.div`
   }
 `;
 
-export const LabelGroup = styled.h2``;
+export const LabelGroup = styled.h2`
+  margin-top: 1.25rem;
+`;
 
 export const Content = styled.div`
   width: 100%;
@@ -53,27 +55,26 @@ export const DirectorWrapper = styled.div`
 `;
 
 export const DirectorLogo = styled.img<{ width?: string }>`
+  margin-top: 1.5rem;
   height: 100%;
-
   object-fit: contain;
   overflow: hidden;
-
   cursor: pointer;
 
   ${({ width }) =>
     mq({
       width: [
+        "5rem",
+        "5rem",
+        "5rem",
         "6rem",
-        "6rem",
-        "6rem",
+        "6.5rem",
         "7rem",
-        "7.5rem",
-        "8rem",
-        width || "18rem",
+        width || "8rem",
       ],
     })}
 
   @media (orientation: landscape) and (max-width: 930px) {
-    width: 8rem;
+    width: 7rem;
   }
 `;
