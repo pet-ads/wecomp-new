@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
+
+
 
 import AvailabilityTag from "../../../../commons/toolkit/tags/AvailabilityTag";
 import DifficultyTag from "../../../../commons/toolkit/tags/DifficultyTag";
@@ -16,12 +19,10 @@ import {
   IconContainer,
   AbertoContainer,
 } from "./styles";
+
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
-
 import { ProgrammingProps } from "../../types";
-
 import { AiFillCloseCircle } from "react-icons/ai";
-
 import LabeledValue from "../../../../commons/toolkit/LabeledValue";
 
 export default function CardProjeto({
@@ -40,62 +41,65 @@ export default function CardProjeto({
   location,
 }: ProgrammingProps) {
   const [isOpen, setIsOpen] = useState(false);
-  function setingIsOpen() {
-    setIsOpen(!isOpen);
-  }
+
+ useEffect(() => {
+    if (isOpen) {
+      
+      document.body.style.overflow = "hidden";
+    } else {
+      
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
+
+  const setingIsOpen = () => setIsOpen(!isOpen);
   const eventIconProps = generatedIconEvent(typeEvent);
+
+  const portalElement = document.getElementById("portal-root");
+
+  const modalContent = (
+    <AbertoContainer>
+      <AiFillCloseCircle className="closeButton" onClick={setingIsOpen} />
+      <IconContainer>
+        <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
+      </IconContainer>
+      <InformationContainer>
+        <EventTitle>{name}</EventTitle>
+        <EventDetails>{`${location} | ${date} | ${time}`}</EventDetails>
+        <EventSpeakers>{author}</EventSpeakers>
+        <TagContainer>
+          <AvailabilityTag label={status} />
+          <DifficultyTag label={classification} />
+        </TagContainer>
+      </InformationContainer>
+      <EventImage src={image} alt={imageDescription} />
+      <CardMain content={bio} />
+      <CardMain content={description} />
+      <LabeledValue label="Vagas" value={vacancies} />
+    </AbertoContainer>
+  );
+
   return (
     <>
       {!isOpen && (
         <Container key={name} onClick={setingIsOpen}>
           <IconContainer>
-            <Icon
-              src={eventIconProps.iconPath}
-              alt={`Icone evento ${eventIconProps.label}`}
-            />
+            <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
           </IconContainer>
-
           <EventTitle>{name}</EventTitle>
-
           <TagContainer>
             <AvailabilityTag label={status} />
             <DifficultyTag label={classification} />
           </TagContainer>
-
           <LabeledValue label="Vagas" value={vacancies} />
         </Container>
       )}
-      {isOpen && (
-        <>
-          <AbertoContainer>
-            <AiFillCloseCircle
-              className="closeButton"
-              onClick={() => setIsOpen(!isOpen)}
-            />
-            <IconContainer>
-              <Icon
-                src={eventIconProps.iconPath}
-                alt={`Icone evento ${eventIconProps.label}`}
-              />
-            </IconContainer>
-            <InformationContainer>
-              <EventTitle>{name}</EventTitle>
-              <EventDetails>{`${location} | ${date} | ${time}`}</EventDetails>
-              <EventSpeakers>{author}</EventSpeakers>
-              <TagContainer>
-                <AvailabilityTag label={status} />
-                <DifficultyTag label={classification} />
-              </TagContainer>
-            </InformationContainer>
-            <EventImage src={image} alt={imageDescription} />
-
-            <CardMain content={bio} />
-            <CardMain content={description} />
-
-            <LabeledValue label="Vagas" value={vacancies} />
-          </AbertoContainer>
-        </>
-      )}
+      {isOpen && portalElement && ReactDOM.createPortal(modalContent, portalElement)}
     </>
   );
 }
