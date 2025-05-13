@@ -10,7 +10,8 @@ interface OrganizationProps {
   logoPath: string;
   mobileLogoPath?: string; 
   link: string;
-  width: string;
+  width?: string;
+  height?: string;
   type: OrganizerTypes;
 }
 
@@ -27,14 +28,14 @@ export const organizationContent: OrganizationProps[] = [
     name: "PET ADS",
     logoPath: pet,
     link: "https://petads-ifsp-scl.vercel.app",
-    width: "12.5rem",
+    width: "8rem",
     type: "Organizer",
   },
   {
     name: "ONE SIX",
     logoPath: onesix,
     link: "https://onesix.global",
-    width: "8rem",
+    width: "4.9rem",
     type: "Director",
   },
 ];
