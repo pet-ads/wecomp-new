@@ -80,12 +80,22 @@ export const DirectorLogo = styled.img<{ width?: string }>`
     }
   }
 
+
+  //   SUMMARY
+  //   web responsive logos
+  //   IFSP   ... width 10.5rem
+  //   ONE SIX  ... width 4.5rem
+  //   PET ADS  ... width 7rem
+
   @media (min-width: 769px) {
-    &:first-of-type {
-      width: 9rem;
+    &[alt*="IFSP"] {
+      width: 10.5rem;
     }
-    &:last-of-type {
-      width: 6rem;
+    &[alt*="ONE SIX"] {
+      width: 4.5rem;
+    }
+    &[alt*="PET ADS"] {
+      width: 7rem;
     }
   }
 
