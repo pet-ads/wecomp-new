@@ -10,7 +10,7 @@ export const Container = styled.div`
   min-height: 3.25rem;
   max-height: 3.25rem;
 
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 
   overflow-y: auto;
 

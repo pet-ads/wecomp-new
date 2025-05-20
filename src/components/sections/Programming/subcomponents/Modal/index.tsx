@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
+import useToggleCardContent from "../../../../../hooks/toggle/useToggleCardContent";
+
 
 
 import AvailabilityTag from "../../../../commons/toolkit/tags/AvailabilityTag";
@@ -20,6 +22,8 @@ import {
   AbertoContainer,
   ContainerEvent,
   CloseButton,
+  ContainerButtons,
+  EventDescriptionButton,
 } from "./styles";
 
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
@@ -62,7 +66,14 @@ export default function CardProjeto({
   const setingIsOpen = () => setIsOpen(!isOpen);
   const eventIconProps = generatedIconEvent(typeEvent);
 
+  const { labelButton, cardText, handleChangeCardText } = useToggleCardContent(
+        description,
+        bio,
+        "Ver biografia"
+      );
+
   const portalElement = document.getElementById("portal-root");
+  const eventsDisablingActionButton = ["TechnicalVisit", "Opening"];
 
   const modalContent = (
     <AbertoContainer>
@@ -75,16 +86,28 @@ export default function CardProjeto({
           <EventTitle isOpen={isOpen}>{name}</EventTitle>
           <EventDetails>{`${location} | ${date} | ${time}`}</EventDetails>
           <EventSpeakers>{author}</EventSpeakers>
+
         </ContainerEvent>
-        <EventImage src={image} alt={imageDescription} />
+        
       </InformationContainer>
-      <TagContainer>
+
+      <TagContainer isOpen>
         <AvailabilityTag label={status} />
         <DifficultyTag label={classification} />
       </TagContainer>
-      <CardMain content={bio} />
-      <CardMain content={description} />
+      
+      <EventImage src={image} alt={imageDescription} />
+      
+      <CardMain content={cardText} />
+      
+
       <LabeledValue label="Vagas" value={vacancies} />
+      <ContainerButtons>
+        {eventsDisablingActionButton.includes(typeEvent) ? null : (
+        <EventDescriptionButton onClick={handleChangeCardText}>
+          {labelButton}
+        </EventDescriptionButton> )}
+      </ContainerButtons>
     </AbertoContainer>
   );
 
@@ -96,7 +119,7 @@ export default function CardProjeto({
             <EventTitle isOpen={isOpen}>{name}</EventTitle>
             <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
           </IconContainer>
-          <TagContainer>
+          <TagContainer isOpen={isOpen}>
             <AvailabilityTag label={status} />
             <DifficultyTag label={classification} />
           </TagContainer>

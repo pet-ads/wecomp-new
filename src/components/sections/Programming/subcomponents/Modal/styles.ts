@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { mq } from "../../../../../utils/responsive/breakpoints";
 import { AiFillCloseCircle } from "react-icons/ai";
+import ButtonContainer from "../../../../../styles/ButtonContainer";
 
 export const Container = styled.div`
   display: flex;
@@ -99,18 +100,28 @@ export const InformationContainer = styled.div`
 `;
 
 export const EventImage = styled.img`
-  width: 25%;
-
-  height: 25%;
-
+  width: 40%;
+  height: 40%;
   object-fit: cover;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
 
   @media (max-width: 600px) {
-    width: 40%;
-
-    height: 40%;
+    width: 30%;
+    height: 30%;
   }
 `;
+export const ContainerButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  gap: 1rem;
+
+`;
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
+export const EventDescriptionButton = styled(ButtonContainer)<ButtonProps>``;
 
 export const EventTitle = styled.div<{isOpen: boolean}>`
   display: inline-block;
@@ -157,11 +168,12 @@ export const Icon = styled.img`
 
 `;
 
-export const TagContainer = styled.div`
+export const TagContainer = styled.div<{isOpen: boolean}>`
   display: flex;
   align-items: center;
   gap: 1rem;
-
+  margin-top:  ${({ isOpen }) => isOpen 
+  ? '1rem' : '-0.5rem'};
   ${mq({
       width: ["1rem", "2rem", "2rem", "2rem", "2rem", "2rem", "5rem"],
       height: ["1rem", "2rem", "2rem", "2rem", "2rem", "2rem", "5rem"],
