@@ -2,18 +2,21 @@ import { useState, useEffect } from "react";
 
 function useWindowSize(){
     const [size, setSize] = useState({
-        width:window.innerWidth
+        width:window.innerWidth,
+        height: window.innerHeight
     });
     const handleResize = () => {
         setSize({
           width: window.innerWidth,
+          height: window.innerHeight
         });
       };
     
 useEffect(() =>{
 
 setSize({
-    width:window.innerWidth
+    width:window.innerWidth,
+    height: window.innerHeight
 })
 window.addEventListener('resize', handleResize)
 
@@ -26,3 +29,6 @@ return size;
 }
 
 export default useWindowSize;
+
+
+
