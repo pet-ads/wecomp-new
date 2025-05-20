@@ -5,7 +5,7 @@ export const LabeledValueContainer = styled.div`
   display: flex;
 
   gap: 1rem;
-
+  margin-top: 1rem;
   font-size: 1.25rem;
 
   ${mq({  
