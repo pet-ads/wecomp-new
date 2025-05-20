@@ -5,6 +5,7 @@ import Card from "./subcomponents/Card";
 import CardProjeto from "./subcomponents/Modal";
 
 import useIsMobile from "../../../hooks/window/Mobile";
+import useIsMobileHeight from "../../../hooks/window/MobileHeight";
 
 import programmingContent from "../../../assets/content/programming";
 
@@ -13,6 +14,8 @@ import { Container } from "./styles";
 
 export default function Programming() {
   const isMobile = useIsMobile();
+  const isMobileHeight= useIsMobileHeight();
+   const shouldUseMobileLayout = isMobile || isMobileHeight;
 
   return (
     <Section
@@ -24,7 +27,7 @@ export default function Programming() {
         <Slider
           items={programmingContent}
           renderItem={(event) =>
-            isMobile ? (
+            shouldUseMobileLayout ? (
               <CardProjeto key={event.name} {...event} />
             ) : (
               <Card key={event.name} {...event} />
