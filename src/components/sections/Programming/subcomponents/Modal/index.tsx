@@ -18,11 +18,13 @@ import {
   Icon,
   IconContainer,
   AbertoContainer,
+  ContainerEvent,
+  CloseButton,
 } from "./styles";
 
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
 import { ProgrammingProps } from "../../types";
-import { AiFillCloseCircle } from "react-icons/ai";
+
 import LabeledValue from "../../../../commons/toolkit/LabeledValue";
 
 export default function CardProjeto({
@@ -64,20 +66,22 @@ export default function CardProjeto({
 
   const modalContent = (
     <AbertoContainer>
-      <AiFillCloseCircle className="closeButton" onClick={setingIsOpen} />
-      <IconContainer>
-        <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
-      </IconContainer>
+      <CloseButton onClick={setingIsOpen} />
+      {/*<IconContainer>
+        <Icon src={eventIconProps.iconPath} alt={Icone evento ${eventIconProps.label}} />
+      </IconContainer>*/}
       <InformationContainer>
-        <EventTitle>{name}</EventTitle>
-        <EventDetails>{`${location} | ${date} | ${time}`}</EventDetails>
-        <EventSpeakers>{author}</EventSpeakers>
-        <TagContainer>
-          <AvailabilityTag label={status} />
-          <DifficultyTag label={classification} />
-        </TagContainer>
+        <ContainerEvent>
+          <EventTitle isOpen={isOpen}>{name}</EventTitle>
+          <EventDetails>{`${location} | ${date} | ${time}`}</EventDetails>
+          <EventSpeakers>{author}</EventSpeakers>
+        </ContainerEvent>
+        <EventImage src={image} alt={imageDescription} />
       </InformationContainer>
-      <EventImage src={image} alt={imageDescription} />
+      <TagContainer>
+        <AvailabilityTag label={status} />
+        <DifficultyTag label={classification} />
+      </TagContainer>
       <CardMain content={bio} />
       <CardMain content={description} />
       <LabeledValue label="Vagas" value={vacancies} />
@@ -89,9 +93,9 @@ export default function CardProjeto({
       {!isOpen && (
         <Container key={name} onClick={setingIsOpen}>
           <IconContainer>
+            <EventTitle isOpen={isOpen}>{name}</EventTitle>
             <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
           </IconContainer>
-          <EventTitle>{name}</EventTitle>
           <TagContainer>
             <AvailabilityTag label={status} />
             <DifficultyTag label={classification} />
