@@ -39,15 +39,14 @@ export const InformationContainer = styled.div`
 
 export const EventImage = styled.img`
   width: 25%;
-
   height: 25%;
-
   object-fit: cover;
+  align-self: flex-start;
 
   @media (max-width: 768px) {
     width: 30%;
-
     height: 30%;
+    
   }
 `;
 
