@@ -1,43 +1,67 @@
 import styled from "styled-components";
+import { mq } from "../../../../../utils/responsive/breakpoints";
+import { AiFillCloseCircle } from "react-icons/ai";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  min-width: 100%;
-  max-width: 100%;
-
-  min-height: 100%;
-  max-height: 100%;
-
   padding: 1.5rem;
-  gap: 2rem;
+  gap: 1rem;
   border-radius: 1rem;
 
   background-color: var(--white-100);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+
+    
+    ${mq({
+      width: ["13rem", "13rem", "13rem", "16rem", "16rem", "17rem", "18rem"],
+      height: ["8.5rem", "10rem", "10rem", "12rem", "13rem", "11rem", "16rem"],
+    })}
+
+    @media (orientation: landscape) and (max-width: 930px) {
+      ${mq({
+      width: ["8rem", "7rem", "12rem", "16rem", "16rem", "17rem", "18rem"],
+      height: ["8rem", "10rem", "5rem", "10rem", "9rem", "10rem", "12rem"],
+    })}
+  }
+  
+  
 `;
+
+export const ContainerEvent = styled.div``;
 
 export const AbertoContainer = styled.div`
   top: 20vh;
   z-index: 100;
   width: auto;
-  max-height: 25rem;
+  max-height: 100%;
   height: auto;
   left: 300px;
   overflow: auto;
   right: 300px;
   padding: 1rem 1rem 0 1rem;
-  position: fixed;
+  position: relative;
   box-sizing: border-box;
   background-color: var(--white-100);
 
   @media (max-width: 768px) {
-    max-width: 100vw;
-    min-width: 100vw;
-    min-height: 100vh;
-    max-height: 100vh;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+  }
+  @media (max-height: 686px) {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
     top: 0;
     left: 0;
     bottom: 0;
@@ -46,10 +70,20 @@ export const AbertoContainer = styled.div`
   }
 `;
 
+export const CloseButton = styled(AiFillCloseCircle)`
+  
+  margin-left: auto;
+  width: 2rem;
+  height: 2rem;
+  
+  
+`;
+
 export const InformationContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: start;
 
   width: 60%;
 
@@ -78,17 +112,24 @@ export const EventImage = styled.img`
   }
 `;
 
-export const EventTitle = styled.div`
-  font-size: 1.25rem;
+export const EventTitle = styled.div<{isOpen: boolean}>`
+  display: inline-block;
+  text-align: start;
+  
   font-weight: bold;
 
   max-width: 100%;
 
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 
   cursor: pointer;
+
+  font-size: ${({ isOpen }) => isOpen 
+  ? '1.5rem' : mq({ fontSize: ['0.8rem', '0.8rem', '0.8rem', '1rem', '1rem', '1rem', '1.2rem'] }) };
+  @media (max-width: 768px) {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  };
 `;
 
 export const EventDetails = styled.div`
@@ -105,18 +146,25 @@ export const EventSpeakers = styled.div`
 
 export const IconContainer = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
 `;
 
-export const Icon = styled.img``;
+export const Icon = styled.img`
+
+`;
 
 export const TagContainer = styled.div`
   display: flex;
   align-items: center;
-
   gap: 1rem;
 
-  @media (max-width: 600px) {
-    flex-direction: column;
-  }
+  ${mq({
+      width: ["1rem", "2rem", "2rem", "2rem", "2rem", "2rem", "5rem"],
+      height: ["1rem", "2rem", "2rem", "2rem", "2rem", "2rem", "5rem"],
+    })}
+
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mq } from "../../../../../utils/responsive/breakpoints";
 
 export const Container = styled.div`
   display: flex;
@@ -17,6 +18,8 @@ export const Container = styled.div`
   background-color: var(--white-100);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
+   
+
   @media (max-width: 768px) {
     min-width: 65vw;
     max-width: 65vw;
@@ -25,12 +28,12 @@ export const Container = styled.div`
     max-height: 65vh;
   }
 
-  @media (max-width: 375px) {
-    min-width: 65vw;
-    max-width: 65vw;
+  @media (max-width: 505px) {
+    min-width: 35vw;
+    max-width: 35vw;
 
-    min-height: 70vh;
-    max-height: 70vh;
+    min-height: 40vh;
+    max-height: 40vh;
   }
 `;
 
@@ -53,4 +56,8 @@ export const EventTitle = styled.div`
   font-weight: bold;
 
   text-align: justify;
+
+   ${mq({
+          fontSize: ["0.8rem", "0.8rem", "0.8rem", "0.8rem", "1rem", "1rem", "1.2rem"],
+        })}
 `;

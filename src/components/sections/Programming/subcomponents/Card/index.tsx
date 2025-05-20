@@ -35,12 +35,12 @@ export default function Card({
   return (
     <Container key={name}>
       <IconContainer>
+        <EventTitle>{name}</EventTitle>
         <Icon
           src={eventIconProps.iconPath}
           alt={`Icone evento ${eventIconProps.label}`}
         />
       </IconContainer>
-      <EventTitle>{name}</EventTitle>
       <CardHeader
         author={author}
         eventLocationAndDate={`${location} | ${date} | ${time}`}

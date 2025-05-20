@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
+
+
 
 import AvailabilityTag from "../../../../commons/toolkit/tags/AvailabilityTag";
 import DifficultyTag from "../../../../commons/toolkit/tags/DifficultyTag";
@@ -15,12 +18,12 @@ import {
   Icon,
   IconContainer,
   AbertoContainer,
+  ContainerEvent,
+  CloseButton,
 } from "./styles";
+
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
-
 import { ProgrammingProps } from "../../types";
-
-import { AiFillCloseCircle } from "react-icons/ai";
 
 import LabeledValue from "../../../../commons/toolkit/LabeledValue";
 
@@ -40,62 +43,67 @@ export default function CardProjeto({
   location,
 }: ProgrammingProps) {
   const [isOpen, setIsOpen] = useState(false);
-  function setingIsOpen() {
-    setIsOpen(!isOpen);
-  }
+
+ useEffect(() => {
+    if (isOpen) {
+      
+      document.body.style.overflow = "hidden";
+    } else {
+      
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
+
+  const setingIsOpen = () => setIsOpen(!isOpen);
   const eventIconProps = generatedIconEvent(typeEvent);
+
+  const portalElement = document.getElementById("portal-root");
+
+  const modalContent = (
+    <AbertoContainer>
+      <CloseButton onClick={setingIsOpen} />
+      {/*<IconContainer>
+        <Icon src={eventIconProps.iconPath} alt={Icone evento ${eventIconProps.label}} />
+      </IconContainer>*/}
+      <InformationContainer>
+        <ContainerEvent>
+          <EventTitle isOpen={isOpen}>{name}</EventTitle>
+          <EventDetails>{`${location} | ${date} | ${time}`}</EventDetails>
+          <EventSpeakers>{author}</EventSpeakers>
+        </ContainerEvent>
+        <EventImage src={image} alt={imageDescription} />
+      </InformationContainer>
+      <TagContainer>
+        <AvailabilityTag label={status} />
+        <DifficultyTag label={classification} />
+      </TagContainer>
+      <CardMain content={bio} />
+      <CardMain content={description} />
+      <LabeledValue label="Vagas" value={vacancies} />
+    </AbertoContainer>
+  );
+
   return (
     <>
       {!isOpen && (
         <Container key={name} onClick={setingIsOpen}>
           <IconContainer>
-            <Icon
-              src={eventIconProps.iconPath}
-              alt={`Icone evento ${eventIconProps.label}`}
-            />
+            <EventTitle isOpen={isOpen}>{name}</EventTitle>
+            <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
           </IconContainer>
-
-          <EventTitle>{name}</EventTitle>
-
           <TagContainer>
             <AvailabilityTag label={status} />
             <DifficultyTag label={classification} />
           </TagContainer>
-
           <LabeledValue label="Vagas" value={vacancies} />
         </Container>
       )}
-      {isOpen && (
-        <>
-          <AbertoContainer>
-            <AiFillCloseCircle
-              className="closeButton"
-              onClick={() => setIsOpen(!isOpen)}
-            />
-            <IconContainer>
-              <Icon
-                src={eventIconProps.iconPath}
-                alt={`Icone evento ${eventIconProps.label}`}
-              />
-            </IconContainer>
-            <InformationContainer>
-              <EventTitle>{name}</EventTitle>
-              <EventDetails>{`${location} | ${date} | ${time}`}</EventDetails>
-              <EventSpeakers>{author}</EventSpeakers>
-              <TagContainer>
-                <AvailabilityTag label={status} />
-                <DifficultyTag label={classification} />
-              </TagContainer>
-            </InformationContainer>
-            <EventImage src={image} alt={imageDescription} />
-
-            <CardMain content={bio} />
-            <CardMain content={description} />
-
-            <LabeledValue label="Vagas" value={vacancies} />
-          </AbertoContainer>
-        </>
-      )}
+      {isOpen && portalElement && ReactDOM.createPortal(modalContent, portalElement)}
     </>
   );
 }
