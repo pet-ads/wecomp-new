@@ -1,24 +1,36 @@
 import { Section } from "../../commons/structure/Section";
-import { HighlightsContent } from "./styles";
+import { Container } from "./styles";
 
 // import comingSoonImg from "../../../assets/images/emBreve.png";
-import SoonCard from "../../commons/toolkit/SoonCard";
+//import SoonCard from "../../commons/toolkit/SoonCard";
+import Slider from "../../commons/toolkit/Slider";
+import highlightContent from "../../../assets/content/highlights";
+import useIsMobile from "../../../hooks/window/Mobile";
+import CardProjeto from "./subcomponents/Modal";
+import Card from "./subcomponents/Card";
 
 export default function Highlights() {
+  const isMobile = useIsMobile();
+
   return (
     <Section
       title="Destaques"
       currentSectionId="Highlights"
       nextSectionId="Locations"
     >
-      <HighlightsContent>
-        {/* <img
-          src={comingSoonImg}
-          alt="Em breve"
-          style={{ width: "100%", maxWidth: "20rem" }}
-        /> */}
-        <SoonCard />
-      </HighlightsContent>
+       <Container>
+        <Slider
+          items={highlightContent}
+          renderItem={(event) =>
+            isMobile ? (
+              <CardProjeto key={event.title} {...event} />
+            ) : ( 
+              <Card key={event.title} {...event} />
+            )
+          }
+        />
+        
+      </Container>
     </Section>
   );
 }
