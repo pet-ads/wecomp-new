@@ -4,12 +4,10 @@ import { mq } from "../../../../../utils/responsive/breakpoints";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-
+  justify-content: flex-start; 
   gap: 0.5rem;
 
-  min-width: 35rem;
-  max-width: 35rem;
+
 
   padding: 1.5rem;
 
@@ -18,23 +16,21 @@ export const Container = styled.div`
   background-color: var(--white-100);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
-   
+  
+  overflow: hidden; 
 
-  @media (max-width: 768px) {
-    min-width: 65vw;
-    max-width: 65vw;
+  
 
-    min-height: 65vh;
-    max-height: 65vh;
-  }
+  ${mq({
+      width: [ "34rem"],
+      height: [ "22rem"],
+    })}
 
-  @media (max-width: 505px) {
-    min-width: 35vw;
-    max-width: 35vw;
-
-    min-height: 40vh;
-    max-height: 40vh;
-  }
+    @media (orientation: landscape) and (max-width: 930px) {
+      ${mq({
+      width: [ "34rem"],
+      height: [ "22rem"],
+    })}}
 `;
 
 export const IconContainer = styled.div`
