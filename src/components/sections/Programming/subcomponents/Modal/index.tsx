@@ -12,7 +12,10 @@ import CardMain from "../CardMain";
 import {
   Container,
   InformationContainer,
+  ContainerVacancies,
   EventImage,
+  ContainerMainModal,
+  ContainerMain,
   EventDetails,
   EventSpeakers,
   EventTitle,
@@ -21,6 +24,7 @@ import {
   IconContainer,
   AbertoContainer,
   ContainerEvent,
+  ContainerEventModal,
   CloseButton,
   ContainerButtons,
   EventDescriptionButton,
@@ -82,12 +86,12 @@ export default function CardProjeto({
         <Icon src={eventIconProps.iconPath} alt={Icone evento ${eventIconProps.label}} />
       </IconContainer>*/}
       <InformationContainer>
-        <ContainerEvent>
+        <ContainerEventModal>
           <EventTitle isOpen={isOpen}>{name}</EventTitle>
-          <EventDetails>{`${location} | ${date} | ${time}`}</EventDetails>
+          <EventDetails isOpen={isOpen}>{`${location} | ${date} | ${time}`}</EventDetails>
           <EventSpeakers>{author}</EventSpeakers>
 
-        </ContainerEvent>
+        </ContainerEventModal>
         
       </InformationContainer>
 
@@ -96,18 +100,22 @@ export default function CardProjeto({
         <DifficultyTag label={classification} />
       </TagContainer>
       
-      <EventImage src={image} alt={imageDescription} />
+      <ContainerMainModal>
+        <EventImage src={image} alt={imageDescription} />
+        <ContainerMain>
+          <CardMain content={cardText} />
+        </ContainerMain>
+      </ContainerMainModal>
       
-      <CardMain content={cardText} />
-      
-
-      <LabeledValue label="Vagas" value={vacancies} />
-      <ContainerButtons>
-        {eventsDisablingActionButton.includes(typeEvent) ? null : (
-        <EventDescriptionButton onClick={handleChangeCardText}>
-          {labelButton}
-        </EventDescriptionButton> )}
-      </ContainerButtons>
+      <ContainerVacancies>
+        <LabeledValue label="Vagas" value={vacancies} />
+        <ContainerButtons>
+          {eventsDisablingActionButton.includes(typeEvent) ? null : (
+          <EventDescriptionButton onClick={handleChangeCardText}>
+            {labelButton}
+          </EventDescriptionButton> )}
+        </ContainerButtons>
+      </ContainerVacancies>
     </AbertoContainer>
   );
 
@@ -116,7 +124,12 @@ export default function CardProjeto({
       {!isOpen && (
         <Container key={name} onClick={setingIsOpen}>
           <IconContainer>
-            <EventTitle isOpen={isOpen}>{name}</EventTitle>
+            <ContainerEvent>
+              <EventTitle isOpen={isOpen}>{name}</EventTitle>
+              <EventDetails isOpen={isOpen}>{`${location} - ${date} | ${time}`}</EventDetails>
+
+            </ContainerEvent>
+            
             <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
           </IconContainer>
           <TagContainer isOpen={isOpen}>

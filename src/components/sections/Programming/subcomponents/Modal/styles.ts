@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { mq } from "../../../../../utils/responsive/breakpoints";
-import { AiFillCloseCircle } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import ButtonContainer from "../../../../../styles/ButtonContainer";
 
 export const Container = styled.div`
@@ -17,21 +17,24 @@ export const Container = styled.div`
 
     
     ${mq({
-      width: ["13rem", "13rem", "13rem", "16rem", "16rem", "17rem", "18rem"],
-      height: ["8.5rem", "10rem", "10rem", "12rem", "13rem", "11rem", "16rem"],
+      width: ["130rem", "13rem", "13rem", "16rem", "16rem", "17rem", "18rem"],
+      height: ["8.5rem", "8rem", "10rem", "12rem", "13rem", "11rem", "16rem"],
     })}
 
-    @media (orientation: landscape) and (max-width: 930px) {
+    @media (orientation: landscape)  {
       ${mq({
-      width: ["8rem", "7rem", "12rem", "16rem", "16rem", "17rem", "18rem"],
-      height: ["8rem", "10rem", "5rem", "10rem", "9rem", "10rem", "12rem"],
+      width: ["10rem", "12rem", "14rem", "16rem", "16rem", "18rem", "20rem"],
+      height: ["8rem", "8.5rem", "9rem", "9.2rem", "8.5rem", "9.5rem", "10rem"],
     })}
   }
   
   
 `;
 
-export const ContainerEvent = styled.div``;
+export const ContainerEvent = styled.div`
+`;
+
+export const ContainerEventModal = styled.div``;
 
 export const AbertoContainer = styled.div`
   top: 20vh;
@@ -71,14 +74,34 @@ export const AbertoContainer = styled.div`
   }
 `;
 
-export const CloseButton = styled(AiFillCloseCircle)`
+export const CloseButton = styled(AiOutlineClose)`
   
   margin-left: auto;
-  width: 2rem;
-  height: 2rem;
+  width: 1rem;
+  height: 1rem;
   
   
 `;
+
+export const ContainerMainModal = styled.div`
+  display: flex;
+  flex-direction:  row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 60%;
+  margin-top: 10%;
+  `;
+
+export const ContainerMain = styled.div`
+  width: 100%;
+`;
+
 
 export const InformationContainer = styled.div`
   display: flex;
@@ -87,7 +110,7 @@ export const InformationContainer = styled.div`
   align-items: start;
 
   width: 60%;
-
+  
   gap: 0.5rem;
 
   text-align: justify;
@@ -100,23 +123,49 @@ export const InformationContainer = styled.div`
 `;
 
 export const EventImage = styled.img`
-  width: 40%;
-  height: 40%;
+  width: 30%;
+  
   object-fit: cover;
   display: block;
-  margin: auto;
+  
   border-radius: 10px;
-
-  @media (max-width: 600px) {
-    width: 30%;
-    height: 30%;
-  }
+  
 `;
+
+export const ContainerVacancies = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 1rem;
+  
+
+  @media (max-height: 701px) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  
+`;
+
 export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 1rem;
   gap: 1rem;
+  margin-right: 2rem;
 
 `;
 
@@ -135,7 +184,7 @@ export const EventTitle = styled.div<{isOpen: boolean}>`
   cursor: pointer;
 
   font-size: ${({ isOpen }) => isOpen 
-  ? '1.5rem' : mq({ fontSize: ['0.8rem', '0.8rem', '0.8rem', '1rem', '1rem', '1rem', '1.2rem'] }) };
+  ? '3rem' : mq({ fontSize: ['0.5rem', '0.8rem', '0.8rem', '1rem', '1rem', '1rem', '1.2rem'] }) };
   @media (max-width: 768px) {
     white-space: normal;
     overflow: visible;
@@ -143,8 +192,9 @@ export const EventTitle = styled.div<{isOpen: boolean}>`
   };
 `;
 
-export const EventDetails = styled.div`
-  font-size: 1rem;
+export const EventDetails = styled.div<{isOpen: boolean}>`
+  font-size: ${({ isOpen }) => isOpen 
+  ?  mq({ fontSize: ['0.8rem', '0.8rem', '0.8rem', '1rem', '1rem', '1rem', '1.2rem'] }) : mq({ fontSize: ['0.5rem', '0.5rem', '0.6rem', '0.6rem', '0.6rem', '0.6rem', '0.8rem'] }) };
   font-weight: 600;
 `;
 
@@ -157,14 +207,20 @@ export const EventSpeakers = styled.div`
 
 export const IconContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start; 
   justify-content: space-between;
-
-  gap: 1rem;
+  gap: 0.1rem;
+  margin-top: -1rem;
 
 `;
 
 export const Icon = styled.img`
+
+  ${mq({
+      width: ["1rem", "2rem", "2rem", "2rem", "2rem", "2rem", "2rem"],
+    })}
+  object-fit: contain;
+  flex-shrink: 0;
 
 `;
 
