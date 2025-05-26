@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { mq } from "../../../../../utils/responsive/breakpoints";
-import { AiFillCloseCircle } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import ButtonContainer from "../../../../../styles/ButtonContainer";
 
 export const Container = styled.div<{isOpen: boolean}>`
@@ -77,15 +77,6 @@ export const AbertoContainer = styled.div`
   }
 `;
 
-export const CloseButton = styled(AiFillCloseCircle)`
-  
-  margin-left: auto;
-  width: 2rem;
-  height: 2rem;
-  
-  
-`;
-
 export const InformationContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -121,7 +112,6 @@ export const EventImage = styled.img`
 export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 1rem;
   gap: 1rem;
 
 `;
@@ -141,7 +131,11 @@ export const EventTitle = styled.div<{isOpen: boolean}>`
 
   cursor: pointer;
 
-  ${mq({ fontSize: ['1rem', '1rem', '1rem', '1rem', '1rem', '1.1rem', '1.2rem'] }) }
+  ${({ isOpen }) => isOpen ? 'margin-bottom: 10px;' : ''}
+
+  font-size: ${({ isOpen }) => isOpen 
+  ? '2.3rem;  @media (max-width: 600px) {font-size: 1.6rem;}; @media (max-width: 480px) {font-size: 1.2rem;};' : mq({ fontSize: ['1rem', '1rem', '1rem', '1rem', '1rem', '1.1rem', '1.2rem'] }) };
+
   @media (max-width: 768px) {
     white-space: normal;
     overflow: visible;
@@ -154,7 +148,10 @@ export const EventDetails = styled.div`
   font-weight: 600;
 `;
 
-export const EventSpeakers = styled.div`
+export const EventSpeakers = styled.div<{isOpen: boolean}>`
+
+${({ isOpen }) => isOpen ? 'margin-bottom: 10px;' : ''}
+
   font-size: 1rem;
   font-weight: 600;
 
@@ -210,4 +207,53 @@ export const BoxFooter = styled.div`
   }
   
 
+`;
+
+export const CloseButton = styled(AiOutlineClose)`
+  margin-left: auto;
+  width: 1rem;
+  height: 1rem;
+`;
+
+export const ContainerEventModal = styled.div``;
+
+export const ContainerVacancies = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 1rem;
+  
+
+  @media (max-height: 701px) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    min-width: 100%;
+    max-width: 100%;
+  }
+`;
+
+export const ContainerMainModal = styled.div`
+  display: flex;
+  flex-direction:  row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+  `;
+
+export const ContainerMain = styled.div`
+  width: 100%;
 `;

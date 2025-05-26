@@ -14,12 +14,18 @@ import {
   AbertoContainer,
   BoxTitle,
   BoxHead,
-  BoxFooter
+  BoxFooter,
+  CloseButton,
+  ContainerEventModal,
+  ContainerVacancies,
+  ContainerButtons,
+  EventDescriptionButton,
+  ContainerMainModal,
+  ContainerMain
 } from "./styles";
 
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
 import { HighlightsProps } from "../../types";
-import { AiFillCloseCircle } from "react-icons/ai";
 import LabeledValue from "../../../../commons/toolkit/LabeledValue";
 import ExpirienceTag from "../../../../commons/toolkit/tags/ExperienceTag";
 
@@ -57,20 +63,39 @@ export default function CardProjeto({
 
   const modalContent = (
     <AbertoContainer>
-      <AiFillCloseCircle className="closeButton" onClick={setingIsOpen} />
-      <IconContainer>
+      <CloseButton onClick={setingIsOpen} />
+      {/*<IconContainer>
         <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
-      </IconContainer>
+      </IconContainer>*/}
       <InformationContainer>
-        <EventTitle isOpen={isOpen}>{title}</EventTitle>
-        <EventSpeakers>{companyName}</EventSpeakers>
-        <TagContainer isOpen>
-          <ExpirienceTag label={typeEvent} />
-        </TagContainer>
+        <ContainerEventModal>
+          <EventTitle isOpen={isOpen}>{title}</EventTitle>
+          <EventSpeakers isOpen={isOpen}>{companyName}</EventSpeakers>
+        </ContainerEventModal>
       </InformationContainer>
-      <EventImage src={image} />
-      <CardMain content={description} />
-      <LabeledValue label="Vagas" value={vacancies} />
+
+      <TagContainer isOpen>
+        <ExpirienceTag label={typeEvent} />
+      </TagContainer>
+
+      {/*<EventImage src={image} />
+      <CardMain content={description} />*/}
+
+      <ContainerMainModal>
+        <EventImage src={image} alt={'logo ' + companyName} />
+        <ContainerMain>
+          <CardMain content={description} />
+        </ContainerMain>
+      </ContainerMainModal>
+
+      <ContainerVacancies>
+        <LabeledValue label="Vagas" value={vacancies} />
+        <ContainerButtons>
+          <EventDescriptionButton>
+            Ver vaga
+          </EventDescriptionButton>
+        </ContainerButtons>
+      </ContainerVacancies>
     </AbertoContainer>
   );
 
@@ -83,7 +108,7 @@ export default function CardProjeto({
               <IconContainer>
                 <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
               </IconContainer>
-              <EventSpeakers>{companyName}</EventSpeakers>
+              <EventSpeakers  isOpen={isOpen}>{companyName}</EventSpeakers>
             </BoxTitle>
 
             <EventTitle isOpen={isOpen}>{title}</EventTitle>
