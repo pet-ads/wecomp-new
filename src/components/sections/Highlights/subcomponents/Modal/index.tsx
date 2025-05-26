@@ -12,6 +12,9 @@ import {
   Icon,
   IconContainer,
   AbertoContainer,
+  BoxTitle,
+  BoxHead,
+  BoxFooter
 } from "./styles";
 
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
@@ -59,9 +62,9 @@ export default function CardProjeto({
         <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
       </IconContainer>
       <InformationContainer>
-        <EventTitle>{title}</EventTitle>
+        <EventTitle isOpen={isOpen}>{title}</EventTitle>
         <EventSpeakers>{companyName}</EventSpeakers>
-        <TagContainer>
+        <TagContainer isOpen>
           <ExpirienceTag label={typeEvent} />
         </TagContainer>
       </InformationContainer>
@@ -74,15 +77,23 @@ export default function CardProjeto({
   return (
     <>
       {!isOpen && (
-        <Container key={title} onClick={setingIsOpen}>
-          <IconContainer>
-            <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
-          </IconContainer>
-          <EventTitle>{title}</EventTitle>
-          <TagContainer>
-            <ExpirienceTag label={typeEvent} />
-          </TagContainer>
-          <LabeledValue label="Vagas" value={vacancies} />
+        <Container isOpen key={title} onClick={setingIsOpen}>
+          <BoxHead>
+            <BoxTitle>
+              <IconContainer>
+                <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
+              </IconContainer>
+              <EventSpeakers>{companyName}</EventSpeakers>
+            </BoxTitle>
+
+            <EventTitle isOpen={isOpen}>{title}</EventTitle>
+          </BoxHead>
+          <BoxFooter>
+            <LabeledValue label="Vagas" value={vacancies} />
+            <TagContainer isOpen>
+              <ExpirienceTag label={typeEvent} />
+            </TagContainer>
+          </BoxFooter>
         </Container>
       )}
       {isOpen && portalElement && ReactDOM.createPortal(modalContent, portalElement)}

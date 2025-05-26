@@ -7,6 +7,7 @@ export const Container = styled.div`
 
   gap: 0.5rem;
 
+  height: 100%;
   min-width: 35rem;
   max-width: 35rem;
 
