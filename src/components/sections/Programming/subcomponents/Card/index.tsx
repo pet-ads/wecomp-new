@@ -35,11 +35,11 @@ export default function Card({
   return (
     <Container key={name}>
       <IconContainer>
-        <EventTitle>{name}</EventTitle>
         <Icon
           src={eventIconProps.iconPath}
           alt={`Icone evento ${eventIconProps.label}`}
-        />
+          />
+        <EventTitle>{name}</EventTitle>
       </IconContainer>
       <CardHeader
         author={author}
