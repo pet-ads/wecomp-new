@@ -7,8 +7,6 @@ export const Container = styled.div`
   justify-content: flex-start; 
   gap: 0.5rem;
 
-
-
   padding: 1.5rem;
 
   border-radius: 1rem;
@@ -18,8 +16,19 @@ export const Container = styled.div`
 
   
   overflow: hidden; 
+  max-width: 34rem;
+  min-width: 34rem;
+  max-height: 22rem;
+  min-height: 22rem;
 
-  
+
+
+  @media (max-height: 750px) {
+    max-width: 34rem;
+    min-width: 34rem;
+    max-height: 19rem;
+    min-height: 19rem;
+  }
 
   ${mq({
       width: [ "34rem"],
@@ -36,9 +45,9 @@ export const Container = styled.div`
 export const IconContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start; 
+  gap: 0.5rem; 
 
-  gap: 1rem;
 `;
 
 export const Icon = styled.img``;
