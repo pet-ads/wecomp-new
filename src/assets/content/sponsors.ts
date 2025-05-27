@@ -1,6 +1,7 @@
 import oneSix from "../images/organizationLogo/OneSixLogo.svg";
 import onovolab from "../images/organizationLogo/onovolab.svg";
 import kakauTech from "../images/organizationLogo/KakauTech.svg";
+import csdbr from "../images/organizationLogo/CsdLogo.svg";
 
 interface SponsorProps {
   name: string;
@@ -27,6 +28,12 @@ export const sponsorsContent: SponsorProps[] = [
     logoPath: kakauTech,
     link: "https://www.kakautech.com",
     width: "9rem",
+  },
+  {
+    name: "CSD BR",
+    logoPath: csdbr,
+    link: "https://csdbr.com/",
+    width: "8rem",
   },
 ];
 
