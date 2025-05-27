@@ -15,7 +15,7 @@ import { Container } from "./styles";
 export default function Programming() {
   const isMobile = useIsMobile();
   const isMobileHeight= useIsMobileHeight();
-   const shouldUseMobileLayout = isMobile || isMobileHeight;
+  const shouldUseMobileLayout = isMobile || isMobileHeight;
 
   return (
     <Section

@@ -23,17 +23,13 @@ export const Container = styled.div`
 
 
 
-  @media (max-height: 750px) {
-    max-width: 34rem;
-    min-width: 34rem;
-    max-height: 19rem;
-    min-height: 19rem;
+  @media (max-height: 684px) {
+    max-width: 26rem;
+    min-width: 26rem;
+    max-height: 20rem;
+    min-height: 20rem;
   }
 
-  ${mq({
-      width: [ "34rem"],
-      height: [ "22rem"],
-    })}
 
     @media (orientation: landscape) and (max-width: 930px) {
       ${mq({
