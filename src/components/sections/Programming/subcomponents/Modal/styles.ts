@@ -17,8 +17,8 @@ export const Container = styled.div`
 
     
     ${mq({
-      width: ["130rem", "13rem", "13rem", "16rem", "16rem", "17rem", "18rem"],
-      height: ["8.5rem", "8rem", "10rem", "12rem", "13rem", "11rem", "16rem"],
+      width: ["13rem", "13rem", "13rem", "16rem", "16rem", "17rem", "18rem"],
+      height: ["9rem", "8rem", "10rem", "12rem", "13rem", "11rem", "16rem"],
     })}
 
     @media (orientation: landscape)  {
@@ -95,7 +95,15 @@ export const ContainerMainModal = styled.div`
   overflow: hidden;
   width: 100%;
   height: 60%;
-  margin-top: 10%;
+  @media (max-height: 701px) {
+    min-height: 50%;
+    max-height: 50%;
+  }
+  @media (max-height: 512px) {
+    min-height: 30%;
+    max-height: 30%;
+    margin-top: 5%;
+  }
   `;
 
 export const ContainerMain = styled.div`
@@ -194,7 +202,7 @@ export const EventTitle = styled.div<{isOpen: boolean}>`
 
 export const EventDetails = styled.div<{isOpen: boolean}>`
   font-size: ${({ isOpen }) => isOpen 
-  ?  mq({ fontSize: ['0.8rem', '0.8rem', '0.8rem', '1rem', '1rem', '1rem', '1.2rem'] }) : mq({ fontSize: ['0.5rem', '0.5rem', '0.6rem', '0.6rem', '0.6rem', '0.6rem', '0.8rem'] }) };
+  ?  mq({ fontSize: ['0.5rem', '0.8rem', '0.8rem', '1rem', '1rem', '1rem', '1.2rem'] }) : mq({ fontSize: ['0.5rem', '0.5rem', '0.6rem', '0.6rem', '0.6rem', '0.6rem', '0.8rem'] }) };
   font-weight: 600;
 `;
 
