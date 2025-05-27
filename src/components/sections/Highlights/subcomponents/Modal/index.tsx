@@ -21,7 +21,8 @@ import {
   ContainerButtons,
   EventDescriptionButton,
   ContainerMainModal,
-  ContainerMain
+  ContainerMain,
+  ContainerLogoTag
 } from "./styles";
 
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
@@ -70,19 +71,23 @@ export default function CardProjeto({
       <InformationContainer>
         <ContainerEventModal>
           <EventTitle isOpen={isOpen}>{title}</EventTitle>
-          <EventSpeakers isOpen={isOpen}>{companyName}</EventSpeakers>
         </ContainerEventModal>
       </InformationContainer>
 
-      <TagContainer isOpen>
-        <ExpirienceTag label={typeEvent} />
-      </TagContainer>
+      <ContainerLogoTag>
+        <div>
+          <EventSpeakers isOpen={isOpen}>{companyName}</EventSpeakers>
+          <TagContainer isOpen>
+            <ExpirienceTag label={typeEvent} />
+          </TagContainer>
+        </div>
+        <EventImage src={image} alt={'logo ' + companyName} />
+      </ContainerLogoTag>
 
       {/*<EventImage src={image} />
       <CardMain content={description} />*/}
 
       <ContainerMainModal>
-        <EventImage src={image} alt={'logo ' + companyName} />
         <ContainerMain>
           <CardMain content={description} />
         </ContainerMain>

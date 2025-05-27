@@ -48,7 +48,7 @@ export const AbertoContainer = styled.div`
   left: 300px;
   overflow: auto;
   right: 300px;
-  padding: 1rem 1rem 0 1rem;
+  padding: 60px 10%;
   position: relative;
   box-sizing: border-box;
   background-color: var(--white-100);
@@ -97,17 +97,14 @@ export const InformationContainer = styled.div`
 `;
 
 export const EventImage = styled.img`
-  width: 40%;
-  height: 40%;
+  width: 30%;
+  height: fit-content;
+  max-width: 150px;
+
   object-fit: cover;
   display: block;
-  margin: auto;
   border-radius: 10px;
 
-  @media (max-width: 600px) {
-    width: 30%;
-    height: 30%;
-  }
 `;
 export const ContainerButtons = styled.div`
   display: flex;
@@ -228,19 +225,7 @@ export const ContainerVacancies = styled.div`
   justify-content: space-between;
 
   width: 100%;
-  padding: 1rem;
-  
-
-  @media (max-height: 701px) {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    min-width: 100%;
-    max-width: 100%;
-  }
+  padding: 60px 10%;
 `;
 
 export const ContainerMainModal = styled.div`
@@ -249,11 +234,18 @@ export const ContainerMainModal = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   `;
 
 export const ContainerMain = styled.div`
   width: 100%;
+`;
+
+export const ContainerLogoTag = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 `;

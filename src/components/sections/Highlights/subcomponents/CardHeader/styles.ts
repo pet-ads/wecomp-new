@@ -40,7 +40,7 @@ export const InformationContainer = styled.div`
 export const EventImage = styled.img`
   width: 25%;
 
-  height: 25%;
+  height: fit-content;
 
   object-fit: cover;
 
