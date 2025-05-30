@@ -55,3 +55,28 @@ export const EventTitle = styled.div`
 
   text-align: justify;
 `;
+
+export const EventImage = styled.img`
+  width: 25%;
+
+  height: fit-content;
+
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    width: 30%;
+
+    height: 30%;
+  }
+`;
+
+export const ContainerHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+export const ContainerIconTag = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+`

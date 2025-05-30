@@ -2,27 +2,18 @@ import { CardHeaderProps } from "./types";
 
 import {
   Container,
-  EventImage,
   InformationContainer,
-  EventSpeakers,
-  TagContainer,
+  EventSpeakers
 } from "./styles";
-import ExpirienceTag from "../../../../commons/toolkit/tags/ExperienceTag";
 
 export default function CardHeader({
-  companyName,
-  status,
-  image
+  companyName
 }: CardHeaderProps) {
   return (
     <Container>
       <InformationContainer>
         <EventSpeakers>{companyName}</EventSpeakers>
-        <TagContainer>
-          <ExpirienceTag label={status} />
-        </TagContainer>
       </InformationContainer>
-      <EventImage src={image} />
     </Container>
   );
 }

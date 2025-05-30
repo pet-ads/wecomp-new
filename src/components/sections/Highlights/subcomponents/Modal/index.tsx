@@ -68,11 +68,6 @@ export default function CardProjeto({
       {/*<IconContainer>
         <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
       </IconContainer>*/}
-      <InformationContainer>
-        <ContainerEventModal>
-          <EventTitle isOpen={isOpen}>{title}</EventTitle>
-        </ContainerEventModal>
-      </InformationContainer>
 
       <ContainerLogoTag>
         <div>
@@ -84,6 +79,12 @@ export default function CardProjeto({
         <EventImage src={image} alt={'logo ' + companyName} />
       </ContainerLogoTag>
 
+      
+      <InformationContainer>
+        <ContainerEventModal>
+          <EventTitle isOpen={isOpen}>{title}</EventTitle>
+        </ContainerEventModal>
+      </InformationContainer>
       {/*<EventImage src={image} />
       <CardMain content={description} />*/}
 
@@ -97,7 +98,7 @@ export default function CardProjeto({
         <LabeledValue label="Vagas" value={vacancies} />
         <ContainerButtons>
           <EventDescriptionButton>
-            Ver vaga
+            Inscrever-se
           </EventDescriptionButton>
         </ContainerButtons>
       </ContainerVacancies>
