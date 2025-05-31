@@ -16,19 +16,11 @@ export const Container = styled.div`
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
     
-    ${mq({
-      width: ["13rem", "13rem", "13rem", "16rem", "16rem", "17rem", "18rem"],
-      height: ["9rem", "8rem", "10rem", "12rem", "13rem", "11rem", "16rem"],
-    })}
+  ${mq({
+    width: ["10rem", "12rem", "14rem", "16rem", "16rem", "18rem", "20rem"],
+    height: ["8rem", "8.5rem", "9rem", "9.2rem", "8.5rem", "9.5rem", "10rem"],
+  })}
 
-    @media (orientation: landscape)  {
-      ${mq({
-      width: ["10rem", "12rem", "14rem", "16rem", "16rem", "18rem", "20rem"],
-      height: ["8rem", "8.5rem", "9rem", "9.2rem", "8.5rem", "9.5rem", "10rem"],
-    })}
-  }
-  
-  
 `;
 
 export const ContainerEvent = styled.div`
