@@ -24,18 +24,11 @@ export const Container = styled.div`
 
 
   @media (max-height: 684px) {
-    max-width: 26rem;
-    min-width: 26rem;
+    max-width: 29rem;
+    min-width: 29rem;
     max-height: 20rem;
     min-height: 20rem;
   }
-
-
-    @media (orientation: landscape) and (max-width: 930px) {
-      ${mq({
-      width: [ "34rem"],
-      height: [ "22rem"],
-    })}}
 `;
 
 export const IconContainer = styled.div`
