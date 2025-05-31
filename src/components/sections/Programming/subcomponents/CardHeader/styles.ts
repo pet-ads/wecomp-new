@@ -6,7 +6,6 @@ export const Container = styled.div`
   justify-content: space-between;
 
   width: 100%;
-
   height: auto;
 
   @media (max-width: 768px) {
@@ -24,7 +23,7 @@ export const InformationContainer = styled.div`
 
   height: 100%;
 
-  gap: 0.25rem;
+
 
   text-align: justify;
 
@@ -69,6 +68,6 @@ export const EventSpeakers = styled.div`
 export const TagContainer = styled.div`
   display: flex;
   align-items: center;
-
-  gap: 1rem;
+  margin: 1rem 0;
+  gap: 1.5rem;
 `;
