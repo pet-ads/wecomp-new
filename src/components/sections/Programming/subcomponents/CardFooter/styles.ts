@@ -20,9 +20,7 @@ export const Container = styled.div`
 export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: row;
-
   gap: 1rem;
-
 `;
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
