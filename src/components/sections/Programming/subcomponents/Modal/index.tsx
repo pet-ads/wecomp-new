@@ -172,7 +172,6 @@ export default function CardProjeto({
       <ContainerVacancies>
         <LabeledValue label="Vagas" value={vacancies} />
         <ContainerButtons>
-
            <RedirectButton children="Inscrever-se" link={link} />
         </ContainerButtons>
       </ContainerVacancies>

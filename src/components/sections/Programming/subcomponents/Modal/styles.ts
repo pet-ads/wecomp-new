@@ -66,7 +66,7 @@ export const AbertoContainer = styled.div`
   box-sizing: border-box;
   background-color: var(--white-100);
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     max-width: 100%;
     min-width: 100%;
     min-height: 100%;
@@ -166,7 +166,6 @@ export const ContainerVacancies = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
   min-width: 100%;
   max-width: 100%;
 
@@ -177,7 +176,6 @@ export const ContainerVacancies = styled.div`
 export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 1rem;
   gap: 1rem;
   right: 0;
 
