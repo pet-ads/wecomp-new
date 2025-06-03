@@ -3,7 +3,7 @@ import { ProgrammingProps } from "../../components/sections/Programming/types";
 
 export const programmingContent: ProgrammingProps[] = [
   {
-    name: "Abertura",
+    name: "Introdução à persistência não relaciona com Cassandra",
     image: minister,
     imageDescription: "Abertura da Wecomp",
     bio: "",
