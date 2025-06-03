@@ -10,7 +10,7 @@ export const Container = styled.div`
   min-height: 5rem;
   max-height: 5rem;
 
-  margin-top: 1rem;
+
 
   overflow-y: auto;
 
@@ -24,8 +24,8 @@ export const Container = styled.div`
 
   @media (max-height: 684px) {
     width: 100%;
-    min-height: 4.3rem;
-    max-height: 4.3rem;
+    min-height: 2.6rem;
+    max-height: 2.6rem;
   }
 
   @media (max-width: 600px) {

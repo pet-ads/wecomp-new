@@ -11,10 +11,6 @@ export const Container = styled.div`
   min-width: 100%;
   max-width: 100%;
 
-  @media (max-width: 600px) {
-    flex-direction: column;
-    gap: 1rem;
-  }
 `;
 
 export const ContainerButtons = styled.div`

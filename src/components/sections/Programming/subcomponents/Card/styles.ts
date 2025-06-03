@@ -4,7 +4,7 @@ import { mq } from "../../../../../utils/responsive/breakpoints";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
+  justify-content: space-around;
   gap: 0.5rem;
 
   padding: 1.5rem;
@@ -16,18 +16,18 @@ export const Container = styled.div`
 
   
   overflow: hidden; 
-  max-width: 34rem;
-  min-width: 34rem;
-  max-height: 22rem;
-  min-height: 22rem;
+  max-width: 30rem;
+  min-width: 30rem;
+  max-height: 100%;
+  min-height: 100%;
 
 
 
   @media (max-height: 684px) {
-    max-width: 29rem;
-    min-width: 29rem;
-    max-height: 20rem;
-    min-height: 20rem;
+    max-width: 32rem;
+    min-width: 32rem;
+    max-height: 100%;
+    min-height: 100%;
   }
 `;
 
@@ -49,7 +49,9 @@ export const EventTitle = styled.div`
   font-size: 1.25rem;
   font-weight: bold;
 
-  text-align: justify;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
 
    ${mq({
           fontSize: ["0.8rem", "0.8rem", "0.8rem", "0.8rem", "1rem", "1rem", "1.2rem"],
