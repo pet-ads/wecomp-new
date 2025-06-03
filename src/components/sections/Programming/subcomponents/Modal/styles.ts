@@ -42,17 +42,17 @@ export const AbertoContainer = styled.div`
   box-sizing: border-box;
   background-color: var(--white-100);
 
-  @media (max-width: 768px) {
-    max-width: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    max-height: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: fixed;
-  }
+ @media (max-width: 768px), (max-height: 686px) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+}
 `;
 
 export const CloseButton = styled(AiOutlineClose)`
