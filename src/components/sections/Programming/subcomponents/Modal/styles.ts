@@ -8,7 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  padding: 1.5rem;
+  padding: 1.2rem;
   gap: 1rem;
   border-radius: 1rem;
 
@@ -51,17 +51,6 @@ export const AbertoContainer = styled.div`
   background-color: var(--white-100);
 
   @media (max-width: 768px) {
-    max-width: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    max-height: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: fixed;
-  }
-  @media (max-height: 686px) {
     max-width: 100%;
     min-width: 100%;
     min-height: 100%;
@@ -218,7 +207,6 @@ export const IconContainer = styled.div`
   align-items: flex-start; 
   justify-content: space-between;
   gap: 0.1rem;
-  margin-top: -1rem;
 
 `;
 
@@ -237,7 +225,7 @@ export const TagContainer = styled.div<{isOpen: boolean}>`
   align-items: center;
   gap: 1rem;
   margin-top:  ${({ isOpen }) => isOpen 
-  ? '1rem' : '-0.5rem'};
+  ? '1rem' : '0'};
   ${mq({
       width: ["1rem", "2rem", "2rem", "2rem", "2rem", "2rem", "5rem"],
       height: ["1rem", "2rem", "2rem", "2rem", "2rem", "2rem", "5rem"],
