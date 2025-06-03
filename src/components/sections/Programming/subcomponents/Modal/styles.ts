@@ -7,24 +7,50 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  padding: 1.2rem;
-  gap: 1rem;
+  gap: '1rem';
   border-radius: 1rem;
-
   background-color: var(--white-100);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
-    
+  max-height: 100%;
   ${mq({
-    width: ["10rem", "12rem", "14rem", "16rem", "16rem", "18rem", "20rem"],
-    height: ["8rem", "8.5rem", "9rem", "9.2rem", "8.5rem", "9.5rem", "10rem"],
-  })}
+      width: ["18rem", "18rem", "18rem", "18rem", "18rem", "21rem", "24rem"],
+      height: ["8.5rem", "8.5rem", "9rem", "9.2rem", "9.5rem", "9.5rem", "12rem"],
+      padding: ["1rem", "1rem", "1.2rem", "1.2rem", "1.2rem", "1.2rem", "1.5rem"],
+    })}
+
+  @media (orientation: landscape) {
+    ${mq({
+      width: ["18rem", "18rem", "18rem", "180rem", "18rem", "20rem", "24rem"],
+      height: ["8.5rem", "8.5rem", "9.2rem", "9.2rem", "9.5rem", "9.5rem", "12rem"],
+    })}
+  }
 
 `;
 
-export const ContainerEvent = styled.div`
+export const ContainerFooter = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  
+  
 `;
+
+export const ConteinerHead = styled.div`
+  
+`;
+
+export const ConteinerTitle = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  margin-bottom: 0.5rem;
+`;
+
+
+export const ContainerEvent = styled.div``;
 
 export const ContainerEventModal = styled.div``;
 
@@ -37,27 +63,39 @@ export const AbertoContainer = styled.div`
   left: 300px;
   overflow: auto;
   right: 300px;
-  padding: 1rem 1rem 0 1rem;
+  padding: 60px 10%;
   position: relative;
   box-sizing: border-box;
   background-color: var(--white-100);
 
- @media (max-width: 768px), (max-height: 686px) {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  max-width: 100%;
-  min-width: 100%;
-  max-height: 100%;
-  min-height: 100%;
-}
+  @media (max-width: 768px) {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+  }
+  @media (max-height: 686px) {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+  }
+
 `;
 
 export const CloseButton = styled(AiOutlineClose)`
   
-  margin-left: auto;
+  right: 10rem;
   width: 1rem;
   height: 1rem;
   
@@ -168,12 +206,13 @@ export const EventTitle = styled.div<{isOpen: boolean}>`
   font-weight: bold;
 
   max-width: 100%;
-
+  
 
   cursor: pointer;
 
   font-size: ${({ isOpen }) => isOpen 
-  ? '3rem' : mq({ fontSize: ['0.5rem', '0.8rem', '0.8rem', '1rem', '1rem', '1rem', '1.2rem'] }) };
+  ? mq({ fontSize: ['0.5rem', '0.8rem', '0.8rem', '1rem', '1rem', '1rem', '1.2rem'] }) : mq({ fontSize: ['0.5rem', '0.8rem', '0.9rem', '0.9rem', '0.9rem', '1rem', '1.2rem'] }) };
+  
   @media (max-width: 768px) {
     white-space: normal;
     overflow: visible;
@@ -215,12 +254,12 @@ export const Icon = styled.img`
 export const TagContainer = styled.div<{isOpen: boolean}>`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.4rem;
   margin-top:  ${({ isOpen }) => isOpen 
-  ? '1rem' : '0'};
+  ? '1rem' : '-0.5rem'};
   ${mq({
-      width: ["1rem", "2rem", "2rem", "2rem", "2rem", "2rem", "5rem"],
-      height: ["1rem", "2rem", "2rem", "2rem", "2rem", "2rem", "5rem"],
+      width: ["auto", "auto", "auto", "auto", "auto", "auto", "auto"],
+      height: ["auto", "auto", "auto", "auto", "auto", "auto", "auto"],
     })}
 
 `;

@@ -23,7 +23,9 @@ import {
   Icon,
   IconContainer,
   AbertoContainer,
-  ContainerEvent,
+  ConteinerHead,
+  ConteinerTitle,
+  ContainerFooter,
   ContainerEventModal,
   CloseButton,
   ContainerButtons,
@@ -83,7 +85,7 @@ export default function CardProjeto({
     <AbertoContainer>
       <CloseButton onClick={setingIsOpen} />
       {/*<IconContainer>
-        <Icon src={eventIconProps.iconPath} alt={Icone evento ${eventIconProps.label}} />
+        <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
       </IconContainer>*/}
       <InformationContainer>
         <ContainerEventModal>
@@ -123,20 +125,24 @@ export default function CardProjeto({
     <>
       {!isOpen && (
         <Container key={name} onClick={setingIsOpen}>
-          <IconContainer>
-            <ContainerEvent>
+          <ConteinerHead>
+            <ConteinerTitle>
+              <IconContainer>
+              <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
+            </IconContainer>
               <EventTitle isOpen={isOpen}>{name}</EventTitle>
-              <EventDetails isOpen={isOpen}>{`${location} - ${date} | ${time}`}</EventDetails>
+            </ConteinerTitle>
+            <EventDetails isOpen={isOpen}>{`${location} - ${date} | ${time}`}</EventDetails>
+          </ConteinerHead>
 
-            </ContainerEvent>
-            
-            <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
-          </IconContainer>
-          <TagContainer isOpen={isOpen}>
-            <AvailabilityTag label={status} />
-            <DifficultyTag label={classification} />
-          </TagContainer>
-          <LabeledValue label="Vagas" value={vacancies} />
+          <ContainerFooter>
+            <LabeledValue label="Vagas" value={vacancies} />
+            <TagContainer isOpen={isOpen}>
+              <AvailabilityTag label={status} />
+              <DifficultyTag label={classification} />
+            </TagContainer>
+
+          </ContainerFooter>
         </Container>
       )}
       {isOpen && portalElement && ReactDOM.createPortal(modalContent, portalElement)}
