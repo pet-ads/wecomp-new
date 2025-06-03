@@ -2,6 +2,7 @@ import oneSix from "../images/organizationLogo/OneSixLogo.svg";
 import onovolab from "../images/organizationLogo/onovolab.svg";
 import kakauTech from "../images/organizationLogo/KakauTech.svg";
 import csdbr from "../images/organizationLogo/CsdLogo.svg";
+import softable from "../images/organizationLogo/SoftableLogo.svg";
 
 interface SponsorProps {
   name: string;
@@ -35,6 +36,12 @@ export const sponsorsContent: SponsorProps[] = [
     link: "https://csdbr.com",
     width: "8rem",
   },
+  {
+    name: "SOFTABLE",
+    logoPath: softable,
+    link: "https://softable.com.br/",
+    width: "8rem",
+  }
 ];
 
 export default sponsorsContent;
