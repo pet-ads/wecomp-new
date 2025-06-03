@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { mq } from "../../../../../utils/responsive/breakpoints";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiFillCloseCircle} from 'react-icons/ai';
 import ButtonContainer from "../../../../../styles/ButtonContainer";
 
 export const Container = styled.div`
@@ -60,9 +60,7 @@ export const AbertoContainer = styled.div`
   width: auto;
   max-height: 100%;
   height: auto;
-  left: 300px;
   overflow: auto;
-  right: 300px;
   padding: 60px 10%;
   position: relative;
   box-sizing: border-box;
@@ -93,13 +91,13 @@ export const AbertoContainer = styled.div`
 
 `;
 
-export const CloseButton = styled(AiOutlineClose)`
-  
-  right: 10rem;
-  width: 1rem;
-  height: 1rem;
-  
-  
+export const CloseButton = styled(AiFillCloseCircle)`
+  width: 1.5rem;
+  height: 1.5rem;
+  right: 1rem;
+  top: 1rem;
+  position: absolute;
+
 `;
 
 export const ContainerMainModal = styled.div`
@@ -108,24 +106,27 @@ export const ContainerMainModal = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
-  border-radius: 1rem;
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 60%;
+
   @media (max-height: 701px) {
-    min-height: 50%;
-    max-height: 50%;
+    margin-top: 2rem;
+    height: 60%;
   }
   @media (max-height: 512px) {
     min-height: 30%;
     max-height: 30%;
-    margin-top: 5%;
   }
   `;
 
 export const ContainerMain = styled.div`
+  width: 100%;
+`;
+
+export const TextSobre = styled.h3`
+  margin-top: 2rem;
   width: 100%;
 `;
 
@@ -160,31 +161,17 @@ export const EventImage = styled.img`
 `;
 
 export const ContainerVacancies = styled.div`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
-  width: 100%;
-  padding: 1rem;
-  
+  min-width: 100%;
+  max-width: 100%;
 
-  @media (max-height: 701px) {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
 
-    min-width: 100%;
-    max-width: 100%;
-  }
 
-  
 `;
 
 export const ContainerButtons = styled.div`
@@ -192,7 +179,7 @@ export const ContainerButtons = styled.div`
   flex-direction: row;
   margin-top: 1rem;
   gap: 1rem;
-  margin-right: 2rem;
+  right: 0;
 
 `;
 
@@ -211,7 +198,7 @@ export const EventTitle = styled.div<{isOpen: boolean}>`
   cursor: pointer;
 
   font-size: ${({ isOpen }) => isOpen 
-  ? mq({ fontSize: ['0.5rem', '0.8rem', '0.8rem', '1rem', '1rem', '1rem', '1.2rem'] }) : mq({ fontSize: ['0.5rem', '0.8rem', '0.9rem', '0.9rem', '0.9rem', '1rem', '1.2rem'] }) };
+  ? mq({ fontSize: ['1rem', '1.5rem', '1.5rem', '1.7rem', '2rem', '2.1rem', '2.3rem'] }) : mq({ fontSize: ['0.5rem', '0.8rem', '0.9rem', '0.9rem', '0.9rem', '1rem', '1.2rem'] }) };
   
   @media (max-width: 768px) {
     white-space: normal;

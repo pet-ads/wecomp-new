@@ -3,7 +3,10 @@ import ReactDOM from "react-dom";
 
 import useToggleCardContent from "../../../../../hooks/toggle/useToggleCardContent";
 
+import useIsMobileModal from "../../../../../hooks/window/MobileModal";
+import useIsMobileModalHeight from "../../../../../hooks/window/MobileModalHeight";
 
+import RedirectButton from "../../../../commons/toolkit/RedirectButton";
 
 import AvailabilityTag from "../../../../commons/toolkit/tags/AvailabilityTag";
 import DifficultyTag from "../../../../commons/toolkit/tags/DifficultyTag";
@@ -28,6 +31,7 @@ import {
   ContainerFooter,
   ContainerEventModal,
   CloseButton,
+  TextSobre,
   ContainerButtons,
   EventDescriptionButton,
 } from "./styles";
@@ -51,6 +55,7 @@ export default function CardProjeto({
   date,
   time,
   location,
+  link,
 }: ProgrammingProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -68,6 +73,9 @@ export default function CardProjeto({
     };
   }, [isOpen]);
 
+  const isMobileModal = useIsMobileModal();
+  const isMobileModalHeight = useIsMobileModalHeight();
+  const shouldUseMobileLayout = isMobileModal || isMobileModalHeight;
 
   const setingIsOpen = () => setIsOpen(!isOpen);
   const eventIconProps = generatedIconEvent(typeEvent);
@@ -80,8 +88,8 @@ export default function CardProjeto({
 
   const portalElement = document.getElementById("portal-root");
   const eventsDisablingActionButton = ["TechnicalVisit", "Opening"];
-
-  const modalContent = (
+  
+  const mobileModalContent = (
     <AbertoContainer>
       <CloseButton onClick={setingIsOpen} />
       {/*<IconContainer>
@@ -103,10 +111,10 @@ export default function CardProjeto({
       </TagContainer>
       
       <ContainerMainModal>
-        <EventImage src={image} alt={imageDescription} />
         <ContainerMain>
           <CardMain content={cardText} />
         </ContainerMain>
+        <EventImage src={image} alt={imageDescription} />
       </ContainerMainModal>
       
       <ContainerVacancies>
@@ -116,6 +124,56 @@ export default function CardProjeto({
           <EventDescriptionButton onClick={handleChangeCardText}>
             {labelButton}
           </EventDescriptionButton> )}
+           <RedirectButton children="Inscrever-se" link={link} />
+        </ContainerButtons>
+      </ContainerVacancies>
+    </AbertoContainer>
+  
+  );
+
+  const modalContent = (
+    <AbertoContainer>
+      {/*<IconContainer>
+        <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
+        </IconContainer>*/}
+      <CloseButton onClick={setingIsOpen} />
+      <InformationContainer>
+        <ContainerEventModal>
+          <EventTitle isOpen={isOpen}>{name}</EventTitle>
+          <EventDetails isOpen={isOpen}>{`${location} | ${date} | ${time}`}</EventDetails>
+          <EventSpeakers>{author}</EventSpeakers>
+
+        </ContainerEventModal>
+        
+      </InformationContainer>
+
+      <TagContainer isOpen>
+        <AvailabilityTag label={status} />
+        <DifficultyTag label={classification} />
+      </TagContainer>
+
+      <div>
+      <TextSobre>Sobre o curso:</TextSobre>
+        <ContainerMainModal>
+          <ContainerMain>
+            <CardMain content={cardText} />
+          </ContainerMain>
+          <EventImage src={image} alt={imageDescription} />
+        </ContainerMainModal>
+      </div>
+      
+      {bio?.trim() && (
+        <ContainerMain>
+          <strong>Biografia:</strong><br />
+          {bio}
+        </ContainerMain>
+      )}
+      
+      <ContainerVacancies>
+        <LabeledValue label="Vagas" value={vacancies} />
+        <ContainerButtons>
+
+           <RedirectButton children="Inscrever-se" link={link} />
         </ContainerButtons>
       </ContainerVacancies>
     </AbertoContainer>
@@ -134,7 +192,7 @@ export default function CardProjeto({
             </ConteinerTitle>
             <EventDetails isOpen={isOpen}>{`${location} - ${date} | ${time}`}</EventDetails>
           </ConteinerHead>
-
+          
           <ContainerFooter>
             <LabeledValue label="Vagas" value={vacancies} />
             <TagContainer isOpen={isOpen}>
@@ -145,7 +203,7 @@ export default function CardProjeto({
           </ContainerFooter>
         </Container>
       )}
-      {isOpen && portalElement && ReactDOM.createPortal(modalContent, portalElement)}
+      {isOpen && portalElement && ReactDOM.createPortal(shouldUseMobileLayout ? mobileModalContent : modalContent, portalElement)}
     </>
   );
 }
