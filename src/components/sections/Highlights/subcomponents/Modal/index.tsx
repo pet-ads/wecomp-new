@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import CardMain from "../CardMain";
 
 import {
   Container,
@@ -16,12 +15,10 @@ import {
   BoxHead,
   BoxFooter,
   CloseButton,
-  ContainerEventModal,
   ContainerVacancies,
   ContainerButtons,
   EventDescriptionButton,
   ContainerMainModal,
-  ContainerMain,
   ContainerLogoTag
 } from "./styles";
 
@@ -81,17 +78,13 @@ export default function CardProjeto({
 
       
       <InformationContainer>
-        <ContainerEventModal>
-          <EventTitle isOpen={isOpen}>{title}</EventTitle>
-        </ContainerEventModal>
+        <EventTitle isOpen={isOpen}>{title}</EventTitle>
       </InformationContainer>
       {/*<EventImage src={image} />
       <CardMain content={description} />*/}
 
       <ContainerMainModal>
-        <ContainerMain>
-          <CardMain content={description} />
-        </ContainerMain>
+        {description}
       </ContainerMainModal>
 
       <ContainerVacancies>

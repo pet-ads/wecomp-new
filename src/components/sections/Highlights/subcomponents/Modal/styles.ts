@@ -39,7 +39,7 @@ export const AbertoContainer = styled.div`
   left: 300px;
   overflow: auto;
   right: 300px;
-  padding: 60px 10%;
+  padding: 50px 9%;
   position: relative;
   box-sizing: border-box;
   background-color: var(--white-100);
@@ -68,12 +68,10 @@ export const InformationContainer = styled.div`
   justify-content: space-between;
   align-items: start;
   width: 60%;
-  gap: 0.5rem;
   text-align: justify;
 
   @media (max-width: 768px) {
     width: 100%;
-    gap: 1rem;
   }
 `;
 
@@ -103,12 +101,11 @@ export const EventTitle = styled.div<{ isOpen: boolean }>`
   text-align: start;
   font-weight: bold;
   max-width: 100%;
-  margin-top: 10px;
   cursor: pointer;
 
   ${({ isOpen }) => isOpen && 'margin-bottom: 10px;'}
 
-  font-size: ${({ isOpen }) => (isOpen ? '2.3rem' : '1rem')};
+  font-size: ${({ isOpen }) => (isOpen ? '1.6rem' : '1rem')};
 
   @media (max-width: 600px) {
     font-size: ${({ isOpen }) => (isOpen ? '1.6rem' : '0.9rem')};
@@ -119,6 +116,7 @@ export const EventTitle = styled.div<{ isOpen: boolean }>`
   }
 
   @media (max-width: 768px) {
+    font-size: ${({ isOpen }) => (isOpen ? '1.6rem' : '0.9rem')};
     white-space: normal;
     overflow: visible;
     text-overflow: unset;
@@ -186,12 +184,14 @@ export const BoxFooter = styled.div`
 `;
 
 export const CloseButton = styled(AiOutlineClose)`
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
   margin-left: auto;
-  width: 1rem;
-  height: 1rem;
+  width: 1.1rem;
+  height: 1.1rem;
 `;
 
-export const ContainerEventModal = styled.div``;
 
 export const ContainerVacancies = styled.div`
   display: flex;
@@ -201,23 +201,9 @@ export const ContainerVacancies = styled.div`
   width: 100%;
   margin-top: 1rem;
   flex-wrap: nowrap;
-
-  @media (max-width: 320px) {
-    overflow-x: auto;
-  }
-
-  a {
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
 `;
 
 export const ContainerMainModal = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
   width: 100%;
   margin-top: 1rem;
 `;
@@ -230,6 +216,5 @@ export const ContainerLogoTag = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 `;
