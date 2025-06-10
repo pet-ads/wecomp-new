@@ -104,7 +104,7 @@ export default function CardProjeto({
             <EventTitle isOpen={isOpen}>{title}</EventTitle>
           </BoxHead>
           <BoxFooter>
-            <Vacancies>Vagas</Vacancies>
+            <Vacancies>Vagas: {vacancies}</Vacancies>
             <TagContainer isOpen>
               <ExpirienceTag label={typeEvent} />
             </TagContainer>

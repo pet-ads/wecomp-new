@@ -217,7 +217,9 @@ export const ContainerMain = styled.div`
   width: 100%;
 `;
 
-export const Vacancies = styled.div``;
+export const Vacancies = styled.div`
+  font-weight: bold;
+`;
 
 export const ContainerLogoTag = styled.div`
   display: flex;
