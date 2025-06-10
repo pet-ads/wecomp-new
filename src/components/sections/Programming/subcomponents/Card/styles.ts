@@ -16,8 +16,8 @@ export const Container = styled.div`
 
   
   overflow: hidden; 
-  max-width: 30rem;
-  min-width: 30rem;
+  max-width: 31rem;
+  min-width: 31rem;
   max-height: 100%;
   min-height: 100%;
 
