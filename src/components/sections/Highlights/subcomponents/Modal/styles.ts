@@ -108,15 +108,15 @@ export const EventTitle = styled.div<{ isOpen: boolean }>`
   font-size: ${({ isOpen }) => (isOpen ? '1.6rem' : '1rem')};
 
   @media (max-width: 600px) {
-    font-size: ${({ isOpen }) => (isOpen ? '1.6rem' : '0.9rem')};
+    font-size: ${({ isOpen }) => (isOpen ? '1.6rem' : '1rem')};
   }
 
   @media (max-width: 480px) {
-    font-size: ${({ isOpen }) => (isOpen ? '1.2rem' : '0.8rem')};
+    font-size: ${({ isOpen }) => (isOpen ? '1.2rem' : '1rem')};
   }
 
   @media (max-width: 768px) {
-    font-size: ${({ isOpen }) => (isOpen ? '1.6rem' : '0.9rem')};
+    font-size: ${({ isOpen }) => (isOpen ? '1.6rem' : '1rem')};
     white-space: normal;
     overflow: visible;
     text-overflow: unset;
@@ -163,7 +163,12 @@ export const BoxTitle = styled.div`
   gap: 4px;
 `;
 
-export const BoxHead = styled.div``;
+export const BoxHead = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+`;
 
 export const BoxFooter = styled.div`
   display: flex;
@@ -211,6 +216,8 @@ export const ContainerMainModal = styled.div`
 export const ContainerMain = styled.div`
   width: 100%;
 `;
+
+export const Vacancies = styled.div``;
 
 export const ContainerLogoTag = styled.div`
   display: flex;

@@ -8,21 +8,18 @@ import {
   EventSpeakers,
   EventTitle,
   TagContainer,
-  Icon,
-  IconContainer,
   AbertoContainer,
-  BoxTitle,
   BoxHead,
   BoxFooter,
   CloseButton,
   ContainerVacancies,
+  Vacancies,
   ContainerButtons,
   EventDescriptionButton,
   ContainerMainModal,
   ContainerLogoTag
 } from "./styles";
 
-import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
 import { HighlightsProps } from "../../types";
 import LabeledValue from "../../../../commons/toolkit/LabeledValue";
 import ExpirienceTag from "../../../../commons/toolkit/tags/ExperienceTag";
@@ -55,7 +52,6 @@ export default function CardProjeto({
 
 
   const setingIsOpen = () => setIsOpen(!isOpen);
-  const eventIconProps = generatedIconEvent(typeEvent);
 
   const portalElement = document.getElementById("portal-root");
 
@@ -103,17 +99,12 @@ export default function CardProjeto({
       {!isOpen && (
         <Container isOpen key={title} onClick={setingIsOpen}>
           <BoxHead>
-            <BoxTitle>
-              <IconContainer>
-                <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
-              </IconContainer>
-              <EventSpeakers  isOpen={isOpen}>{companyName}</EventSpeakers>
-            </BoxTitle>
+            <EventSpeakers  isOpen={isOpen}>{companyName}</EventSpeakers>
 
             <EventTitle isOpen={isOpen}>{title}</EventTitle>
           </BoxHead>
           <BoxFooter>
-            <LabeledValue label="Vagas" value={vacancies} />
+            <Vacancies>Vagas</Vacancies>
             <TagContainer isOpen>
               <ExpirienceTag label={typeEvent} />
             </TagContainer>
