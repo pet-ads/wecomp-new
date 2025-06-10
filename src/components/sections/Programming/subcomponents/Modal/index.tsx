@@ -36,6 +36,7 @@ import {
   ContainerButtons,
   EventDescriptionButton,
   ContainerBottom,
+  PlusIcon,
 } from "./styles";
 
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
@@ -193,6 +194,7 @@ export default function CardProjeto({
                 <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
               </IconContainer>
               <EventTitle isOpen={isOpen}>{name}</EventTitle>
+              <PlusIcon onClick={setingIsOpen} aria-label="Abrir detalhes" />
             </ConteinerTitle>
             <EventDetails isOpen={isOpen}>{`${location} - ${date} | ${time}`}</EventDetails>
           </ConteinerHead>

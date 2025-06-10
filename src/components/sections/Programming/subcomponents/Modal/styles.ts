@@ -2,8 +2,11 @@ import styled from "styled-components";
 import { mq } from "../../../../../utils/responsive/breakpoints";
 import { AiFillCloseCircle} from 'react-icons/ai';
 import ButtonContainer from "../../../../../styles/ButtonContainer";
+import { AiOutlinePlus } from 'react-icons/ai'; 
+
 
 export const Container = styled.div`
+position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -14,18 +17,30 @@ export const Container = styled.div`
 
   max-height: 100%;
   ${mq({
-      width: ["20rem", "20rem", "20rem", "20rem", "20rem", "22rem", "26rem"],
+      width: ["21rem", "21rem", "21rem", "21rem", "23rem", "23rem", "26rem"],
       height: ["10.5rem", "10.5rem", "11rem", "11.2rem", "11.5rem", "11.5rem", "14rem"],
       padding: ["1rem", "1rem", "1.2rem", "1.2rem", "1.2rem", "1.2rem", "1.5rem"],
     })}
 
   @media (orientation: landscape) {
     ${mq({
-      width: ["20rem", "20rem", "20rem", "20rem", "20rem", "22rem", "26rem"],
-      height: ["8.5rem", "8.5rem", "9.2rem", "9.2rem", "9.5rem", "9.5rem", "12rem"],
+      width: ["21rem", "21rem", "21rem", "21rem", "21rem", "23rem", "26rem"],
+      height: ["10.5rem", "10.5rem", "11rem", "11.2rem", "11.5rem", "11.5rem", "14rem"],
     })}
   }
 
+`;
+
+export const PlusIcon = styled(AiOutlinePlus)`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  max-width: 1.5rem;
+  min-width: 1.5rem;
+  max-height: 1.5rem;
+  min-height: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-color); 
 `;
 
 export const ContainerFooter = styled.div`
@@ -209,9 +224,10 @@ export const EventTitle = styled.div<{isOpen: boolean}>`
   
 
   cursor: pointer;
+  padding-right: 1rem;
 
   font-size: ${({ isOpen }) => isOpen 
-  ? mq({ fontSize: ['0.7rem', '1.2rem', '1.2rem', '1.4rem', '1.7rem', '1.8rem', '2rem'] }) : mq({ fontSize: ['0.7rem', '0.8rem', '1rem', '1rem', '1rem', '1.1rem', '1.3rem'] }) };
+  ? mq({ fontSize: ['0.7rem', '1.2rem', '1.2rem', '1.4rem', '1.7rem', '1.8rem', '2rem'] }) : mq({ fontSize: ['0.8rem', '0.9rem', '1.1rem', '1.1rem', '1.1rem', '1.2rem', '1.4rem'] }) };
   
   @media (max-width: 768px) {
     white-space: normal;
@@ -222,7 +238,7 @@ export const EventTitle = styled.div<{isOpen: boolean}>`
 
 export const EventDetails = styled.div<{isOpen: boolean}>`
   font-size: ${({ isOpen }) => isOpen 
-  ?  mq({ fontSize: ['0.8rem', '1rem', '1rem', '1.2rem', '1.2rem', '1.2rem', '1.4rem'] }) : mq({ fontSize: ['0.6rem', '0.6rem', '0.8rem', '0.8rem', '0.8rem', '0.8rem', '1rem'] }) };
+  ?  mq({ fontSize: ['0.8rem', '1rem', '1rem', '1.2rem', '1.2rem', '1.2rem', '1.4rem'] }) : mq({ fontSize: ['0.6rem', '0.6rem', '0.8rem', '0.8rem', '0.8rem', '0.8rem', '1rem']  }) };
   font-weight: 600;
   
 `;
