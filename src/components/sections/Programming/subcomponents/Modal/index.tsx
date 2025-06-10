@@ -10,7 +10,7 @@ import RedirectButton from "../../../../commons/toolkit/RedirectButton";
 
 import AvailabilityTag from "../../../../commons/toolkit/tags/AvailabilityTag";
 import DifficultyTag from "../../../../commons/toolkit/tags/DifficultyTag";
-import CardMain from "../CardMain";
+//import CardMain from "../CardMain";
 
 import {
   Container,
@@ -24,6 +24,7 @@ import {
   EventTitle,
   TagContainer,
   Icon,
+  ContainerImagem,
   IconContainer,
   AbertoContainer,
   ConteinerHead,
@@ -34,6 +35,7 @@ import {
   TextSobre,
   ContainerButtons,
   EventDescriptionButton,
+  ContainerBottom,
 } from "./styles";
 
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
@@ -92,50 +94,47 @@ export default function CardProjeto({
   const mobileModalContent = (
     <AbertoContainer>
       <CloseButton onClick={setingIsOpen} />
-      {/*<IconContainer>
-        <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
-      </IconContainer>*/}
       <InformationContainer>
         <ContainerEventModal>
           <EventTitle isOpen={isOpen}>{name}</EventTitle>
           <EventDetails isOpen={isOpen}>{`${location} | ${date} | ${time}`}</EventDetails>
           <EventSpeakers>{author}</EventSpeakers>
-
         </ContainerEventModal>
-        
       </InformationContainer>
 
       <TagContainer isOpen>
         <AvailabilityTag label={status} />
         <DifficultyTag label={classification} />
       </TagContainer>
-      
+
+      <ContainerImagem>
+        <EventImage src={image} alt={imageDescription} />
+      </ContainerImagem>
+
       <ContainerMainModal>
         <ContainerMain>
-          <CardMain content={cardText} />
+          <TextSobre>{labelButton === "Ver biografia" ? "Descrição:" : "Biografia:"}</TextSobre>
+          {cardText} 
         </ContainerMain>
-        <EventImage src={image} alt={imageDescription} />
       </ContainerMainModal>
-      
-      <ContainerVacancies>
-        <LabeledValue label="Vagas" value={vacancies} />
-        <ContainerButtons>
-          {eventsDisablingActionButton.includes(typeEvent) ? null : (
-          <EventDescriptionButton onClick={handleChangeCardText}>
-            {labelButton}
-          </EventDescriptionButton> )}
-           <RedirectButton children="Inscrever-se" link={link} />
-        </ContainerButtons>
-      </ContainerVacancies>
-    </AbertoContainer>
-  
-  );
 
+      <ContainerBottom>
+        <ContainerVacancies>
+          <LabeledValue label="Vagas" value={vacancies} />
+          <ContainerButtons>
+            {bio?.trim() && !eventsDisablingActionButton.includes(typeEvent) && (
+              <EventDescriptionButton onClick={handleChangeCardText}>
+                {labelButton}
+              </EventDescriptionButton>
+            )}
+            <RedirectButton children="Inscrever-se" link={link} />
+          </ContainerButtons>
+        </ContainerVacancies>
+      </ContainerBottom>
+    </AbertoContainer>
+  );
   const modalContent = (
     <AbertoContainer>
-      {/*<IconContainer>
-        <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
-        </IconContainer>*/}
       <CloseButton onClick={setingIsOpen} />
       <InformationContainer>
         <ContainerEventModal>
@@ -152,29 +151,35 @@ export default function CardProjeto({
         <DifficultyTag label={classification} />
       </TagContainer>
 
-      <div>
       <TextSobre>Sobre o curso:</TextSobre>
         <ContainerMainModal>
           <ContainerMain>
-            <CardMain content={cardText} />
+            {description}
           </ContainerMain>
-          <EventImage src={image} alt={imageDescription} />
+          
         </ContainerMainModal>
-      </div>
+        
+      <ContainerImagem>
+        <EventImage src={image} alt={imageDescription} />
+      </ContainerImagem>
+
+      
       
       {bio?.trim() && (
         <ContainerMain>
-          <strong>Biografia:</strong><br />
+          <TextSobre>Biografia:</TextSobre>
           {bio}
         </ContainerMain>
       )}
-      
-      <ContainerVacancies>
-        <LabeledValue label="Vagas" value={vacancies} />
-        <ContainerButtons>
-           <RedirectButton children="Inscrever-se" link={link} />
-        </ContainerButtons>
-      </ContainerVacancies>
+
+      <ContainerBottom>
+        <ContainerVacancies>
+          <LabeledValue label="Vagas" value={vacancies} />
+          <ContainerButtons>
+            <RedirectButton children="Inscrever-se" link={link} />
+          </ContainerButtons>
+        </ContainerVacancies>
+      </ContainerBottom>
     </AbertoContainer>
   );
 
@@ -185,8 +190,8 @@ export default function CardProjeto({
           <ConteinerHead>
             <ConteinerTitle>
               <IconContainer>
-              <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
-            </IconContainer>
+                <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
+              </IconContainer>
               <EventTitle isOpen={isOpen}>{name}</EventTitle>
             </ConteinerTitle>
             <EventDetails isOpen={isOpen}>{`${location} - ${date} | ${time}`}</EventDetails>

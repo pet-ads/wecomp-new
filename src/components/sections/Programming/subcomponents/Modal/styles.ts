@@ -14,14 +14,14 @@ export const Container = styled.div`
 
   max-height: 100%;
   ${mq({
-      width: ["18rem", "18rem", "18rem", "18rem", "18rem", "21rem", "24rem"],
-      height: ["8.5rem", "8.5rem", "9rem", "9.2rem", "9.5rem", "9.5rem", "12rem"],
+      width: ["20rem", "20rem", "20rem", "20rem", "20rem", "22rem", "26rem"],
+      height: ["10.5rem", "10.5rem", "11rem", "11.2rem", "11.5rem", "11.5rem", "14rem"],
       padding: ["1rem", "1rem", "1.2rem", "1.2rem", "1.2rem", "1.2rem", "1.5rem"],
     })}
 
   @media (orientation: landscape) {
     ${mq({
-      width: ["18rem", "18rem", "18rem", "180rem", "18rem", "20rem", "24rem"],
+      width: ["20rem", "20rem", "20rem", "20rem", "20rem", "22rem", "26rem"],
       height: ["8.5rem", "8.5rem", "9.2rem", "9.2rem", "9.5rem", "9.5rem", "12rem"],
     })}
   }
@@ -109,24 +109,25 @@ export const ContainerMainModal = styled.div`
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 60%;
-
-  @media (max-height: 701px) {
-    margin-top: 2rem;
-    height: 60%;
-  }
-  @media (max-height: 512px) {
-    min-height: 30%;
-    max-height: 30%;
-  }
   `;
 
 export const ContainerMain = styled.div`
   width: 100%;
 `;
 
+export const ContainerImagem = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;        
+  margin-top: 2rem;
+`;
+
 export const TextSobre = styled.h3`
   margin-top: 2rem;
+   ${mq({
+     fontSize: ['0.8rem', '0.8rem', '0.8rem', '1rem', '1.3rem', '1.4rem', '1.6rem']
+   })}
   width: 100%;
 `;
 
@@ -169,8 +170,22 @@ export const ContainerVacancies = styled.div`
   min-width: 100%;
   max-width: 100%;
 
+  
+`;
 
-
+export const ContainerBottom = styled.div`
+  position: fixed;
+  bottom: 0; 
+  left: 0;
+  padding: 1% 10%;
+  min-width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white; 
+  z-index: 1000; 
 `;
 
 export const ContainerButtons = styled.div`
@@ -196,7 +211,7 @@ export const EventTitle = styled.div<{isOpen: boolean}>`
   cursor: pointer;
 
   font-size: ${({ isOpen }) => isOpen 
-  ? mq({ fontSize: ['1rem', '1.5rem', '1.5rem', '1.7rem', '2rem', '2.1rem', '2.3rem'] }) : mq({ fontSize: ['0.5rem', '0.8rem', '0.9rem', '0.9rem', '0.9rem', '1rem', '1.2rem'] }) };
+  ? mq({ fontSize: ['0.7rem', '1.2rem', '1.2rem', '1.4rem', '1.7rem', '1.8rem', '2rem'] }) : mq({ fontSize: ['0.7rem', '0.8rem', '1rem', '1rem', '1rem', '1.1rem', '1.3rem'] }) };
   
   @media (max-width: 768px) {
     white-space: normal;
@@ -207,8 +222,9 @@ export const EventTitle = styled.div<{isOpen: boolean}>`
 
 export const EventDetails = styled.div<{isOpen: boolean}>`
   font-size: ${({ isOpen }) => isOpen 
-  ?  mq({ fontSize: ['0.5rem', '0.8rem', '0.8rem', '1rem', '1rem', '1rem', '1.2rem'] }) : mq({ fontSize: ['0.5rem', '0.5rem', '0.6rem', '0.6rem', '0.6rem', '0.6rem', '0.8rem'] }) };
+  ?  mq({ fontSize: ['0.8rem', '1rem', '1rem', '1.2rem', '1.2rem', '1.2rem', '1.4rem'] }) : mq({ fontSize: ['0.6rem', '0.6rem', '0.8rem', '0.8rem', '0.8rem', '0.8rem', '1rem'] }) };
   font-weight: 600;
+  
 `;
 
 export const EventSpeakers = styled.div`
