@@ -27,6 +27,7 @@ export const CarouselTrack = styled(motion.div)`
 
 export const CarouselItem = styled.div`
   width: 100%;
-
   height: 100%;
+  display: flex;
+  align-items: center;
 `;

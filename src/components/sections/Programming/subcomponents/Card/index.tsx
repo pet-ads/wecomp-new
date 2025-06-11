@@ -4,7 +4,7 @@ import CardFooter from "../CardFooter";
 
 import useToggleCardContent from "../../../../../hooks/toggle/useToggleCardContent";
 
-import { Container, EventTitle, Icon, IconContainer } from "./styles";
+import { Container, EventTitle, Icon, IconContainer} from "./styles";
 
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
 
@@ -34,6 +34,7 @@ export default function Card({
   const eventIconProps = generatedIconEvent(typeEvent);
   return (
     <Container key={name}>
+      
       <IconContainer>
         <Icon
           src={eventIconProps.iconPath}
