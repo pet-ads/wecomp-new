@@ -5,11 +5,11 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-around;
 
-  gap: 0.5rem;
+  gap: 1rem;
 
   height: 100%;
   min-width: 35rem;
-  max-width: 35rem;
+  max-width: 40rem;
 
   padding: 1.5rem;
 
@@ -35,15 +35,15 @@ export const Container = styled.div`
   }
 `;
 
-export const IconContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+// export const IconContainer = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
 
-  gap: 1rem;
-`;
+//   gap: 1rem;
+// `;
 
-export const Icon = styled.img``;
+// export const Icon = styled.img``;
 
 export const EventTitle = styled.div`
   max-width: 100%;

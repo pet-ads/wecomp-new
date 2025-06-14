@@ -17,7 +17,8 @@ import {
   ContainerButtons,
   EventDescriptionButton,
   ContainerMainModal,
-  ContainerLogoTag
+  ContainerLogoTag,
+  ModalContentWrapper
 } from "./styles";
 
 import { HighlightsProps } from "../../types";
@@ -56,43 +57,37 @@ export default function CardProjeto({
   const portalElement = document.getElementById("portal-root");
 
   const modalContent = (
-    <AbertoContainer>
+  <AbertoContainer>
+    <ModalContentWrapper>
       <CloseButton onClick={setingIsOpen} />
-      {/*<IconContainer>
-        <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
-      </IconContainer>*/}
-
+      <TagContainer isOpen>
+            <ExpirienceTag label={typeEvent} />
+      </TagContainer>
       <ContainerLogoTag>
         <div>
           <EventSpeakers isOpen={isOpen}>{companyName}</EventSpeakers>
-          <TagContainer isOpen>
-            <ExpirienceTag label={typeEvent} />
-          </TagContainer>
         </div>
         <EventImage src={image} alt={'logo ' + companyName} />
       </ContainerLogoTag>
 
-      
       <InformationContainer>
         <EventTitle isOpen={isOpen}>{title}</EventTitle>
       </InformationContainer>
-      {/*<EventImage src={image} />
-      <CardMain content={description} />*/}
 
-      <ContainerMainModal>
-        {description}
-      </ContainerMainModal>
+      <ContainerMainModal>{description}</ContainerMainModal>
 
       <ContainerVacancies>
         <LabeledValue label="Vagas" value={vacancies} />
         <ContainerButtons>
           <EventDescriptionButton>
-            Inscrever-se
+            Acesse
           </EventDescriptionButton>
         </ContainerButtons>
       </ContainerVacancies>
-    </AbertoContainer>
-  );
+    </ModalContentWrapper>
+  </AbertoContainer>
+);
+
 
   return (
     <>

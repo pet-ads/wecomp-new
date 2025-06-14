@@ -35,14 +35,17 @@ export const AbertoContainer = styled.div`
   z-index: 100;
   width: auto;
   max-height: 100%;
-  height: auto;
+  height: 100vh;
   left: 300px;
   overflow: auto;
   right: 300px;
-  padding: 50px 9%;
+  padding: 65px 12%;
   position: relative;
   box-sizing: border-box;
   background-color: var(--white-100);
+
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 768px),
          (max-height: 686px) {
@@ -60,6 +63,14 @@ export const AbertoContainer = styled.div`
   @media (orientation: landscape) and (max-height: 400px) {
     padding: 20px 5%;
   }
+`;
+
+export const ModalContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  flex-grow: 1;
 `;
 
 export const InformationContainer = styled.div`
@@ -93,7 +104,7 @@ export const ContainerButtons = styled.div`
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 export const EventDescriptionButton = styled(ButtonContainer)<ButtonProps>`
   max-width: 100%;
-  width: fit-content; /* ou width: 100% para ocupar tudo */
+  width: fit-content;
 `;
 
 export const EventTitle = styled.div<{ isOpen: boolean }>`
@@ -102,9 +113,7 @@ export const EventTitle = styled.div<{ isOpen: boolean }>`
   font-weight: bold;
   max-width: 100%;
   cursor: pointer;
-
   ${({ isOpen }) => isOpen && 'margin-bottom: 10px;'}
-
   font-size: ${({ isOpen }) => (isOpen ? '1.6rem' : '1rem')};
 
   @media (max-width: 600px) {
@@ -150,11 +159,10 @@ export const TagContainer = styled.div<{ isOpen: boolean }>`
   align-items: center;
   gap: 1rem;
   margin-top: ${({ isOpen }) => (isOpen ? '0rem' : '-0.5rem')};
-  
-  ${mq({
-    width: ["auto", "auto", "auto", "auto", "auto", "auto", "auto"],
-    height: ["auto", "auto", "auto", "auto", "auto", "auto", "auto"],
-  })}
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
 `;
 
 export const BoxTitle = styled.div`
@@ -168,6 +176,9 @@ export const BoxHead = styled.div`
   flex-direction: column;
   gap: 0.5rem;
 
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
 `;
 
 export const BoxFooter = styled.div`
@@ -175,28 +186,35 @@ export const BoxFooter = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Permite quebrar linha */
-  gap: 0.5rem; /* Espaçamento entre os itens */
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
 
-  width: 100%; /* Ocupa toda a largura disponível */
+  @media (max-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
   @media (max-width: 480px) {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 0.75rem;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
     margin-top: 1rem;
   }
 `;
 
 export const CloseButton = styled(AiOutlineClose)`
-  position: relative;
-  left: 100%;
-  transform: translateX(-100%);
-  margin-left: auto;
-  width: 1.1rem;
-  height: 1.1rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1rem;
+  z-index: 1000;
 `;
-
 
 export const ContainerVacancies = styled.div`
   display: flex;

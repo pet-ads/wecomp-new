@@ -14,7 +14,7 @@ export default function CardFooter({
     <Container>
       <LabeledValue label="Vagas" value={vacancies} />
       <ContainerButtons>
-        <RedirectButton children="Inscrever-se" link={link} />
+        <RedirectButton children="Acesse" link={link} />
       </ContainerButtons>
     </Container>
   );

@@ -2,9 +2,7 @@ import CardHeader from "../CardHeader";
 import CardMain from "../CardMain";
 import CardFooter from "../CardFooter";
 
-import { Container, Icon, IconContainer, EventImage, ContainerHeader, ContainerIconTag } from "./styles";
-
-import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
+import { Container, EventImage, ContainerHeader, ContainerIconTag } from "./styles";
 
 import { HighlightsProps } from "../../types";
 import { Title } from "../../../../commons/toolkit/Card/styles";
@@ -20,18 +18,10 @@ export default function Card({
   description,
   typeEvent,
 }: HighlightsProps) {
-  const eventIconProps = generatedIconEvent(typeEvent);
   return (
     <Container key={title}>
       <ContainerHeader>
         <ContainerIconTag>
-          <IconContainer>
-            <Icon
-              src={eventIconProps.iconPath}
-              alt={`Icone evento ${eventIconProps.label}`}
-            />
-          </IconContainer>
-
           <TagContainer>
             <ExpirienceTag label={typeEvent} />
           </TagContainer>
