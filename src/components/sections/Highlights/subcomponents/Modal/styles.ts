@@ -87,7 +87,7 @@ export const InformationContainer = styled.div`
 `;
 
 export const EventImage = styled.img`
-  width: 30%;
+  width: 40%;
   height: fit-content;
   max-width: 150px;
   object-fit: cover;
@@ -125,7 +125,7 @@ export const EventTitle = styled.div<{ isOpen: boolean }>`
   }
 
   @media (max-width: 768px) {
-    font-size: ${({ isOpen }) => (isOpen ? '1.6rem' : '1rem')};
+    font-size: ${({ isOpen }) => (isOpen ? '1.2rem' : '1rem')};
     white-space: normal;
     overflow: visible;
     text-overflow: unset;
@@ -139,7 +139,7 @@ export const EventDetails = styled.div`
 
 export const EventSpeakers = styled.div<{ isOpen: boolean }>`
   ${({ isOpen }) => isOpen && 'margin-bottom: 10px;'}
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--gray-1000);
 `;
@@ -157,13 +157,16 @@ export const Icon = styled.img``;
 export const TagContainer = styled.div<{ isOpen: boolean }>`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
-  margin-top: ${({ isOpen }) => (isOpen ? '0rem' : '-0.5rem')};
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
   @media (max-width: 768px) {
-    margin-top: 0;
+    margin-top: 2.5rem;
   }
 `;
+
 
 export const BoxTitle = styled.div`
   display: flex;
@@ -222,8 +225,12 @@ export const ContainerVacancies = styled.div`
   align-items: center;
   gap: 1rem;
   width: 100%;
-  margin-top: 1rem;
-  flex-wrap: nowrap;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
 `;
 
 export const ContainerMainModal = styled.div`
@@ -241,7 +248,10 @@ export const Vacancies = styled.div`
 
 export const ContainerLogoTag = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    margin-top: 0.5rem;
+  }
 `;

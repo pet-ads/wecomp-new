@@ -61,21 +61,16 @@ export default function CardProjeto({
     <ModalContentWrapper>
       <CloseButton onClick={setingIsOpen} />
       <TagContainer isOpen>
-            <ExpirienceTag label={typeEvent} />
+        <ExpirienceTag label={typeEvent} />
+        <EventImage src={image} alt={'logo ' + companyName} />
       </TagContainer>
       <ContainerLogoTag>
-        <div>
-          <EventSpeakers isOpen={isOpen}>{companyName}</EventSpeakers>
-        </div>
-        <EventImage src={image} alt={'logo ' + companyName} />
+        <EventSpeakers isOpen={isOpen}>{companyName}</EventSpeakers>
       </ContainerLogoTag>
-
-      <InformationContainer>
+      <div>
         <EventTitle isOpen={isOpen}>{title}</EventTitle>
-      </InformationContainer>
-
-      <ContainerMainModal>{description}</ContainerMainModal>
-
+        <ContainerMainModal>{description}</ContainerMainModal>
+      </div>
       <ContainerVacancies>
         <LabeledValue label="Vagas" value={vacancies} />
         <ContainerButtons>
