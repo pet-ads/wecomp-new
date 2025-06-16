@@ -37,7 +37,7 @@ export const programmingContent: ProgrammingProps[] = [
     status: "LastVacancies",
   },
   {
-    name: "Talk sobre a Importância do Back-end",
+    name: "Talk - Importância do Back-end",
     image: minister,
     imageDescription: "Minicurso de Back-end",
     bio: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sapiente sint quasi laboriosam excepturi delectus unde eum magni, dolores placeat harum blanditiis est veritatis itaque id ut eligendi ullam dignissimos!",

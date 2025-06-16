@@ -1,14 +1,11 @@
 import styled from "styled-components";
+import { mq } from "../../../../../utils/responsive/breakpoints";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-
+  justify-content: flex-start; 
   gap: 0.5rem;
-
-  min-width: 35rem;
-  max-width: 35rem;
 
   padding: 1.5rem;
 
@@ -17,29 +14,40 @@ export const Container = styled.div`
   background-color: var(--white-100);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
-  @media (max-width: 768px) {
-    min-width: 65vw;
-    max-width: 65vw;
+  
+  overflow: hidden; 
+  max-width: 34rem;
+  min-width: 34rem;
+  max-height: 22rem;
+  min-height: 22rem;
 
-    min-height: 65vh;
-    max-height: 65vh;
+
+
+  @media (max-height: 750px) {
+    max-width: 34rem;
+    min-width: 34rem;
+    max-height: 19rem;
+    min-height: 19rem;
   }
 
-  @media (max-width: 375px) {
-    min-width: 65vw;
-    max-width: 65vw;
+  ${mq({
+      width: [ "34rem"],
+      height: [ "22rem"],
+    })}
 
-    min-height: 70vh;
-    max-height: 70vh;
-  }
+    @media (orientation: landscape) and (max-width: 930px) {
+      ${mq({
+      width: [ "34rem"],
+      height: [ "22rem"],
+    })}}
 `;
 
 export const IconContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start; 
+  gap: 0.5rem; 
 
-  gap: 1rem;
 `;
 
 export const Icon = styled.img``;
@@ -53,4 +61,8 @@ export const EventTitle = styled.div`
   font-weight: bold;
 
   text-align: justify;
+
+   ${mq({
+          fontSize: ["0.8rem", "0.8rem", "0.8rem", "0.8rem", "1rem", "1rem", "1.2rem"],
+        })}
 `;
