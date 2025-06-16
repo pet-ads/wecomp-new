@@ -35,16 +35,6 @@ export const Container = styled.div`
   }
 `;
 
-// export const IconContainer = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-
-//   gap: 1rem;
-// `;
-
-// export const Icon = styled.img``;
-
 export const EventTitle = styled.div`
   max-width: 100%;
 

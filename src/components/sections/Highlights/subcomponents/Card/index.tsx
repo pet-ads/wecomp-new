@@ -8,6 +8,7 @@ import { HighlightsProps } from "../../types";
 import { Title } from "../../../../commons/toolkit/Card/styles";
 import { TagContainer } from "../CardHeader/styles";
 import ExpirienceTag from "../../../../commons/toolkit/tags/ExperienceTag";
+import { ContainerMainModal } from "../Modal/styles";
 
 export default function Card({
   title,
@@ -32,7 +33,11 @@ export default function Card({
       <CardHeader
         companyName={companyName}
       />
-      <CardMain content={description} />
+      <ContainerMainModal>
+        {description.split("\n").map((line, i) => (
+          <p key={i}>{line.trim()}</p>
+        ))}
+      </ContainerMainModal>
       <CardFooter
         vacancies={vacancies}
         link={link}
