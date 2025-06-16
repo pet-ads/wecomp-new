@@ -47,11 +47,13 @@ export const EventTitle = styled.div`
 `;
 
 export const EventImage = styled.img`
-  width: 25%;
+  width: 20%;
 
   height: fit-content;
 
   object-fit: cover;
+
+  border-radius: 0.6rem;
 
   @media (max-width: 768px) {
     width: 30%;

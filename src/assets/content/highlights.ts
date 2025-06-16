@@ -1,10 +1,10 @@
 import { HighlightsProps } from "../../components/sections/Highlights/types";
-import genericEmpress from "../images/empresaGenerica.svg";
+import csdLogo from "../images/organizationLogo/CsdLogo.svg";
 
 export const highlightsContent: HighlightsProps[] = [
   {
     title: "Analista de Fiscalização e Supervisão PL",
-    image: genericEmpress,
+    image: csdLogo,
     companyName: "CSD BR",
     linkCompany: "#",
     vacancies: 1,
@@ -15,7 +15,7 @@ export const highlightsContent: HighlightsProps[] = [
   },
   {
     title: "Analista DevOps JR",
-    image: genericEmpress,
+    image: csdLogo,
     companyName: "CSD BR",
     linkCompany: "#",
     vacancies: 2,
@@ -26,7 +26,7 @@ export const highlightsContent: HighlightsProps[] = [
   },
   {
     title: "Analista de Segurança Informação JR",
-    image: genericEmpress,
+    image: csdLogo,
     companyName: "CSD BR",
     linkCompany: "#",
     vacancies: 2,
@@ -37,7 +37,7 @@ export const highlightsContent: HighlightsProps[] = [
   },
   {
     title: "Analista de Customer Experience JR",
-    image: genericEmpress,
+    image: csdLogo,
     companyName: "CSD BR",
     linkCompany: "#",
     vacancies: 2,
@@ -48,7 +48,7 @@ export const highlightsContent: HighlightsProps[] = [
   },
   {
     title: "Analista de Service Desk JR",
-    image: genericEmpress,
+    image: csdLogo,
     companyName: "CSD BR",
     linkCompany: "#",
     vacancies: 1,
@@ -59,7 +59,7 @@ export const highlightsContent: HighlightsProps[] = [
   },
   {
     title: "Analista de Operações JR",
-    image: genericEmpress,
+    image: csdLogo,
     companyName: "CSD BR",
     linkCompany: "#",
     vacancies: 1,

@@ -87,12 +87,10 @@ export const InformationContainer = styled.div`
 `;
 
 export const EventImage = styled.img`
-  width: 40%;
-  height: fit-content;
-  max-width: 150px;
+  width: 30%;
   object-fit: cover;
   display: block;
-  border-radius: 10px;
+  border-radius: 0.6rem;
 `;
 
 export const ContainerButtons = styled.div`
