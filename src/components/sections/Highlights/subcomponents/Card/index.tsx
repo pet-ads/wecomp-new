@@ -1,5 +1,4 @@
 import CardHeader from "../CardHeader";
-import CardMain from "../CardMain";
 import CardFooter from "../CardFooter";
 
 import { Container, EventImage, ContainerHeader, ContainerIconTag } from "./styles";
