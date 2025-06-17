@@ -30,7 +30,7 @@ import {
   ConteinerHead,
   ConteinerTitle,
   ContainerFooter,
-  ContainerEventModal,
+ 
   CloseButton,
   TextSobre,
   ContainerButtons,
@@ -96,12 +96,11 @@ export default function CardProjeto({
     <AbertoContainer>
       <CloseButton onClick={setingIsOpen} />
       <InformationContainer>
-        <ContainerEventModal>
-          <EventTitle isOpen={isOpen}>{name}</EventTitle>
-          <EventDetails isOpen={isOpen}>{`${location} | ${date} | ${time}`}</EventDetails>
-          <EventSpeakers>{author}</EventSpeakers>
-        </ContainerEventModal>
+        <EventTitle isOpen={isOpen}>{name}</EventTitle>
+        <EventDetails isOpen={isOpen}>{`${location} | ${date} | ${time}`}</EventDetails>
+        <EventSpeakers>{author}</EventSpeakers>
       </InformationContainer>
+      
 
       <TagContainer isOpen>
         <AvailabilityTag label={status} />
@@ -138,13 +137,9 @@ export default function CardProjeto({
     <AbertoContainer>
       <CloseButton onClick={setingIsOpen} />
       <InformationContainer>
-        <ContainerEventModal>
-          <EventTitle isOpen={isOpen}>{name}</EventTitle>
-          <EventDetails isOpen={isOpen}>{`${location} | ${date} | ${time}`}</EventDetails>
-          <EventSpeakers>{author}</EventSpeakers>
-
-        </ContainerEventModal>
-        
+        <EventTitle isOpen={isOpen}>{name}</EventTitle>
+        <EventDetails isOpen={isOpen}>{`${location} | ${date} | ${time}`}</EventDetails>
+        <EventSpeakers>{author}</EventSpeakers>
       </InformationContainer>
 
       <TagContainer isOpen>
@@ -152,7 +147,7 @@ export default function CardProjeto({
         <DifficultyTag label={classification} />
       </TagContainer>
 
-      <TextSobre>Sobre o curso:</TextSobre>
+      <TextSobre>Descrição:</TextSobre>
         <ContainerMainModal>
           <ContainerMain>
             {description}

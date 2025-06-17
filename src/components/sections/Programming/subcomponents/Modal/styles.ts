@@ -67,14 +67,16 @@ export const ConteinerTitle = styled.div`
 
 export const ContainerEvent = styled.div``;
 
-export const ContainerEventModal = styled.div``;
+export const ContainerEventModal = styled.div`
+
+`;
 
 export const AbertoContainer = styled.div`
   top: 20vh;
   z-index: 100;
   width: auto;
   max-height: 100%;
-  height: auto;
+  min-height: 100%;
   overflow: auto;
   padding: 60px 10%;
   position: relative;
@@ -128,20 +130,26 @@ export const ContainerMainModal = styled.div`
 
 export const ContainerMain = styled.div`
   width: 100%;
+  text-align: justify;
+  ${mq({
+     fontSize: ['0.8rem', '01rem', '1.2rem', '1.2rem', '1.2rem', '1.3rem', '1.5rem']    
+   })}
 `;
 
 export const ContainerImagem = styled.div`
   width: 100%;
+  
   display: flex;
   justify-content: center; 
   align-items: center;        
   margin-top: 2rem;
+  
 `;
 
 export const TextSobre = styled.h3`
   margin-top: 2rem;
    ${mq({
-     fontSize: ['0.8rem', '0.8rem', '0.8rem', '1rem', '1.3rem', '1.4rem', '1.6rem']
+     fontSize: ['0.8rem', '01rem', '1.2rem', '1.2rem', '1.2rem', '1.3rem', '1.5rem']    
    })}
   width: 100%;
 `;
@@ -149,20 +157,18 @@ export const TextSobre = styled.h3`
 
 export const InformationContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: start;
-
-  width: 60%;
-  
+  width: 100%;
   gap: 0.5rem;
+  
 
   text-align: justify;
 
   @media (max-width: 768px) {
     width: 100%;
 
-    gap: 1rem;
+    gap: 0.5rem;
   }
 `;
 
