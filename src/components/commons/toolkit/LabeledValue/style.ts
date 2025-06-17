@@ -9,7 +9,6 @@ export const LabeledValueContainer = styled.div`
   font-size: 1.25rem;
 
   ${mq({
-    fontSize: ["0.6rem", "0.6rem", "0.8rem", "0.8rem", "0.8rem", "1rem", "1.1rem"],
-    
+     fontSize: ['0.6rem', '0.7rem', '0.9rem', '0.9rem', '0.9rem', '1rem', '1.2rem']        
   })}
 `;
