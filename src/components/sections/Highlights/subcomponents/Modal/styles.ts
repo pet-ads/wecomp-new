@@ -221,6 +221,7 @@ export const ContainerVacancies = styled.div`
   width: 100%;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  padding-bottom: 20px;
 
   @media (max-width: 768px) {
     flex-direction: row;
@@ -232,10 +233,9 @@ export const ContainerMainModal = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-
+  
   max-height: 20rem;
   overflow-y: auto;
-  padding-right: 0.5rem;
 
   font-size: 0.95rem;
   text-align: justify;
