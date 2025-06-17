@@ -87,12 +87,10 @@ export const InformationContainer = styled.div`
 `;
 
 export const EventImage = styled.img`
-  width: 40%;
-  height: fit-content;
-  max-width: 150px;
+  width: 30%;
   object-fit: cover;
   display: block;
-  border-radius: 10px;
+  border-radius: 0.6rem;
 `;
 
 export const ContainerButtons = styled.div`
@@ -222,6 +220,7 @@ export const ContainerVacancies = styled.div`
   gap: 1rem;
   width: 100%;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 
   @media (max-width: 768px) {
     flex-direction: row;
@@ -230,8 +229,24 @@ export const ContainerVacancies = styled.div`
 `;
 
 export const ContainerMainModal = styled.div`
-  width: 100%;
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  max-height: 20rem;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+
+  font-size: 0.95rem;
+  text-align: justify;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
 `;
 
 export const ContainerMain = styled.div`
@@ -249,5 +264,16 @@ export const ContainerLogoTag = styled.div`
 
   @media (max-width: 768px) {
     margin-top: 0.5rem;
+  }
+`;
+
+export const ResponsiveTagWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    display: contents;
   }
 `;

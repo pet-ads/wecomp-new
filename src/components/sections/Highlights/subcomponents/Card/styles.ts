@@ -35,16 +35,6 @@ export const Container = styled.div`
   }
 `;
 
-// export const IconContainer = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-
-//   gap: 1rem;
-// `;
-
-// export const Icon = styled.img``;
-
 export const EventTitle = styled.div`
   max-width: 100%;
 
@@ -57,11 +47,13 @@ export const EventTitle = styled.div`
 `;
 
 export const EventImage = styled.img`
-  width: 25%;
+  width: 20%;
 
   height: fit-content;
 
   object-fit: cover;
+
+  border-radius: 0.6rem;
 
   @media (max-width: 768px) {
     width: 30%;

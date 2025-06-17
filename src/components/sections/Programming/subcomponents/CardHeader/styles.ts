@@ -9,8 +9,6 @@ export const Container = styled.div`
 
   height: auto;
 
-  gap: 1rem;
-
   @media (max-width: 768px) {
     flex-direction: column-reverse;
   }
@@ -26,7 +24,7 @@ export const InformationContainer = styled.div`
 
   height: 100%;
 
-  gap: 1.25rem;
+  gap: 0.25rem;
 
   text-align: justify;
 
@@ -39,22 +37,20 @@ export const InformationContainer = styled.div`
 
 export const EventImage = styled.img`
   width: 25%;
-
-  height: 25%;
-
-  object-fit: cover;
+  object-fit: cover; 
+  border-radius: 0.5rem; 
+  align-self: flex-start;
 
   @media (max-width: 768px) {
     width: 30%;
-
     height: 30%;
+    
   }
 `;
 
 export const EventDetails = styled.div`
   font-size: 1rem;
   font-weight: 600;
-
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -63,7 +59,6 @@ export const EventDetails = styled.div`
 export const EventSpeakers = styled.div`
   font-size: 1rem;
   font-weight: 600;
-
   color: var(--gray-1000);
 
   @media (max-width: 768px) {

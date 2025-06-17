@@ -1,4 +1,4 @@
-import RedirectButton from "../../../../commons/toolkit/RedirectButton";
+//import RedirectButton from "../../../../commons/toolkit/RedirectButton";
 import LabeledValue from "../../../../commons/toolkit/LabeledValue";
 
 import { CardFooterProps } from "./types";
@@ -7,7 +7,7 @@ import { Container, ContainerButtons, EventDescriptionButton } from "./styles";
 
 export default function CardFooter({
   vacancies,
-  link,
+  //link,
   labelButton,
   typeEvent,
   handleChangeCardText,
@@ -23,7 +23,7 @@ export default function CardFooter({
             {labelButton}
           </EventDescriptionButton>
         )}
-        <RedirectButton children="Inscrever-se" link={link} />
+        {/*<RedirectButton children="Inscrever-se" link={link} />*/}
       </ContainerButtons>
     </Container>
   );
