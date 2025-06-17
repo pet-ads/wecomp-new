@@ -14,7 +14,7 @@ export const Container = styled.div<{ isOpen: boolean }>`
 
   ${mq({
     width: ["13rem", "15rem", "16.5rem", "17rem", "17rem", "17rem", "20rem"],
-    minHeight: ["15.2rem", "14rem", "12rem", "12.5rem", "13rem", "12.5rem", "13.5rem"],
+    minHeight: ["15.2rem", "15rem", "14rem", "14rem", "13rem", "13rem", "13.5rem"],
     padding: ["1rem", "1rem", "1.2rem", "1.2rem", "1.2rem", "1.2rem", "1.5rem"],
   })}
 
@@ -161,10 +161,6 @@ export const TagContainer = styled.div<{ isOpen: boolean }>`
   gap: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-
-  @media (max-width: 768px) {
-    margin-top: 2.5rem;
-  }
 `;
 
 

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import {
   Container,
-  InformationContainer,
+  //InformationContainer,
   EventImage,
   EventSpeakers,
   EventTitle,
