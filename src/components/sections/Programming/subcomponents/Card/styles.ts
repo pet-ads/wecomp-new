@@ -33,20 +33,21 @@ export const Container = styled.div`
 
 export const IconContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start; 
   gap: 0.5rem; 
 
 `;
 
-export const Icon = styled.img``;
+export const Icon = styled.img`
+`;
 
 export const EventTitle = styled.div`
   max-width: 100%;
 
   height: auto;
 
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: bold;
 
   hyphens: auto;
@@ -54,6 +55,6 @@ export const EventTitle = styled.div`
   word-break: break-word;
 
    ${mq({
-          fontSize: ["0.8rem", "0.8rem", "0.8rem", "0.8rem", "1rem", "1rem", "1.2rem"],
+          fontSize: ["0.8rem", "0.8rem", "0.8rem", "0.8rem", "1rem", "1rem", "1.1rem"],
         })}
 `;
