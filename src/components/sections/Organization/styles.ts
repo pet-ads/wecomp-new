@@ -74,6 +74,21 @@ export const DirectorLogo = styled.img<{ width?: string }>`
       ],
     })}
 
+  @media (max-width: 768px) {
+    &[alt*="IFSP"] {
+      width: 5.5rem !important;
+    }
+  }
+
+  @media (min-width: 769px) {
+    &:first-of-type {
+      width: 9rem;
+    }
+    &:last-of-type {
+      width: 6rem;
+    }
+  }
+
   @media (orientation: landscape) and (max-width: 930px) {
     width: 7rem;
   }

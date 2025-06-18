@@ -1,16 +1,7 @@
 import { Section } from "../../commons/structure/Section";
 
-import Slider from "../../commons/toolkit/Slider";
-import Card from "./subcomponents/Card";
-import CardProjeto from "./subcomponents/Modal";
-
-import useIsMobile from "../../../hooks/window/Mobile";
-import useIsMobileHeight from "../../../hooks/window/MobileHeight";
-
-import programmingContent from "../../../assets/content/programming";
-
 import { Container } from "./styles";
-//import SoonCard from "../../commons/toolkit/SoonCard";
+import SoonCard from "../../commons/toolkit/SoonCard";
 
 export default function Programming() {
   const isMobile = useIsMobile();
@@ -24,18 +15,9 @@ export default function Programming() {
       nextSectionId="Marathon"
     >
       <Container>
-        <Slider
-          items={programmingContent}
-          renderItem={(event) =>
-            shouldUseMobileLayout ? (
-              <CardProjeto key={event.name} {...event} />
-            ) : (
-              <Card key={event.name} {...event} />
-            )
-          }
-        />
-        
+        <SoonCard />
       </Container>
     </Section>
   );
 }
+
