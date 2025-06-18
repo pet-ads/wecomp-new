@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
-
-  width: 100%;
-
-  height: auto;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
@@ -19,18 +19,14 @@ export const InformationContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-
-  width: 60%;
-
-  height: 100%;
-
-  gap: 0.25rem;
-
+  max-width: 65%;
+  min-width: 65%;
+  min-height: 100%;
+  max-height: 100%;
   text-align: justify;
-
+  
   @media (max-width: 768px) {
     align-items: center;
-
     width: 100%;
   }
 `;
@@ -40,7 +36,7 @@ export const EventImage = styled.img`
   object-fit: cover; 
   border-radius: 0.5rem; 
   align-self: flex-start;
-
+  
   @media (max-width: 768px) {
     width: 30%;
     height: 30%;
@@ -69,6 +65,6 @@ export const EventSpeakers = styled.div`
 export const TagContainer = styled.div`
   display: flex;
   align-items: center;
-
-  gap: 1rem;
+  bottom: 0;
+  gap: 1.5rem;
 `;

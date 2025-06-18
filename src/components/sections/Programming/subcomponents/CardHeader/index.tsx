@@ -26,8 +26,8 @@ export default function CardHeader({
         <EventDetails>{eventLocationAndDate}</EventDetails>
         <EventSpeakers>{author}</EventSpeakers>
         <TagContainer>
-          <AvailabilityTag label={status} />
           <DifficultyTag label={classification} />
+          <AvailabilityTag label={status} />
         </TagContainer>
       </InformationContainer>
       <EventImage src={image} alt={imageDescription} />

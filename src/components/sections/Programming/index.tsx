@@ -4,6 +4,10 @@ import { Container } from "./styles";
 import SoonCard from "../../commons/toolkit/SoonCard";
 
 export default function Programming() {
+  const isMobile = useIsMobile();
+  const isMobileHeight= useIsMobileHeight();
+  const shouldUseMobileLayout = isMobile || isMobileHeight;
+
   return (
     <Section
       title="Programação"
