@@ -149,7 +149,7 @@ export const ContainerImagem = styled.div`
 export const TextSobre = styled.h3`
   margin-top: 2rem;
    ${mq({
-     fontSize: ['0.8rem', '01rem', '1.2rem', '1.2rem', '1.2rem', '1.3rem', '1.5rem']    
+     fontSize: ['0.8rem', '01rem', '1.2rem', '1.2rem', '1.2rem', '1.3rem', '1.5rem']     
    })}
   width: 100%;
 `;
