@@ -6,8 +6,8 @@ const ButtonContainer = styled.button`
   justify-content: center;
   align-items: center;
 
-  min-width: 8rem;
-  max-width: 8rem;
+  min-width: 7rem;
+  max-width: 7rem;
 
   min-height: 2.5rem;
   max-height: 2.5rem;

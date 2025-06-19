@@ -1,56 +1,89 @@
 import styled from "styled-components";
 import { mq } from "../../../../../utils/responsive/breakpoints";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiFillCloseCircle} from 'react-icons/ai';
 import ButtonContainer from "../../../../../styles/ButtonContainer";
+import { AiOutlinePlus } from 'react-icons/ai'; 
+
 
 export const Container = styled.div`
+position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  padding: 1.5rem;
-  gap: 1rem;
+  gap: '1rem';
   border-radius: 1rem;
-
   background-color: var(--white-100);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
-    
-    ${mq({
-      width: ["13rem", "13rem", "13rem", "16rem", "16rem", "17rem", "18rem"],
-      height: ["9rem", "8rem", "10rem", "12rem", "13rem", "11rem", "16rem"],
+  max-height: 100%;
+  ${mq({
+      width: ["21rem", "21rem", "21rem", "21rem", "23rem", "23rem", "26rem"],
+      height: ["10.5rem", "10.5rem", "11rem", "11.2rem", "11.5rem", "11.5rem", "14rem"],
+      padding: ["1rem", "1rem", "1.2rem", "1.2rem", "1.2rem", "1.2rem", "1.5rem"],
     })}
 
-    @media (orientation: landscape)  {
-      ${mq({
-      width: ["10rem", "12rem", "14rem", "16rem", "16rem", "18rem", "20rem"],
-      height: ["8rem", "8.5rem", "9rem", "9.2rem", "8.5rem", "9.5rem", "10rem"],
+  @media (orientation: landscape) {
+    ${mq({
+      width: ["21rem", "21rem", "21rem", "21rem", "21rem", "23rem", "26rem"],
+      height: ["10.5rem", "10.5rem", "11rem", "11.2rem", "11.5rem", "11.5rem", "14rem"],
     })}
   }
+
+`;
+
+export const PlusIcon = styled(AiOutlinePlus)`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  max-width: 1.5rem;
+  min-width: 1.5rem;
+  max-height: 1.5rem;
+  min-height: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-color); 
+`;
+
+export const ContainerFooter = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
   
   
 `;
 
-export const ContainerEvent = styled.div`
+export const ConteinerHead = styled.div`
+  
 `;
 
-export const ContainerEventModal = styled.div``;
+export const ConteinerTitle = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  margin-bottom: 0.5rem;
+`;
+
+
+export const ContainerEvent = styled.div``;
+
+export const ContainerEventModal = styled.div`
+
+`;
 
 export const AbertoContainer = styled.div`
   top: 20vh;
   z-index: 100;
   width: auto;
   max-height: 100%;
-  height: auto;
-  left: 300px;
+  min-height: 100%;
   overflow: auto;
-  right: 300px;
-  padding: 1rem 1rem 0 1rem;
+  padding: 60px 10%;
   position: relative;
   box-sizing: border-box;
   background-color: var(--white-100);
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     max-width: 100%;
     min-width: 100%;
     min-height: 100%;
@@ -72,15 +105,16 @@ export const AbertoContainer = styled.div`
     right: 0;
     position: fixed;
   }
+
 `;
 
-export const CloseButton = styled(AiOutlineClose)`
-  
-  margin-left: auto;
-  width: 1rem;
-  height: 1rem;
-  
-  
+export const CloseButton = styled(AiFillCloseCircle)`
+  width: 1.5rem;
+  height: 1.5rem;
+  right: 1rem;
+  top: 1rem;
+  position: absolute;
+
 `;
 
 export const ContainerMainModal = styled.div`
@@ -89,44 +123,52 @@ export const ContainerMainModal = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
-  border-radius: 1rem;
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 60%;
-  @media (max-height: 701px) {
-    min-height: 50%;
-    max-height: 50%;
-  }
-  @media (max-height: 512px) {
-    min-height: 30%;
-    max-height: 30%;
-    margin-top: 5%;
-  }
   `;
 
 export const ContainerMain = styled.div`
+  width: 100%;
+  text-align: justify;
+  ${mq({
+     fontSize: ['0.8rem', '01rem', '1.2rem', '1.2rem', '1.2rem', '1.3rem', '1.5rem']    
+   })}
+`;
+
+export const ContainerImagem = styled.div`
+  width: 100%;
+  
+  display: flex;
+  justify-content: center; 
+  align-items: center;        
+  margin-top: 2rem;
+  
+`;
+
+export const TextSobre = styled.h3`
+  margin-top: 2rem;
+   ${mq({
+     fontSize: ['0.8rem', '01rem', '1.2rem', '1.2rem', '1.2rem', '1.3rem', '1.5rem']     
+   })}
   width: 100%;
 `;
 
 
 export const InformationContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: start;
-
-  width: 60%;
-  
+  width: 100%;
   gap: 0.5rem;
+  
 
   text-align: justify;
 
   @media (max-width: 768px) {
     width: 100%;
 
-    gap: 1rem;
+    gap: 0.5rem;
   }
 `;
 
@@ -141,39 +183,37 @@ export const EventImage = styled.img`
 `;
 
 export const ContainerVacancies = styled.div`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
-  width: 100%;
-  padding: 1rem;
-  
-
-  @media (max-height: 701px) {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    min-width: 100%;
-    max-width: 100%;
-  }
+  min-width: 100%;
+  max-width: 100%;
 
   
+`;
+
+export const ContainerBottom = styled.div`
+  position: fixed;
+  bottom: 0; 
+  left: 0;
+  padding: 1% 10%;
+  min-width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white; 
+  z-index: 1000; 
 `;
 
 export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 1rem;
   gap: 1rem;
-  margin-right: 2rem;
+  right: 0;
 
 `;
 
@@ -187,12 +227,14 @@ export const EventTitle = styled.div<{isOpen: boolean}>`
   font-weight: bold;
 
   max-width: 100%;
-
+  
 
   cursor: pointer;
+  padding-right: 1rem;
 
   font-size: ${({ isOpen }) => isOpen 
-  ? '3rem' : mq({ fontSize: ['0.5rem', '0.8rem', '0.8rem', '1rem', '1rem', '1rem', '1.2rem'] }) };
+  ? mq({ fontSize: ['0.7rem', '1.2rem', '1.2rem', '1.4rem', '1.7rem', '1.8rem', '2rem'] }) : mq({ fontSize: ['0.8rem', '0.9rem', '1.1rem', '1.1rem', '1.1rem', '1.2rem', '1.4rem'] }) };
+  
   @media (max-width: 768px) {
     white-space: normal;
     overflow: visible;
@@ -202,8 +244,9 @@ export const EventTitle = styled.div<{isOpen: boolean}>`
 
 export const EventDetails = styled.div<{isOpen: boolean}>`
   font-size: ${({ isOpen }) => isOpen 
-  ?  mq({ fontSize: ['0.5rem', '0.8rem', '0.8rem', '1rem', '1rem', '1rem', '1.2rem'] }) : mq({ fontSize: ['0.5rem', '0.5rem', '0.6rem', '0.6rem', '0.6rem', '0.6rem', '0.8rem'] }) };
+  ?  mq({ fontSize: ['0.8rem', '1rem', '1rem', '1.2rem', '1.2rem', '1.2rem', '1.4rem'] }) : mq({ fontSize: ['0.6rem', '0.6rem', '0.8rem', '0.8rem', '0.8rem', '0.8rem', '1rem']  }) };
   font-weight: 600;
+  
 `;
 
 export const EventSpeakers = styled.div`
@@ -218,7 +261,6 @@ export const IconContainer = styled.div`
   align-items: flex-start; 
   justify-content: space-between;
   gap: 0.1rem;
-  margin-top: -1rem;
 
 `;
 
@@ -235,12 +277,12 @@ export const Icon = styled.img`
 export const TagContainer = styled.div<{isOpen: boolean}>`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.4rem;
   margin-top:  ${({ isOpen }) => isOpen 
   ? '1rem' : '-0.5rem'};
   ${mq({
-      width: ["1rem", "2rem", "2rem", "2rem", "2rem", "2rem", "5rem"],
-      height: ["1rem", "2rem", "2rem", "2rem", "2rem", "2rem", "5rem"],
+      width: ["auto", "auto", "auto", "auto", "auto", "auto", "auto"],
+      height: ["auto", "auto", "auto", "auto", "auto", "auto", "auto"],
     })}
 
 `;
