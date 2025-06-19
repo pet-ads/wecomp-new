@@ -14,7 +14,6 @@ import {
   ContainerVacancies,
   Vacancies,
   ContainerButtons,
-  EventDescriptionButton,
   ContainerMainModal,
   ContainerLogoTag,
   ModalContentWrapper,
@@ -24,12 +23,14 @@ import {
 import { HighlightsProps } from "../../types";
 import LabeledValue from "../../../../commons/toolkit/LabeledValue";
 import ExpirienceTag from "../../../../commons/toolkit/tags/ExperienceTag";
+import RedirectButton from "../../../../commons/toolkit/RedirectButton";
 
 export default function CardProjeto({
   title,
   image,
   companyName,
   vacancies,
+  link,
   description,
   typeEvent,
 }: HighlightsProps) {
@@ -67,9 +68,7 @@ export default function CardProjeto({
         <ContainerVacancies>
           <LabeledValue label="Vagas" value={vacancies} />
           <ContainerButtons>
-            <EventDescriptionButton>
-              Acesse
-            </EventDescriptionButton>
+            <RedirectButton children="Acesse" link={link} />
           </ContainerButtons>
         </ContainerVacancies>
       </ModalContentWrapper>
