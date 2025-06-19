@@ -21,7 +21,7 @@ export const organizationContent: OrganizationProps[] = [
     logoPath: ifsp, 
     mobileLogoPath: ifspVertical, 
     link: "https://scl.ifsp.edu.br",
-    width: "",
+    width: "5rem",
     type: "Director",
   },
   {
