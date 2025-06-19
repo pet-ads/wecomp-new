@@ -2,7 +2,7 @@ import { Section } from "../../commons/structure/Section";
 import { Container } from "./styles";
 
 // import comingSoonImg from "../../../assets/images/emBreve.png";
-//import SoonCard from "../../commons/toolkit/SoonCard";
+// import SoonCard from "../../commons/toolkit/SoonCard";
 import Slider from "../../commons/toolkit/Slider";
 import highlightContent from "../../../assets/content/highlights";
 
