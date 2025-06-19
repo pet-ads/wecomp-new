@@ -53,11 +53,11 @@ export const ContainerFooter = styled.div`
   
 `;
 
-export const ConteinerHead = styled.div`
+export const ContainerHead = styled.div`
   
 `;
 
-export const ConteinerTitle = styled.div`
+export const ContainerTitle = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 4px;

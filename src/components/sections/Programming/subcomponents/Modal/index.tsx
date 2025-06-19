@@ -27,8 +27,8 @@ import {
   ContainerImagem,
   IconContainer,
   AbertoContainer,
-  ConteinerHead,
-  ConteinerTitle,
+  ContainerHead,
+  ContainerTitle,
   ContainerFooter,
  
   CloseButton,
@@ -183,16 +183,16 @@ export default function CardProjeto({
     <>
       {!isOpen && (
         <Container key={name} onClick={setingIsOpen}>
-          <ConteinerHead>
-            <ConteinerTitle>
+          <ContainerHead>
+            <ContainerTitle>
               <IconContainer>
                 <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
               </IconContainer>
               <EventTitle isOpen={isOpen}>{name}</EventTitle>
               <PlusIcon onClick={setingIsOpen} aria-label="Abrir detalhes" />
-            </ConteinerTitle>
+            </ContainerTitle>
             <EventDetails isOpen={isOpen}>{`${location} - ${date} | ${time}`}</EventDetails>
-          </ConteinerHead>
+          </ContainerHead>
           
           <ContainerFooter>
             <LabeledValue label="Vagas" value={vacancies} />

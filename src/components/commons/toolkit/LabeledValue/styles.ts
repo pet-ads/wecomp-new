@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mq } from "../../../..//utils/responsive/breakpoints";
+import { mq } from "../../../../utils/responsive/breakpoints";
 
 export const LabeledValueContainer = styled.div`
   display: flex;
