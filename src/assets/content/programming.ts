@@ -1,9 +1,10 @@
 import { ProgrammingProps } from "../../components/sections/Programming/types";
+import minister from "../images/ministrante.svg";
 
 export const programmingContent: ProgrammingProps[] = [
   {
     name: "Abertura oficial",
-    image: 'minister',
+    image: minister,
     imageDescription: "OnovoLab",
     bio: "",
     author: "ONOVOLAB",
@@ -20,7 +21,7 @@ export const programmingContent: ProgrammingProps[] = [
   },
   {
     name: "Como é o dia-a-dia de um QA?",
-    image: 'minister',
+    image: minister,
     imageDescription: "Cerminaro",
     bio: "Leonardo Cerminaro é formado em Análise e Desenvolvimento de Sistemas pelo IFSP São Carlos e trabalha como Senior Quality Assurance Engineer na X-Team. Possui certificações de teste de software CTFL-AT e CTFL da BSTQB e ampla experiência em qualidade de software.",
     author: "Leonardo Cerminaro",
@@ -37,7 +38,7 @@ export const programmingContent: ProgrammingProps[] = [
   },
   {
     name: "Criando um aplicativo de clima com Flutter",
-    image: 'minister',
+    image: minister,
     imageDescription: "Davi Guelfi Erba",
     bio: "Davi é desenvolvedor full-stack com foco em front-end na Monitora, organizador do OpenSanca, apaixonado por carro, tecnologia e aleatoriedades.",
     author: "Davi Guelfi Erba",
@@ -54,7 +55,7 @@ export const programmingContent: ProgrammingProps[] = [
   },
   {
     name: "Jornada Cloud Native",
-    image: 'minister',
+    image: minister,
     imageDescription: "Jornada Cloud Native",
     bio: "Henrique Lima Margarido e Augusto Moreto Barros são especialistas em DevOps na Minsait, com experiência em Kubernetes, CI/CD, automação de infraestrutura, observabilidade e nuvem (AWS, Azure).",
     author: "Henrique Margarido e Augusto Barros",
@@ -71,7 +72,7 @@ export const programmingContent: ProgrammingProps[] = [
   },
   {
     name: "Explorando a arquitetura MVVM e Consumo de API em Desenvolvimento Mobile",
-    image: 'minister',
+    image: minister,
     imageDescription: "Geovanna Martins e Gustavo Feliciano",
     bio: "Geovana Martins é desenvolvedora Android na Santander F1RST e Gustavo Feliciano é Engenheiro iOS na F1RST, ambos com formação em tecnologia e experiência em desenvolvimento mobile.",
     author: "Geovanna Martins e Gustavo Feliciano",
@@ -88,7 +89,7 @@ export const programmingContent: ProgrammingProps[] = [
   },
   {
     name: "Ciência de dados aplicada a imagens",
-    image: 'minister',
+    image: minister,
     imageDescription: "Ciência de dados aplicada a imagens",
     bio: "Jorge Franco e Augusto Nunes são estudantes e pesquisadores com experiência em IA, machine learning e ciência de dados, com passagens por USP, Embrapa e grupos como o DATA.",
     author: "Jorge Luiz Franco e Augusto Nunes",
