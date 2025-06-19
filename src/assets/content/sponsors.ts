@@ -36,12 +36,12 @@ export const sponsorsContent: SponsorProps[] = [
     link: "https://softable.com.br/",
     width: "8rem",
   },
-  // {
-  //   name: "CSD BR",
-  //   logoPath: csdbr,
-  //   link: "https://csdbr.com",
-  //   width: "8rem",
-  // },
+  {
+    name: "CSD BR",
+    logoPath: csdbr,
+    link: "https://csdbr.com",
+    width: "8rem",
+  },
 ];
 
 export default sponsorsContent;

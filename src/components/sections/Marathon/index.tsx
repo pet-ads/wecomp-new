@@ -17,8 +17,6 @@ export default function Marathon() {
   const isMobile = useIsMobile();
   const isLandscape = useOrientation();
 
-  console.log("é landscape garai?", isLandscape);
-
   return (
     <Section
       title="InterIF"

@@ -1,6 +1,6 @@
 import { LabeledValueProps } from "./types";
 
-import { LabeledValueContainer } from "./style";
+import { LabeledValueContainer } from "./styles";
 
 export default function LabeledValue({ label, value }: LabeledValueProps) {
   return (

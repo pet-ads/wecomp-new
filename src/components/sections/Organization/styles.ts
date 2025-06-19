@@ -80,7 +80,6 @@ export const DirectorLogo = styled.img<{ width?: string }>`
     }
   }
 
-
   //   SUMMARY
   //   web responsive logos
   //   IFSP   ... width 10.5rem
