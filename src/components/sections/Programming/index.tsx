@@ -10,12 +10,14 @@ import useIsMobileHeight from "../../../hooks/window/MobileHeight";
 import programmingContent from "../../../assets/content/programming";
 
 import { Container } from "./styles";
+import SoonCard from "../../commons/toolkit/SoonCard";
 //import SoonCard from "../../commons/toolkit/SoonCard";
 
 export default function Programming() {
   const isMobile = useIsMobile();
   const isMobileHeight= useIsMobileHeight();
   const shouldUseMobileLayout = isMobile || isMobileHeight;
+  const soonOrNot = true;
 
   return (
     <Section
@@ -24,7 +26,7 @@ export default function Programming() {
       nextSectionId="Marathon"
     >
       <Container>
-        <Slider
+        {soonOrNot ? <SoonCard/> : <Slider
           items={programmingContent}
           renderItem={(event) =>
             shouldUseMobileLayout ? (
@@ -33,8 +35,7 @@ export default function Programming() {
               <Card key={event.name} {...event} />
             )
           }
-        />
-        
+        />}
       </Container>
     </Section>
   );
