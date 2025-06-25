@@ -7,7 +7,7 @@ export default function RedirectButton({
   children,
 }: RedirectButtonProps) {
   const handleClick = () => {
-    window.location.href = link;
+    window.open(link, "_blank");
   };
 
   return <LinkButton onClick={handleClick}>{children}</LinkButton>;
