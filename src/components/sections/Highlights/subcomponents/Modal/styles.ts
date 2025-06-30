@@ -48,7 +48,7 @@ export const AbertoContainer = styled.div`
   flex-direction: column;
 
   @media (max-width: 768px),
-         (max-height: 686px) {
+         (max-height: 687px) {
     max-width: 100%;
     min-width: 100%;
     min-height: 100%;
@@ -62,6 +62,14 @@ export const AbertoContainer = styled.div`
 
   @media (orientation: landscape) and (max-height: 400px) {
     padding: 20px 5%;
+  }
+
+  @media (orientation: landscape) and (max-height: 450px) {
+    padding: 3rem 8%;
+  }
+
+  @media (orientation: landscape) and (max-height: 375px) {
+    padding: 3rem 10%;
   }
 `;
 
@@ -84,6 +92,12 @@ export const InformationContainer = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   }
+
+  @media (orientation: landscape) and (max-height: 450px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 `;
 
 export const EventImage = styled.img`
@@ -91,6 +105,10 @@ export const EventImage = styled.img`
   object-fit: cover;
   display: block;
   border-radius: 0.6rem;
+
+  @media (orientation: landscape) and (max-height: 450px) {
+    width: 20%;
+  }
 `;
 
 export const ContainerButtons = styled.div`
@@ -226,6 +244,14 @@ export const ContainerVacancies = styled.div`
   @media (max-width: 768px) {
     flex-direction: row;
     gap: 0.5rem;
+  }
+
+  @media (orientation: landscape) and (max-height: 450px) {
+    padding-bottom: 5rem;
+  }
+
+  @media (min-height: 667px) {
+    padding-bottom: 4rem;
   }
 `;
 

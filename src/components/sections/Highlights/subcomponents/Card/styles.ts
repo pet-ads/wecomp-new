@@ -18,7 +18,7 @@ export const Container = styled.div`
   background-color: var(--white-100);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     min-width: 65vw;
     max-width: 65vw;
 
@@ -55,7 +55,7 @@ export const EventImage = styled.img`
 
   border-radius: 0.6rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     width: 30%;
 
     height: 30%;
