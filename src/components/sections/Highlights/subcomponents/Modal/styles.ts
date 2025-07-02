@@ -14,7 +14,7 @@ export const Container = styled.div<{ isOpen: boolean }>`
 
   ${mq({
     width: ["13rem", "15rem", "16.5rem", "17rem", "17rem", "17rem", "20rem"],
-    minHeight: ["15.2rem", "15rem", "14rem", "14rem", "13rem", "13rem", "13.5rem"],
+    minHeight: ["15.2rem", "14rem", "14rem", "14rem", "13rem", "13rem", "12rem"],
     padding: ["1rem", "1rem", "1.2rem", "1.2rem", "1.2rem", "1.2rem", "1.5rem"],
   })}
 
@@ -23,7 +23,7 @@ export const Container = styled.div<{ isOpen: boolean }>`
   @media (orientation: landscape) and (max-width: 930px) {
     ${mq({
       width: ["8rem", "7rem", "12rem", "17rem", "17rem", "19rem", "20rem"],
-      minHeight: ["8.5rem", "10rem", "10rem", "12rem", "13rem", "13rem", "13.5rem"],
+      minHeight: ["8.5rem", "10rem", "10rem", "12rem", "12rem", "12rem", "12rem"],
     })}
   }
 `;
