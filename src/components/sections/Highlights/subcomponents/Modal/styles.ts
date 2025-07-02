@@ -259,6 +259,8 @@ export const ContainerMainModal = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+
+  padding-right: 1rem;
   
   max-height: 20rem;
   overflow-y: auto;
@@ -270,7 +272,7 @@ export const ContainerMainModal = styled.div`
     width: 6px;
   }
   &::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: #1A800A;
     border-radius: 4px;
   }
 `;

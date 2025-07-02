@@ -17,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
 
   html, body, #root {
     width: 100%;
-    height: 100%;
+    height: 100dvh;
   }
 
   body {
@@ -26,6 +26,14 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--gray-200);
     color: var(--gray-1000);
     font-family: 'Montserrat';
+  }
+
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--green-500);
+    border-radius: 20px;
   }
 `;
 
