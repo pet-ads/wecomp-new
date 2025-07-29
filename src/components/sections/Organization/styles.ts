@@ -35,7 +35,6 @@ export const LabelGroup = styled.h2`
 export const Content = styled.div`
   width: 100%;
   height: 50%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,7 +46,7 @@ export const Content = styled.div`
 export const DirectorWrapper = styled.div`
   width: 100%;
   height: 80%;
-
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +56,7 @@ export const DirectorWrapper = styled.div`
 export const DirectorLogo = styled.img<{ width?: string }>`
   margin-top: 1.5rem;
   height: 100%;
+  
   object-fit: contain;
   overflow: hidden;
   cursor: pointer;
@@ -64,13 +64,13 @@ export const DirectorLogo = styled.img<{ width?: string }>`
   ${({ width }) =>
     mq({
       width: [
-        "5rem",
-        "5rem",
-        "5rem",
-        "6rem",
-        "6.5rem",
         "7rem",
-        width || "8rem",
+        "7rem",
+        "7rem",
+        "8rem",
+        "8.5rem",
+        "9rem",
+        width || "10rem",
       ],
     })}
 
@@ -88,13 +88,13 @@ export const DirectorLogo = styled.img<{ width?: string }>`
 
   @media (min-width: 769px) {
     &[alt*="IFSP"] {
-      width: 10.5rem;
+      width: 13.5rem;
     }
     &[alt*="ONE SIX"] {
-      width: 4.5rem;
+      width: 7.5rem;
     }
     &[alt*="PET ADS"] {
-      width: 7rem;
+      width: 10rem;
     }
   }
 
