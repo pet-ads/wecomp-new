@@ -29,7 +29,7 @@ export const Container = styled.div`
 `;
 
 export const LabelGroup = styled.h2`
-  margin-top: 1.25rem;
+  
 `;
 
 export const Content = styled.div`
@@ -39,7 +39,7 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  background-color: blue;
   gap: 1rem;
 `;
 
@@ -54,9 +54,7 @@ export const DirectorWrapper = styled.div`
 `;
 
 export const DirectorLogo = styled.img<{ width?: string }>`
-  margin-top: 1.5rem;
   height: 100%;
-  
   object-fit: contain;
   overflow: hidden;
   cursor: pointer;
