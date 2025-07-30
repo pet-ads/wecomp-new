@@ -76,7 +76,7 @@ export const DirectorLogo = styled.img<{ width?: string }>`
 
   @media (max-width: 768px) {
     &[alt*="IFSP"] {
-      width: 5.5rem !important;
+      width: 7.5rem !important;
     }
   }
 
