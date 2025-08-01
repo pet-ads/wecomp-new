@@ -2,12 +2,13 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const SliderWrapper = styled.div`
-  display: flex;
-
-  width: 100%;
+  margin: 0px; 
+  overflow:hidden; 
   height: 100%;
-
-  overflow: hidden;
+  padding-top: constant(safe-area-inset-top); 
+  padding-top: env(safe-area-inset-top); 
+  padding-bottom: constant(safe-area-inset-bottom); 
+  padding-bottom: env(safe-area-inset-bottom);
 `;
 
 export const CarouselTrack = styled(motion.div)`
