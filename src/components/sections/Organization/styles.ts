@@ -28,9 +28,7 @@ export const Container = styled.div`
   }
 `;
 
-export const LabelGroup = styled.h2`
-  
-`;
+export const LabelGroup = styled.h2``;
 
 export const Content = styled.div`
   width: 100%;
@@ -39,14 +37,13 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: blue;
   gap: 1rem;
 `;
 
 export const DirectorWrapper = styled.div`
   width: 100%;
   height: 80%;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
