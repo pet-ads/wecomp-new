@@ -28,19 +28,15 @@ export const Container = styled.div`
   }
 `;
 
-export const LabelGroup = styled.h2`
-  margin-top: 1.25rem;
-`;
+export const LabelGroup = styled.h2``;
 
 export const Content = styled.div`
   width: 100%;
   height: 50%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   gap: 1rem;
 `;
 
@@ -55,7 +51,6 @@ export const DirectorWrapper = styled.div`
 `;
 
 export const DirectorLogo = styled.img<{ width?: string }>`
-  margin-top: 1.5rem;
   height: 100%;
   object-fit: contain;
   overflow: hidden;
@@ -64,19 +59,19 @@ export const DirectorLogo = styled.img<{ width?: string }>`
   ${({ width }) =>
     mq({
       width: [
-        "5rem",
-        "5rem",
-        "5rem",
-        "6rem",
-        "6.5rem",
         "7rem",
-        width || "8rem",
+        "7rem",
+        "7rem",
+        "8rem",
+        "8.5rem",
+        "9rem",
+        width || "10rem",
       ],
     })}
 
   @media (max-width: 768px) {
     &[alt*="IFSP"] {
-      width: 5.5rem !important;
+      width: 7.5rem !important;
     }
   }
 
@@ -88,13 +83,13 @@ export const DirectorLogo = styled.img<{ width?: string }>`
 
   @media (min-width: 769px) {
     &[alt*="IFSP"] {
-      width: 10.5rem;
+      width: 13.5rem;
     }
     &[alt*="ONE SIX"] {
-      width: 4.5rem;
+      width: 7.5rem;
     }
     &[alt*="PET ADS"] {
-      width: 7rem;
+      width: 10rem;
     }
   }
 
