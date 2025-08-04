@@ -67,7 +67,10 @@ export default function CardProjeto({
       
       document.body.style.overflow = "hidden";
     } else {
-      
+      setTimeout(() => {
+        window.scrollBy(0, 1);
+        window.scrollBy(0, -1);
+      }, 50);
       document.body.style.overflow = "auto";
     }
 
