@@ -4,6 +4,7 @@ import kakauTech from "../images/organizationLogo/KakauTech.svg";
 import csdbr from "../images/organizationLogo/CsdLogo.svg";
 import softable from "../images/organizationLogo/SoftableLogo.svg";
 import amdocs from "../images/organizationLogo/amdocs.svg";
+import dio from "../images/organizationLogo/DIO.svg";
 
 interface SponsorProps {
   name: string;
@@ -38,17 +39,23 @@ export const sponsorsContent: SponsorProps[] = [
     width: "8rem",
   },
   {
+    name: "DIO",
+    logoPath: dio,
+    link: "https://www.dio.me/",
+    width: "8rem",
+  },
+  {
     name: "ONOVOLAB",
     logoPath: onovolab,
     link: "https://onovolab.com",
     width: "9rem",
-  }, 
+  },
   {
     name: "OneSIX",
     logoPath: oneSix,
     link: "https://onesix.global",
     width: "8rem",
-  }
+  },
 ];
 
 export default sponsorsContent;
