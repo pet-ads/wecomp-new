@@ -62,20 +62,16 @@ export default function CardProjeto({
 }: ProgrammingProps) {
   const [isOpen, setIsOpen] = useState(false);
 
- useEffect(() => {
+
+  useEffect(() => {
     if (isOpen) {
-      
-      document.body.style.overflow = "hidden";
+      document.body.classList.add("modal-open");
     } else {
-      setTimeout(() => {
-        window.scrollBy(0, 1);
-        window.scrollBy(0, -1);
-      }, 50);
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("modal-open");
     }
 
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("modal-open");
     };
   }, [isOpen]);
 
