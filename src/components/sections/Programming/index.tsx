@@ -17,7 +17,7 @@ export default function Programming() {
   const isMobile = useIsMobile();
   const isMobileHeight= useIsMobileHeight();
   const shouldUseMobileLayout = isMobile || isMobileHeight;
-  const soonOrNot = true;
+  const soonOrNot = false;
 
   return (
     <Section
