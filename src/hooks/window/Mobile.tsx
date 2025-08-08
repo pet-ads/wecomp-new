@@ -1,7 +1,11 @@
+// Hooks
 import useWindowSize from "./useWindowSize";
 
-export default function useIsMobile(){
-    const size = useWindowSize();
-    const isMobile = size.width <= 767;
-    return isMobile;
+// Constants
+const MAX_WIDTH = 768;
+
+export default function useIsMobile() {
+  const size = useWindowSize();
+  const isMobile = size.width <= MAX_WIDTH;
+  return isMobile;
 }
