@@ -183,13 +183,12 @@ export const EventImage = styled.img`
 `;
 
 export const ContainerVacancies = styled.div`
-  position: relative;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  min-width: 100%;
-  max-width: 100%;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  flex-wrap: nowrap;
 
   
 `;
@@ -212,8 +211,9 @@ export const ContainerBottom = styled.div`
 export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 1rem;
-  right: 0;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  white-space: nowrap; 
 
 `;
 
