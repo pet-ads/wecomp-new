@@ -127,7 +127,11 @@ export default function CardProjeto({
                 {labelButton}
               </EventDescriptionButton>
             )}
-            <RedirectButton children="Inscrever-se" link={link} />
+            {link && (
+              <RedirectButton link={link}>
+                Inscrever-se
+              </RedirectButton>
+            )}
           </ContainerButtons>
         </ContainerVacancies>
       </ContainerBottom>
@@ -172,7 +176,11 @@ export default function CardProjeto({
         <ContainerVacancies>
           <LabeledValue label="Vagas" value={vacancies} />
           <ContainerButtons>
-            <RedirectButton children="Inscrever-se" link={link} />
+            {link && (
+              <RedirectButton link={link}>
+                Inscrever-se
+              </RedirectButton>
+            )}
           </ContainerButtons>
         </ContainerVacancies>
       </ContainerBottom>

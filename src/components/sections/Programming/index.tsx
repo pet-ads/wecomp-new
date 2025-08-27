@@ -16,7 +16,7 @@ import programmingContent from "../../../assets/content/programming";
 import { Container } from "./styles";
 
 // Constants
-const soonOrNot = true;
+const soonOrNot = false;
 
 export default function Programming() {
   const isMobile = useIsMobile();
