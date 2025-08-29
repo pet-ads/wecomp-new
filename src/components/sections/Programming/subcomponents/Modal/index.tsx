@@ -97,7 +97,7 @@ export default function CardProjeto({
       <CloseButton onClick={setingIsOpen} />
       <InformationContainer>
         <EventTitle isOpen={isOpen}>{name}</EventTitle>
-        <EventDetails isOpen={isOpen}>{`${location} | ${date} | ${time}`}</EventDetails>
+        <EventDetails isOpen={isOpen}>{[location, date, time].filter(Boolean).join(" | ")}</EventDetails>
         <EventSpeakers>{author}</EventSpeakers>
       </InformationContainer>
       
@@ -142,7 +142,7 @@ export default function CardProjeto({
       <CloseButton onClick={setingIsOpen} />
       <InformationContainer>
         <EventTitle isOpen={isOpen}>{name}</EventTitle>
-        <EventDetails isOpen={isOpen}>{`${location} | ${date} | ${time}`}</EventDetails>
+        <EventDetails isOpen={isOpen}>{[location, date, time].filter(Boolean).join(" | ")}</EventDetails>
         <EventSpeakers>{author}</EventSpeakers>
       </InformationContainer>
 
@@ -199,7 +199,7 @@ export default function CardProjeto({
               <EventTitle isOpen={isOpen}>{name}</EventTitle>
               <PlusIcon onClick={setingIsOpen} aria-label="Abrir detalhes" />
             </ContainerTitle>
-            <EventDetails isOpen={isOpen}>{`${location} - ${date} | ${time}`}</EventDetails>
+            <EventDetails isOpen={isOpen}>{[location, date, time].filter(Boolean).join(" | ")}</EventDetails>
           </ContainerHead>
           
           <ContainerFooter>
