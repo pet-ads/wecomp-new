@@ -2,8 +2,8 @@ import { ProgrammingProps } from "../../components/sections/Programming/types";
 
 import minister from "../images/ministrante.svg"
 import onovolav from "../images/organizationLogo/onovolab.svg"
+import amdocs from "../images/organizationLogo/amdocs.svg"
 import GabrielZutiao from "../images/lecturers/GabrielZutiao.svg"
-import HT_RO_GG_MM from "../images/lecturers/HT_RO_GG_MM.svg"
 import CarlaoPereira from "../images/lecturers/CarlaoPereira.svg"
 import LucasOliveira from "../images/lecturers/LucasOliveira.svg"
 import LauraLuchiari from "../images/lecturers/LauraLuchiari.svg"
@@ -20,9 +20,9 @@ export const programmingContent: ProgrammingProps[] = [
     bio: "",
     author: "ONOVOLAB",
     date: "03/10",
-    time: "19h - 21h30",
+    time: "19h - 22h",
     link: "",
-    vacancies: 0,
+    vacancies: 240,
     location: "ONOVOLAB",
     description:
       "A abertura oficial da VI Wecomp acontecerá no ONOVOLAB e contará com a presença de empresas parceiras, uma mesa redonda com o tema 'IA generativa, mercado de trabalho e a carreira dos (novos) desenvolvedores' e uma confraternização. Não perca!",
@@ -32,15 +32,9 @@ export const programmingContent: ProgrammingProps[] = [
   },
   {
     name: "Da Ideia à Solução: Caminhos Reais na Entrega e Suporte de Tecnologia",
-    image: HT_RO_GG_MM,
+    image: amdocs,
     imageDescription: "Henrique Trimidi, Giovana Garcia, Ricardo Ortega e Misia Meyknecht",
-    bio: `Henrique Trimidi: Domain Solution Expert; Com 12 anos de experiência na Amdocs, Henrique construiu uma carreira sólida na indústria de telecomunicações, atuando desde Desenvolvedor Júnior até Gerente de Desenvolvimento. Ex-aluno do IFSP, ele é especialista em soluções tecnológicas, com profundo conhecimento em desenvolvimento de software e uma visão estratégica voltada para inovação e eficiência em projetos complexos.
-
-    ; Giovana Garcia: SW Developer; Graduanda em Análise e Desenvolvimento de Sistemas em São Carlos, iniciou sua trajetória acadêmica na UFSCar, na área de Ciências Sociais. Com o tempo, sua afinidade com tecnologia a levou a migrar para Análise e Desenvolvimento de Sistemas, onde vem se desenvolvendo como profissional da área. Recentemente contratada pela Amdocs, ela dá início à sua jornada no desenvolvimento de software.
-    
-    ; Ricardo Ortega: Site Lead; Com 33 anos de trajetória na área de Tecnologia da Informação, Ricardo acumula 27 anos de atuação como executivo em empresas nacionais e multinacionais, como Amdocs do Brasil, Elevadores Otis e Cromos Tintas Gráficas. Especialista em telecomunicações, possui sólida experiência em todo o ciclo de vida de projetos e suporte a sistemas, contribuindo diretamente para a entrega de soluções eficientes e sustentáveis para diversos clientes.
-    
-    ; Misia Meyknecht: TA Team Lead; Com 15 anos de experiência em recrutamento e seleção, atuou em empresas dos setores de marketing, tecnologia (software) e financeiro. Há 8 anos na Amdocs, onde lidera iniciativas estratégicas de aquisição de talentos para América Latina, com foco em atrair perfis alinhados à cultura organizacional e às necessidades do negócio. Caso vocês tenham a disponibilidade de ministrar minicursos, preciso para cada um deles: N/A`,
+    bio: "Henrique Trimidi: Domain Solution Expert; Com 12 anos de experiência na Amdocs, Henrique construiu uma carreira sólida na indústria de telecomunicações, atuando desde Desenvolvedor Júnior até Gerente de Desenvolvimento. Ex-aluno do IFSP, ele é especialista em soluções tecnológicas, com profundo conhecimento em desenvolvimento de software e uma visão estratégica voltada para inovação e eficiência em projetos complexos.; \n \n Giovana Garcia: SW Developer; Graduanda em Análise e Desenvolvimento de Sistemas em São Carlos, iniciou sua trajetória acadêmica na UFSCar, na área de Ciências Sociais. Com o tempo, sua afinidade com tecnologia a levou a migrar para Análise e Desenvolvimento de Sistemas, onde vem se desenvolvendo como profissional da área. Recentemente contratada pela Amdocs, ela dá início à sua jornada no desenvolvimento de software.; \n \n Ricardo Ortega: Site Lead; Com 33 anos de trajetória na área de Tecnologia da Informação, Ricardo acumula 27 anos de atuação como executivo em empresas nacionais e multinacionais, como Amdocs do Brasil, Elevadores Otis e Cromos Tintas Gráficas. Especialista em telecomunicações, possui sólida experiência em todo o ciclo de vida de projetos e suporte a sistemas, contribuindo diretamente para a entrega de soluções eficientes e sustentáveis para diversos clientes.; \n \n Misia Meyknecht: TA Team Lead; Com 15 anos de experiência em recrutamento e seleção, atuou em empresas dos setores de marketing, tecnologia (software) e financeiro. Há 8 anos na Amdocs, onde lidera iniciativas estratégicas de aquisição de talentos para América Latina, com foco em atrair perfis alinhados à cultura organizacional e às necessidades do negócio. Caso vocês tenham a disponibilidade de ministrar minicursos, preciso para cada um deles: N/A",
     author: "Henrique Trimidi, Giovana Garcia, Ricardo Ortega e Misia Meyknecht",
     date: "06/10",
     time: "19h - 21h",
@@ -125,7 +119,7 @@ export const programmingContent: ProgrammingProps[] = [
     name: "Desenvolvimento de Aplicações Híbridas com Capacitor",
     image: DP_LC,
     imageDescription: "Diego Pagotto e Luiz Chiquetano",
-    bio: "Diego Pagotto é desenvolvedor P&D Júnior na Xmobots e atua com RTA, SpringBoot, React,  PostgreSQL,  Go e Python. Luiz Chiquetano é desenvolvedor P&D Júnior na Xmobots e trabalha com RTA, React, Typescript, Java e Kotlin. Ambos são egressos do curso de ADS do IFSP São Carlos.",
+    bio: "Diego Pagotto é desenvolvedor P&D Júnior na Xmobots e atua com RTA, SpringBoot, React,  PostgreSQL,  Go e Python. \n Luiz Chiquetano é desenvolvedor P&D Júnior na Xmobots e trabalha com RTA, React, Typescript, Java e Kotlin. Ambos são egressos do curso de ADS do IFSP São Carlos.",
     author: "Diego Pagotto e Luiz Chiquetano",
     date: "",
     time: "",
