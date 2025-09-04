@@ -5,11 +5,11 @@ import onovolav from "../images/organizationLogo/onovolab.svg"
 import amdocs from "../images/organizationLogo/amdocs.svg"
 import GabrielZutiao from "../images/lecturers/GabrielZutiao.svg"
 import CarlaoPereira from "../images/lecturers/CarlaoPereira.svg"
-import Pet from "../images/organizationLogo/petLogo.svg"
+//import Pet from "../images/organizationLogo/petLogo.svg"
 import LauraLuchiari from "../images/lecturers/LauraLuchiari.svg"
 //import DP_LC from "../images/lecturers/DP_LC.svg"
 import LeonardoCerminaro from "../images/lecturers/LC.svg"
-import kakautech from "../images/organizationLogo/petLogo.svg"
+import kakautech from "../images/organizationLogo/KakauTech.svg"
 
 
 
@@ -117,7 +117,7 @@ export const programmingContent: ProgrammingProps[] = [
     classification: "Basic",
     status: "Available",
   },
-  {
+  /*{
     name: "Git e GitHub: do mínimo que você precisa saber ao deploy no Vercel",
     image: Pet,
     imageDescription: "Lucas Oliveira",
@@ -133,7 +133,7 @@ export const programmingContent: ProgrammingProps[] = [
     typeEvent: "Course",
     classification: "Free",
     status: "Available",
-  },
+  },*/
   {
     name: "Introdução à automação de testes com Playwright",
     image: LeonardoCerminaro,
