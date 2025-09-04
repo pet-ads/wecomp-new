@@ -9,7 +9,7 @@ import CarlaoPereira from "../images/lecturers/CarlaoPereira.svg"
 import LauraLuchiari from "../images/lecturers/LauraLuchiari.svg"
 //import DP_LC from "../images/lecturers/DP_LC.svg"
 import LeonardoCerminaro from "../images/lecturers/LC.svg"
-import kakautech from "../images/organizationLogo/KakauTech.svg"
+import kakautech from "../images/KakauTech.svg"
 
 
 
