@@ -10,7 +10,7 @@ export const Container = styled(TagContainer)<{
 }>`
 
 ${mq({
-        width: ["5rem", "5rem", "5rem", "5rem", "5rem", "5rem", "6rem"],
+        width: ["6rem", "6rem", "6rem", "6rem", "6rem", "6rem", "7rem"],
         height: ["1rem", "1rem", "1rem", "1rem", "1rem", "1rem", "2rem"],
         fontSize: ["0.5rem", "0.6rem", "0.6rem", "0.6rem", "0.7rem", "0.7rem", "0.8rem"],
       })}

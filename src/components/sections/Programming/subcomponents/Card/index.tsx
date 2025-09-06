@@ -44,7 +44,9 @@ export default function Card({
       </IconContainer>
       <CardHeader
         author={author}
-        eventLocationAndDate={`${location} | ${date} | ${time}`}
+        eventLocationAndDate={
+          [location, date, time].filter(Boolean).join(" | ")
+        }
         status={status}
         classification={classification}
         image={image}

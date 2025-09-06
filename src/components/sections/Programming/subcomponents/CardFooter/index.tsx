@@ -23,7 +23,11 @@ export default function CardFooter({
             {labelButton}
           </EventDescriptionButton>
         )}
-        <RedirectButton children="Inscrever-se" link={link} />
+        {link && (
+          <RedirectButton link={link}>
+            Inscrever-se
+          </RedirectButton>
+        )}
       </ContainerButtons>
     </Container>
   );
