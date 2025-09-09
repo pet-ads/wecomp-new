@@ -20,6 +20,19 @@ export default function Slider<T>({ items, renderItem }: SliderProps<T>) {
   useEffect(() => {
     updateCarouselWidth();
     window.addEventListener("resize", updateCarouselWidth);
+
+    const resizeObserver = new ResizeObserver(() => {
+      updateCarouselWidth();
+    });
+
+    if (carouselContainerRef.current) {
+      resizeObserver.observe(carouselContainerRef.current);
+    }
+
+    return () => {
+      window.removeEventListener("resize", updateCarouselWidth);
+      resizeObserver.disconnect();
+    };
   }, []);
 
   return (
