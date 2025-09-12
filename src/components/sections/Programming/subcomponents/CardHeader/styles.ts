@@ -32,14 +32,14 @@ export const InformationContainer = styled.div`
 `;
 
 export const EventImage = styled.img`
-  width: 25%;
+  width: 20%;
   object-fit: cover; 
   border-radius: 0.5rem; 
   align-self: flex-start;
   
   @media (max-width: 768px) {
-    width: 30%;
-    height: 30%;
+    width: 20%;
+    height: 20%;
     
   }
 `;
