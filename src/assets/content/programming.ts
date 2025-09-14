@@ -20,7 +20,7 @@ import TiagoTamega from "../images/lecturers/TiagoTamega.svg"
 
 export const programmingContent: ProgrammingProps[] = [
   {
-    name: "Abertura oficial",
+    name: "Abertura IV WECOMP + InterIF",
     image: onovolav,
     imageDescription: "OnovoLab",
     bio: "",
@@ -28,7 +28,7 @@ export const programmingContent: ProgrammingProps[] = [
     date: "03/10",
     time: "19h - 22h",
     link: "",
-    vacancies: 240,
+    vacancies: 300,
     location: "ONOVOLAB",
     description:
       "A abertura oficial da VI Wecomp acontecerá no ONOVOLAB e contará com a presença de empresas parceiras, uma mesa redonda com o tema 'IA generativa, mercado de trabalho e a carreira dos (novos) desenvolvedores' e uma confraternização. Não perca!",
@@ -65,7 +65,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Equipe CSD BR",
     date: "07/10",
     time: "19h00 - 21h00",
-    link: "",
+    link: "https://forms.gle/uEzNsrVoGk3ZRMmB7",
     vacancies: 110,
     location: "IFSP - C103",
     description:
@@ -116,7 +116,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "George Tamanaka e Gustavo Kobayashi",
     date: "09/10",
     time: "19h00 - 21h00",
-    link: "",
+    link: "https://forms.gle/NhDkEvw1tpBjGGSD8",
     vacancies: 110,
     location: "IFSP - C103",
     description:
@@ -134,7 +134,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "Lucas Albano, Guilherme Ichibara, Michelangelo",
     date: "06/10",
     time: "08h00 - 11h30",
-    link: "",
+    link: "https://forms.gle/cLSJVfgS4uMjD6PL6",
     vacancies: 30,
     location: "IFSP - C106",
     description:
