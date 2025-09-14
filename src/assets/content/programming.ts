@@ -65,7 +65,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Equipe CSD BR",
     date: "07/10",
     time: "19h00 - 21h00",
-    link: "https://forms.gle/cFAUZW2VbzK5ZzGZA",
+    link: "",
     vacancies: 110,
     location: "IFSP - C103",
     description:
@@ -116,7 +116,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "George Tamanaka e Gustavo Kobayashi",
     date: "09/10",
     time: "19h00 - 21h00",
-    link: "https://forms.gle/RZGhr6hM6bt3FT5V6",
+    link: "",
     vacancies: 110,
     location: "IFSP - C103",
     description:
