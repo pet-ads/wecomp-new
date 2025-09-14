@@ -134,7 +134,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "Lucas Albano, Guilherme Ichibara, Michelangelo",
     date: "06/10",
     time: "08h00 - 11h30",
-    link: "https://forms.gle/ac64y7zHrzHrovkr8",
+    link: "",
     vacancies: 30,
     location: "IFSP - C106",
     description:
