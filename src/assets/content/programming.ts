@@ -42,7 +42,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Henrique Trimidi, Giovana Garcia, Ricardo Ortega e Misia Meyknecht",
     date: "06/10",
     time: "19h00 - 21h00",
-    link: "",
+    link: "https://forms.gle/cFAUZW2VbzK5ZzGZA",
     vacancies: 110,
     location: "IFSP - C103",
     description:
@@ -59,7 +59,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "Paulo Pedroso",
     date: "08/10",
     time: "19h00 - 21h00",
-    link: "",
+    link: "https://forms.gle/RZGhr6hM6bt3FT5V6",
     vacancies: 110,
     location: "IFSP - C103",
     description:
@@ -76,7 +76,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "Gabriel Zutião",
     date: "06/10",
     time: "14h00 - 17h30",
-    link: "",
+    link: "https://forms.gle/ac64y7zHrzHrovkr8",
     vacancies: 30,
     location: "IFSP - C107",
     description:
@@ -93,7 +93,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "Leonardo Cerminaro",
     date: "06/10",
     time: "08h00 - 11h30",
-    link: "",
+    link: "https://forms.gle/PNTbEvqmFN9BH7qk6",
     vacancies: 20,
     location: "IFSP - C107",
     description:
@@ -110,7 +110,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "Jean Valdevino",
     date: "07/10",
     time: "14h00-17h30",
-    link: "",
+    link: "https://forms.gle/79LxPviu4JR1UbMAA",
     vacancies: 30,
     location: "IFSP - C107",
     description:
@@ -127,7 +127,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "Francisco Galindo e Lucas Almeida",
     date: "07/10",
     time: "08h00 - 11h30",
-    link: "",
+    link: "https://forms.gle/F9t5gK3ZR7UuFuMG8",
     vacancies: 30,
     location: "IFSP - C107",
     description:
@@ -144,7 +144,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "Lucas Oliveira",
     date: "07/10",
     time: "14h00 - 17h30",
-    link: "",
+    link: "https://forms.gle/J1w4nmUEWu7rBJ91A",
     vacancies: 30,
     location: "IFSP - C102",
     description:
@@ -161,7 +161,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "Carlão Pereira",
     date: "08/10",
     time: "08h00 - 11h30",
-    link: "",
+    link: "https://forms.gle/hjmqCXgGaKf8eGGk9",
     vacancies: 30,
     location: "IFSP - C107",
     description:
@@ -178,7 +178,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "Diego Pagotto e Luiz Chiquetano",
     date: "08/10",
     time: "14h00 - 17h30",
-    link: "",
+    link: "https://forms.gle/T8QyUSMd375RgkpQ6",
     vacancies: 30,
     location: "IFSP - C107",
     description:
@@ -195,7 +195,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "Tiago Tâmega",
     date: "09/10",
     time: "14h00 - 17h30",
-    link: "",
+    link: "https://forms.gle/YEq7T7TvyxUWu9Qq5",
     vacancies: 30,
     location: "IFSP - C102",
     description:
@@ -212,7 +212,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "Carlão Pereira",
     date: "09/10",
     time: "08h00 - 11h30",
-    link: "",
+    link: "https://forms.gle/BJQg1HrEQZya6kzU8",
     vacancies: 30,
     location: "IFSP - C107",
     description:
@@ -230,7 +230,7 @@ export const programmingContent: ProgrammingProps[] = [
     author: "Laura Luchiari",
     date: "09/10",
     time: "14h00 - 17h30",
-    link: "",
+    link: "https://forms.gle/EiBXk7nm4z41ohD69",
     vacancies: 20,
     location: "IFSP - C107",
     description:
