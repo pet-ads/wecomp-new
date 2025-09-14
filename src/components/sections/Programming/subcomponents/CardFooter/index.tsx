@@ -15,7 +15,7 @@ export default function CardFooter({
 }: CardFooterProps) {
   const eventsDisablingActionButton = ["TechnicalVisit", "Opening"];
 
-  const cutoffDate = new Date("2025-09-14T17:20:00");
+  const cutoffDate = new Date("2025-09-15T00:01:00");
   const [isAfterCutoff, setIsAfterCutoff] = useState(new Date() >= cutoffDate);
 
   useEffect(() => {
