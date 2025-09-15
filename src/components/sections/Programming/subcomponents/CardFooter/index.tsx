@@ -4,6 +4,7 @@ import LabeledValue from "../../../../commons/toolkit/LabeledValue";
 import { CardFooterProps } from "./types";
 
 import { Container, ContainerButtons, EventDescriptionButton } from "./styles";
+import { useEffect, useState } from "react";
 
 export default function CardFooter({
   vacancies,
@@ -14,6 +15,22 @@ export default function CardFooter({
 }: CardFooterProps) {
   const eventsDisablingActionButton = ["TechnicalVisit", "Opening"];
 
+  const cutoffDate = new Date("2025-09-15T00:01:00");
+  const [isAfterCutoff, setIsAfterCutoff] = useState(new Date() >= cutoffDate);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date();
+      if (now >= cutoffDate) {
+        setIsAfterCutoff(true);
+        clearInterval(interval); 
+      }
+    }, 1000 * 30); 
+
+    return () => clearInterval(interval);
+  }, []);
+
+
   return (
     <Container>
       <LabeledValue label="Vagas" value={vacancies} />
@@ -23,7 +40,7 @@ export default function CardFooter({
             {labelButton}
           </EventDescriptionButton>
         )}
-        {link && (
+        {isAfterCutoff && link && (
           <RedirectButton link={link}>
             Inscrever-se
           </RedirectButton>
