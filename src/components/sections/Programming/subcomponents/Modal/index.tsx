@@ -62,7 +62,22 @@ export default function CardProjeto({
 }: ProgrammingProps) {
   const [isOpen, setIsOpen] = useState(false);
 
- useEffect(() => {
+  const cutoffDate = new Date("2025-09-15T00:01:00");
+  const [isAfterCutoff, setIsAfterCutoff] = useState(new Date() >= cutoffDate);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date();
+      if (now >= cutoffDate) {
+        setIsAfterCutoff(true);
+        clearInterval(interval); 
+      }
+    }, 1000 * 30); 
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
     if (isOpen) {
       
       document.body.style.overflow = "hidden";
@@ -127,7 +142,7 @@ export default function CardProjeto({
                 {labelButton}
               </EventDescriptionButton>
             )}
-            {link && (
+            {isAfterCutoff && link && (
               <RedirectButton link={link}>
                 Inscrever-se
               </RedirectButton>
@@ -176,7 +191,7 @@ export default function CardProjeto({
         <ContainerVacancies>
           <LabeledValue label="Vagas" value={vacancies} />
           <ContainerButtons>
-            {link && (
+            {isAfterCutoff && link && (
               <RedirectButton link={link}>
                 Inscrever-se
               </RedirectButton>
