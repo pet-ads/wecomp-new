@@ -145,7 +145,7 @@ export default function CardProjeto({
                   {labelButton}
                 </EventDescriptionButton>
               )}
-            {isAfterCutoff && link && (
+            {isShowSubscriveButton && (
               <RedirectButton link={link}>Inscrever-se</RedirectButton>
             )}
           </ContainerButtons>
