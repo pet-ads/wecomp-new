@@ -4,7 +4,7 @@ import CardFooter from "../CardFooter";
 
 import useToggleCardContent from "../../../../../hooks/toggle/useToggleCardContent";
 
-import { Container, EventTitle, Icon, IconContainer} from "./styles";
+import { Container, EventTitle, Icon, IconContainer } from "./styles";
 
 import { generatedIconEvent } from "../../../../../utils/generatedIconEvent";
 
@@ -33,23 +33,20 @@ export default function Card({
   );
   const eventIconProps = generatedIconEvent(typeEvent);
 
-
-
   return (
     <Container key={name}>
-      
       <IconContainer>
         <Icon
           src={eventIconProps.iconPath}
           alt={`Icone evento ${eventIconProps.label}`}
-          />
+        />
         <EventTitle>{name}</EventTitle>
       </IconContainer>
       <CardHeader
         author={author}
-        eventLocationAndDate={
-          [location, date, time].filter(Boolean).join(" | ")
-        }
+        eventLocationAndDate={[location, date, time]
+          .filter(Boolean)
+          .join(" | ")}
         status={status}
         classification={classification}
         image={image}
@@ -59,6 +56,7 @@ export default function Card({
       <CardFooter
         vacancies={vacancies}
         link={link}
+        status={status}
         labelButton={labelButton}
         handleChangeCardText={handleChangeCardText}
         typeEvent={typeEvent}
