@@ -30,7 +30,6 @@ import {
   ContainerHead,
   ContainerTitle,
   ContainerFooter,
- 
   CloseButton,
   TextSobre,
   ContainerButtons,
@@ -70,19 +69,17 @@ export default function CardProjeto({
       const now = new Date();
       if (now >= cutoffDate) {
         setIsAfterCutoff(true);
-        clearInterval(interval); 
+        clearInterval(interval);
       }
-    }, 1000 * 30); 
+    }, 1000 * 30);
 
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     if (isOpen) {
-      
       document.body.style.overflow = "hidden";
     } else {
-      
       document.body.style.overflow = "auto";
     }
 
@@ -99,23 +96,26 @@ export default function CardProjeto({
   const eventIconProps = generatedIconEvent(typeEvent);
 
   const { labelButton, cardText, handleChangeCardText } = useToggleCardContent(
-        description,
-        bio,
-        "Ver biografia"
-      );
+    description,
+    bio,
+    "Ver biografia"
+  );
 
   const portalElement = document.getElementById("portal-root");
   const eventsDisablingActionButton = ["TechnicalVisit", "Opening"];
-  
+
+  const isShowSubscriveButton = isAfterCutoff && link && status != "Closed";
+
   const mobileModalContent = (
     <AbertoContainer>
       <CloseButton onClick={setingIsOpen} />
       <InformationContainer>
         <EventTitle isOpen={isOpen}>{name}</EventTitle>
-        <EventDetails isOpen={isOpen}>{[location, date, time].filter(Boolean).join(" | ")}</EventDetails>
+        <EventDetails isOpen={isOpen}>
+          {[location, date, time].filter(Boolean).join(" | ")}
+        </EventDetails>
         <EventSpeakers>{author}</EventSpeakers>
       </InformationContainer>
-      
 
       <TagContainer isOpen>
         <AvailabilityTag label={status} />
@@ -128,8 +128,10 @@ export default function CardProjeto({
 
       <ContainerMainModal>
         <ContainerMain>
-          <TextSobre>{labelButton === "Ver biografia" ? "Descrição:" : "Biografia:"}</TextSobre>
-          {cardText} 
+          <TextSobre>
+            {labelButton === "Ver biografia" ? "Descrição:" : "Biografia:"}
+          </TextSobre>
+          {cardText}
         </ContainerMain>
       </ContainerMainModal>
 
@@ -137,15 +139,14 @@ export default function CardProjeto({
         <ContainerVacancies>
           <LabeledValue label="Vagas" value={vacancies} />
           <ContainerButtons>
-            {bio?.trim() && !eventsDisablingActionButton.includes(typeEvent) && (
-              <EventDescriptionButton onClick={handleChangeCardText}>
-                {labelButton}
-              </EventDescriptionButton>
-            )}
+            {bio?.trim() &&
+              !eventsDisablingActionButton.includes(typeEvent) && (
+                <EventDescriptionButton onClick={handleChangeCardText}>
+                  {labelButton}
+                </EventDescriptionButton>
+              )}
             {isAfterCutoff && link && (
-              <RedirectButton link={link}>
-                Inscrever-se
-              </RedirectButton>
+              <RedirectButton link={link}>Inscrever-se</RedirectButton>
             )}
           </ContainerButtons>
         </ContainerVacancies>
@@ -157,7 +158,9 @@ export default function CardProjeto({
       <CloseButton onClick={setingIsOpen} />
       <InformationContainer>
         <EventTitle isOpen={isOpen}>{name}</EventTitle>
-        <EventDetails isOpen={isOpen}>{[location, date, time].filter(Boolean).join(" | ")}</EventDetails>
+        <EventDetails isOpen={isOpen}>
+          {[location, date, time].filter(Boolean).join(" | ")}
+        </EventDetails>
         <EventSpeakers>{author}</EventSpeakers>
       </InformationContainer>
 
@@ -167,19 +170,14 @@ export default function CardProjeto({
       </TagContainer>
 
       <TextSobre>Descrição:</TextSobre>
-        <ContainerMainModal>
-          <ContainerMain>
-            {description}
-          </ContainerMain>
-          
-        </ContainerMainModal>
-        
+      <ContainerMainModal>
+        <ContainerMain>{description}</ContainerMain>
+      </ContainerMainModal>
+
       <ContainerImagem>
         <EventImage src={image} alt={imageDescription} />
       </ContainerImagem>
 
-      
-      
       {bio?.trim() && (
         <ContainerMain>
           <TextSobre>Biografia:</TextSobre>
@@ -191,10 +189,8 @@ export default function CardProjeto({
         <ContainerVacancies>
           <LabeledValue label="Vagas" value={vacancies} />
           <ContainerButtons>
-            {isAfterCutoff && link && (
-              <RedirectButton link={link}>
-                Inscrever-se
-              </RedirectButton>
+            {isShowSubscriveButton && (
+              <RedirectButton link={link}>Inscrever-se</RedirectButton>
             )}
           </ContainerButtons>
         </ContainerVacancies>
@@ -209,25 +205,33 @@ export default function CardProjeto({
           <ContainerHead>
             <ContainerTitle>
               <IconContainer>
-                <Icon src={eventIconProps.iconPath} alt={`Icone evento ${eventIconProps.label}`} />
+                <Icon
+                  src={eventIconProps.iconPath}
+                  alt={`Icone evento ${eventIconProps.label}`}
+                />
               </IconContainer>
               <EventTitle isOpen={isOpen}>{name}</EventTitle>
               <PlusIcon onClick={setingIsOpen} aria-label="Abrir detalhes" />
             </ContainerTitle>
-            <EventDetails isOpen={isOpen}>{[location, date, time].filter(Boolean).join(" | ")}</EventDetails>
+            <EventDetails isOpen={isOpen}>
+              {[location, date, time].filter(Boolean).join(" | ")}
+            </EventDetails>
           </ContainerHead>
-          
           <ContainerFooter>
             <LabeledValue label="Vagas" value={vacancies} />
             <TagContainer isOpen={isOpen}>
               <AvailabilityTag label={status} />
               <DifficultyTag label={classification} />
             </TagContainer>
-
           </ContainerFooter>
         </Container>
       )}
-      {isOpen && portalElement && ReactDOM.createPortal(shouldUseMobileLayout ? mobileModalContent : modalContent, portalElement)}
+      {isOpen &&
+        portalElement &&
+        ReactDOM.createPortal(
+          shouldUseMobileLayout ? mobileModalContent : modalContent,
+          portalElement
+        )}
     </>
   );
 }
