@@ -3,7 +3,7 @@ import { ProgrammingProps } from "../../components/sections/Programming/types";
 import onovolav from "../images/organizationLogo/onovolab.svg";
 import amdocs from "../images/organizationLogo/amdocs.svg";
 import csd from "../images/organizationLogo/CsdLogo.svg";
-import dio from "../images/organizationLogo/DIO.svg"
+import dio from "../images/organizationLogo/DIO.svg";
 import softable from "../images/organizationLogo/SoftableLogo.svg";
 import StepWise from "../images/lecturers/StepWise.svg";
 import GabrielZutiao from "../images/lecturers/GabrielZutiao.svg";
@@ -15,12 +15,11 @@ import Pet from "../images/PET.svg";
 import DP_LC from "../images/lecturers/DP_LC.svg";
 import FG_LA from "../images/lecturers/FG_LA.svg";
 import JeanValdevino from "../images/lecturers/JeanValdevino.svg";
-import TiagoTamega from "../images/lecturers/TiagoTamega.svg"
-
+import TiagoTamega from "../images/lecturers/TiagoTamega.svg";
 
 export const programmingContent: ProgrammingProps[] = [
   {
-    name: "Abertura IV WECOMP + InterIF",
+    name: "Abertura VI WECOMP + InterIF",
     image: onovolav,
     imageDescription: "OnovoLab",
     bio: "",
@@ -41,7 +40,7 @@ export const programmingContent: ProgrammingProps[] = [
     image: amdocs,
     imageDescription:
       "Henrique Trimidi, Giovana Garcia, Ricardo Ortega e Misia Meyknecht",
-    bio: "Henrique Trimidi: Domain Solution Expert; Com 12 anos de experiência na Amdocs, Henrique construiu uma carreira sólida na indústria de telecomunicações, atuando desde Desenvolvedor Júnior até Gerente de Desenvolvimento. Ex-aluno do IFSP, ele é especialista em soluções tecnológicas, com profundo conhecimento em desenvolvimento de software e uma visão estratégica voltada para inovação e eficiência em projetos complexos. \n Giovana Garcia: SW Developer; Graduanda em Análise e Desenvolvimento de Sistemas em São Carlos, iniciou sua trajetória acadêmica na UFSCar, na área de Ciências Sociais. Com o tempo, sua afinidade com tecnologia a levou a migrar para Análise e Desenvolvimento de Sistemas, onde vem se desenvolvendo como profissional da área. Recentemente contratada pela Amdocs, ela dá início à sua jornada no desenvolvimento de software; \n Ricardo Ortega: Site Lead; Com 33 anos de trajetória na área de Tecnologia da Informação, Ricardo acumula 27 anos de atuação como executivo em empresas nacionais e multinacionais, como Amdocs do Brasil, Elevadores Otis e Cromos Tintas Gráficas. Especialista em telecomunicações, possui sólida experiência em todo o ciclo de vida de projetos e suporte a sistemas, contribuindo diretamente para a entrega de soluções eficientes e sustentáveis para diversos clientes; \n Misia Meyknecht: TA Team Lead; Com 15 anos de experiência em recrutamento e seleção, atuou em empresas dos setores de marketing, tecnologia (software) e financeiro. Há 8 anos na Amdocs, onde lidera iniciativas estratégicas de aquisição de talentos para América Latina, com foco em atrair perfis alinhados à cultura organizacional e às necessidades do negócio.", 
+    bio: "Henrique Trimidi: Domain Solution Expert; Com 12 anos de experiência na Amdocs, Henrique construiu uma carreira sólida na indústria de telecomunicações, atuando desde Desenvolvedor Júnior até Gerente de Desenvolvimento. Ex-aluno do IFSP, ele é especialista em soluções tecnológicas, com profundo conhecimento em desenvolvimento de software e uma visão estratégica voltada para inovação e eficiência em projetos complexos. \n Giovana Garcia: SW Developer; Graduanda em Análise e Desenvolvimento de Sistemas em São Carlos, iniciou sua trajetória acadêmica na UFSCar, na área de Ciências Sociais. Com o tempo, sua afinidade com tecnologia a levou a migrar para Análise e Desenvolvimento de Sistemas, onde vem se desenvolvendo como profissional da área. Recentemente contratada pela Amdocs, ela dá início à sua jornada no desenvolvimento de software; \n Ricardo Ortega: Site Lead; Com 33 anos de trajetória na área de Tecnologia da Informação, Ricardo acumula 27 anos de atuação como executivo em empresas nacionais e multinacionais, como Amdocs do Brasil, Elevadores Otis e Cromos Tintas Gráficas. Especialista em telecomunicações, possui sólida experiência em todo o ciclo de vida de projetos e suporte a sistemas, contribuindo diretamente para a entrega de soluções eficientes e sustentáveis para diversos clientes; \n Misia Meyknecht: TA Team Lead; Com 15 anos de experiência em recrutamento e seleção, atuou em empresas dos setores de marketing, tecnologia (software) e financeiro. Há 8 anos na Amdocs, onde lidera iniciativas estratégicas de aquisição de talentos para América Latina, com foco em atrair perfis alinhados à cultura organizacional e às necessidades do negócio.",
     author:
       "Henrique Trimidi, Giovana Garcia, Ricardo Ortega e Misia Meyknecht",
     date: "06/10",
@@ -58,11 +57,9 @@ export const programmingContent: ProgrammingProps[] = [
   {
     name: "Conheça a CSD BR: A nova clearing do mercado financeiro brasileiro",
     image: csd,
-    imageDescription:
-      "Equipe CSD BR",
-    bio: "", 
-    author:
-      "Equipe CSD BR",
+    imageDescription: "Equipe CSD BR",
+    bio: "",
+    author: "Equipe CSD BR",
     date: "07/10",
     time: "19h00 - 21h00",
     link: "https://forms.gle/uEzNsrVoGk3ZRMmB7",
@@ -78,7 +75,7 @@ export const programmingContent: ProgrammingProps[] = [
     name: "A Solução Começa na Orelha",
     image: kakautech,
     imageDescription: "Paulo Pedroso",
-    bio: "Paulo Pedroso é pai do Pedro Henrique e do João Guilherme, e essa é a informação mais importante que precisam saber sobre ele. Sócio-fundador, atua como CTO na Kakau Tech desde 2022. Com mais de 30 anos no mercado, é apaixonado por tecnologia. Ele também é um músico muito talentoso, segundo ele mesmo e mais ninguém...", 
+    bio: "Paulo Pedroso é pai do Pedro Henrique e do João Guilherme, e essa é a informação mais importante que precisam saber sobre ele. Sócio-fundador, atua como CTO na Kakau Tech desde 2022. Com mais de 30 anos no mercado, é apaixonado por tecnologia. Ele também é um músico muito talentoso, segundo ele mesmo e mais ninguém...",
     author: "Paulo Pedroso",
     date: "08/10",
     time: "19h00 - 21h00",
@@ -95,7 +92,7 @@ export const programmingContent: ProgrammingProps[] = [
     name: "IA e Carreiras do Futuro: Tendências, Habilidades e Oportunidades",
     image: dio,
     imageDescription: "Venilton Falvo Jr ",
-    bio: "Doutor em Engenharia de Software pelo ICMC-USP, com 16+ anos de experiência em soluções Web, Mobile e Cloud. Education Tech Lead na DIO, integra IA e metodologias inovadoras para ampliar a empregabilidade na comunidade tech. Possui certificações Microsoft, Oracle, Google e AWS, pesquisa o uso de IA na educação e atua como consultor em projetos estratégicos de arquitetura e alta performance.", 
+    bio: "Doutor em Engenharia de Software pelo ICMC-USP, com 16+ anos de experiência em soluções Web, Mobile e Cloud. Education Tech Lead na DIO, integra IA e metodologias inovadoras para ampliar a empregabilidade na comunidade tech. Possui certificações Microsoft, Oracle, Google e AWS, pesquisa o uso de IA na educação e atua como consultor em projetos estratégicos de arquitetura e alta performance.",
     author: "Venilton Falvo Jr ",
     date: "08/10",
     time: "21h00 - 22h00",
@@ -112,7 +109,7 @@ export const programmingContent: ProgrammingProps[] = [
     name: "Além do hype: criando uma empresa de tecnologia do zero",
     image: softable,
     imageDescription: "George Tamanaka e Gustavo Kobayashi",
-    bio: "Há 8 anos, numa sala de apartamento, ainda na faculdade, George Tamanaka e Gustavo Kobayashi criaram a Softable, que tem a missão de devolver às empresas o controle sobre seus processos, oferecendo aos clientes soluções simples, acessíveis e transparentes que resolvem problemas reais.", 
+    bio: "Há 8 anos, numa sala de apartamento, ainda na faculdade, George Tamanaka e Gustavo Kobayashi criaram a Softable, que tem a missão de devolver às empresas o controle sobre seus processos, oferecendo aos clientes soluções simples, acessíveis e transparentes que resolvem problemas reais.",
     author: "George Tamanaka e Gustavo Kobayashi",
     date: "09/10",
     time: "19h00 - 21h00",
@@ -125,7 +122,7 @@ export const programmingContent: ProgrammingProps[] = [
     classification: "Free",
     status: "Available",
   },
-  
+
   {
     name: "IA Generativa e Aplicações Reais em Projetos de Negócio.",
     image: StepWise,
@@ -141,7 +138,7 @@ export const programmingContent: ProgrammingProps[] = [
       "O minicurso tem como objetivo oferecer uma visão prática e objetiva sobre inteligência Artificial Generativa, abordando as técnicas existentes, os modelos utilizados e suas aplicações práticas em cases de negócio, utilizando infraestrutura offline e integrações com API's dos principais players do mercado. A partir de dois mini projetos, os participantes terão contato direto com exemplos reais de uso, conectando teoria e prática e demonstrando como essas soluções podem gerar valor em diferentes contextos de negócio.",
     typeEvent: "Course",
     classification: "Basic",
-    status: "Available",
+    status: "Closed",
   },
   {
     name: "Introdução à automação de testes com Playwright.",
@@ -158,7 +155,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Aprenda os fundamentos da automação de testes com Playwright em um minicurso prático, explorando conceitos, exemplos e primeiros scripts.",
     typeEvent: "Course",
     classification: "Basic",
-    status: "Available",
+    status: "Closed",
   },
   {
     name: "Desenvolvendo um aplicativo multiplataforma com Expo, Google Maps e Redux.",
@@ -192,7 +189,7 @@ export const programmingContent: ProgrammingProps[] = [
       "A maioria dos apps falha porque o código apodrece rápido demais. Você começa empolgado, coloca tudo em uma Activity, e em semanas vira um caos. Isso não é azar, é falta de arquitetura. MVVM não é luxo: é disciplina, é o que separa um app descartável de um software profissional. Neste minicurso você vai aprender, na prática, a estruturar seu código para durar, ser testável e crescer sem colapsar. Esqueça atalhos: arquitetura é sobrevivência.",
     typeEvent: "Course",
     classification: "Intermediary",
-    status: "Available",
+    status: "Closed",
   },
   {
     name: "Introdução ao Clojure — explorando a programação funcional.",
@@ -277,11 +274,11 @@ export const programmingContent: ProgrammingProps[] = [
       "Rust é uma linguagem de programação moderna que vem ganhando destaque por unir alto desempenho, segurança de memória e um ecossistema em constante crescimento. Utilizada em grandes projetos de software e cada vez mais presente no mercado, ela se destaca como uma alternativa poderosa a linguagens tradicionais como C e C++. Nesta minicurso, vamos explorar os conceitos básicos da linguagem, entender sua proposta e dar os primeiros passos no desenvolvimento com Rust.",
     typeEvent: "Course",
     classification: "Basic",
-    status: "Available",
+    status: "Closed",
   },
   {
     name: "O Unicórnio da Tecnologia: Profissionais de TI que Sabem Vender",
-    image: TiagoTamega, 
+    image: TiagoTamega,
     imageDescription: "Tiago Tâmega",
     bio: "Tiago Tâmega é gerente de tecnologia no Grupo ADN, com mais de 15 anos de experiência no setor de TI e ex-aluno do IFSP. Iniciou sua carreira na parte técnica, atuando como desenvolvedor e analista de qualidade, e ao longo do tempo transitou para funções de gestão, vendas e liderança. Já foi scrum master, gerente de projetos, CIO em empresa de soluções digitais e mentor de líderes. Também estruturou áreas de marketing e vendas e trabalhou diretamente com outsourcing de TI. É palestrante na Software Zen, além de participações nos eventos InterAgil, Inova Week e semanas da Tecnologia, compartilhando experiências sobre liderança, gestão ágil, transformação digital e o papel estratégico da tecnologia nos negócios.",
     author: "Tiago Tâmega",
