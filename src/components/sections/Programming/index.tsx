@@ -15,6 +15,9 @@ import programmingContent from "../../../assets/content/programming";
 // Styles
 import { Container } from "./styles";
 
+// Utils
+import groupProgramming from "../../../utils/groupProgramming";
+
 // Constants
 const soonOrNot = false;
 
@@ -22,6 +25,8 @@ export default function Programming() {
   const isMobile = useIsMobile();
   const isMobileHeight = useIsMobileHeight();
   const shouldUseMobileLayout = isMobile || isMobileHeight;
+
+  const sortedData = groupProgramming(programmingContent);
 
   return (
     <Section
@@ -34,7 +39,7 @@ export default function Programming() {
           <SoonCard />
         ) : (
           <Slider
-            items={programmingContent}
+            items={sortedData}
             renderItem={(event) =>
               shouldUseMobileLayout ? (
                 <CardProjeto key={event.name} {...event} />
