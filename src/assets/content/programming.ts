@@ -289,7 +289,7 @@ export const programmingContent: ProgrammingProps[] = [
     location: "IFSP - C106",
     description:
       "Você já percebeu que saber apenas programar ou configurar sistemas pode não garantir mais o seu futuro em tecnologia? As empresas estão em busca de um perfil raro: profissionais que entendem de tecnologia e sabem comunicar valor, gerar negócios e construir confiança. Neste encontro, vamos mostrar como transformar seu conhecimento técnico em vantagem competitiva, explorando caminhos de carreira que vão muito além da programação — e que podem ser altamente rentáveis. Se você quer se tornar o unicórnio que o mercado procura, esse é o seu lugar!",
-    typeEvent: "Talk",
+    typeEvent: "Course",
     classification: "Free",
     status: "Available",
   },
