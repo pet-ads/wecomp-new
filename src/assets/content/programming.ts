@@ -86,7 +86,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Esta palestra apresenta a Kakau Tech, uma empresa especializada em integrar a tecnologia digital aos negócios. Na Kakau Tech, o foco está em compreender profundamente os desafios dos clientes para oferecer soluções realmente relevantes. Este bate-papo busca mostrar que a tecnologia deve servir ao propósito de resolver problemas reais, e que o sucesso está em propor soluções simples e eficazes – em vez de apostar em ferramentas sofisticadas que não se conectam com as necessidades do cliente. Os participantes perceberão que a escuta ativa, aliada à identificação de oportunidades e à definição de estratégias de inovação, agrega valor prático, com exemplos do cotidiano empresarial e experiências do mercado.",
     typeEvent: "Talk",
     classification: "Free",
-    status: "Available",
+    status: "LastVacancies",
   },
   {
     name: "IA e Carreiras do Futuro: Tendências, Habilidades e Oportunidades",
@@ -103,7 +103,7 @@ export const programmingContent: ProgrammingProps[] = [
       "A IA está transformando o mercado de trabalho e abrindo novas possibilidades para profissionais de tecnologia. Neste talk da DIO, vamos explorar como a IA está transformando setores, redefinindo funções e criando oportunidades inéditas. Discutiremos as principais tendências que guiarão o futuro das carreiras, as habilidades mais valorizadas nesse novo cenário e como cada profissional pode se preparar para se destacar.",
     typeEvent: "Talk",
     classification: "Free",
-    status: "Available",
+    status: "LastVacancies",
   },
   {
     name: "Além do hype: criando uma empresa de tecnologia do zero",
@@ -120,7 +120,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Queremos te contar o que ninguém contou sobre empreender ainda na faculdade. Quais foram os desafios e aprendizados até a Softable se tornar parceira de tecnologia de algumas das maiores marcas do mundo.",
     typeEvent: "Talk",
     classification: "Free",
-    status: "Available",
+    status: "LastVacancies",
   },
 
   {
@@ -223,7 +223,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Neste minicurso, você aprenderá os conceitos básicos do Git, capacitando-o a usar essa ferramenta no dia a dia. Também será apresentada uma visão geral do GitHub e como integrá-lo ao Vercel para realizar deploys automáticos de páginas web.",
     typeEvent: "Course",
     classification: "Free",
-    status: "Available",
+    status: "LastVacancies",
   },
   {
     name: "Como sobreviver no terminal do Linux",
@@ -240,7 +240,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Este mini-curso apresentará uma breve história da filosofia do Software Livre e do surgimento do sistema operacional Linux, focando em seguida nos principais comandos para dominar o terminal e executar tarefas com agilidade e eficiência. Desde comandos básicos de navegação até operações mais avançadas, serão exploradas ferramentas essenciais para gestão de arquivos, instalação de programas, gerenciamento de processos, entre outros, de uma forma totalmente prática.",
     typeEvent: "Course",
     classification: "Free",
-    status: "Available",
+    status: "Closed",
   },
   {
     name: "Desenvolvimento de Aplicações Híbridas com Capacitor",
