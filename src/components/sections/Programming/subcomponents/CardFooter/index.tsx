@@ -11,6 +11,7 @@ export default function CardFooter({
   link,
   labelButton,
   typeEvent,
+  status,
   handleChangeCardText,
 }: CardFooterProps) {
   const eventsDisablingActionButton = ["TechnicalVisit", "Opening"];
@@ -23,13 +24,14 @@ export default function CardFooter({
       const now = new Date();
       if (now >= cutoffDate) {
         setIsAfterCutoff(true);
-        clearInterval(interval); 
+        clearInterval(interval);
       }
-    }, 1000 * 30); 
+    }, 1000 * 30);
 
     return () => clearInterval(interval);
   }, []);
 
+  const isShowSubscriveButton = isAfterCutoff && link && status != "Closed";
 
   return (
     <Container>
@@ -40,10 +42,8 @@ export default function CardFooter({
             {labelButton}
           </EventDescriptionButton>
         )}
-        {isAfterCutoff && link && (
-          <RedirectButton link={link}>
-            Inscrever-se
-          </RedirectButton>
+        {isShowSubscriveButton && (
+          <RedirectButton link={link}>Inscrever-se</RedirectButton>
         )}
       </ContainerButtons>
     </Container>
