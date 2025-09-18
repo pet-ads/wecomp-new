@@ -55,10 +55,10 @@ export const programmingContent: ProgrammingProps[] = [
     status: "Available",
   },
   {
-    name: "Conheça a CSD BR: A nova clearing do mercado financeiro brasileiro",
+    name: "Conheça a CSD BR: Como a inovação tecnológica propiciou melhor desempenho e robustez para a nova clearing do Brasil",
     image: csd,
     imageDescription: "Equipe CSD BR",
-    bio: "",
+    bio: "Guilherme Conrado é mestre em Engenharia Civil pela Escola Politécnica da USP e atua como Diretor de Fiscalização e Supervisão na CSD BR. Com mais de 20 anos de experiência, já liderou áreas de governança, riscos e controles internos, além de ter sido COO na LUZ Soluções Financeiras. Sua trajetória combina visão estratégica, capacidade analítica e sólida atuação em ambientes regulatórios e financeiros.",
     author: "Equipe CSD BR",
     date: "07/10",
     time: "19h00 - 21h00",
@@ -122,7 +122,6 @@ export const programmingContent: ProgrammingProps[] = [
     classification: "Free",
     status: "LastVacancies",
   },
-
   {
     name: "IA Generativa e Aplicações Reais em Projetos de Negócio.",
     image: StepWise,
