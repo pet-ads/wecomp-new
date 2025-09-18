@@ -1,7 +1,12 @@
 import CardHeader from "../CardHeader";
 import CardFooter from "../CardFooter";
 
-import { Container, EventImage, ContainerHeader, ContainerIconTag } from "./styles";
+import {
+  Container,
+  EventImage,
+  ContainerHeader,
+  ContainerIconTag,
+} from "./styles";
 
 import { HighlightsProps } from "../../types";
 import { Title } from "../../../../commons/toolkit/Card/styles";
@@ -26,21 +31,16 @@ export default function Card({
             <ExpirienceTag label={typeEvent} />
           </TagContainer>
         </ContainerIconTag>
-        <EventImage src={image} />
+        <EventImage src={image} draggable={false} />
       </ContainerHeader>
       <Title>{title}</Title>
-      <CardHeader
-        companyName={companyName}
-      />
+      <CardHeader companyName={companyName} />
       <ContainerMainModal>
         {description.split("\n").map((line, i) => (
           <p key={i}>{line.trim()}</p>
         ))}
       </ContainerMainModal>
-      <CardFooter
-        vacancies={vacancies}
-        link={link}
-      />
+      <CardFooter vacancies={vacancies} link={link} />
     </Container>
   );
 }

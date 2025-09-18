@@ -30,7 +30,7 @@ export default function CardHeader({
           <AvailabilityTag label={status} />
         </TagContainer>
       </InformationContainer>
-      <EventImage src={image} alt={imageDescription} />
+      <EventImage src={image} alt={imageDescription} draggable={false} />
     </Container>
   );
 }

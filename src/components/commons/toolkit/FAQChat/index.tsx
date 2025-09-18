@@ -88,7 +88,7 @@ export default function FAQChat() {
               const isLast = index === chat.length - 1;
               return msg.from === "grace" ? (
                 <MessageLeft key={index}>
-                  <img src={GraceAvatar} alt="Grace" />
+                  <img src={GraceAvatar} alt="Grace" draggable={false} />
                   <span ref={isLast ? buttonRef : null}>{msg.text}</span>
                 </MessageLeft>
               ) : (

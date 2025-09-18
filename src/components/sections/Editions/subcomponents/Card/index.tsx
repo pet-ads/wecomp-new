@@ -27,6 +27,7 @@ export default function Card({
           src={logoPath}
           alt={altText}
           onClick={() => window.open(website, "_blank")}
+          draggable={false}
         />
       </IconContainer>
       <NameContainer isVisible={isVisible}>{edition}</NameContainer>

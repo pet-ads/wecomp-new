@@ -55,6 +55,7 @@ export default function Directors() {
                         : director.logoPath
                     }
                     alt={`Logo da organização ${director.name}`}
+                    draggable={false}
                     width={director.width}
                     onClick={() => handleRedirectOnClick(director.link)}
                   />

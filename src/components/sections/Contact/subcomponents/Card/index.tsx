@@ -15,6 +15,7 @@ export default function Card({
         src={iconPath}
         alt={iconAlt}
         onClick={() => window.open(contactUrl, "_blank")}
+        draggable={false}
       />
       <NameContainer>{username}</NameContainer>
     </Container>

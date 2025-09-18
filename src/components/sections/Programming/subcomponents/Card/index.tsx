@@ -39,6 +39,7 @@ export default function Card({
         <Icon
           src={eventIconProps.iconPath}
           alt={`Icone evento ${eventIconProps.label}`}
+          draggable={false}
         />
         <EventTitle>{name}</EventTitle>
       </IconContainer>

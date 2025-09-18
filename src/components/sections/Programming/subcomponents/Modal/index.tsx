@@ -123,7 +123,7 @@ export default function CardProjeto({
       </TagContainer>
 
       <ContainerImagem>
-        <EventImage src={image} alt={imageDescription} />
+        <EventImage src={image} alt={imageDescription} draggable={false} />
       </ContainerImagem>
 
       <ContainerMainModal>
@@ -175,7 +175,7 @@ export default function CardProjeto({
       </ContainerMainModal>
 
       <ContainerImagem>
-        <EventImage src={image} alt={imageDescription} />
+        <EventImage src={image} alt={imageDescription} draggable={false} />
       </ContainerImagem>
 
       {bio?.trim() && (
@@ -208,6 +208,7 @@ export default function CardProjeto({
                 <Icon
                   src={eventIconProps.iconPath}
                   alt={`Icone evento ${eventIconProps.label}`}
+                  draggable={false}
                 />
               </IconContainer>
               <EventTitle isOpen={isOpen}>{name}</EventTitle>

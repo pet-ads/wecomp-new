@@ -40,6 +40,7 @@ export default function Marathon() {
             {...ZOOM_ANIMATION}
             src={marathonContent.path}
             alt="Foto da fase final do InterIF 2024"
+            draggable={false}
           />
         </MarathonImageWrapper>
       </Container>

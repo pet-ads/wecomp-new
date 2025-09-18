@@ -17,7 +17,7 @@ import {
   ContainerMainModal,
   ContainerLogoTag,
   ModalContentWrapper,
-  ResponsiveTagWrapper
+  ResponsiveTagWrapper,
 } from "./styles";
 
 import { HighlightsProps } from "../../types";
@@ -52,7 +52,11 @@ export default function CardProjeto({
         <CloseButton onClick={setingIsOpen} />
         <TagContainer isOpen>
           <ExpirienceTag label={typeEvent} />
-          <EventImage src={image} alt={'logo ' + companyName} />
+          <EventImage
+            src={image}
+            alt={"logo " + companyName}
+            draggable={false}
+          />
         </TagContainer>
         <ContainerLogoTag>
           <EventSpeakers isOpen={isOpen}>{companyName}</EventSpeakers>
@@ -60,8 +64,8 @@ export default function CardProjeto({
         <div>
           <EventTitle isOpen={isOpen}>{title}</EventTitle>
           <ContainerMainModal>
-            {description.split('\n').map((line, i) => (
-            <p key={i}>{line.trim()}</p>
+            {description.split("\n").map((line, i) => (
+              <p key={i}>{line.trim()}</p>
             ))}
           </ContainerMainModal>
         </div>
@@ -91,7 +95,9 @@ export default function CardProjeto({
           </BoxFooter>
         </Container>
       )}
-      {isOpen && portalElement && ReactDOM.createPortal(modalContent, portalElement)}
+      {isOpen &&
+        portalElement &&
+        ReactDOM.createPortal(modalContent, portalElement)}
     </>
   );
 }

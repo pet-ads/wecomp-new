@@ -10,7 +10,7 @@ import {
 export default function Local({ address, alt, name, url }: LocationProps) {
   return (
     <Container>
-      <MapFrame src={url} aria-label={alt} />
+      <MapFrame src={url} aria-label={alt} draggable={false} />
 
       <DetailsOfLocal>
         <InformationSpan>{name}</InformationSpan>

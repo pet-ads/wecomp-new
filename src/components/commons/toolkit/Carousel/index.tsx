@@ -109,6 +109,7 @@ export default function Carousel({ items, visibleItems }: CarouselProps) {
                   src={item.logoPath}
                   alt={item.name}
                   width={item.width}
+                  draggable={false}
                 />
                 <LogoCaption>{item.name}</LogoCaption>
               </LogoFigure>

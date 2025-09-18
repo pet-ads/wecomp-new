@@ -15,7 +15,12 @@ export default function SoonCard() {
             transition: { duration: 0.8 },
           }}
         >
-          <SoonImage src={comingSoonImg} alt="Em breve" isMobile={isMobile} />
+          <SoonImage
+            src={comingSoonImg}
+            alt="Em breve"
+            isMobile={isMobile}
+            draggable={false}
+          />
         </motion.div>
       </InformationWrapper>
     </SoonCardContainer>

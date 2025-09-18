@@ -14,6 +14,7 @@ export default function HeroBanner() {
         <EventLogo
           src={heroContent.logoPath}
           alt={heroContent.logoAlternativeText}
+          draggable={false}
         />
 
         <EventDate>
