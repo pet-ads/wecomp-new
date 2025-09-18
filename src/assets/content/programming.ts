@@ -30,7 +30,7 @@ export const programmingContent: ProgrammingProps[] = [
     vacancies: 300,
     location: "ONOVOLAB",
     description:
-      "A abertura oficial da VI Wecomp acontecerá no ONOVOLAB e contará com a presença de empresas parceiras, uma mesa redonda com o tema 'IA generativa, mercado de trabalho e a carreira dos (novos) desenvolvedores' e uma confraternização. Não perca!",
+      "A abertura oficial da VI Wecomp acontecerá no ONOVOLAB e contará com a presença de empresas parceiras, uma mesa redonda com o tema 'Dev 2030: Como deverá ser a carreira de tech daqui a cinco anos?' e uma confraternização. Não perca!",
     typeEvent: "Opening",
     classification: "Free",
     status: "Available",
