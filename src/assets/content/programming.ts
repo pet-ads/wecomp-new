@@ -52,7 +52,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Esta sessão interativa reúne profissionais de diferentes áreas para compartilhar suas trajetórias e experiências na entrega de soluções, suporte a sistemas e interação com usuários. O painel abordará como uma ideia nasce a partir da necessidade do cliente, os passos até sua implementação técnica e o papel essencial das áreas de suporte e operações.",
     typeEvent: "Talk",
     classification: "Free",
-    status: "Available",
+    status: "LastVacancies",
   },
   {
     name: "Conheça a CSD BR: Como a inovação tecnológica propiciou melhor desempenho e robustez para a nova clearing do Brasil",
@@ -69,7 +69,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Nessa talk, os profissionais da CSD BR apresentarão a empresa, a cultura, os desafios e as oportunidades disponíveis aos profissionais da região",
     typeEvent: "Talk",
     classification: "Free",
-    status: "Available",
+    status: "LastVacancies",
   },
   {
     name: "A Solução Começa na Orelha",
@@ -222,7 +222,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Neste minicurso, você aprenderá os conceitos básicos do Git, capacitando-o a usar essa ferramenta no dia a dia. Também será apresentada uma visão geral do GitHub e como integrá-lo ao Vercel para realizar deploys automáticos de páginas web.",
     typeEvent: "Course",
     classification: "Free",
-    status: "LastVacancies",
+    status: "Closed",
   },
   {
     name: "Como sobreviver no terminal do Linux",
@@ -290,7 +290,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Você já percebeu que saber apenas programar ou configurar sistemas pode não garantir mais o seu futuro em tecnologia? As empresas estão em busca de um perfil raro: profissionais que entendem de tecnologia e sabem comunicar valor, gerar negócios e construir confiança. Neste encontro, vamos mostrar como transformar seu conhecimento técnico em vantagem competitiva, explorando caminhos de carreira que vão muito além da programação — e que podem ser altamente rentáveis. Se você quer se tornar o unicórnio que o mercado procura, esse é o seu lugar!",
     typeEvent: "Course",
     classification: "Free",
-    status: "Available",
+    status: "LastVacancies",
   },
   {
     name: "Criando um chat de mensagens com React, TypeScript e WebSocket",
@@ -307,7 +307,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Neste minicurso, vamos desenvolver juntos uma aplicação de chat em tempo real usando React com TypeScript e WebSocket. O back-end já estará pronto, então o foco será na construção do front-end: implementação da interface, conexão e troca de mensagens entre usuários. Além disso, vamos abordar boas práticas de organização de código, assim como dicas e pontos importantes para quem deseja se aprimorar no desenvolvimento do dia a dia.",
     typeEvent: "Course",
     classification: "Intermediary",
-    status: "Available",
+    status: "LastVacancies",
   },
 ];
 
