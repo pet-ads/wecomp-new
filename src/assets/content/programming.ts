@@ -307,7 +307,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Neste minicurso, vamos desenvolver juntos uma aplicação de chat em tempo real usando React com TypeScript e WebSocket. O back-end já estará pronto, então o foco será na construção do front-end: implementação da interface, conexão e troca de mensagens entre usuários. Além disso, vamos abordar boas práticas de organização de código, assim como dicas e pontos importantes para quem deseja se aprimorar no desenvolvimento do dia a dia.",
     typeEvent: "Course",
     classification: "Intermediary",
-    status: "LastVacancies",
+    status: "Closed",
   },
 ];
 
