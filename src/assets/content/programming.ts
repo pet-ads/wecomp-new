@@ -86,7 +86,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Esta palestra apresenta a Kakau Tech, uma empresa especializada em integrar a tecnologia digital aos negócios. Na Kakau Tech, o foco está em compreender profundamente os desafios dos clientes para oferecer soluções realmente relevantes. Este bate-papo busca mostrar que a tecnologia deve servir ao propósito de resolver problemas reais, e que o sucesso está em propor soluções simples e eficazes – em vez de apostar em ferramentas sofisticadas que não se conectam com as necessidades do cliente. Os participantes perceberão que a escuta ativa, aliada à identificação de oportunidades e à definição de estratégias de inovação, agrega valor prático, com exemplos do cotidiano empresarial e experiências do mercado.",
     typeEvent: "Talk",
     classification: "Free",
-    status: "LastVacancies",
+    status: "Closed",
   },
   {
     name: "IA e Carreiras do Futuro: Tendências, Habilidades e Oportunidades",
@@ -103,7 +103,7 @@ export const programmingContent: ProgrammingProps[] = [
       "A IA está transformando o mercado de trabalho e abrindo novas possibilidades para profissionais de tecnologia. Neste talk da DIO, vamos explorar como a IA está transformando setores, redefinindo funções e criando oportunidades inéditas. Discutiremos as principais tendências que guiarão o futuro das carreiras, as habilidades mais valorizadas nesse novo cenário e como cada profissional pode se preparar para se destacar.",
     typeEvent: "Talk",
     classification: "Free",
-    status: "LastVacancies",
+    status: "Closed",
   },
   {
     name: "Além do hype: criando uma empresa de tecnologia do zero",
@@ -307,7 +307,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Neste minicurso, vamos desenvolver juntos uma aplicação de chat em tempo real usando React com TypeScript e WebSocket. O back-end já estará pronto, então o foco será na construção do front-end: implementação da interface, conexão e troca de mensagens entre usuários. Além disso, vamos abordar boas práticas de organização de código, assim como dicas e pontos importantes para quem deseja se aprimorar no desenvolvimento do dia a dia.",
     typeEvent: "Course",
     classification: "Intermediary",
-    status: "LastVacancies",
+    status: "Closed",
   },
 ];
 
