@@ -205,7 +205,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Clojure é uma linguagem moderna, funcional e poderosa que vai te mostrar um novo jeito de programar — mais simples, mais expressivo e com foco em resultados. Durante o minicurso, você vai entender os fundamentos da programação funcional, conhecer a sintaxe do Clojure e criar um programa do zero, tudo de forma prática e descomplicada.",
     typeEvent: "Course",
     classification: "Intermediary",
-    status: "Closed",
+    status: "Available",
   },
   {
     name: "Git e GitHub: do mínimo que você precisa saber ao deploy no Vercel",
