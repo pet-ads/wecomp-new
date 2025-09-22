@@ -137,13 +137,13 @@ export const ContainerMain = styled.div`
   text-align: justify;
   ${mq({
     fontSize: [
-      "0.8rem",
-      "01rem",
+      "0.7rem",
+      "0.9rem",
+      "1.1rem",
+      "1.1rem",
+      "1.1rem",
       "1.2rem",
-      "1.2rem",
-      "1.2rem",
-      "1.3rem",
-      "1.5rem",
+      "1.4rem",
     ],
   })}
 `;
@@ -265,7 +265,7 @@ export const EventTitle = styled.div<{ isOpen: boolean }>`
             "0.9rem",
             "1rem",
             "1rem",
-            "1.4rem",
+            "1.2rem",
           ],
         })};
 
