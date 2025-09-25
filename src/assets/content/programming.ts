@@ -120,7 +120,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Queremos te contar o que ninguém contou sobre empreender ainda na faculdade. Quais foram os desafios e aprendizados até a Softable se tornar parceira de tecnologia de algumas das maiores marcas do mundo.",
     typeEvent: "Talk",
     classification: "Free",
-    status: "LastVacancies",
+    status: "Closed",
   },
   {
     name: "IA Generativa e Aplicações Reais em Projetos de Negócio.",
