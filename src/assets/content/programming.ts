@@ -120,7 +120,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Queremos te contar o que ninguém contou sobre empreender ainda na faculdade. Quais foram os desafios e aprendizados até a Softable se tornar parceira de tecnologia de algumas das maiores marcas do mundo.",
     typeEvent: "Talk",
     classification: "Free",
-    status: "LastVacancies",
+    status: "Closed",
   },
   {
     name: "IA Generativa e Aplicações Reais em Projetos de Negócio.",
@@ -171,7 +171,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Neste minicurso vamos explorar a utilização das bibliotecas react-native-maps e Redux em um aplicativo React Native gerenciado pela plataforma Expo. Faremos um app que acompanha o progresso de uma caminhada/trilha e mostra informações úteis para o usuário.",
     typeEvent: "Course",
     classification: "Intermediary",
-    status: "Available",
+    status: "LastVacancies",
   },
   {
     name: "Por que 90% dos apps quebram em 6 meses — e como evitar isso com arquitetura e MVVM",
@@ -256,7 +256,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Oficina prática sobre o desenvolvimento de aplicações híbridas utilizando Capacitor, explorando integração com frameworks web React, acesso a recursos nativos do dispositivo e empacotamento para Android. Serão abordados conceitos de configuração, plugins, ciclo de build e boas práticas para distribuição em lojas de aplicativos.",
     typeEvent: "Course",
     classification: "Intermediary",
-    status: "Available",
+    status: "LastVacancies",
   },
   {
     name: "Programação Rústica: desbravando o Rust do zero",
@@ -290,7 +290,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Você já percebeu que saber apenas programar ou configurar sistemas pode não garantir mais o seu futuro em tecnologia? As empresas estão em busca de um perfil raro: profissionais que entendem de tecnologia e sabem comunicar valor, gerar negócios e construir confiança. Neste encontro, vamos mostrar como transformar seu conhecimento técnico em vantagem competitiva, explorando caminhos de carreira que vão muito além da programação — e que podem ser altamente rentáveis. Se você quer se tornar o unicórnio que o mercado procura, esse é o seu lugar!",
     typeEvent: "Course",
     classification: "Free",
-    status: "LastVacancies",
+    status: "Closed",
   },
   {
     name: "Criando um chat de mensagens com React, TypeScript e WebSocket",
