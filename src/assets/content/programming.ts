@@ -171,7 +171,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Neste minicurso vamos explorar a utilização das bibliotecas react-native-maps e Redux em um aplicativo React Native gerenciado pela plataforma Expo. Faremos um app que acompanha o progresso de uma caminhada/trilha e mostra informações úteis para o usuário.",
     typeEvent: "Course",
     classification: "Intermediary",
-    status: "LastVacancies",
+    status: "Closed",
   },
   {
     name: "Por que 90% dos apps quebram em 6 meses — e como evitar isso com arquitetura e MVVM",
@@ -256,7 +256,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Oficina prática sobre o desenvolvimento de aplicações híbridas utilizando Capacitor, explorando integração com frameworks web React, acesso a recursos nativos do dispositivo e empacotamento para Android. Serão abordados conceitos de configuração, plugins, ciclo de build e boas práticas para distribuição em lojas de aplicativos.",
     typeEvent: "Course",
     classification: "Intermediary",
-    status: "LastVacancies",
+    status: "Closed",
   },
   {
     name: "Programação Rústica: desbravando o Rust do zero",
