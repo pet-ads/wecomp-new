@@ -23,7 +23,7 @@ export const programmingContent: ProgrammingProps[] = [
     image: onovolav,
     imageDescription: "OnovoLab",
     bio: "",
-    author: "ONOVOLAB",
+    author: "",
     date: "03/10",
     time: "19h - 22h",
     link: "https://www.sympla.com.br/evento/abertura-da-vi-semana-da-computacao-wecomp-do-ifsp-sao-carlos/3118603",
