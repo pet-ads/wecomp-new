@@ -45,9 +45,9 @@ export const groupProgramming = (
     ...(groups.opening ? [groups.opening] : []),
     ...groups.talksWithVacancies,
     ...groups.talksLastVacancies,
-    ...groups.talksWithoutVacancies,
     ...groups.coursesWithVacancies,
     ...groups.coursesLastVacancies,
+    ...groups.talksWithoutVacancies,
     ...groups.coursesWithoutVacancies,
   ];
 };
