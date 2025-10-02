@@ -18,7 +18,7 @@ export default function AvailabilityTag({ label }: AvailabilityProps) {
       Closed: {
         backgroundColor: "#F2E6E6",
         textColor: "#FF6158",
-        translateText: "Encerrado",
+        translateText: "Esgotado",
       },
     };
     return options[label];

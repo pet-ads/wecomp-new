@@ -23,7 +23,7 @@ export const programmingContent: ProgrammingProps[] = [
     image: onovolav,
     imageDescription: "OnovoLab",
     bio: "",
-    author: "ONOVOLAB",
+    author: "",
     date: "03/10",
     time: "19h - 22h",
     link: "https://www.sympla.com.br/evento/abertura-da-vi-semana-da-computacao-wecomp-do-ifsp-sao-carlos/3118603",
@@ -33,7 +33,7 @@ export const programmingContent: ProgrammingProps[] = [
       "A abertura oficial da VI Wecomp acontecerá no ONOVOLAB e contará com a presença de empresas parceiras, uma mesa redonda com o tema 'Dev 2030: Como deverá ser a carreira de tech daqui a cinco anos?' e uma confraternização. Não perca!",
     typeEvent: "Opening",
     classification: "Free",
-    status: "Available",
+    status: "LastVacancies",
   },
   {
     name: "Da Ideia à Solução: Caminhos Reais na Entrega e Suporte de Tecnologia",
@@ -171,7 +171,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Neste minicurso vamos explorar a utilização das bibliotecas react-native-maps e Redux em um aplicativo React Native gerenciado pela plataforma Expo. Faremos um app que acompanha o progresso de uma caminhada/trilha e mostra informações úteis para o usuário.",
     typeEvent: "Course",
     classification: "Intermediary",
-    status: "LastVacancies",
+    status: "Closed",
   },
   {
     name: "Por que 90% dos apps quebram em 6 meses — e como evitar isso com arquitetura e MVVM",
@@ -256,7 +256,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Oficina prática sobre o desenvolvimento de aplicações híbridas utilizando Capacitor, explorando integração com frameworks web React, acesso a recursos nativos do dispositivo e empacotamento para Android. Serão abordados conceitos de configuração, plugins, ciclo de build e boas práticas para distribuição em lojas de aplicativos.",
     typeEvent: "Course",
     classification: "Intermediary",
-    status: "LastVacancies",
+    status: "Closed",
   },
   {
     name: "Programação Rústica: desbravando o Rust do zero",

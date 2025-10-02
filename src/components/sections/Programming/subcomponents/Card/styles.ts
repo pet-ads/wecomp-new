@@ -55,7 +55,7 @@ export const EventTitle = styled.div`
   word-break: break-word;
 
    ${mq({
-          fontSize: ["0.8rem", "0.8rem", "0.9rem", "0.9rem", "1rem", "1.2rem", "1.3rem"],
+          fontSize: ["0.7rem", "0.7rem", "0.8rem", "0.8rem", "0.9rem", "1rem", "1.15rem"],
                       
         })}
 `;
