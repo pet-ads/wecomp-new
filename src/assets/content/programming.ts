@@ -33,7 +33,7 @@ export const programmingContent: ProgrammingProps[] = [
       "A abertura oficial da VI Wecomp acontecerá no ONOVOLAB e contará com a presença de empresas parceiras, uma mesa redonda com o tema 'Dev 2030: Como deverá ser a carreira de tech daqui a cinco anos?' e uma confraternização. Não perca!",
     typeEvent: "Opening",
     classification: "Free",
-    status: "LastVacancies",
+    status: "Closed",
   },
   {
     name: "Da Ideia à Solução: Caminhos Reais na Entrega e Suporte de Tecnologia",
@@ -52,7 +52,7 @@ export const programmingContent: ProgrammingProps[] = [
       "Esta sessão interativa reúne profissionais de diferentes áreas para compartilhar suas trajetórias e experiências na entrega de soluções, suporte a sistemas e interação com usuários. O painel abordará como uma ideia nasce a partir da necessidade do cliente, os passos até sua implementação técnica e o papel essencial das áreas de suporte e operações.",
     typeEvent: "Talk",
     classification: "Free",
-    status: "LastVacancies",
+    status: "Closed",
   },
   {
     name: "Conheça a CSD BR: Como a inovação tecnológica propiciou melhor desempenho e robustez para a nova clearing do Brasil",
